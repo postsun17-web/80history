@@ -1,5 +1,9 @@
-export const sceneIds = ['scene_f-c-0', 'scene_a-s-0', 'scene_a-s-w-1+'];
+import type {SceneLink} from './scene-links';
+export const sceneIds = ['scene_f-c-0', 'scene_a-s-0', 'scene_a-s-w-1+', 'scene_a-s-e+1', 'scene_c-c-s-1', 'scene_c-c-s-0', 'scene_c-s-e+1', 'scene_ext-e-entry', 'scene_ext-e-center'];
 export type Route = { scene: string; page: number; exhibit?: string; look?: [number, number, number] };
+export function followSceneLink(_route:Route,link:SceneLink):Route {
+ return {scene:link.to,page:1,look:link.arrivalLook};
+}
 export function parseRoute(search: string): Route {
  const p = new URLSearchParams(search.replace(/\+/g, '%2B'));
  const scene = p.get('startscene') || '';

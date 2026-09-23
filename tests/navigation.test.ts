@@ -1,8 +1,19 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {parseRoute, routeUrl, toPosition, verticalFov} from '../src/navigation.ts';
+import {parseRoute, routeUrl, toPosition, verticalFov, followSceneLink} from '../src/navigation.ts';
+import {sceneLinks} from '../src/scene-links.ts';
 test('legacy raw and encoded plus scene IDs are retained',()=>{
  for(const id of ['scene_a-s-w-1+','scene_a-s-w-1%2B']) assert.equal(parseRoute('?startscene='+id).scene,'scene_a-s-w-1+');
+});
+test('a shared URL can open the new E room and survive a round trip',()=>{
+ const route={scene:'scene_ext-e-center',page:1,look:[-90,0,100] as [number,number,number]};
+ assert.deepEqual(parseRoute(routeUrl(route)),route);
+});
+test('walking through the E doorway aims inside the room and back toward C',()=>{
+ const toE=sceneLinks.find(link=>link.from==='scene_c-s-e+1'&&link.to==='scene_ext-e-entry')!;
+ const toC=sceneLinks.find(link=>link.from==='scene_ext-e-entry'&&link.to==='scene_c-s-e+1')!;
+ assert.deepEqual(followSceneLink({scene:toE.from,page:4,exhibit:'panel',look:[1,2,90]},toE),{scene:toE.to,page:1,look:toE.arrivalLook});
+ assert.deepEqual(followSceneLink({scene:toC.from,page:1},toC),{scene:toC.to,page:1,look:toC.arrivalLook});
 });
 test('unknown and numeric scenes fall back, malformed angles do not propagate',()=>{
  assert.equal(parseRoute('?startscene=999&page=99&startlookat=NaN,0,90').scene,'scene_f-c-0');

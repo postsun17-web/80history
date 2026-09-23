@@ -2,6 +2,7 @@ import { Viewer } from '@photo-sphere-viewer/core';
 import { CubemapTilesAdapter, type CubemapMultiTilesPanorama } from '@photo-sphere-viewer/cubemap-tiles-adapter';
 import { MarkersPlugin, type MarkerConfig } from '@photo-sphere-viewer/markers-plugin';
 import data from './data/museum.json';
+import {sceneLinks} from './scene-links';
 import { toPosition, verticalFov, type Route } from './navigation';
 import '@photo-sphere-viewer/core/index.css';
 import '@photo-sphere-viewer/markers-plugin/index.css';
@@ -29,15 +30,19 @@ export class MuseumViewer {
  async show(route:Route) {
   const scene=data.scenes.find(s=>s.id===route.scene)!;
   if(this.scene!==scene.id){
-   this.markers.clearMarkers();
    const root=`/media/v1/panos/${scene.key}`;
+   const config='pano' in scene ? scene.pano : null;
+   const base=Object.fromEntries(Object.entries(faceNames).map(([name,face])=>[name,`${root}/${face}/base.webp`])) as Record<keyof typeof faceNames,string>;
+   await Promise.all(Object.values(base).map(src=>new Promise<void>((resolve,reject)=>{
+    const img=new Image();img.onload=()=>resolve();img.onerror=()=>reject(new Error(`Cannot load panorama face: ${src}`));img.src=src;
+   })));
    const panorama:CubemapMultiTilesPanorama={
-    baseUrl:Object.fromEntries(Object.entries(faceNames).map(([name,face])=>[name,`${root}/${face}/base.webp`])) as Record<keyof typeof faceNames,string>,
-    levels:[{faceSize:2048,nbTiles:4},{faceSize:3840,nbTiles:8}],
-    tileUrl:(face,col,row,level)=>`${root}/${faceNames[face]}/${level+2}/${row}_${col}.${level===0?'jpg':'webp'}`};
+    baseUrl:base,
+    levels:config?[{faceSize:config.faceSize,nbTiles:config.tiles}]:[{faceSize:2048,nbTiles:4},{faceSize:3840,nbTiles:8}],
+    tileUrl:(face,col,row,level)=>`${root}/${faceNames[face]}/${config?config.level:level+2}/${row}_${col}.${config?config.ext:level===0?'jpg':'webp'}`};
    const look=route.look||[scene.ath,scene.atv,scene.fov];
    const zoom=this.zoomFor(look[2]);
-   await this.viewer.setPanorama(panorama,{position:toPosition(look[0],look[1]),zoom,transition:false});
+   await this.viewer.setPanorama(panorama,{position:toPosition(look[0],look[1]),zoom,transition:this.scene?{speed:550,rotation:false,effect:'fade'}:false});
    this.scene=scene.id;
   }else if(route.look){
    this.viewer.rotate(toPosition(route.look[0],route.look[1]));this.viewer.zoom(this.zoomFor(route.look[2]));
@@ -51,7 +56,9 @@ export class MuseumViewer {
    const element=document.createElement('button');element.className='pano-hotspot';element.setAttribute('aria-label',label);
    const symbol=document.createElement('span');symbol.textContent=icon;
    const text=document.createElement('span');text.textContent=label;element.append(symbol,text);
-   element.addEventListener('click',e=>{e.stopPropagation();this.action(action)});
+   element.addEventListener('keydown',event=>{
+    if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();this.action(action);}
+   });
    markers.push({id,element,position:toPosition(ath,atv),anchor:'center center',data:{action},tooltip:label});
   };
   // Original XML dimensions are in krpano distorted-hotspot units (1000-unit distance).
@@ -77,21 +84,20 @@ export class MuseumViewer {
    });
    markers.push({id:p.name,imageLayer:p.image,position:corners as [typeof corners[0],typeof corners[0],typeof corners[0],typeof corners[0]],opacity:Number(p.alpha||1)});
   }
-  if(route.scene===data.scenes[0].id)button('to-a',0,16,'A존으로 이동',`scene:${data.scenes[1].id}`);
+  for(const link of sceneLinks.filter(link=>link.from===route.scene)){
+   button(`to-${link.to}`,link.ath,link.atv,link.label,`scene:${link.to}`,link.label.includes('돌아')||link.label.includes('로비')?'↩':'→');
+  }
   if(route.scene===data.scenes[1].id){
-   button('to-history',-145,13,'복음의 문이 열리다',`scene:${data.scenes[2].id}`);
    button('a-video',35,5,'A존 소개 영상','video-a','▶');
-   button('to-lobby',180,22,'로비로 이동',`scene:${data.scenes[0].id}`,'↩');
   }
   if(route.scene===data.scenes[2].id){
-   // Main panel geometry is unavailable in the encrypted tour: this is explicitly a PoC calibration.
+   // The original main XML is available; this PoC panel projection remains calibrated.
    markers.push({id:'history-panel',imageLayer:data.pages[route.page-1],
     position:[toPosition(137,-21),toPosition(225,-21),toPosition(225,23),toPosition(137,23)],
     data:{action:'panel'},tooltip:'전시 패널 크게 보기',zIndex:1});
    for(const h of data.hotspots.filter(h=>h.page===route.page))button(h.id,h.ath,h.atv,h.title,h.exhibit,h.exhibit.startsWith('photo')?'+':'≡');
    for(const p of data.polygons.filter(p=>p.page===route.page))markers.push({id:p.id,polygon:p.points.map(([a,v])=>toPosition(a,v)),svgStyle:{fill:'rgba(203,170,104,0.04)',stroke:'rgba(203,170,104,0.5)',strokeWidth:'1'},data:{action:p.exhibit},tooltip:p.title,zIndex:3});
    button('panel-read',-178,27,'전시 패널 읽기','panel','▤');
-   button('to-entry',0,20,'A존 입구로',`scene:${data.scenes[1].id}`,'↩');
   }
   this.markers.setMarkers(markers);
  }

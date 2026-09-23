@@ -1,0 +1,82 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>E room panorama renderer</title><style>html,body{margin:0;width:1024px;height:1024px;overflow:hidden;background:#c8b5a2}canvas{display:block}</style><body><script type="module">
+import * as THREE from 'three';
+
+const params = new URLSearchParams(location.search);
+const view = params.get('view') === 'center' ? 'center' : 'entry';
+const face = params.get('face') || 'f';
+const scene = new THREE.Scene();
+scene.background = new THREE.Color('#b7a08c');
+const renderer = new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
+renderer.setSize(1024,1024);
+renderer.setPixelRatio(1);
+renderer.outputColorSpace=THREE.SRGBColorSpace;
+renderer.toneMapping=THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure=1.15;
+document.body.append(renderer.domElement);
+scene.add(new THREE.AmbientLight(0xffffff,1.1));
+const sun=new THREE.DirectionalLight(0xffeddb,.7);sun.position.set(2,3,4);scene.add(sun);
+
+const mat=(color,extra={})=>new THREE.MeshStandardMaterial({color,roughness:.9,metalness:0,...extra});
+function surface(base,variance){
+ const canvas=document.createElement('canvas');canvas.width=canvas.height=256;
+ const ctx=canvas.getContext('2d');const image=ctx.createImageData(256,256);
+ let seed=2737;const rgb=base.match(/\w\w/g).map(v=>parseInt(v,16));
+ for(let i=0;i<256*256;i++){
+  seed=(seed*1664525+1013904223)>>>0;
+  const variation=((seed>>>24)/255-.5)*variance;
+  for(let c=0;c<3;c++)image.data[i*4+c]=Math.max(0,Math.min(255,rgb[c]+variation));
+  image.data[i*4+3]=255;
+ }
+ ctx.putImageData(image,0,0);
+ const t=new THREE.CanvasTexture(canvas);t.colorSpace=THREE.SRGBColorSpace;return t;
+}
+const ivory=mat('#ffffff',{map:surface('bba99a',6)}),stone=mat('#ffffff',{map:surface('8e7f72',32)}),trim=mat('#dacabb'),floor=mat('#ffffff',{map:surface('c8b8a8',4),roughness:.62}),rib=mat('#4d443d'),line=mat('#978674');
+function box(name,w,h,d,x,y,z,material){const mesh=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),material);mesh.name=name;mesh.position.set(x,y,z);scene.add(mesh);return mesh;}
+const W=9,D=8,H=4;
+box('floor',W,.12,D,0,-.06,0,floor);box('ceiling',W,.12,D,0,H+.06,0,stone);
+box('east wall',.1,H,D,W/2, H/2,0,ivory);
+box('north wall',W,H,.1,0,H/2,-D/2,ivory);
+box('south wall',W,H,.1,0,H/2,D/2,ivory);
+// The west doorway has the same 2 m clear opening in both rendered views.
+box('west wall north',.1,H,3,W/-2,H/2,-2.5,ivory);
+box('west wall south',.1,H,3,W/-2,H/2,2.5,ivory);
+box('west header',.1,H-2.8,2,W/-2,3.4,0,ivory);
+box('north jamb',.25,2.8,.22,-4.5,1.4,-1,trim);
+box('south jamb',.25,2.8,.22,-4.5,1.4,1,trim);
+box('lintel',.25,.18,2,-4.5,2.8,0,trim);
+box('corridor floor',2.8,.12,2.15,-5.9,-.06,0,floor);
+box('corridor north',2.8,3.2,.1,-5.9,1.6,-1.05,ivory);
+box('corridor south',2.8,3.2,.1,-5.9,1.6,1.05,ivory);
+box('corridor end',.1,3.2,2.15,-7.3,1.6,0,trim);
+box('corridor ceiling',2.8,.12,2.15,-5.9,3.22,0,stone);
+
+// Restrained panel joints, low dark vertical ribs and ceiling light grid echo C.
+for(const z of [-4,4]){
+ for(let x=-4.3;x<=4.3;x+=2.25)box('wall joint',.012,3.1,.018,x,2,z+(z<0?.06:-.06),line);
+ for(let x=-4.42;x<=4.42;x+=.18)box('rib',.09,.38,.09,x,.2,z+(z<0?.08:-.08),rib);
+ box('wall dado',W,.014,.018,0,.42,z+(z<0?.085:-.085),trim);
+}
+for(const x of [-4.5,4.5]){
+ for(let z=-3.8;z<=3.8;z+=1.9)box('wall joint',.018,3.1,.012,x+(x<0?.06:-.06),2,z,line);
+ if(x>0){for(let z=-3.9;z<=3.9;z+=.18)box('rib',.09,.38,.09,x-.09,.2,z,rib);}
+}
+for(const x of [-3.4,-1.1,1.1,3.4])for(const z of [-2.7,-.9,.9,2.7]){
+ box('ceiling light recess',1.65,.018,1.15,x,3.928,z,trim);
+ box('ceiling light',1.47,.021,.98,x,3.908,z,mat('#fff6e6',{emissive:'#fff0d4',emissiveIntensity:3}));
+ const light=new THREE.PointLight(0xffebd2,1.8,7);light.position.set(x,3.45,z);scene.add(light);
+}
+for(let x=-3.2;x<=3.2;x+=2.25){
+ box('floor joint',.012,.004,D,x,.005,0,trim);
+}
+for(let z=-3;z<=3;z+=2){box('floor joint',W,.004,.012,0,.005,z,trim);}
+
+const camera=new THREE.PerspectiveCamera(90,1,.02,100);
+camera.position.set(view==='entry'?-2.9:0,1.64,0);
+const directions={f:[0,0,-1],b:[0,0,1],r:[1,0,0],l:[-1,0,0],u:[0,1,0],d:[0,-1,0]};
+const dir=directions[face]||directions.f;
+camera.up.set(0,face==='u'||face==='d'?0:1,face==='u'?-1:face==='d'?1:0);
+camera.lookAt(camera.position.x+dir[0],camera.position.y+dir[1],camera.position.z+dir[2]);
+renderer.render(scene,camera);
+document.title=`ready-${view}-${face}`;
+window.renderReady=true;
+</script></body></html>

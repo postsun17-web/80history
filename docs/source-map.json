@@ -9127,12 +9127,2641 @@
       "source": "html/photo/chart.jpg",
       "kind": "local-copy",
       "sha256": "e09423229980f2bcfb5cc0876a3d5569205d7ad480bad4d8abc8ab3eafae7641"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/base.webp",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "38ed5d359f3126d1ef267e5a2b03f9795af78e306099f741226b83436062d55c"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/base.webp",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "67b7fcd8eb10f79bc9ef603f8c64ab583aad19c65ed13706f79ea6108e3a688e"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/base.webp",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "d8b1ec095c30983b6a097f251aee736e68aa4e8f3b1c5c6c2b5750e019e7a382"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/base.webp",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "53368addfc941af5d514154b10eab691f3b2347540d682e2532aea08ecf8952a"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/base.webp",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "7cf43f1c09c1578b273d90bb238c016484def4137f5cd58fb271969629d64117"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/base.webp",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "304302417401a60772817cb95efbf6565b06609e501333d8214e5d18a1eec59b"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/0_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "e69b54462d68c69faac1a24e7becdf6e00ef23db40a09eb6acf6851a2123654d"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/0_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "5455ef4ad2551413361e3e12c433463131e888f3698cb5f61c74c0ab3fc498b6"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/0_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "230ceef68875e72544524228c93c0b1a4091b3f362166b843fff89d60f80630e"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/0_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "c22c20cbc6a1631bb640df03370488320704b04cbe41264776b3e497869a10ec"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/1_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "190b28b882efa0af896e3ba1a83e6fae7de15a30c8a311e1da4f58865ee44652"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/1_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "2d9763e0e7b4a1a3ac2d695c85e7983305fc1f6bf450b1d3e0036c06a5242ee5"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/1_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "a351bacaf7fbbbef5834dc3f6fa48379f58b8e152e344b06eee23cbd421b5daa"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/1_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "d428359fccc7aeb871901e530274f96442ff9862cc45abdf0b9b097440d28b69"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/2_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "68851eb1927d48b6cafd883fcec2924b447a2ddcb84b13b8b45e26152ae0621b"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/2_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "02e9d7c3d5ae7c3f77fd672d9f1b64d396a19fbf33cbe702db566a6a5ddbd539"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/2_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "41612cb24b1773ec135991e7b0b7c11b55875e91fe2735bd27039b48e6a13b38"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/2_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "c155a0598e03401f551ee5c434bd98ed7e0b79cf8dadf4ee93d16749bd0f15a9"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/3_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "4a56f26fcdbda6fd5ce95a97e059dd9f892ec3beb5f45e6a58e0cc9502e83b45"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/3_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "e4e8ddf84b332cba3b6c53cb825646f73ffda7904384d8f9f574c6a8e1f01b36"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/3_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "18419deac8cdd44e104e5c5da1bb674f4f3fe6b8be84063b65366f5f4bf3cda5"
+    },
+    {
+      "path": "/media/v1/panos/a-right/b/2/3_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "2d8388a79fa6d589026ab26f4cee3621e03f1ce13c85e7df4854095ad26dec67"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/0_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "21c61da898a2ffec5a9de979a047d95976d61ad51de9b53bf914c11ac33423f5"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/0_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "e3ce9b9cc4595ee422317724c94c0288a0ab05f30168dd3103f801a3b15b876c"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/0_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "bbee6b020d91e8caf65f09a563d477d672bcc0eb27d4a01f40634c5127aaf544"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/0_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "0081d2b7234da8865933c7fd60bf5ae5482fb3aff2dcdf75ed2b1f1f3180aa02"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/1_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "fa4b9552037561378dbe2a59434bc5733b722aff5153494a3b465088a624b032"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/1_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "a9c445a732031074196e0fcc992930471e7940aae3a22b4810b349dba696215e"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/1_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "ec848a22f2c1868960f9202cd1d195434e0664775c6da6477522ef8a2a432d4a"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/1_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "64fb1afc06201310d2de27d77da734bef1247b17f136d8a2cf484466ec3e5a6d"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/2_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "cb2b1e116c6a0f6ac7fa2ee5d841c22ad67c0a4209537ba7a765caf2d54631f9"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/2_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "824974dfcb17544c024dd8d5108404332e5a1fa9c50963c3e3952e2afeda99b6"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/2_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "5912f29f0baa001bbabdfdd830409561dd7adeccfd43aff7e2335b91e5268f13"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/2_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "21e51b903722dea643f1630b376e528c23e09c78780c1cb78d95d3ed44f909e1"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/3_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "59dc9476f4b1d2cf54f797f690138d6373459e98b52e9852f30b4849011fb43b"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/3_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "36aa331802b7132dfcdd362aff41cfced424c1897382303c6f58fa574da853bd"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/3_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "1b24ad2cdcf3815a17ab3df7a2469ed64c89544883389734885cf80da61e2e0c"
+    },
+    {
+      "path": "/media/v1/panos/a-right/d/2/3_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "6983416923e7320422ecd5e19597691d4cc1076f70d0fb97baab00bf23fc8d1a"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/0_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "1505b3d4087fa4d1667d77ba35b4036afe0dfd820a3127cb0893576194e35ae1"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/0_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "c2ac34fbd9de1420482a661105965ca45613909a43ffed30155cf4cf0ee4ab1f"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/0_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "f1305401d8bcf3ab94fa1783daf0fbd7fe59a53e0b18f2085d5297a949607176"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/0_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "cbf388ada90b238826df2cc710a255beb520c0072f609309fe173018caa9c03d"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/1_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "041e3e0ba23d339b219e91402d4e9dd1bee5c4dae8eb91e5631120e2a8869d35"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/1_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "652037b365ecdbcc1777268610bfcef06f715ddbfaab91ba6224024141def336"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/1_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "8c11d9c62570c71ddae969aeea723410503520458770a31107397d9905834ec4"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/1_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "70a210b371ae4c0250b4c6cfee064087796c037df90d2e8dc07e7af328ea6e70"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/2_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "4eb85bab8dcef3fa6866883428d58e64af270b7b6e827bd2e1586367e5ed0ce0"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/2_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "690980a7cede1bd20c5d94c9777f7416118b8f7266291fa7695ac83489127f20"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/2_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "38e9b27d0113f9870d0af2d1526ca0992624f469bc450c17b5e235589e739d55"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/2_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "1326f8ad5cccaae68600b66c9bfaa30bb44773bfe4ed94ff3c0a09955fae4023"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/3_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "267274e880181db95fef8146e28b25909a1cb3da036f434afad7ffde482e08bd"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/3_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "1247e5a96d361a70ade8a18e841d7f28037df315f44b21c1a27ff5faa78b0b58"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/3_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "5ad7506690e4e71b2e4a8c752c7dace26a7fb20f63c65c9eac53d127ed1296f4"
+    },
+    {
+      "path": "/media/v1/panos/a-right/f/2/3_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "d0486035d54614f6159c1c8b8684b00382ba96f96ecfd9a5904392ba79991820"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/0_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "13408c92689e002c9cfdd11564181757124118660fd0a42d609375064c85fc52"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/0_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "0bfdd46171fc597562c0597313055052861f4cb653cbed8beebf157cf54f87fc"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/0_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "4738391174d3d90a4101304d8e09acff93b3bc9bfbf161ed97bab317b1654869"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/0_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "cd78a4036f66a1cc188c8426b028f6ae8d7a0b72a89b70c0b222a48a250282a0"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/1_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "d4828e3698dd3358e7c91ac684b022715abc91f3ec76c4cde779238d7135e43c"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/1_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "f163f3cb0ed3612cec74fca34db49a92226b3a589ab11d044e05921117ca38e2"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/1_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "8f55dae5baa223f68b892c5fc009dd30c30a4ba3906cfa1269aa3aeb135671b0"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/1_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "a57728fee7f22f203aca6c9075e564d7d9068b93f8e7a71ff111934db525e88f"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/2_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "1479c22287d611f88db6c8eb9d0f2beb66eb6c0733e0655ac507afb7b5323c2c"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/2_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "b30510261123c5c7e9807531d17f9ce7e0bda33db07c321fb97ff09d6ce0b8e9"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/2_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "a6e601e848738fc54a289abb96e5aa135dd4d5aa7532bdff9d50f732ed85c927"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/2_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "290aa89b84e3482fb9d6979ae6dbf8239b295e282e8aa33edeed7e65f791e1d7"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/3_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "df427017e2c871c8de37401d1255e39e47b66d115d5d28536e564224a3fc1126"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/3_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "0978728ad37802653d856a877345a4dcaf6e4ee3470dc2cf61bdb701894cc643"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/3_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "f6c21d9a8052c321258dbc44393844acb8329c115891713a8e03b68ceda17647"
+    },
+    {
+      "path": "/media/v1/panos/a-right/l/2/3_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "2f13d79be30ea6b3e6f57b5490408335ee2af2c748e02458d0d689ee8f78305d"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/0_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "f88f2fb8e897a93105ef62ca822c6981ff1d909ea48c22340011d4ab5cb14ec2"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/0_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "45f2bc41d34f6fbecc01d78003e16a50b43ab6e5d85decdcc959e669b9055306"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/0_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "20690d01ae1d01f7960262a538f4108779ae825e5e03bb011716202076ea2b0c"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/0_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "045fb9658e18e1117557ad442dd26be34feaae7160d85eb21be622fb96b7ed7a"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/1_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "bdb1d3de841722470921e2fa1049bba47136db0888b9b3ade17975d7dcb0e7e9"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/1_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "e8e7386a696ba006bc1bc25be0942d87c9ed40da8aa3c2293852bb1e2ee9432a"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/1_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "d07b4dd61e46fe01aa35cb932854ff5c80a3660ee47d68951667279e73b604a6"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/1_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "030ff4dd01b49fac9737ef2fa224e8c07ffff5e2cca84967c9499b6eb7bc9f05"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/2_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "f1486ade43921a4bcc4a074d357b14e00aa59e68316c9cd4eab290d1005fb14b"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/2_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "64ec8dcd1fdbb1fd57ac77538399714741f19b71e5001e10c050fcdf1a0580d0"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/2_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "de44155634939bfebb445589ed98afa22b0e4d0226a090c5e4fa46be7299250f"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/2_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "5aadecefde5c385e71b199800f157230365fcec3fb2a91c237e3a8e0a069e27a"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/3_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "77a1024531c9663251af4d43fb482d5cd725e46bc029f278ef9e0a2ac038aac3"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/3_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "4787de34182e1b14d2240a3f16814d5263c6d2e7e994e7c055833a0c86171617"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/3_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "741195b00fa62eace3fe8e4d7133a84b8e484589e90afff64ee540d8ddc81ae8"
+    },
+    {
+      "path": "/media/v1/panos/a-right/r/2/3_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "9b23de8027d19e0755146aac9e3a09a632085313207a6e61ce4e774908d5358c"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/0_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "73984ca66d9c2a905e1f68680f718bf720bf3e42b405f2d79619861a80b5b730"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/0_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "80e6b708a96bf96b15f365dcc7a051fe3967518d4e0955aab420d6e05b16d443"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/0_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "908ba476b7b9236287705e8007e80c6bd59be3849a25230ee4a1889f0d3de701"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/0_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "769ce17ef6bbe1fb55d1d79b112b8951de05d44110d6a02d0c400e3edfb3e9ed"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/1_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "534d6371c3a0a670b65ad31f2bf70f7c863342545dfbcd0a6072d33b6983d66d"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/1_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "870e3afd441b50fa16a61948b98952011363dd2d204c8659bddb10d0da147b89"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/1_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "26ac8a3d21d70edaa0553cef9d4b741e59da2e2b9630537265becbcfff58572d"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/1_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "2347aca6e4b3a3a90064885994292ad05a552a9d5d3f2c4aa968ab89f80c5eef"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/2_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "6317cd60099349356f2c9404f2cc2d954bd8ef7e497857b383c55c697cac88b2"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/2_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "14d02ef19782d35dc8abdb27eac58bd7dc85625311ebae6f300be85f3f9eac9a"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/2_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "b7a14f272bf954114768b44c052ed9ea3ba5ac23699ec49452eecb13a83ed2da"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/2_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "630f8274ad4b848f007c6517a3d90be85c3a08696df26ac45e4f8a3affb8326a"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/3_0.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "df7c2aec625a3994e165057c5dee94f0316b9f532aa33e66b28e038f24b1a78e"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/3_1.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "e657e37abfa944823ceef84ee532d089a59bd15d8c111ac8e136c305b6d5d71c"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/3_2.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "00c606454b1309a8089735cece161310da4580d751702fd338d8e2736324b1cc"
+    },
+    {
+      "path": "/media/v1/panos/a-right/u/2/3_3.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "22e8dfba2214b22530e2e4c2b436877087e978ec2bcbef60e683ab9360eb415d"
+    },
+    {
+      "path": "/media/v1/thumbs/a-right.jpg",
+      "source": "panos/A-s-e+1.tiles",
+      "kind": "derived-room",
+      "sha256": "f546072415d5dcb978d32b5950ce7eaf72e1da05c1e57471b21281945ce06764"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/base.webp",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "a1740f32f9ad2a744615b80b104c12bc9af08c7d137fb8e5e315fca82204b394"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/base.webp",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "95364d42c3c94feeaf419a5a0bd7933c9b1441cfbd3f8da75e25511f00c42cb3"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/base.webp",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "01ac24b4e70d6d294758c379e2a87e89ba68206521c0babd2390ac94e8b56bec"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/base.webp",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "b2ec063ad6fac5070f0f25d579cd8d0a06ec4d0d1f139f8670aea2347ad6c724"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/base.webp",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "c280cbab5b59817e115c5ef150a229e71c0818fcf29ddbe93665a241838c783d"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/base.webp",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "9a1c652c3beef490d8c48127a9e938140e570effb1d959f73a24e713a531d38f"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/0_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "bc6775ef6d911bbced1e28839fee7d55f0ac24dec7b26fe5144fe1a2ba2fbb36"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/0_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "1ff200c3d6363540b3311f98a8323db17506a995525dc4cfc6defe956c681309"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/0_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "752200b311e0682bc6ce843e86a4895eac1d6a5881b3cf50b717e8a319373b55"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/0_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "23448d58c20d41cad2bdf9567f85defdb9840fefc5f509e82431c5db7026dddb"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/1_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "2d484a90fb95144badf224ecc1796665612434f3c0c87982bd9e0b780230cb44"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/1_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "740289824182c0f4e17a5c702d0428334ac4e5e9bb46a5627c1b373f4fc138c4"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/1_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "2df40a39a3c67cad8c64db28a18eb3c8d3ebe5dece7e258486099857b5a9d5a3"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/1_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "f8bac3c3987c0e1e8d4a3751248736bf6b4a010bcbbf01fe78021515f64bcec8"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/2_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "d4a66163f38793d5945be283f1ed0024bfe4f1566b9c190148b7f7533203fa24"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/2_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "3008c888b9e62cc87f8e5b133ffc7aa6c13cd0bc4628eb6e4f18419fc2565be9"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/2_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "aad8a5419aff5c2f5ad4a216061d90922a6928606f075d1bffd099b1bc914cb8"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/2_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "f2b409b8fe0197c9d89c32e96631e3824e3c79568a35922c9c5c57fb46067731"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/3_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "65b00b76a8c783fe2f0f31b6452a36063da261c1868d3adafe496b145ed45aac"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/3_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "16743f5c87d4809016cdf450af39abacfa707e80e9adf458df3e1a4f5520586d"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/3_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "bd8f1d840fc4fa40c9b8e9e6dcef74f525a1f653ed0407c116a988efe7030b39"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/b/2/3_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "bd058cf720b81d1b211cb1d92fdf7c927b09509fa0eaf4abb844d4173c05c053"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/0_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "14ad237e2221a4abbc5b25477e459e7b581cbe74da469abb2bc3467d531b10d0"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/0_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "bf42d5bda20321db1c6622041a4c3c59cb5e745a11cb2334761e75cbc1167876"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/0_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "177b989d882d63808545abb053e717a32a83075bc843d425177fe619f9a50a7c"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/0_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "438f8ea515ba494f2631d9aa6330434013b5621f2ca7bd30b3a6ff25a205644d"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/1_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "5f9b884d8f11bbe43a9aa436be8c06ce894b51b15caef305b21258339582b357"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/1_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "90d796ed18df352101c12f52910438d141ce6a929cea726498185f0371c54ebd"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/1_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "ecd379755c4a3e38daec4f71035aa7b6b820f7a00ce9de881865804cfdee4471"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/1_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "3ff4940edb96df4b8a6bfc09b3162e2671ffb5d33ec7345aacc8f39deb898e07"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/2_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "ee0ec772b636b3f48f6d40cdb12c5d0856a8c5587f0e1658effe63b5ba44ae5c"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/2_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "3d2c08c4caf40e01f0a4c2aa4b693a5728d0152ed47bb763d0b5f76f7d3240c8"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/2_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "782295ad8f6d9161f93e90d5a2287cb3429b88d1d113ba54f4ad4b553d5f7992"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/2_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "042620bf7e4d2f13e501cca60d79c4af17fae84c808389f47cff723249a1536e"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/3_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "3b133730c867536f54352b41c88ea86d4c82f415936b94b1f260cae92d331582"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/3_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "cec05f77dfa6ea7be6466907b48074c88f325464f33aa142801ce13d51812a9d"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/3_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "dbe0d679c5c86d72a78ee7602b7f6767313a58e88b74067406f3ba4d096b12c4"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/d/2/3_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "b8f077b478d52836e652607905bcf915b0904a80311869f9ccd772b60fc163ba"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/0_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "c55ca7974b3cbcc497da1a94f5533d223160cae8f1b82f439008c879e3bdaa9b"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/0_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "1f8eb801976ddd129d166c78b148f257a989efe868a6f16f53c7c7c73f3aaddb"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/0_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "70eecb98ed44ee0a497fb9c295d0a152e2e83896127bbaed08b40eabeb86de10"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/0_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "ce2e72b984c3ac1f5530de226f056e98c92234690902df73906b00902111f007"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/1_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "394172519fba33459f332c17d759565915a8883267141a66989b3da7a9d30f9f"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/1_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "fcd02ba35f49a8fdff0212a370de397622663bca6c97f40559174d853d0607b3"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/1_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "76a8e2cab1c07cab50cbad5a3804d5c396f4f01364742b1970702cd2bf6b8185"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/1_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "0ab3ed013f03fac011ee57be68e7fc7213234ca062781f3d6d0e638437321c42"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/2_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "bcd494535660e7b7dd56077971b0f19a7f0b763a14e3a1b2bccf382995e85952"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/2_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "b28f6ecb76f0a5dd6709b40d2f1601423a67f3ebc0c64cf10c5d288ed1c898b9"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/2_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "affbdf06fecd0865804bcca8f8a2fe61cbd9764d8b7d2fac35fd8e415e802755"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/2_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "da5e65b2f39b2f32e007e252d38c15c615e22cbc9d0b8681aeaa954c0765bf6e"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/3_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "54cc75a590c00d043e45f3280ff6b0fec6fddc216fb3d42f61ae157fda7e4edf"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/3_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "d9c6fffc510e196fbfaac9137893e93504166ad107fbb742ee675df2d6e24676"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/3_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "9ac993916e299b937a763d5f9f707fd8b2264abe36081b49792eca82d4636b24"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/f/2/3_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "fd154b81546d99aa22a99eff183705ee340a604c27a222d69f50af6fcb80bab8"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/0_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "10fe25ec2d1944ea3d656fe3d9ca28c2e1cc563bd8ba2ce424c823c2637c3afc"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/0_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "71cf3b2b706ddea762dca4e29c7e5b121e290eb3eaba3f2b0c034931dc761ebe"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/0_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "706d623ef86026c89b6c94a818e83ea86e10375ecf004322882bc25cc497f16b"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/0_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "6034d17c1b2e953cc66e9dfcb6d0108bcda0bcd6b34a71a0b09362eb23ed6b82"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/1_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "c3c9bc56d792249526830fdc585412bc5776642a0c83d9fa48c499de94b78ffb"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/1_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "7ea1cc6d144c42b7765b64b0408686f993a67b7869dfbce6615e4a55f3fcc9c1"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/1_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "20e267f0bafd82d19b6015326b7a785c9a70aa22211104df5aed361831a3d3aa"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/1_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "daee6a70bc380581e65109375a06e2c5fe256038781daa616be23604535300bc"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/2_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "2e8f1ff24c7031c029e29503de0317251e52f245222872ce6ce482de446d46cc"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/2_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "69d6d457f97f8cceab2c27b203080ea1d4f24c706f044790263be79693b72b09"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/2_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "4a9a975f7922f07303c3de2836324b843370f2ce9aed6ab5c3558cbdb6ca34dd"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/2_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "d1c4c71c0247be045bb5eebf0ffedfaa8e0d43d8759793b9d43297341a773c4a"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/3_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "9b9f54624946b0d6c35d6ce6f4b586322579167f109153bdb0dbde8b8893b7b1"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/3_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "59805caa797bdc5c3759315c43d38bdda7612bea918263c1a11e810c011dbcda"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/3_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "099b45f857732c41d9dba50e0251cdc169ee408fec9e38d6e33e0a8a5db37022"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/l/2/3_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "6db3673e09f1960e3338bb20c850f97fa74c3bed7c1a89072ac5eb41181737f1"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/0_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "13109f0ad27e65e952b2a240516f18590ff55db870720d477106405f67d06240"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/0_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "5c8635057bae1a37e1049a581bd8ff7be7e5ca2a54b0efdd607e7fa690c66d30"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/0_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "6db4ae98fb29b2ba996df2496bfa776cd5b7e6bdd5717ef933980fcb8bcdfd18"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/0_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "5249867dcbd6e2d71e3b8c5e200eaa91c59654912fe6fa1104a570e7bd1db46e"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/1_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "01417fa40268abae26118a01f7f7567fddccc006b4db1ae05c2b533e7c179dd9"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/1_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "eb15b3e20f4b2fada2500a879da8f9eade067359dac4c053ceee99f34574b4dc"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/1_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "4fdc55e659f5f615ddb428fc39707586e99c29adb60292200bd64d840286b52e"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/1_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "2065a16fa44aa7d1c0ebe523c9ec5d97bf0caa14ea6c52200e46b0016f7dacbd"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/2_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "5c84b8811b57ba5ec6304f4992559195d3297df3c87be454c9951fc606472dea"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/2_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "96d392731e87c80a960dd3620f9e9e1284398f2cf1cb24e7378d2ba291add55a"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/2_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "0d6f569f980d746d6ac4cdc721bde4b29623931b3aef44f3b3e8e02f9c7e4cb1"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/2_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "c817333082a35c6d37a3c767645457a85286a06d158a674722d9251738b8524d"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/3_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "45a9a8344ae305390e256193015ab5098d9cbd288f3e84908c2bcee56e6d56c1"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/3_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "61c7217867b7022b2be162d4ebeffd4d9f5d876b0282cc4eb6d1af501c5e7e70"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/3_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "ecc386a559e8a114fb377ee5b54dae109c2cd00a26424d9d44677e66a4ac2488"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/r/2/3_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "9333be99f0cbf6a38e829465e2b8b46e30aa043c6e6037d2c0b8f0d615096f61"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/0_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "a8f899386d5a95d3eb7ce42b5950531348d8586c95cb241b7968dcf11b30064f"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/0_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "2ffd331e5817e9215b7b17b8fef4a24b01dee960c0ceae77644120dcd111bdb3"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/0_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "73fcf99fc50a3b8a26cbc3d6c761c4f5f16adcd8d1ec9b5de43c182e2cea3d25"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/0_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "19d1b042774f9620561608c15afda664b47247db036cafc77923bf35eadd3298"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/1_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "167dc278330608fba0f7aea9106070ca83c45e4eb0ef3c1105b34e864bae5576"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/1_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "f3cf64406148e41d16d604f161c9faa27aaf47cc1f444c7eab4ab95f344dbe95"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/1_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "240b5ad09111c5a580b139e9740363e99936824d3a8e6d71888dee74440d2f1e"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/1_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "8c6831ecd5b59cd4e944433c25fdfa37dcb6f83245f7e982b4f7eeeb6b990a3d"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/2_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "f9de6085bc8235898b353bcc1d0fbc81c1865068db9047d3f95c3eef1b6a87cf"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/2_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "668c6f7c3aa8732b5904c9fad03167713582ea0ed75cb8aea1d01460d0ea488e"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/2_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "b0ff776cfba3ce46f77cd7386d2a9682fe8d52815f25aef475734a9c9387b76c"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/2_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "17367d2b2b34fb5b21a748736947cfa12e0a7210ff951e0a75855fbea7e9287a"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/3_0.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "85210c1e77b1760005d7eec27a9657c8d094eb3aa25ba03f048585460eaf8a07"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/3_1.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "fde2016409349698a340f1bfd731fea3e2266b768c0cfae379e64a752f8551dc"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/3_2.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "1940326f87568507f05381df943312575efd63611aac981c6761a687851bf96c"
+    },
+    {
+      "path": "/media/v1/panos/c-entry/u/2/3_3.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "70f3f762a1386d381d26ff807312f6b5c4c4385d477e6c329f3394273ec4bf8e"
+    },
+    {
+      "path": "/media/v1/thumbs/c-entry.jpg",
+      "source": "panos/C-c-s-1.tiles",
+      "kind": "derived-room",
+      "sha256": "3eb9f293ccd330ef17b3481b779d22367153b658681bdbd4449485ba0b8eb27a"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/base.webp",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "1a0f8a5eea97b8ed60ed1c8ba6c924c309a5b48bd6a7f584fbb74154afd6cd9d"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/base.webp",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "f3eef211c71dfc4e8266ed28efa3b3ca0ebdfc5f6a2d6b89587eb86217a6ce86"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/base.webp",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "216964f908d4e49f34547ca947fe23bfdda0da34744d45ad3d2917cc0dfdc762"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/base.webp",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "9aa0fd04b1542a1d81dd23bd60c6852d74c54c1be8bc6828a0d052efde025505"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/base.webp",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "a6f42dfe9be105559f529eb65ece5a7e02bc3eecfa3b0903578ae874ffa5bfc8"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/base.webp",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "d975a91131f4f1bf25d77c1e83293c37d4c79d7d05d00a18d829faf6fa1b2159"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/0_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "330c4a676241ad58cf13be7c26498379b0d9992808160dcc310a8a8d899168d9"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/0_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "efa512ec93f1e8bda6cd638bb6816eacf2628159412c7baa2f4aeb8166566371"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/0_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "67827e55f46b93e4ea9da769e204fe9bd7888ca0c28f7d30e3ba6529fad58824"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/0_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "a058e0efad7442e4b6ef617e1056c83d1e1a56422f94a38bc6ab0d51d3c1ab0d"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/1_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "7ae08b57862a2b6da1eec9945ad765f5e7e610e6e8b6b31b41996952c0be5c26"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/1_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "cfac2ce03689c040f0d12911c5de9f1b9f28610388b265e02cda976e79b02ebf"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/1_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "e4c5b75c6664c9de929b692a0b605d9bb4469920f12bb9fa575160677679a0c2"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/1_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "3b9e255d0125409e9520634441b0833529d9fe2f7fc57a68d7a1639ca5e9e67a"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/2_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "6f0892ff032e6f4ad57c915ec40bceebd9c31bae2ce2a2501d22e6502894564a"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/2_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "f30a4c544bf352b33b4d44527d8b91c123ea4d042b963a55353aeb0536f8b0ce"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/2_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "8e816c50f175e1d6c66e5c33fa4c8a12e8cd1d52df4545cd5a0d88aa8645d408"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/2_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "5e6e3c1c85c3f9bac9ecfd08c3448a2c1c398b1ba246a117f19bfc8be2915ecf"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/3_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "34fe01df60408fce57d5f7fe561e809c0f301e94b25db5f66f8d0b7c545989a4"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/3_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "26e30708ba686f9975227bd4bee6b18de05099bc3cec3da64bd0631ba6d4624a"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/3_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "73f3a1a8de256e40dbcd7f122c82a4b65c8581f1f3c2f1796351cb6789657908"
+    },
+    {
+      "path": "/media/v1/panos/c-center/b/2/3_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "a7490e88580f87e5fb774ced0ff9640bc74e99ba6c162488acc003ba3f8bea80"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/0_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "f31a1573583d3966ab0d1471cad72dcd44a1de80ed1882c61d0a46ce070f46ad"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/0_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "28cb301b433b2893cd2689105665b984e07c7720fdf6be7db9f4c4e439fc7e1b"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/0_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "0739e51134599a6c5d988479a830719f66d87bc10cbda369e68cb83b490593b6"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/0_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "b0098a8969a5301da5d20e2ae251f7285131d43b5616512b33b56b27ca3b75e6"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/1_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "4f5126025ec27d4a24d9dacb9d2872116bfaa6d1981ba81a3a7133615c492810"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/1_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "acf4217775319c741a2cc5fb667355f2efade997faf536f4f75ffc6ab63b039c"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/1_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "0ff52ffe1f47c296a630e191e04f89a2ff019e073550714cebb2e6ba77250cba"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/1_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "dfc4222378c2cfe938d6f24d515c7a6d1e6d002047fe30b62a564a3ccd35f1d8"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/2_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "652260bc09cec72f5b5df759e379ad98f870c70accfc610d86a0587e78fda424"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/2_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "fc79fd1537adf5aa3c3ad05bf43a0f6e8df6aad3002c7329ad6c1b02a1cf9183"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/2_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "e0b27702a6f936dadcb343ae80a02b3fdfb1927305f1ba75dfff4e4af7837506"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/2_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "f4bfdde399d8fbe625864d38968810d531048de464c416208d884392670548f4"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/3_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "e0a4e4b1827381dc42bba8fbc7a8621fd7d704410c2bb60022b29ebfb9f999e0"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/3_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "c0fcb84179f2b728357a44748af46c5663cdbb35716a3c897339f28295602fbc"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/3_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "cced4cb4958f4c76c79c3b5e65afa1dbb4a1b1222a453c9f629a6a5f052f028a"
+    },
+    {
+      "path": "/media/v1/panos/c-center/d/2/3_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "bb56187172eca71251d6697afb9b758b90524ab4e917873eb8739103e2ea84d4"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/0_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "7c83f8f32b0787cf9ff2b81eb124ed7464a2d86424bece075349996c641937d3"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/0_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "4399794021f005559cbf9c3123667fe5425998c7d85cc8abb8711ada5daaad60"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/0_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "54c394dfcb1cba0028f9b69df8e319424c86f910cf7fb646d18856d9ab88f2d7"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/0_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "c65a87a91b9d704818bae6c02dedc960a28258b9c590d0e3ca446875e6a9f468"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/1_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "109182e42d96dc81eb7bcaf849a74f84352475a8e97452f639b59ed42008e030"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/1_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "73c5f5010388073bc4fd4edb4c572bec20b6ebbf720a083638cbdfe90abed352"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/1_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "0ba10c7ae5a6eb510949364da7423d4fd678ae47b38dff53180b32cb9e6df12b"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/1_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "e8b705159d0c08e3f563540c17365e96e67dccd64de13b1095d88038a15c159f"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/2_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "94844952563dd63369a1ff5479d18d2bb1818e467a545830b925db03219139f3"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/2_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "f9844d7f3352aefedc2eabf11c2e05e78c3699db3d4eba31de82b032342733b1"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/2_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "63054622e5d77fa00e80854aaeb8552cb85d9fc3d53e700bd7a6132442e2b49b"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/2_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "009a1152c768973502abf5a83fde68201995c8db995963b04593712fbe156233"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/3_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "2deb22c3e905b210ac8ed0ef878eb1000e9762fa1229a1f7fc33883a96184748"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/3_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "df1267f478081329dfe189e9013025682489279cacd838cff15931ee8949ae75"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/3_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "b44a7ee665af84ce09c541236fa25584878c1de491d19da00a79c08c881e660c"
+    },
+    {
+      "path": "/media/v1/panos/c-center/f/2/3_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "3949e61da24a0cb358542dc221c9307584a3a14b1152e065acfc1cd9719e11ff"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/0_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "8843c99c90e8d0f2b823be3d6b4d1e1201d2151b83c7f5c6137013f5ca93f5c1"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/0_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "aa21e6e545a910aa1738f000555281bad94885358acd741944f878a2f8bb07fd"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/0_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "c1589552801f0e5c273a808fbba59e1a18ea1488b8a7c9b6cb98518c5c80e0bc"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/0_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "30a24561dc1914b1184ca8a776a0bff0c168c0305c7cfb3e053001ef451a5655"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/1_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "84ae1bb13c3b1df2067e4b34e0416e96602e381866fbd0c18d28dd1da2b2b762"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/1_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "7222d5c31d4e3678387aa92b06eb59f92336e49195b15d97d95f7602cfae842b"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/1_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "e2d5517b6d277f269fae287929bcc70b110baad4bd1a522693b0d731ffc38515"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/1_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "7e4d18d885b5dee3e10326e4c97a03fcf945b1c82341e9e07a59328077a99deb"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/2_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "152351e00c8b62575948f4aa20409e0426d08cd922d343f8d2110c707dd53892"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/2_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "8f30dd27291edd9e6c9d4e81c238d91cca215c33adf1fde45722f134c4b276f9"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/2_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "de14a811115c9ee87157bdacb4864e706d98f1ebb95dcf60ff8c1bbae71b2e6c"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/2_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "12f7a78ea19ecf555fd6bd1c9348cc25623bbdfe118e6d20339657fb44f2f2f9"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/3_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "8818acabd160e377d92a31cabf1fd5a81174e6bda587404c51cae9d1bd838a67"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/3_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "012b45b824ab4a3143de4424702a479853ec62d3952247bd62758c6da4b39013"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/3_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "67584c82e3d51b7b23e24a87e2a7fae74e8a1ec7534cd061f43e7a92901bfc9a"
+    },
+    {
+      "path": "/media/v1/panos/c-center/l/2/3_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "1716847d576e6a3d72b97cedc33045095e7e81554a3b0a4ecf25fb25bd8f1236"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/0_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "a1a2600258a8e00598ad0993bbc5706599f99abe6bd03fcd9ceca6178eda0bc5"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/0_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "45a9a52fbbfd9e6f48c5408d9f2a9c4cfeb42b328988554a9b55681759f19d93"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/0_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "f77e66803e052d97b2f7d86f7d045a25d13929ebf859a9c9b0511454457c78bf"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/0_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "6b2bab0d3d88baf0224ee075b6cc22f119b419db916955f92051cb49fcccebd7"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/1_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "413dacc43fbe3af1220c9e301a33f67a85a52ccc8654043c7969cc8602fb2339"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/1_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "78f336127ce3b7b7e25f0f0c1fe84cc1b5a83bc3769338c6a5bb681a9dfecd21"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/1_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "5e8edaf826039140b7d9208549a862964c2857a485e2f80ed0975f8d266ea300"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/1_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "81a14055527a264e6f60b17a8723da252640a2a552e2360d01304ed3aa6f8732"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/2_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "8bb5374ced055d915a692650d6052a60633b325b10b25186a557b6a126ea9689"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/2_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "81591353b562a47ebe95dd12bc37001dcaf7850d92b5a0dddd9edfa3082f3179"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/2_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "7447facc76111f971f4ace7366bd16ba6b0dadbb0eba1533df008c78c8ef6315"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/2_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "f868087fa8ad165b42350cd67b8069568ae81d12559a872ce91eb6299847410e"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/3_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "2287ec6e68703fb22e75065d6a6845c9beb398768e2331c0730cb218ad6180bd"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/3_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "2d929d4735b4899bd6784d9abd27c94f257b78497b1444a9fea5e008f35ae6bc"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/3_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "0f50d4fafef87d6d574367d21fdaee222f7de888932bee251f0826217188b72c"
+    },
+    {
+      "path": "/media/v1/panos/c-center/r/2/3_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "4b6fea4123a7494804cb72c36fc9d551179d1596687b44885eb9b70e047d543c"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/0_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "721b5ce481c4d6ae5d78e9e78ef951f9c4b047c24e016b9330928459fecd7e59"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/0_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "dd31779eb80c818d7a513d69b8b1167bab41db6d1fc1e6b6461ac8626a247362"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/0_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "bfacf2cc5e6a14a1a8a239eca206f0e3df4148359e463733e20cc3504e787b4a"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/0_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "0d2c5c72d16edcb04170a66421b28023981849efef196f22ae5bebcc1f1fb9f0"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/1_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "6fe1704926b9e669ca2fea6c6c87e3e2c70fcacfe22feb198d3e09b776be5751"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/1_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "e169b9c27d1b5cffc23011efb6a60f6bf108c594e6bd68bfc4cb5e51b647796e"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/1_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "ea4b68f8625193f95e2d6ce03c9ceb7f6b5b1cc172165a574eb0784f5c0ed569"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/1_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "60faf5fef7cb4515c3a18eaf4e46b364219f890d2f75224bea08eb7133dcb1ea"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/2_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "4f2795bdecc5751605e2fd3048e1f63642055a8800b119b90f53fa76d4431d24"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/2_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "8d2a62bb19d288b195040405f632b26639421bcf4b6de50e382eea81d6a642d4"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/2_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "912417d6ff6d4ea696954e87cf58d542933427543d46d9b5a8b84fa38a1da9b3"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/2_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "649a0ce8ae35c492b821afbee5ebb43f1864ee96015e1a6eaf0d4afbff8a58ee"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/3_0.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "ce22424e31f6ead7c7af58d8f612a85099466b392116be88f9fa0728203f9892"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/3_1.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "2b0120ca874a72a7e000895d47693d9c7a0d6bf6f18dcffd2a60d1d64ef681d6"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/3_2.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "c9e4b1786bbe75f007561a86f0aa0f0a301e6f811ad7713b5027e6d66a785431"
+    },
+    {
+      "path": "/media/v1/panos/c-center/u/2/3_3.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "761f368c85aa0a75f21c75b1b648cb03caf305cd5bdfc91eb1d1bf53c78c5a11"
+    },
+    {
+      "path": "/media/v1/thumbs/c-center.jpg",
+      "source": "panos/C-c-s-0.tiles",
+      "kind": "derived-room",
+      "sha256": "2547191ca12377835925534bfa505431ce1716cc242b3a7fff20d757b10a46f9"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/base.webp",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "5d733e4470147af6c789dd290e4e0db29bcaa747e3e3bf23197a79def13ac486"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/base.webp",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "e674361a3b8d2fda9ccfb2d371151606764f4063db1744cd45cae20feebde9e8"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/base.webp",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "92de0d2dc7342ddd75b83420e2d1d28d23923ddac06c9d7489b74bcf062a97fb"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/base.webp",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "3671207d99308e3fee42305e5c64815dc073bc7314451b06d06b1ae0be749478"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/base.webp",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "debad4198ed558752ea5d487b17ccfa74995d0302c5bb0cf80a093f195c312aa"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/base.webp",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "2230f97f3f703f663a96b93ebce9530402209c4e1a72aa487d179ca1bd09ef5d"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/0_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "f2e71eaaffc83db4b9ff0e9884ee84ca544aef9a98dff0e22ba5297000f93b25"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/0_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "a354e0b5f26fdea41594e98ccbe8e484c78e4476b8706241265ea65c470ae96d"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/0_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "248407da91262bc728308de9f26b130d92eb81bd40c6ffa0423fe72eb5f5f625"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/0_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "fddf639e4f30b95ebfce7f0858645d8faf2191e1b84e1bd5348da29c31337cdd"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/1_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "ffb67e1d68c156b5e88c8bbf3860d65ac8c670cc4aa90e43cb29687b6f121eaf"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/1_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "cb7b620bf7c039c20b59fc2d07628b9aabd88619d9622c4536a5f2e1a24b5c1d"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/1_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "97a593834447386e2458486002c8e37199a8df6a52bdd4d5702b73d136034598"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/1_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "4833bc4bbe6e88298beac5b5b6e032bcda85a56613d0ee1e043e677f0863a5b7"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/2_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "352d49d23f736192b5ee44ba447de365b0380c0f3f488730a5565f302c6a86c5"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/2_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "9172331a4b1b469a1ccb6743080636878b1f60c85f09b25687815e910e4db54a"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/2_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "713d0684d0f16a72d0d4a6eb4f16fe197e82ca95c1177048b90ca19e4666e7fb"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/2_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "415e50f46a2060dc6d9129e264d82ae2beed4297b4f70a82a686b57f3f2fef4b"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/3_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "8bf7b94ecea155b21a1cbecfdec20e97da5c211428c2a4b5d50ce8ba458f25c6"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/3_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "f84f3438a5bdc6d239d0655b1108c678a733eb213da92f36aab1414f1cb4e33a"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/3_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "c494ea9986c4b2bf03a606f28e8e669408111f2a56f9dbbca1bb3ddc7bac3113"
+    },
+    {
+      "path": "/media/v1/panos/c-right/b/2/3_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "47ad9ad20ee45850a4071a1c71cac0e658404c8c440c9679581b375f7ebe4a60"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/0_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "a9d9ead2e584ce515aa8bc05180391566f8e8b5652f7fc811d0d77e4c730566f"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/0_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "0150d7e578a880993a7429c2fc1d478b44d60d5b3dbfa28b0f01d402fec914dd"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/0_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "dbab41c4c4fd81438ba431ab02645d5bb0bec43381f26f6b2ea1979bdded4274"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/0_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "0534a4fbf3b22980ee4939f506ebb332dcd0fc0289e07631dec2d66052d2bc13"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/1_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "cd7e5544c15f1a02f8818b56755d51b30566d9d35ea4950c11b7620c3347ed65"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/1_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "6b777408e1fccdc5431d4782ae281532acd031104975d4ed1feae5cdbe3e5959"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/1_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "bac3e074e1cff09b143d526f0d80f17f1ab5a08f5900e91e360ca34cf5d5520b"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/1_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "072b8e4af420acb89b8a9aad8ee7f027d54cdd2e6e28df7561558014c19bbf58"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/2_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "6ba09684c22d22d01a58a56472e570cbae7b365b71f6d9df48ae06673b472373"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/2_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "cdd74330a0e1ad08d07dc2597718bffc5464b58deec6428bbfad5d1f01b6a772"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/2_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "bd709b89ed83361f866363e9f7a7157df99d465fcc8c777386cb5f1d5be25807"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/2_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "a12af61717c560d0ac6fb33f0bf594d7fb392cbec0f4c8c0fb088e2bfa21b1a5"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/3_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "ec7e564692401cb0b47bdcec3f22ca58c0f28ab653c6cfb45c545a5e6863fc42"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/3_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "a594960416df18bfce23872a373e419d0ddb04bcf0510d9f0a7adca5c1afb9eb"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/3_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "49887c2b70e03dc9cedc55deb9340a295118ad32feba05e6f07aa060e2321948"
+    },
+    {
+      "path": "/media/v1/panos/c-right/d/2/3_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "e6829f2772388cdfefa3be45f560e3c47b43e4f324c0224431dd917a9d079433"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/0_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "a65bc459d2831b38a33ef2f70ed6e98873246249340dea80289745531d8d3010"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/0_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "94a5390e4fb2f0fac1ae2738fab653eaaf46e05e2c261937f64b4b7f5f7b4850"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/0_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "e1046b073657ac97381d0077b58a7c3da3855b17df8d4bfe4ab155524f27d6cc"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/0_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "adcfd1390900ad36462c86513c961f5d3ae3e3c0a5960d9fe9ed0c3850465494"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/1_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "70eb2bb0bac5589baf4ba8306e20fd1ae843af01b250aaee9608b11cdf0a1a4c"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/1_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "10febfd3827f50351b193b5a3f69138518c8e58676898e051da2ddb65e5122e8"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/1_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "ddc1249ff252fb101f37b18b655f0b88856e18b53792448861dd1e3c8b66fdd4"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/1_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "6ef7016ac222db9bf4daa0f0838b611adc5a93d94effa90042627f13f6bfbe47"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/2_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "954641514df8ea467558f472ba4842bf73d0ce5d190150eeb0a09390b9dfed4b"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/2_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "aacd40ab9711b06da2c3d20457c2f1a04b75e75170cdcd8a88251e9542d1f76e"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/2_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "c290ab33a1783636484ca43695eb60cf45dcacf12facf92a9596d2713edb6f4d"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/2_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "465eac427f4c06881ea1e5b0c052f51c376fa6cbd53c2539c6138eb3ec8c1e35"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/3_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "2aabe84204a5fbe6dd133566dc156570c148a997f5e8c5702e4e2a34fc13ff4f"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/3_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "46c9469863dec61e45b9a2760eb11f516b08732f7375d1c8decbe16a421fa722"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/3_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "227bdb3324c4a8c17395c2160c67e6f978e45e86039f86748ff3c147709254d3"
+    },
+    {
+      "path": "/media/v1/panos/c-right/f/2/3_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "544a6faa062bc957f03b52edd482cd6c265be651a2ebf32e8e42416377afbd03"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/0_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "a6613d7389ce2f257fe1e066d309dbcb4c22ebb0e2ce82ab9e1692e9a1493c5b"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/0_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "72ce954747773d905fc5014aeff7c2c4e88bc8034124487998239de7f1acf627"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/0_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "9822cea1c7e3920e1e4f062c5d8625ca1ba096845472a83aa38f23a282a1274c"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/0_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "36c0f2f36627493b6fcecc553c58ac41abd67b98729d1e5688affa9ef10638b1"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/1_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "158d300979ec2ff4e622db8df1717547f27f3ce212d610b2079e19fbaa81fd9d"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/1_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "5e60fc5473b91fd92c7701ff43bd0a91d7bd8eeb15d19653fb855f9af3e8d18b"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/1_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "cd6ebf050aa186da32b4e3ebbf1bfc2160d67d9aba78cd1b74258a591ad7dfa9"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/1_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "1fbe80cd89da67ea1f876d065ec29c9175042ab4b35a2954f6f17e7d57fbe734"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/2_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "098efd2e7d680e8af01b5865667c144947e4f3a30a05d4063ba58c6e20beab6c"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/2_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "14dfbefa7a62367584076ac604146e6647431b5b11b7f65d3301d4eab8c3ef81"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/2_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "4f5121212f3552d86d0806cc0948d844974ade4da169951227c9ddb7408fc3b7"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/2_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "6f57c2842e54ad531685bfdb5cf1424d2e79ec11d9ce7086451e0d148b70e7ce"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/3_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "e76bf0ba1fc15631435e1683ea8a28d7b2fc431bd69e531040bbda2fa6466333"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/3_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "a78c19177fa21fb57131d5efbce9c5667c49d6be78c7b5cde0096ef828862811"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/3_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "59b7baec632e3c5930de53c81c9facd0d99751b64c68b11bbd3233f5760be5f2"
+    },
+    {
+      "path": "/media/v1/panos/c-right/l/2/3_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "3bd8602f5a37a3dc257d16eb7edcb2eb234beeccf6748d88d08fd62ea361c05a"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/0_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "f5f35a291d45b26bb5acfd2e0d4f81f6c3f40051f12abdeb1ceab64ce403113c"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/0_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "a0f147c2dcfa030aa34730e506cdd021b0ee53f5ea3ef650d70301259598e59c"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/0_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "b9570ee61e6a1a6d9b392f7db1bb9b4b0538c6165a001a9fcd50aed9cb949275"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/0_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "7b044fd79226ccb106d03c49a336f90291b39ba268199259f9a6c0310e99aa06"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/1_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "71743cf14ccae1d476e0cb817fa34878869eaa4113b6500f5c5a1a3ae40f479d"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/1_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "861ddbfeaeacd125583a477bfc6944f776308f397e828ad78785a3b301028dc7"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/1_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "03f1b7cf22ac4b97a58b95fc55deb0c6d6baf0dd75880c3607713460c494bba9"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/1_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "a4c28c3439e5cc319f1e261804723a7f856c1c0c633415156e42fc8b5ebf8c27"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/2_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "0a5aa30c349e18ed9ee123d6fa34761f3dbb89959d93d56965c1dfd5b12188d3"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/2_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "cf23542e5cde7fbacee9157c6c906e1587b03fe38c6574e0eb748ab56599966e"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/2_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "d7df452ce35dbd8a30a7d8e7569359f4d4c5605e90c0d58c4f17aa543bf74322"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/2_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "2b91556738295a20be24f3c268b214719fce52d9ef8ac8063b5a27b2c5315798"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/3_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "310909a6336b01c4e4cdba3e11e536e8ad9f663ee40c0746b9705f1dbc922081"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/3_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "ed3af22e1935d3ab26c8b23950fc7f72868fe82317062b9bd376fff522a43a71"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/3_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "ef4f29f0a3b470b970e77cf59a5e053de18e98c7ea2f374a04f9280eaa9431a2"
+    },
+    {
+      "path": "/media/v1/panos/c-right/r/2/3_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "01eaa64263db95ac87137f325128b1853dcb12aa92bd1ed5db6634e42442769e"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/0_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "9dcd8e711b3fb2c3b0e933a769b1f804d9703bbbba2de6aefcc33261d9fcc004"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/0_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "4e1b84c185a95f2e8b1cd9fe273f1458e7b13e159496809af2138c827ca889e7"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/0_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "7afa5933f99ec746d3977f14c6138f3850c48624f6068f3d610b6a0e8b488c00"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/0_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "ba68bf43f79b69f88c9b60a27e6c1a654355a599100305a454964f46f2ac6875"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/1_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "997097456e28d7df9cd2cfbf1cd822f7fe83691d0724a9abb075ab3fb1cb7b8c"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/1_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "7e585cd33a4da2a47ef8995e8ed226f6c7ba2cfbb7b0a25d68c63d732434df3e"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/1_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "f2e6bce91a1083e666ff79ef45a9d134ea9fb82c26637dc4b08a680ddc129a2e"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/1_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "573cea52ae31289f6fe601e0064b0c980af45ea225e65e267556099a526b2972"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/2_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "28759fafff84c85c9652fdd0bf76226b4528186e5a41cd6ff485d5e86e7b452c"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/2_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "1c53feda9df755fecc3f53b2147eb63256dd51dcb17ffdf0f0dab628a27ea5c4"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/2_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "f755879ef2925671379045dfa6d7a1999f8df00eaa63a85d7c81944d54026857"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/2_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "579b45719779c16dfd64e844c9ce1c716cf318a97bdd08047a47472629ce55de"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/3_0.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "6a17f79fd94f7a298238b32a488b641cafb64ae2b2c7e426e55f90c07e8708c2"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/3_1.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "e135ce8f3418d01ebb6d58822b439615c9a2aaeff69f92788c4df19a5edddc0c"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/3_2.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "63fb62191caa610afdd57edc99c2dada2485e5b3760b875576ccc1b788075fc6"
+    },
+    {
+      "path": "/media/v1/panos/c-right/u/2/3_3.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "871671d32bd6621ffdcea1946a687b57c1ae36024ec11ade597412a67bcdf0b3"
+    },
+    {
+      "path": "/media/v1/thumbs/c-right.jpg",
+      "source": "panos/C-s-e+1.tiles + tools/assets/c-right-portal.png",
+      "kind": "derived-room",
+      "sha256": "0ced64c6d5b346dcc5647fb2a3285911a05a6cfdb400c9b87eb79f6305da767c"
+    },
+    {
+      "path": "/media/v1/panos/e-entry/b/base.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "9338162bfd61ec08fb1d19d3af23c00ecd41e13db5b11c50e9ed188c64f865bb"
+    },
+    {
+      "path": "/media/v1/panos/e-entry/d/base.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "650d17d06ac29d6b42918963d10a1906b3cd0538db645482b9ca5e82a540590f"
+    },
+    {
+      "path": "/media/v1/panos/e-entry/f/base.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "fc2b4d4bec2bb73f5dddfefcf49891a7fba58bc4ef2c49542cd4515513c123de"
+    },
+    {
+      "path": "/media/v1/panos/e-entry/l/base.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "9fcacec4a3a58c6f608fdd3b38254396ac0a0b023e2051226d9143664510e906"
+    },
+    {
+      "path": "/media/v1/panos/e-entry/r/base.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "5e6c31d4c02fda0dd73b7378eaa11b08f0b41476fe926cc7ccdae5c352f06081"
+    },
+    {
+      "path": "/media/v1/panos/e-entry/u/base.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "9cede3ca813e3b7b17208ebc9a042f33e15d49d915a10c7244a2c5b3d6865ec5"
+    },
+    {
+      "path": "/media/v1/panos/e-entry/b/1/0_0.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "9338162bfd61ec08fb1d19d3af23c00ecd41e13db5b11c50e9ed188c64f865bb"
+    },
+    {
+      "path": "/media/v1/panos/e-entry/d/1/0_0.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "650d17d06ac29d6b42918963d10a1906b3cd0538db645482b9ca5e82a540590f"
+    },
+    {
+      "path": "/media/v1/panos/e-entry/f/1/0_0.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "fc2b4d4bec2bb73f5dddfefcf49891a7fba58bc4ef2c49542cd4515513c123de"
+    },
+    {
+      "path": "/media/v1/panos/e-entry/l/1/0_0.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "9fcacec4a3a58c6f608fdd3b38254396ac0a0b023e2051226d9143664510e906"
+    },
+    {
+      "path": "/media/v1/panos/e-entry/r/1/0_0.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "5e6c31d4c02fda0dd73b7378eaa11b08f0b41476fe926cc7ccdae5c352f06081"
+    },
+    {
+      "path": "/media/v1/panos/e-entry/u/1/0_0.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "9cede3ca813e3b7b17208ebc9a042f33e15d49d915a10c7244a2c5b3d6865ec5"
+    },
+    {
+      "path": "/media/v1/thumbs/e-entry.jpg",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "8d935c1e7d1193331228f64b6d98b6914f055d19c5a6ad5496e4cdaa08caa7d1"
+    },
+    {
+      "path": "/media/v1/panos/e-center/b/base.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "18394caf4342c074a0fac627cf79493a09d5a549acfa2b35826e2a41caecc3ed"
+    },
+    {
+      "path": "/media/v1/panos/e-center/d/base.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "95310562f3ac229a13819eca01973a97717a6db24f36051bc6ce403b10638772"
+    },
+    {
+      "path": "/media/v1/panos/e-center/f/base.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "df787a6551bc7295b97ef54b033a36b718b783a608f0d3181a21672aff3aade5"
+    },
+    {
+      "path": "/media/v1/panos/e-center/l/base.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "2ef2b5dcfcc64c652e9f2a7498b032bb5b04ad20a031269dbec3f6b8f1c296fc"
+    },
+    {
+      "path": "/media/v1/panos/e-center/r/base.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "c7531c9519edc22ecf9ede1b3c24912e2a7d541935cb669ee7144b5acc7e9bea"
+    },
+    {
+      "path": "/media/v1/panos/e-center/u/base.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "62546333c5d95bdadf4d931a39e1c67fe1675759655b10f8419ff1cd5ffeb49f"
+    },
+    {
+      "path": "/media/v1/panos/e-center/b/1/0_0.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "18394caf4342c074a0fac627cf79493a09d5a549acfa2b35826e2a41caecc3ed"
+    },
+    {
+      "path": "/media/v1/panos/e-center/d/1/0_0.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "95310562f3ac229a13819eca01973a97717a6db24f36051bc6ce403b10638772"
+    },
+    {
+      "path": "/media/v1/panos/e-center/f/1/0_0.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "df787a6551bc7295b97ef54b033a36b718b783a608f0d3181a21672aff3aade5"
+    },
+    {
+      "path": "/media/v1/panos/e-center/l/1/0_0.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "2ef2b5dcfcc64c652e9f2a7498b032bb5b04ad20a031269dbec3f6b8f1c296fc"
+    },
+    {
+      "path": "/media/v1/panos/e-center/r/1/0_0.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "c7531c9519edc22ecf9ede1b3c24912e2a7d541935cb669ee7144b5acc7e9bea"
+    },
+    {
+      "path": "/media/v1/panos/e-center/u/1/0_0.webp",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "62546333c5d95bdadf4d931a39e1c67fe1675759655b10f8419ff1cd5ffeb49f"
+    },
+    {
+      "path": "/media/v1/thumbs/e-center.jpg",
+      "source": "tools/render_e_room.html",
+      "kind": "derived-room",
+      "sha256": "3850a17da42fc29b69edea4dace6a70e8f00cfd3b9bee5b757935eadfd00014b"
     }
   ],
   "rulings": [
     "Scene initial views are PoC framing.",
     "Only photo polygon indices 0 and 1 from a2_111.xml retained; remaining links use list_a02_action.xml and current public tour.",
     "No encrypted runtime or plugins are shipped.",
-    "Main history panel bounds are calibrated web geometry; original main XML unavailable."
+    "Main tour.xml was found editable in the delivered ZIP; C transition values are taken from it.",
+    "E room is a proposed extension: two consistent rendered viewpoints, not delivered historical footage."
   ]
 }
