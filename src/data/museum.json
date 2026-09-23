@@ -1,0 +1,801 @@
+{
+  "scenes": [
+    {
+      "id": "scene_f-c-0",
+      "key": "lobby",
+      "title": "메인 로비",
+      "label": "MAIN LOBBY",
+      "subtitle": "영락의 이야기가 시작되는 곳",
+      "ath": 0,
+      "atv": 0,
+      "fov": 100,
+      "map": {
+        "x": 49.85574148874783,
+        "y": 78.82882882882883,
+        "heading": 179.5
+      },
+      "viewSource": "PoC framing, not original view metadata",
+      "thumb": "/media/v1/thumbs/lobby.jpg"
+    },
+    {
+      "id": "scene_a-s-0",
+      "key": "a-entry",
+      "title": "영락교회 성장 및 발전",
+      "label": "A · INTRODUCTION",
+      "subtitle": "한 공동체의 믿음이 시대를 만나다",
+      "ath": 0,
+      "atv": 0,
+      "fov": 95,
+      "map": {
+        "x": 49.971148297749565,
+        "y": 45.090090090090094,
+        "heading": 179.5
+      },
+      "viewSource": "PoC framing, not original view metadata",
+      "thumb": "/media/v1/thumbs/a-entry.jpg"
+    },
+    {
+      "id": "scene_a-s-w-1+",
+      "key": "a-history",
+      "title": "복음의 문이 열리다",
+      "label": "A · 01 / 1945년 이전",
+      "subtitle": "한국교회의 뿌리와 신앙공동체의 시작",
+      "ath": 180,
+      "atv": 0,
+      "fov": 95,
+      "map": {
+        "x": 42.18118869013272,
+        "y": 40.22522522522522,
+        "heading": 179.51
+      },
+      "viewSource": "PoC framing, not original view metadata",
+      "thumb": "/media/v1/thumbs/a-history.jpg"
+    }
+  ],
+  "panels": [
+    {
+      "name": "map_8",
+      "style": "pannel",
+      "url": "%FIRSTXML%/img/sector_a1_03a.png",
+      "alpha": "0.6",
+      "ath": "143.5531",
+      "atv": "2.0152",
+      "width": "145.8",
+      "height": "prop",
+      "rx": "3.14",
+      "ry": "-26.32",
+      "edge": "bottom",
+      "id": "scene_a-s-0",
+      "image": "/media/v1/panels/sector_a1_03a.png",
+      "source": "pannel.xml"
+    },
+    {
+      "name": "pptspot_17",
+      "style": "pannel",
+      "url": "%FIRSTXML%/images/sector_a1_03bs.png",
+      "alpha": "0.6",
+      "ath": "30.613",
+      "atv": "1.4175",
+      "width": "29.86",
+      "height": "prop",
+      "rx": "-3.58",
+      "ry": "44.16",
+      "edge": "bottom",
+      "title": "hotspot_17",
+      "id": "scene_f-c-0",
+      "image": "/media/v1/panels/sector_a1_03bs.png",
+      "source": "pannel.xml"
+    },
+    {
+      "name": "tvspot_34",
+      "style": "pannel|video04",
+      "handcursor": "true",
+      "url": "%FIRSTXML%/images/tv4.jpg",
+      "ath": "-3.2633",
+      "atv": "1.1135",
+      "width": "33.68",
+      "height": "prop",
+      "rx": "1.46",
+      "ry": "15.88",
+      "edge": "lefttop",
+      "title": "hotspot_34",
+      "id": "scene_a-s-w-1+",
+      "image": "/media/v1/panels/tv4.jpg",
+      "source": "pannel.xml"
+    },
+    {
+      "name": "pannelspot_1",
+      "style": "pannel3",
+      "url": "%FIRSTXML%/images/zone_info_a.png",
+      "ath": "29.6403",
+      "atv": "-15.9389",
+      "width": "134.22",
+      "height": "prop",
+      "rx": "-21.96",
+      "ry": "-23.7",
+      "edge": "lefttop",
+      "title": "hotspot_1",
+      "id": "scene_a-s-0",
+      "image": "/media/v1/panels/zone_info_a.png",
+      "source": "pannel.xml"
+    },
+    {
+      "name": "pannelspot_14",
+      "style": "pannel3",
+      "url": "%FIRSTXML%/images/zone_info_a.png",
+      "ath": "3.8361",
+      "atv": "-2.1742",
+      "width": "17.92",
+      "height": "prop",
+      "rx": "-3.42",
+      "ry": "-20.28",
+      "edge": "lefttop",
+      "title": "hotspot_14",
+      "id": "scene_f-c-0",
+      "image": "/media/v1/panels/zone_info_a.png",
+      "source": "pannel.xml"
+    },
+    {
+      "name": "pannelspot_15",
+      "style": "pannel3",
+      "url": "%FIRSTXML%/images/zone_info_c.png",
+      "ath": "66.539",
+      "atv": "-7.7515",
+      "width": "86.78",
+      "height": "prop",
+      "rx": "-8.98",
+      "ry": "-67.72",
+      "edge": "lefttop",
+      "title": "hotspot_15",
+      "id": "scene_a-s-0",
+      "image": "/media/v1/panels/zone_info_c.png",
+      "source": "pannel.xml"
+    },
+    {
+      "name": "pannelspot_24",
+      "style": "pannel3",
+      "url": "%FIRSTXML%/images/zone_info_d.png",
+      "ath": "-43.2751",
+      "atv": "-13.5992",
+      "width": "132.36",
+      "height": "prop",
+      "rx": "-14.3",
+      "ry": "43.44",
+      "edge": "lefttop",
+      "title": "hotspot_24",
+      "id": "scene_a-s-0",
+      "image": "/media/v1/panels/zone_info_d.png",
+      "source": "pannel.xml"
+    },
+    {
+      "name": "pannelspot_36",
+      "style": "pannel3",
+      "url": "%FIRSTXML%/images/zone_info_d.png",
+      "ath": "-5.6665",
+      "atv": "-2.0313",
+      "width": "18.36",
+      "height": "prop",
+      "rx": "0.98",
+      "ry": "-8.58",
+      "edge": "lefttop",
+      "title": "hotspot_36",
+      "id": "scene_f-c-0",
+      "image": "/media/v1/panels/zone_info_d.png",
+      "source": "pannel.xml"
+    },
+    {
+      "name": "pannelspot_37",
+      "style": "pannel3",
+      "url": "%FIRSTXML%/images/zone_info_b.png",
+      "ath": "-69.2223",
+      "atv": "-6.9564",
+      "width": "75.18",
+      "height": "prop",
+      "rx": "-11.14",
+      "ry": "62.14",
+      "edge": "lefttop",
+      "title": "hotspot_37",
+      "id": "scene_a-s-0",
+      "image": "/media/v1/panels/zone_info_b.png",
+      "source": "pannel.xml"
+    },
+    {
+      "name": "tvspot_46",
+      "style": "pannel|video01",
+      "url": "%FIRSTXML%/images/tv1.jpg",
+      "ath": "31.5008",
+      "atv": "-7.1216",
+      "width": "119.82",
+      "height": "prop",
+      "rx": "-7.68",
+      "ry": "-31.66",
+      "edge": "lefttop",
+      "title": "hotspot_46",
+      "id": "scene_a-s-0",
+      "image": "/media/v1/panels/tv1.jpg",
+      "source": "pannel.xml"
+    },
+    {
+      "name": "tvspot_58",
+      "style": "pannel|video01",
+      "url": "%FIRSTXML%/images/tv1.jpg",
+      "ath": "4.0028",
+      "atv": "-0.9987",
+      "width": "15.46",
+      "height": "prop",
+      "rx": "-1.04",
+      "ry": "-24.5",
+      "edge": "lefttop",
+      "title": "hotspot_58",
+      "id": "scene_f-c-0",
+      "image": "/media/v1/panels/tv1.jpg",
+      "source": "pannel.xml"
+    },
+    {
+      "name": "tvspot_59",
+      "style": "pannel|video04",
+      "url": "%FIRSTXML%/images/tv4.jpg",
+      "ath": "-42.8249",
+      "atv": "-6.5934",
+      "width": "106.34",
+      "height": "prop",
+      "rx": "-7.68",
+      "ry": "43.22",
+      "edge": "lefttop",
+      "title": "hotspot_59",
+      "id": "scene_a-s-0",
+      "image": "/media/v1/panels/tv4.jpg",
+      "source": "pannel.xml"
+    },
+    {
+      "name": "tvspot_71",
+      "style": "pannel|video04",
+      "url": "%FIRSTXML%/images/tv4.jpg",
+      "ath": "-5.6783",
+      "atv": "-1.0082",
+      "width": "14.94",
+      "height": "prop",
+      "rx": "-2.22",
+      "ry": "13.7",
+      "edge": "lefttop",
+      "title": "hotspot_71",
+      "id": "scene_f-c-0",
+      "image": "/media/v1/panels/tv4.jpg",
+      "source": "pannel.xml"
+    },
+    {
+      "name": "tvspot_72",
+      "style": "pannel|video02",
+      "url": "%FIRSTXML%/images/tv2.jpg",
+      "ath": "-68.8007",
+      "atv": "-2.9981",
+      "width": "60.06",
+      "height": "prop",
+      "rx": "-4.74",
+      "ry": "63.44",
+      "edge": "lefttop",
+      "title": "hotspot_72",
+      "id": "scene_a-s-0",
+      "image": "/media/v1/panels/tv2.jpg",
+      "source": "pannel.xml"
+    },
+    {
+      "name": "tvspot_81",
+      "style": "pannel|video03",
+      "url": "%FIRSTXML%/images/tv3.jpg",
+      "ath": "66.6933",
+      "atv": "-2.5602",
+      "width": "67.2",
+      "height": "prop",
+      "rx": "-3.48",
+      "ry": "-67.24",
+      "edge": "lefttop",
+      "title": "hotspot_81",
+      "id": "scene_a-s-0",
+      "image": "/media/v1/panels/tv3.jpg",
+      "source": "pannel.xml"
+    },
+    {
+      "name": "dacuspot_3",
+      "style": "pannel",
+      "url": "%FIRSTXML%/images/dacu.png",
+      "ath": "-109.6116",
+      "atv": "-14.7913",
+      "width": "284.62",
+      "height": "prop",
+      "rx": "-16.18",
+      "ry": "16.78",
+      "edge": "lefttop",
+      "id": "scene_f-c-0",
+      "image": "/media/v1/panels/dacu.png",
+      "source": "pannel.xml"
+    }
+  ],
+  "pages": [
+    "/media/v1/exhibition/page-1.png",
+    "/media/v1/exhibition/page-2.png",
+    "/media/v1/exhibition/page-3.png",
+    "/media/v1/exhibition/page-4.png",
+    "/media/v1/exhibition/page-5.png",
+    "/media/v1/exhibition/page-6.png"
+  ],
+  "hotspots": [
+    {
+      "id": "plus_1",
+      "page": 1,
+      "ath": 154.1644,
+      "atv": -1.767,
+      "title": "토마스선교사",
+      "exhibit": "photo-0",
+      "source": "list_a02_action.xml"
+    },
+    {
+      "id": "plus_2",
+      "page": 1,
+      "ath": -133.9729,
+      "atv": -5.2191,
+      "title": "평양만수대 위치한 장대현교회",
+      "exhibit": "photo-1",
+      "source": "list_a02_action.xml"
+    },
+    {
+      "id": "morespot_2",
+      "page": 3,
+      "ath": 159.74,
+      "atv": -0.016,
+      "title": "이야기 더 읽기",
+      "exhibit": "text-2",
+      "source": "list_a02_action.xml"
+    },
+    {
+      "id": "plus_5",
+      "page": 4,
+      "ath": 172.2435,
+      "atv": 4.7512,
+      "title": "사무엘 마펫",
+      "exhibit": "photo-2",
+      "source": "list_a02_action.xml"
+    },
+    {
+      "id": "plus_6",
+      "page": 4,
+      "ath": -160.8834,
+      "atv": 4.8411,
+      "title": "1891년 마펫의 의주 선교여행",
+      "exhibit": "photo-3",
+      "source": "list_a02_action.xml"
+    },
+    {
+      "id": "plus_7",
+      "page": 4,
+      "ath": -139.283,
+      "atv": 3.6955,
+      "title": "초기 평양신학교",
+      "exhibit": "photo-4",
+      "source": "list_a02_action.xml"
+    },
+    {
+      "id": "morespot_3",
+      "page": 4,
+      "ath": -152.552,
+      "atv": 13.433,
+      "title": "장로교 교회 분포 / 해방 전 북한교회 통계",
+      "exhibit": "text-3",
+      "source": "list_a02_action.xml"
+    },
+    {
+      "id": "plus_8",
+      "page": 5,
+      "ath": -160.4728,
+      "atv": 8.513,
+      "title": "사진 보기",
+      "exhibit": "photo-5",
+      "source": "list_a02_action.xml"
+    },
+    {
+      "id": "plus_9",
+      "page": 5,
+      "ath": -136.782,
+      "atv": 6.603,
+      "title": "사진 보기",
+      "exhibit": "photo-6",
+      "source": "list_a02_action.xml"
+    },
+    {
+      "id": "plus_10",
+      "page": 5,
+      "ath": 169.1673,
+      "atv": 8.9463,
+      "title": "사진 보기",
+      "exhibit": "photo-7",
+      "source": "list_a02_action.xml"
+    },
+    {
+      "id": "morespot_4",
+      "page": 5,
+      "ath": -139.15,
+      "atv": -7.225,
+      "title": "이야기 더 읽기",
+      "exhibit": "text-4",
+      "source": "list_a02_action.xml"
+    },
+    {
+      "id": "plus_11",
+      "page": 6,
+      "ath": -170.2294,
+      "atv": 14.1323,
+      "title": "사진 보기",
+      "exhibit": "photo-9",
+      "source": "list_a02_action.xml"
+    },
+    {
+      "id": "plus_12",
+      "page": 6,
+      "ath": -136.9731,
+      "atv": 10.3361,
+      "title": "사진 보기",
+      "exhibit": "photo-8",
+      "source": "list_a02_action.xml"
+    },
+    {
+      "id": "morespot_5",
+      "page": 6,
+      "ath": -138.09,
+      "atv": -9.515,
+      "title": "이야기 더 읽기",
+      "exhibit": "text-5",
+      "source": "list_a02_action.xml"
+    }
+  ],
+  "polygons": [
+    {
+      "id": "poly_1",
+      "page": 1,
+      "title": "토마스 선교사",
+      "exhibit": "photo-0",
+      "points": [
+        [
+          150.332,
+          -7.394
+        ],
+        [
+          150.47,
+          -1.349
+        ],
+        [
+          154.906,
+          -1.454
+        ],
+        [
+          154.796,
+          -7.728
+        ]
+      ],
+      "source": "a2_111.xml; restricted to verified title/index matches"
+    },
+    {
+      "id": "poly_2",
+      "page": 1,
+      "title": "평양만수대 위치한 장대현교회",
+      "exhibit": "photo-1",
+      "points": [
+        [
+          -143.52,
+          -5.907
+        ],
+        [
+          -143.542,
+          0.363
+        ],
+        [
+          -136.487,
+          0.271
+        ],
+        [
+          -136.32,
+          -5.386
+        ]
+      ],
+      "source": "a2_111.xml; restricted to verified title/index matches"
+    }
+  ],
+  "photos": [
+    {
+      "id": "photo-0",
+      "title": "토마스 선교사",
+      "image": "/media/v1/photos/0/image.webp",
+      "width": 256,
+      "height": 318,
+      "source": "http://youngnakdhm.net/photo/a02/index.html?startscene=0"
+    },
+    {
+      "id": "photo-1",
+      "title": "평양만수대 위치한 장대현교회",
+      "image": "/media/v1/photos/1/image.webp",
+      "width": 1536,
+      "height": 1014,
+      "source": "http://youngnakdhm.net/photo/a02/index.html?startscene=1"
+    },
+    {
+      "id": "photo-2",
+      "title": "사무엘 마펫",
+      "image": "/media/v1/photos/2/image.webp",
+      "width": 512,
+      "height": 702,
+      "source": "http://youngnakdhm.net/photo/a02/index.html?startscene=2"
+    },
+    {
+      "id": "photo-3",
+      "title": "1891년 마펫의 의주 선교여행",
+      "image": "/media/v1/photos/3/image.webp",
+      "width": 1536,
+      "height": 1058,
+      "source": "http://youngnakdhm.net/photo/a02/index.html?startscene=3"
+    },
+    {
+      "id": "photo-4",
+      "title": "초기 평양신학교",
+      "image": "/media/v1/photos/4/image.webp",
+      "width": 768,
+      "height": 510,
+      "source": "http://youngnakdhm.net/photo/a02/index.html?startscene=4"
+    },
+    {
+      "id": "photo-5",
+      "title": "신의주제2교회 헌당식(1936.11.11.)",
+      "image": "/media/v1/photos/5/image.webp",
+      "width": 1664,
+      "height": 1228,
+      "source": "http://youngnakdhm.net/photo/a02/index.html?startscene=5"
+    },
+    {
+      "id": "photo-6",
+      "title": "헌당식 예배 기념(1936.11.11.)",
+      "image": "/media/v1/photos/6/image.webp",
+      "width": 768,
+      "height": 556,
+      "source": "http://youngnakdhm.net/photo/a02/index.html?startscene=6"
+    },
+    {
+      "id": "photo-7",
+      "title": "신축한 신의주제2교회 전경",
+      "image": "/media/v1/photos/7/image.webp",
+      "width": 1088,
+      "height": 1368,
+      "source": "http://youngnakdhm.net/photo/a02/index.html?startscene=7"
+    },
+    {
+      "id": "photo-8",
+      "title": "신의주보린원, 왼쪽-사택, 뒤쪽-무의탁노인 숙소, 오른쪽-원아 숙소",
+      "image": "/media/v1/photos/8/image.webp",
+      "width": 4096,
+      "height": 1992,
+      "source": "http://youngnakdhm.net/photo/a02/index.html?startscene=8"
+    },
+    {
+      "id": "photo-9",
+      "title": "신의주보린원 가족들",
+      "image": "/media/v1/photos/9/image.webp",
+      "width": 2816,
+      "height": 1742,
+      "source": "http://youngnakdhm.net/photo/a02/index.html?startscene=9"
+    }
+  ],
+  "texts": [
+    {
+      "id": "text-1",
+      "title": "복음을 들고 문을 두드린 이들",
+      "html": "\n    \n      <p>\n        복음을 들고 문을 두드린 이들 중에는 1866년 제너럴셔먼호 사건으로 대동강변에서 순교한 영국 런던선교회 선교사 존 토마스를 비롯해 여러 선교사가 있었다. 복음을 들고 직접 문을 연 선교사는 장로교 언더우드와 감리교 아펜젤러였다. 1885년 4월 5일 인천 제물포로 입국한 두 선교사는 복음으로 조용한 나라의 영혼들을 일깨우기 시작했다. 특히 언더우드는 1887년 9월 새문안교회를 비롯해 승동교회(1893년), 연동교회(1894년), 서교동교회(1896년), 노량진교회(1907년) 등을 세우며 기독교의 정착과 확산에 크게 공헌했다. \n      </p>\n    \n  ",
+      "source": "html/a02_01.html"
+    },
+    {
+      "id": "text-2",
+      "title": "복음의 뿌리와 신앙공동체",
+      "html": "\n    \n    \n    \n      <p>\n        1879년 로스가 안식년으로 떠나자 매제인 매킨타이어는 의주 출신 이응찬을 비롯해 백홍준 이성하 김진기에게 세례를 주었고, \n        이들을 중심으로 의주의 첫 신앙공동체가 세워졌다. 1887년 9월 새문안교회를 세운 언더우드는 그해 가을 출발한 \n        ‘서북지방 순회전도여행’을 비롯해 3차례에 걸쳐 서북지역을 방문했다. \n        그 과정에서 그는 황해도 소래(솔내)에서 7명과 평북 의주에서 30여 명에게 세례를 줄 정도로 \n        서북지역에는 신앙공동체가 활발하게 움직이고 있었다.\n      </p>\n      <p>\n        로스와 매킨타이어는 의주에 첫 신앙공동체를 세운 것만 아니라 한글성경 번역과 보급에 큰 영향을 끼쳤다. \n        그의 번역본은 서북지역뿐 아니라 전국적으로 퍼져나가며 복음 전파의 중요한 도구가 되었다.\n      </p>\n    \n\n    \n    \n      \n        \n          <img src=\"/media/v1/articles/a02_04_01.jpg\" alt=\"로스의〈누가복음〉\" loading=\"lazy\">\n        \n        로스의 〈누가복음〉(1882)\n      \n      \n        \n          <img src=\"/media/v1/articles/a02_04_02.jpg\" alt=\"로스의〈신약전서〉\" loading=\"lazy\">\n        \n        로스의〈신약전서〉(1887)\n      \n    \n\n  ",
+      "source": "html/a02_02.html"
+    },
+    {
+      "id": "text-3",
+      "title": "장로교 교회 분포와 북한교회 통계",
+      "html": "\n    \n      <p>\n       1898년 기준으로 서북지역의 장로교 세례교인은 전국 대비 79.3%에 이를 정도로 장로교인 비중이 가장 높았다. 이때부터 한국 기독교, 특히 장로교는 서북지역이 주도하는 현상을 보였다. 1907년 조직된 노회격인 대리회 7개 중 서북지역에만 3개가 설치될 정도로 서북지역의 교세가 가장 컸다.\n      </p>\n      <p>\n       한국장로교는 1920년대까지 평남지역 기독교인들이 가장 많이 있었다. 그러다 1930년부터는 평북지역 기독교인들이 평남지역을 앞서다가 1940년에는 60% 이상을 크게 앞섰다. 이는 평북지역의 기독교가 가장 활발하게 움직이고 있었다는 반증이기도 하다. 초기 영락교회를 이룬 성도들은 대부분 신의주, 용천, 의주, 강계, 선천 출신으로 평북지역의 기독교 성향을 그대로 받고 있었다. \n      </p>\n    \n\n    \n    \n    \n    \n  \n\n\n  \n  <p>\n\n  \n  \n\n 『기독교 대연감』.1992\n\n<br><br>\n<img src=\"/media/v1/articles/chart.jpg\" alt=\"\" loading=\"lazy\">\n\n 장로교회 분포\n\n    \n    \n\n  ",
+      "source": "html/a02_03.html"
+    },
+    {
+      "id": "text-4",
+      "title": "한국교회와 신앙의 성장",
+      "html": "\n    \n      <p>\n       신의주는 일제가 1904년 러일전쟁을 위해 경의선을 연결하고, 전쟁물자를 공급하고자 건설한 신도시다. 1914년 의주에서 분리된 신도시 신의주는 1924년 평북 도청이 이주할 정도로 급부상했다. 이 신도시에 사람들이 몰려오자 그들의 영혼을 담당하고자 신의주제1교회(1910년)와 신의주제2교회(1924년)가 세워졌다. 신의주는 1945년 8월 해방 직후 한경직 목사가 신의주자치위원회를 조직하여 치안을 담당했던 곳이며, 11월 소군정과 공산주의에 강하게 반발하며 학생반공운동이 일어났던 곳이기도 하다. \n      </p>\n    \n  ",
+      "source": "html/a02_04.html"
+    },
+    {
+      "id": "text-5",
+      "title": "해방 이전의 교회",
+      "html": "\n    \n      <p>\n한경직 목사가 보린원 설립에 적극적으로 참여하게 된 배경에 한 소녀가 있다. 그 소녀는 철길에서 다리 하나를 잘린 8세된 복순이였다. 복순이는 어머니가 어린 동생을 업고 도망간 뒤에는 폐병에 걸린 아버지 밑에서 자랐다. 아버지가 폐병으로 사망하자 한경직 목사는 홀로된 복순이를 지속적으로 돌봐야 한다는 애정을 갖고 보린원 설립에 적극적으로 참여하게 되었다. 신의주가 신도시였지만 주변의 고아들이 적지 않았다. 이들을 외면할 수 없었던 한경직 목사는 신의주제1교회 백지엽 장로와 김응락 장로를 비롯해 신의주제2교회와 지역 유지들의 후원으로 30여 명의 어린아이들이 생활하게 될 신의주보육원을 마련했다. </p><p>\n원장에는 신의주제2교회 한경직 목사가, 원감에는 신의주제1교회 장로이며 소학교 교장이던 안승성 장로가 각각 추대됐다. 이후 남신의주 의주면 뒷산 4,300평을 기증받은 한경직 목사는 300여 명의 후원자를 모집하여 고아원과 양로원을 위한 건물을 세웠다. 이 시기에 신의주보육원이 신의주보린원으로 변경된 것으로 보인다. \n\n      </p>\n    \n\n    \n    \n    \n\n\t\t\t\n<em>고아원을 크게 짓고 그 옆에 양로원을 조금 작게 짓고, 이곳을 관리할 사택을 짓고, <br>사찰을 위한 집을 한 채 더 지어 모두 네 동을 지었다.<br> 아동관에는 기도실과 주방, 식당, 목욕실, 사무실 외에<br>아이들이 기숙하는 방도 10개 있었다. <br>노인관에는 식당과 주방 외에 노인들이 기숙할 방이 역시 10개 있었다.</em>\n<br>한경직, 『나의 감사』 중에서\t\n\n    \n\n  ",
+      "source": "html/a02_05.html"
+    }
+  ],
+  "ebooks": [
+    {
+      "title": "영락교회 창립10주년",
+      "category": "창립기념년사",
+      "url": "https://heyzine.com/flip-book/34d5a0cca1.html",
+      "image": "/media/v1/books/0.jpg"
+    },
+    {
+      "title": "영락교회 20년사 (한국혁명과 기독교)",
+      "category": "창립기념년사",
+      "url": "https://heyzine.com/flip-book/a138f5ea2a.html",
+      "image": "/media/v1/books/1.jpg"
+    },
+    {
+      "title": "영락교회 35년사",
+      "category": "창립기념년사",
+      "url": "https://heyzine.com/flip-book/2c12720c87.html",
+      "image": "/media/v1/books/2.jpg"
+    },
+    {
+      "title": "영락교회 창립 50주년",
+      "category": "창립기념년사",
+      "url": "https://heyzine.com/flip-book/e37a62dae7.html",
+      "image": "/media/v1/books/3.jpg"
+    },
+    {
+      "title": "1963년 교우사진첩",
+      "category": "창립기념화보",
+      "url": "https://heyzine.com/flip-book/3ecf61f488.html",
+      "image": "/media/v1/books/4.jpg"
+    },
+    {
+      "title": "창립 40주년 기념화보",
+      "category": "창립기념화보",
+      "url": "https://heyzine.com/flip-book/bfa1f38783.html",
+      "image": "/media/v1/books/5.jpg"
+    },
+    {
+      "title": "영락교회 70주년기념화보",
+      "category": "창립기념화보",
+      "url": "https://heyzine.com/flip-book/e72d49d099.html",
+      "image": "/media/v1/books/6.jpg"
+    },
+    {
+      "title": "70주년 총람자료-교육분야",
+      "category": "창립기념총람",
+      "url": "https://heyzine.com/flip-book/a44285fe97.html",
+      "image": "/media/v1/books/7.jpg"
+    },
+    {
+      "title": "70주년 총람자료-선교분야",
+      "category": "창립기념총람",
+      "url": "https://heyzine.com/flip-book/d5ce61ec6d.html",
+      "image": "/media/v1/books/8.jpg"
+    },
+    {
+      "title": "70주년 총람자료-목양분야",
+      "category": "창립기념총람",
+      "url": "https://heyzine.com/flip-book/c50ceb19e7.html",
+      "image": "/media/v1/books/9.jpg"
+    },
+    {
+      "title": "70주년 총람자료-사회봉사분야 및 기타분야",
+      "category": "창립기념총람",
+      "url": "https://heyzine.com/flip-book/384585048f.html",
+      "image": "/media/v1/books/10.jpg"
+    },
+    {
+      "title": "1984~2004년 영락상담 20주년 기념백서",
+      "category": "제직부서",
+      "url": "https://heyzine.com/flip-book/087934eeb6.html",
+      "image": "/media/v1/books/11.jpg"
+    },
+    {
+      "title": "2018년 북한선교부 20주년 총람",
+      "category": "제직부서",
+      "url": "https://heyzine.com/flip-book/f3f9533b9c.html",
+      "image": "/media/v1/books/12.jpg"
+    },
+    {
+      "title": "2017~2020년 의료선교부 40년",
+      "category": "제직부서",
+      "url": "https://heyzine.com/flip-book/b49c9e75e0.html",
+      "image": "/media/v1/books/13.jpg"
+    },
+    {
+      "title": "2010년 영락의료선교봉사회 창립30주년 포트폴리오",
+      "category": "제직부서",
+      "url": "https://heyzine.com/flip-book/56238ca196.html",
+      "image": "/media/v1/books/14.jpg"
+    },
+    {
+      "title": "2009년 대학부 베드로반 20주년 기념 우리는 혼자가 아닙니다.",
+      "category": "교육부",
+      "url": "https://heyzine.com/flip-book/f3beb8b568.html",
+      "image": "/media/v1/books/15.jpg"
+    },
+    {
+      "title": "창립 20주년 기념 화보 사랑터 5집",
+      "category": "교육부",
+      "url": "https://heyzine.com/flip-book/ff7a8320c7.html",
+      "image": "/media/v1/books/16.jpg"
+    },
+    {
+      "title": "여전도회 40년 사료집",
+      "category": "선교부",
+      "url": "https://heyzine.com/flip-book/2de414e32b.html",
+      "image": "/media/v1/books/17.jpg"
+    },
+    {
+      "title": "여전도회 60년 사료집",
+      "category": "선교부",
+      "url": "https://heyzine.com/flip-book/df33a213cd.html",
+      "image": "/media/v1/books/18.jpg"
+    },
+    {
+      "title": "동행 호산나 찬양대 창립 50주년",
+      "category": "음악부",
+      "url": "https://heyzine.com/flip-book/52149ef6ec.html",
+      "image": "/media/v1/books/19.jpg"
+    },
+    {
+      "title": "임마누엘 찬양대 창립 50주년 기념",
+      "category": "음악부",
+      "url": "https://heyzine.com/flip-book/a6aa8212af.html",
+      "image": "/media/v1/books/20.jpg"
+    },
+    {
+      "title": "베들레헴찬양대 창립 30주년기념",
+      "category": "음악부",
+      "url": "https://heyzine.com/flip-book/9f793a219f.html",
+      "image": "/media/v1/books/21.jpg"
+    },
+    {
+      "title": "영락학원 50년사",
+      "category": "법인 및 기관",
+      "url": "https://heyzine.com/flip-book/aeba5671b8.html",
+      "image": "/media/v1/books/22.jpg"
+    },
+    {
+      "title": "영락학원 70년사",
+      "category": "법인 및 기관",
+      "url": "https://heyzine.com/flip-book/0123eee071.html",
+      "image": "/media/v1/books/23.jpg"
+    },
+    {
+      "title": "영락여자신자학교 20년사",
+      "category": "법인 및 기관",
+      "url": "https://heyzine.com/flip-book/89b88a2278.html",
+      "image": "/media/v1/books/24.jpg"
+    },
+    {
+      "title": "1946~1996 영락농아인교회 50년사",
+      "category": "법인 및 기관",
+      "url": "https://heyzine.com/flip-book/bd686ffb77.html",
+      "image": "/media/v1/books/25.jpg"
+    },
+    {
+      "title": "1966~2916 영락교회 부설 영락유치원",
+      "category": "법인 및 기관",
+      "url": "https://heyzine.com/flip-book/fcd0895f86.html",
+      "image": "/media/v1/books/26.jpg"
+    },
+    {
+      "title": "1966~2016년 영락교회 권사회 50년 그리스도어와의 따뜻한 동행",
+      "category": "법인 및 기관",
+      "url": "https://heyzine.com/flip-book/ac5541928b.html",
+      "image": "/media/v1/books/27.jpg"
+    },
+    {
+      "title": "한경직 목사와 복지사역",
+      "category": "법인 및 기관",
+      "url": "https://heyzine.com/flip-book/7a3b1a05cc.html",
+      "image": "/media/v1/books/28.jpg"
+    }
+  ],
+  "map": "/media/v1/map.png",
+  "mapSize": [
+    1733,
+    2220
+  ],
+  "video": {
+    "title": "영락교회 성장 및 발전",
+    "id": "aTbykwPkmsE"
+  }
+}
