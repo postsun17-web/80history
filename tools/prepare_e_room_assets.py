@@ -11,6 +11,7 @@ import json
 import os
 import shutil
 import subprocess
+import tempfile
 import time
 import urllib.parse
 import xml.etree.ElementTree as ET
@@ -20,7 +21,9 @@ SOURCE = Path(os.environ.get('YOUNGNAK_SOURCE', r'G:\내 드라이브\영락역�
 OUTPUT = PROJECT / 'public/media/v1'
 CHROME = Path(os.environ.get('E_ROOM_CHROME', r'C:\Program Files\Google\Chrome\Application\chrome.exe'))
 RENDER_URL = os.environ.get('E_ROOM_RENDER_URL', 'http://127.0.0.1:5173/tools/render_e_room.html')
-SCRATCH = PROJECT / '.cache/e-room-render'
+SCRATCH = Path(os.environ.get('E_ROOM_SCRATCH', str(
+    Path(tempfile.gettempdir()) / f'youngnak-e-room-{hashlib.sha256(str(PROJECT).encode("utf-8")).hexdigest()[:12]}'
+)))
 FACES = 'fblrud'
 COPIES = {'a-right': 'A-s-e+1', 'c-entry': 'C-c-s-1', 'c-center': 'C-c-s-0', 'c-right': 'C-s-e+1'}
 

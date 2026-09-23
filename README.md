@@ -62,7 +62,7 @@ $env:YOUNGNAK_SOURCE='G:\내 드라이브\영락역사관'
 python tools/prepare_assets.py
 ```
 
-다른 터미널에서 `npm run dev`를 시작하고 출력된 포트를 확인합니다. 기본값은 5173이며 다르면 `$env:E_ROOM_RENDER_URL='http://127.0.0.1:<포트>/tools/render_e_room.html'`을 지정합니다. 생성 스크립트는 각 면의 3D 렌더 완료 신호를 확인한 뒤 이미지를 저장합니다.
+다른 터미널에서 `npm run dev`를 시작하고 출력된 포트를 확인합니다. 기본값은 5173이며 다르면 `$env:E_ROOM_RENDER_URL='http://127.0.0.1:<포트>/tools/render_e_room.html'`을 지정합니다. 생성 스크립트는 각 면의 3D 렌더 완료 신호를 확인한 뒤 이미지를 저장하며, Chrome 임시 파일은 개발 서버의 감시 대상 밖에 둡니다.
 
 ```powershell
 python tools/prepare_e_room_assets.py
