@@ -27,6 +27,8 @@ Codex의 Chromium 기반 브라우저에서 데스크톱 1280×720 및 모바일
 
 - https://youngnak-museum-poc.vercel.app
 - HTTP 200, HTML Content-Type, `X-Robots-Tag: noindex, nofollow` 확인.
+- 배포 주소에서 로비 → 역사 전시 → 패널 → 토마스 선교사 사진 실표시, 확대/전체 보기/닫기 확인. 해당 흐름 콘솔 오류·경고 0건.
+- 배포 A존에서 드래그한 뒤 브라우저 뒤로/앞으로 이동: 시작 수평각 0°에서 변경한 342.027°가 URL과 화면에 복원됨.
 - 최신 배포: `dpl_9bSdug3GUyAdtwxT6PfKpjTAu6nZ`, READY.
 - 별도 시범 프로젝트의 고정 URL입니다. 첫 배포는 Vercel이 Production으로 분류합니다.
 - 최초 CLI 실행이 상위 폴더의 관계없는 저장소 `postsun17-web/meeting-app`을 이 새 프로젝트에 자동 연결하여 즉시 업로드를 중단하고 `vercel git disconnect --yes`로 해제했습니다. 이후 독립 Git 저장소에서 재배포했습니다. 기존 저장소/프로젝트는 수정하지 않았습니다.
