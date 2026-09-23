@@ -1,6 +1,6 @@
 # 영락교회 디지털역사관 · PSV 시범 구현
 
-기존 관람 주소: **https://youngnak-museum-poc.vercel.app**. E방 기능은 별도 Preview 주소에서 검토합니다.
+관람 주소: **https://youngnak-museum-poc.vercel.app**. C방 오른쪽에서 새 E 전시실로 이동할 수 있습니다.
 
 기존 영락교회 디지털역사관의 제공 자료와 운영 사이트를 참고해 Photo Sphere Viewer로 다시 만든 관람용 시범 페이지입니다. 납품 ZIP의 평문 `tour.xml`로 A·C 구역의 원래 이동 경로를 확인했습니다. 기존 사이트와 납품 파일은 수정하지 않았습니다.
 
@@ -18,7 +18,7 @@ CMS·통계·챗봇·유물 회전·외부 입장 장면과 나머지 전시실�
 
 ## 실행
 
-Node.js 22.12 이상을 사용합니다. Google Drive 가상 드라이브에서 npm 패키지 쓰기가 실패해, 실제 개발·빌드 장소는 `C:\Users\user\Projects\youngnak-museum-poc`입니다. `G:\내 드라이브\영락역사관\psv-poc`에는 동일한 소스와 사용 자산을 보관합니다. 다른 컴퓨터에서도 일반 로컬 폴더에 복사해 실행하는 것을 권장합니다.
+Node.js 22.12 이상을 사용합니다. Google Drive 가상 드라이브에서 npm 패키지 쓰기가 실패해, 실제 개발·빌드 장소는 `C:\Users\user\Projects\youngnak-museum-poc`입니다. `G:\내 드라이브\영락역사관\psv-poc-e-room`에는 E방이 포함된 소스와 사용 자산을 보관합니다. 다른 컴퓨터에서도 일반 로컬 폴더에 복사해 실행하는 것을 권장합니다.
 
 ```powershell
 npm ci
@@ -74,7 +74,7 @@ python tools/verify_assets.py
 
 ## Vercel
 
-별도 프로젝트 `youngnak-museum-poc`, 팀 `postsun17-webs-projects`에 배포했습니다. 첫 배포는 Vercel 규칙상 이 새 프로젝트의 Production이 되었고, 기존 영락교회 도메인·프로젝트는 변경하지 않았습니다. 공개 주소에는 `noindex, nofollow`가 적용됩니다. 검색 제외는 접근 제한 기능이 아닙니다.
+별도 프로젝트 `youngnak-museum-poc`, 팀 `postsun17-webs-projects`의 Production 주소에 E방을 반영했습니다. 기존 영락교회 도메인·프로젝트는 변경하지 않았습니다. 공개 주소에는 `noindex, nofollow`가 적용됩니다. 검색 제외는 접근 제한 기능이 아닙니다.
 
 ```powershell
 npx vercel link --project youngnak-museum-poc --scope postsun17-webs-projects
@@ -84,4 +84,4 @@ npx vercel deploy --prod         # 위 테스트용 고정 주소 갱신
 
 이 PC는 한글 컴퓨터 이름 때문에 Vercel CLI의 OAuth 헤더 오류가 발생합니다. `tools/vercel-safe-host.cjs`는 CLI 프로세스 안에서만 호스트 이름을 ASCII로 바꾸는 우회 파일입니다. Windows 컴퓨터 이름이나 계정 설정은 바꾸지 않습니다. 필요할 때 설치된 Vercel CLI 진입점에 `node --require ./tools/vercel-safe-host.cjs <vercel-cli-entry> deploy`를 사용합니다.
 
-상위 사용자 폴더의 Git 저장소가 자동 연결되는 것을 막기 위해 개발 폴더를 독립 Git 저장소로 초기화했습니다. 배포 프로젝트는 GitHub 자동 배포에 연결하지 않았습니다.
+상위 사용자 폴더의 Git 저장소가 자동 연결되는 것을 막기 위해 개발 폴더를 독립 Git 저장소로 초기화했습니다. GitHub 원격 저장소는 설정하지 않았고, 배포 프로젝트도 GitHub 자동 배포에 연결하지 않았습니다. E방 변경은 로컬 Git `master`에 병합하고 Vercel CLI로 Production에 반영했습니다.
