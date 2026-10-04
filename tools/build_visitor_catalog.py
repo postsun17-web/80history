@@ -30,9 +30,21 @@ class ArticleParser(HTMLParser):
   if not self.skip:self.buf.append(text)
 def build(source,output):
  result={}
+ # Source page labels provide concise provenance-backed headings for body-only HTML.
+ museum=json.loads((Path(__file__).resolve().parent.parent/'src/data/full-museum.json').read_text(encoding='utf-8'))
+ titles={}
+ for zone in museum['zones']:
+  for page in zone['pages']:
+   for hotspot in page['hotspots']:
+    attrs={}
+    for style in hotspot['attrs'].get('style','').split('|'):attrs.update(museum['styles'].get(style,{}))
+    attrs.update(hotspot['attrs'])
+    for key in re.findall(r'html/[\w-]+\.html',attrs.get('onclick','')+' '+attrs.get('onloaded','')):
+     titles.setdefault(key,page['title'] or zone['title'])
  for path in sorted(Path(source).glob('*.html')):
   parser=ArticleParser();parser.feed(path.read_text(encoding='utf-8'));parser.flush();key='html/'+path.name
-  result[key]={'path':key,'title':parser.title or (parser.paragraphs[0][:100] if parser.paragraphs else path.stem),'paragraphs':parser.paragraphs,'images':parser.images}
+  title=parser.title if parser.title and len(parser.title)<=60 else titles.get(key,'역사 자료 · '+path.stem)
+  result[key]={'path':key,'title':title,'paragraphs':parser.paragraphs,'images':parser.images}
  Path(output).write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8');Path(output).with_name('visitor-article-index.json').write_text(json.dumps({key:{'title':value['title']} for key,value in result.items()},ensure_ascii=False,indent=2),encoding='utf-8');print(f'Extracted {len(result)} articles')
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--source',default='E:/CodexAssets/youngnak-full/html');p.add_argument('--output',default='src/data/visitor-articles.json');a=p.parse_args();build(a.source,a.output)

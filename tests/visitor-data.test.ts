@@ -69,3 +69,11 @@ test('repeated actual source material retains each page and room context',async(
  const articles=await loadVisitorArticles();const target=at('html/c04_01.html').find(e=>e.scene===c05.scene&&e.page===6)!;
  assert.ok(searchEntries(target.title.slice(0,8),catalog.entries,articles,{room:'c',kind:'article'}).some(result=>result.entryId===target.id));
 });
+
+test('body-only article headings use the actual linked page title and preserve paragraphs',async()=>{
+ const articles=await loadVisitorArticles(),zone=data.zones.find(z=>z.id==='a03')!,page=zone.pages.find(p=>p.number===2)!;
+ assert.equal(articles['html/a03_20.html'].title,page.title);
+ assert.ok(articles['html/a03_20.html'].paragraphs.some(p=>p.startsWith('월남인들은 종교적인 이유 외에도')));
+ const entry=catalog.entries.find(e=>e.sourceAction.type==='article'&&e.sourceAction.path==='html/a03_20.html'&&e.page===2)!;assert.equal(entry.title,page.title);
+ assert.ok(searchEntries('월남인들은',catalog.entries,articles).some(result=>result.title===page.title));
+});
