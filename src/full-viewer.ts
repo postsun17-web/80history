@@ -93,7 +93,9 @@ export class FullViewer {
    const panorama:CubemapMultiTilesPanorama={baseUrl,flipTopBottom:scene.source!=='approved-e-extension',levels:[{faceSize:economy?512:useMid?1024:p.faceSize,nbTiles:economy||useMid?1:p.tiles}],tileUrl:(face,col,row)=>economy?baseUrl[face]:useMid?mid![faces[face]]:panoramaTilePath(p.root,face,col,row,p.level,p.ext)};
    const look=route.look||scene.view;
    try {
-    const ready=await this.viewer.setPanorama(panorama,{position:toPosition(look[0],look[1]),zoom:this.zoom(look[2]),transition:this.scene&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches?{speed:500,rotation:false,effect:'fade'}:false});
+    // PSV5.15.1 destroy stops camera animation but not the separate panorama fade.
+    // Immediate scene replacement keeps quality->read disposal free of adapter callbacks.
+    const ready=await this.viewer.setPanorama(panorama,{position:toPosition(look[0],look[1]),zoom:this.zoom(look[2]),transition:false});
     if(!ready||!this.showGeneration.isCurrent(token)||this.destroyed)return;
    }catch(error){if(!this.showGeneration.isCurrent(token)||this.destroyed)return;this.loadingScene=undefined;throw error;}
    this.loadingScene=undefined;this.scene=scene.id;this.page=0;this.renderedQuality=this.qualityRevision;

@@ -17,3 +17,11 @@ Verification:
 - node --experimental-strip-types --test tests/visitor-integration.test.ts:5/5 passed. Actual catalog assertions cover only two metadata-approved E scenes, real shortcut, bounded unique valid gallery stops and source context progression. State/event regressions cover same-page history vs media overlay, deferred submit prevention/query preservation, and one fallback plus one terminal failure with fresh successful retry.
 - Root conducts final complete suite/build and real browser viewport/failure recovery QA. Browser reload recovery requires the browser tests; no physical iOS/Android validation claim is made.
 - Source full-museum.json, delivered media junction and deployment manifest remain unchanged. No deployment, nested agents or new service.
+
+## Post-commit actual-browser lifecycle follow-up
+
+Root reproduced C→E→economy quality→immediate read causing uncaught CubemapTilesAdapter.setTextureOpacity in a fade tick after destroy. Installed PSV5.15.1 source shows destroy stops camera animation through stopAll/stopAnimation, while renderer panorama transitionAnimation is separate. FullViewer now uses immediate panorama replacement (transition:false) for scene and quality changes, preserving requested look/page/route and synchronous read destruction without surviving fade callbacks. The optional source entrance animation remains uninvoked by UI.
+
+Quick search now renders a vector magnifier and visible Korean 검색; its raster CHATBOT icon is removed while other original quick icons remain.
+
+Covering browser regression: tools/quality-read-regression.js follows actual C→E→economy→read and fails on any pageerror, retained wrong scene or remaining WebGL canvas. Root will execute it on rebuilt4174; npx tsc --noEmit passed for this follow-up. No browser passing claim is made before that execution.
