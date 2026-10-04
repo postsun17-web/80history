@@ -1,0 +1,135 @@
+{
+  "version": "8226aa914387cb84",
+  "top10": [
+    {
+      "original": "/media/full/galleries/c03-02/0.webp",
+      "originalBytes": 4289530,
+      "dimensions": [
+        3840,
+        2754
+      ],
+      "thumbnailBytes": 13998,
+      "previewBytes": 310126
+    },
+    {
+      "original": "/media/full/galleries/d04/16.webp",
+      "originalBytes": 4069092,
+      "dimensions": [
+        3840,
+        3059
+      ],
+      "thumbnailBytes": 31378,
+      "previewBytes": 234384
+    },
+    {
+      "original": "/media/full/galleries/d04/11.webp",
+      "originalBytes": 3663198,
+      "dimensions": [
+        3840,
+        2560
+      ],
+      "thumbnailBytes": 32880,
+      "previewBytes": 385170
+    },
+    {
+      "original": "/media/full/galleries/a06/13.webp",
+      "originalBytes": 3654774,
+      "dimensions": [
+        3840,
+        2664
+      ],
+      "thumbnailBytes": 26450,
+      "previewBytes": 185250
+    },
+    {
+      "original": "/media/full/galleries/a06/24.webp",
+      "originalBytes": 2914970,
+      "dimensions": [
+        3840,
+        2966
+      ],
+      "thumbnailBytes": 29188,
+      "previewBytes": 228196
+    },
+    {
+      "original": "/media/full/galleries/c01/20.webp",
+      "originalBytes": 2875210,
+      "dimensions": [
+        3840,
+        2880
+      ],
+      "thumbnailBytes": 25196,
+      "previewBytes": 304318
+    },
+    {
+      "original": "/media/full/galleries/a06/53.webp",
+      "originalBytes": 2640808,
+      "dimensions": [
+        3840,
+        3006
+      ],
+      "thumbnailBytes": 7768,
+      "previewBytes": 65222
+    },
+    {
+      "original": "/media/full/galleries/a06/66.webp",
+      "originalBytes": 2636720,
+      "dimensions": [
+        3840,
+        3018
+      ],
+      "thumbnailBytes": 29208,
+      "previewBytes": 252632
+    },
+    {
+      "original": "/media/full/galleries/a01/8.webp",
+      "originalBytes": 2478954,
+      "dimensions": [
+        2816,
+        3568
+      ],
+      "thumbnailBytes": 31230,
+      "previewBytes": 308192
+    },
+    {
+      "original": "/media/full/galleries/a07-04/7.webp",
+      "originalBytes": 2376320,
+      "dimensions": [
+        3840,
+        2560
+      ],
+      "thumbnailBytes": 12546,
+      "previewBytes": 93978
+    }
+  ],
+  "skipped": [],
+  "fileCount": 1566,
+  "totalBytes": 100076464,
+  "midFaces": 372,
+  "galleryPreviews": 597,
+  "panoRequests": {
+    "economy": {
+      "base": 6,
+      "detailMaximum": 6
+    },
+    "autoMobile": {
+      "base": 6,
+      "detailMaximum": 6
+    },
+    "high": {
+      "base": 6,
+      "detailMaximum": 96
+    }
+  },
+  "note": "Request maxima per scene, visible detail subset depends on viewport. Economy base tile URLs reuse the six already-loaded bases. Image preview requests 1, original only on explicit expansion.",
+  "top10Totals": {
+    "originalBytes": 31599576,
+    "previewBytes": 2367468,
+    "thumbnailBytes": 239842,
+    "previewReductionPercent": 92.51
+  },
+  "panoramaBytes": {
+    "original2048Tiles": 142335685,
+    "mid1024Faces": 23220002
+  }
+}

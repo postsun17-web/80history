@@ -1,6 +1,7 @@
 import type OpenSeadragon from 'openseadragon';
 import type {Viewer} from '@photo-sphere-viewer/core';
 import {safeReaderUrl} from './visitor-reader-utils';
+import {useMediaPreview} from './visitor-media';
 import {assetUrl,sourcePath,type FullMuseum,type GalleryImage} from './full-types';
 import type {SourceAction} from './source-actions';
 import {sourceGalleryIssue,sourceGalleryNote} from './source-defects';
@@ -22,7 +23,7 @@ export class FullContent {
  private sphere?:Viewer;
  private gallery?:{id:string;index:number};
  private generation=0;
- private articleReturn?:{nodes:Node[];title:string;scroll:number;action:SourceAction;focus:HTMLElement|null};
+ private articleReturn?:{body:HTMLDivElement;cleanup:(()=>void)[];title:string;scroll:number;action:SourceAction;focus:HTMLElement|null};
  private frames:string[]=[];
  private frame=0;
  private dragStart?:{x:number;frame:number};
@@ -53,7 +54,7 @@ export class FullContent {
  open(action:SourceAction):void {
   if(action.type==='scene'||action.type==='page'){this.onAction(action);return;}
   if(!this.dialog.open)this.previousFocus=document.activeElement instanceof HTMLElement?document.activeElement:null;
-  this.articleReturn=undefined;this.teardown();this.activeAction=action;
+  if(this.articleReturn)this.returnToArticle();this.teardown();this.activeAction=action;
   this.body.className='full-content-body';this.body.replaceChildren();
   this.dialog.dataset.contentType=action.type;
   if(!this.dialog.open)this.dialog.showModal();
@@ -75,13 +76,15 @@ export class FullContent {
  }
 
  setFontSize(size:18|21|24):void {this.dialog.style.setProperty('--reader-font-size',`${size}px`);}
- close():void {this.articleReturn=undefined;this.teardown();if(this.dialog.open)this.dialog.close();}
+ close():void {if(this.articleReturn)this.returnToArticle();this.teardown();if(this.dialog.open)this.dialog.close();}
  private expandArticleImage(src:string,title:string):void {
   const action=this.activeAction;if(!action)return;
-  this.articleReturn={nodes:Array.from(this.body.childNodes),title:this.heading.textContent??'',scroll:this.body.scrollTop,action,focus:document.activeElement instanceof HTMLElement?document.activeElement:null};
-  this.teardown();this.body.replaceChildren();this.heading.textContent=title;this.renderImage(src,title);this.body.insertAdjacentHTML('afterbegin',button('article-return','본문으로 돌아가기','← 본문으로'));this.body.querySelector<HTMLButtonElement>('button')?.focus();
+  this.articleReturn={body:this.body,cleanup:this.cleanupTasks,title:this.heading.textContent??'',scroll:this.body.scrollTop,action,focus:document.activeElement instanceof HTMLElement?document.activeElement:null};
+  this.cleanupTasks=[];this.generation++;this.body.style.display='none';
+  this.body=document.createElement('div');this.body.className='full-content-body';this.dialog.append(this.body);
+  this.heading.textContent=title;this.renderImage(src,title);this.body.insertAdjacentHTML('afterbegin',button('article-return','본문으로 돌아가기','← 본문으로'));this.body.querySelector<HTMLButtonElement>('button')?.focus();
  }
- private returnToArticle():void {const saved=this.articleReturn;if(!saved)return;this.teardown();this.body.replaceChildren(...saved.nodes);this.heading.textContent=saved.title;this.activeAction=saved.action;this.body.scrollTop=saved.scroll;this.articleReturn=undefined;saved.focus?.focus();}
+ private returnToArticle():void {const saved=this.articleReturn;if(!saved)return;this.teardown();this.body.remove();this.body=saved.body;this.body.style.removeProperty('display');this.cleanupTasks=saved.cleanup;this.heading.textContent=saved.title;this.activeAction=saved.action;this.body.scrollTop=saved.scroll;this.articleReturn=undefined;saved.focus?.focus();}
 
  /** Event delegation is local to the content dialog; main can call this for forwarded events. */
  controls(event:Event):boolean {
@@ -90,6 +93,7 @@ export class FullContent {
   const command=target.dataset.contentCommand!;
   if(command==='close')this.close();
   else if(command==='article-return')this.returnToArticle();
+  else if(command==='original'){const stage=this.body.querySelector<HTMLDivElement>('.full-content-media-stage');if(stage?.dataset.original){target.disabled=true;void this.createZoom(stage,stage.dataset.original);}}
   else if(command==='previous')this.moveGallery(-1);
   else if(command==='next')this.moveGallery(1);
   else if(command==='related-photo'){
@@ -137,7 +141,7 @@ export class FullContent {
   this.heading.textContent=id==='help'?`관람 안내 · ${position+1} / ${gallery.items.length}`:recovery?.type==='collection'?recovery.title:item.title||gallery.title||'사진 자료';
   this.body.classList.add('full-content-gallery');
   const canPrevious=position>0,canNext=position<gallery.items.length-1;
-  this.body.innerHTML=`<div class="full-content-media-stage" role="img" aria-label="${escape(item.title||'확대 가능한 사진 자료')}"></div><div class="full-content-toolbar"><div class="full-content-paging">${button('previous','이전 사진','←')}<span aria-live="polite">${position+1} / ${gallery.items.length}</span>${button('next','다음 사진','→')}</div><p>${recovery?.type==='collection'?'사진을 선택하면 확대해서 볼 수 있습니다.':!imageAvailable?'이전·다음 버튼으로 다른 사진을 확인할 수 있습니다.':item.faces?'드래그하여 360° 둘러보기':'드래그하여 이동 · 휠 또는 두 손가락으로 확대'}</p><div>${button('zoom-out','자료 축소','−')}${button('home','자료 전체 보기','↺')}${button('zoom-in','자료 확대','＋')}</div></div>`;
+  this.body.innerHTML=`<div class="full-content-media-stage" role="img" aria-label="${escape(item.title||'확대 가능한 사진 자료')}"></div><div class="full-content-toolbar"><div class="full-content-paging">${button('previous','이전 사진','←')}<span aria-live="polite">${position+1} / ${gallery.items.length}</span>${button('next','다음 사진','→')}</div><p>${recovery?.type==='collection'?'사진을 선택하면 확대해서 볼 수 있습니다.':!imageAvailable?'이전·다음 버튼으로 다른 사진을 확인할 수 있습니다.':item.faces?'드래그하여 360° 둘러보기':'원본을 열면 이동하고 확대할 수 있습니다.'}</p><div>${button('zoom-out','자료 축소','−')}${button('home','자료 전체 보기','↺')}${button('zoom-in','자료 확대','＋')}</div></div>`;
   this.body.querySelector<HTMLButtonElement>('[data-content-command="previous"]')!.disabled=!canPrevious;
   this.body.querySelector<HTMLButtonElement>('[data-content-command="next"]')!.disabled=!canNext;
   if(!imageAvailable){
@@ -146,6 +150,7 @@ export class FullContent {
    if(recovery?.type==='collection'){
     stage.classList.add('full-content-related');
     stage.innerHTML=`<p>관련 전시 사진 ${recovery.items.length}장</p><div class="full-content-related-grid">${recovery.items.map(({gallery,index,item})=>`<button type="button" data-content-command="related-photo" data-gallery="${escape(gallery)}" data-index="${index}" aria-label="${escape(item.title||'사진 자료')} 확대"><img src="${escape(item.image)}" alt=""><span>${escape(item.title||'사진 자료')}</span></button>`).join('')}</div>`;
+    for(const image of stage.querySelectorAll<HTMLImageElement>('img'))useMediaPreview(image,image.getAttribute('src')??'',true);
    }else stage.innerHTML=`<div class="full-content-source-note" role="status"><span aria-hidden="true">▧</span><p>${escape(sourceIssue!.message)}</p></div>`;
    for(const button of this.body.querySelectorAll<HTMLButtonElement>('[data-content-command="zoom-in"],[data-content-command="zoom-out"],[data-content-command="home"]'))button.disabled=true;
   }else this.showGalleryImage(item);
@@ -162,22 +167,33 @@ export class FullContent {
   this.teardown();this.renderGallery(id,index+offset);if(narration)this.body.append(narration);
  }
  private async showGalleryImage(item:GalleryImage):Promise<void> {
-  const generation=this.generation;
-  const stage=this.body.querySelector<HTMLDivElement>('.full-content-media-stage')!;
+  const generation=this.generation;const stage=this.body.querySelector<HTMLDivElement>('.full-content-media-stage')!;
   if(item.faces){
-   const faces=item.faces;
-   const [{Viewer},{CubemapAdapter}]=await Promise.all([import('@photo-sphere-viewer/core'),import('@photo-sphere-viewer/cubemap-adapter')]);if(generation!==this.generation)return;
-   this.sphere=new Viewer({container:stage,adapter:CubemapAdapter,panorama:Object.fromEntries(Object.entries(faceNames).map(([name,key])=>[name,faces[key]??faces[name]])),navbar:false,defaultZoomLvl:40,mousewheelCtrlKey:false,touchmoveTwoFingers:false,loadingTxt:'자료를 불러오는 중…'});
-  }else this.createZoom(stage,item.image);
+   stage.textContent='360° 자료를 불러오는 중…';
+   try {const [{Viewer},{CubemapAdapter}]=await Promise.all([import('@photo-sphere-viewer/core'),import('@photo-sphere-viewer/cubemap-adapter')]);if(generation!==this.generation)return;
+    stage.replaceChildren();const faces=item.faces;this.sphere=new Viewer({container:stage,adapter:CubemapAdapter,panorama:Object.fromEntries(Object.entries(faceNames).map(([name,key])=>[name,faces[key]??faces[name]])),navbar:false,defaultZoomLvl:40,mousewheelCtrlKey:false,touchmoveTwoFingers:false,loadingTxt:'자료를 불러오는 중…'});
+   }catch{if(generation===this.generation)this.engineFailure(stage,()=>{void this.showGalleryImage(item);});}
+  }else this.renderPreview(stage,item.image,item.title||'사진 자료');
  }
  private renderImage(url:string,title:string):void {
-  this.body.innerHTML=`<div class="full-content-media-stage" role="img" aria-label="${escape(title)}"></div><div class="full-content-toolbar"><p>드래그하여 이동 · 휠 또는 두 손가락으로 확대</p><div>${button('zoom-out','자료 축소','−')}${button('home','자료 전체 보기','↺')}${button('zoom-in','자료 확대','＋')}</div></div>`;
-  this.createZoom(this.body.querySelector<HTMLDivElement>('.full-content-media-stage')!,url);
+  this.body.innerHTML=`<div class="full-content-media-stage" role="img" aria-label="${escape(title)}"></div><div class="full-content-toolbar"><p>원본을 열면 이동하고 확대할 수 있습니다.</p><div>${button('zoom-out','자료 축소','−')}${button('home','자료 전체 보기','↺')}${button('zoom-in','자료 확대','＋')}</div></div>`;
+  this.renderPreview(this.body.querySelector<HTMLDivElement>('.full-content-media-stage')!,url,title);
+ }
+ private renderPreview(stage:HTMLDivElement,url:string,title:string):void {
+  stage.dataset.original=url;const image=document.createElement('img');image.className='full-content-preview';image.alt=title;useMediaPreview(image,url);stage.replaceChildren(image);
+  const toolbar=this.body.querySelector('.full-content-toolbar');toolbar?.insertAdjacentHTML('afterbegin',button('original','원본 확대 보기'));
+  for(const control of this.body.querySelectorAll<HTMLButtonElement>('[data-content-command="zoom-in"],[data-content-command="zoom-out"],[data-content-command="home"]'))control.disabled=true;
+ }
+ private engineFailure(stage:HTMLDivElement,retry:()=>void):void {
+  stage.replaceChildren();const p=document.createElement('p');p.textContent='확대 자료를 불러오지 못했습니다. 연결을 확인해 주세요.';const b=document.createElement('button');b.type='button';b.textContent='다시 불러오기';b.addEventListener('click',retry);stage.append(p,b);
  }
  private async createZoom(stage:HTMLDivElement,url:string):Promise<void> {
-  const generation=this.generation;const {default:OpenSeadragon}=await import('openseadragon');if(generation!==this.generation)return;
-  this.zoom=OpenSeadragon({element:stage,tileSources:{type:'image',url},showNavigationControl:false,showNavigator:false,minZoomImageRatio:0.8,maxZoomPixelRatio:4,visibilityRatio:0.5,constrainDuringPan:true,gestureSettingsMouse:{clickToZoom:false,dblClickToZoom:true,scrollToZoom:true},gestureSettingsTouch:{pinchToZoom:true,clickToZoom:false}});
-  this.zoom.addHandler('open-failed',()=>{stage.textContent='이미지를 불러오지 못했습니다. 네트워크 연결을 확인하고 다시 열어 주세요.';});
+  const generation=this.generation;stage.textContent='원본 자료를 불러오는 중…';
+  try {const {default:OpenSeadragon}=await import('openseadragon');if(generation!==this.generation)return;stage.replaceChildren();
+   this.zoom=OpenSeadragon({element:stage,tileSources:{type:'image',url},showNavigationControl:false,showNavigator:false,minZoomImageRatio:0.8,maxZoomPixelRatio:4,visibilityRatio:0.5,constrainDuringPan:true,gestureSettingsMouse:{clickToZoom:false,dblClickToZoom:true,scrollToZoom:true},gestureSettingsTouch:{pinchToZoom:true,clickToZoom:false}});
+   for(const control of this.body.querySelectorAll<HTMLButtonElement>('[data-content-command="zoom-in"],[data-content-command="zoom-out"],[data-content-command="home"]'))control.disabled=false;
+   this.zoom.addHandler('open-failed',()=>{if(generation===this.generation){this.zoom?.destroy();this.zoom=undefined;this.engineFailure(stage,()=>{void this.createZoom(stage,url);});}});
+  }catch{if(generation===this.generation)this.engineFailure(stage,()=>{void this.createZoom(stage,url);});}
  }
  private async renderArticle(path:string):Promise<void> {
   const generation=this.generation,key=sourcePath(path),source=this.data.articles[key];
@@ -188,7 +204,7 @@ export class FullContent {
    if(article&&(article.paragraphs.length||article.images.length)){
     this.heading.textContent=article.title;const section=document.createElement('article');section.className='full-content-readable';
     for(const text of article.paragraphs){const p=document.createElement('p');p.textContent=text;section.append(p);}
-    for(const item of article.images){const src=safeReaderUrl(item.src);if(!src)continue;const b=document.createElement('button');b.type='button';b.className='full-content-article-photo';b.textContent='사진 확대';const img=document.createElement('img');img.src=src;img.alt=item.alt;img.loading='lazy';b.prepend(img);b.addEventListener('click',()=>this.expandArticleImage(src,item.alt||article.title));section.append(b);}
+    for(const item of article.images){const src=safeReaderUrl(item.src);if(!src)continue;const b=document.createElement('button');b.type='button';b.className='full-content-article-photo';b.textContent='사진 확대';const img=document.createElement('img');useMediaPreview(img,src);img.alt=item.alt;img.loading='lazy';b.prepend(img);b.addEventListener('click',()=>this.expandArticleImage(src,item.alt||article.title));section.append(b);}
     this.body.append(section);return;
    }
    if(!source){this.notice('이 자료의 본문을 찾을 수 없습니다.');return;}
