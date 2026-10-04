@@ -1,5 +1,9 @@
 export interface VisitorArticle {path:string;title:string;paragraphs:string[];images:{src:string;alt:string}[]}
-let pending:Promise<Record<string,VisitorArticle>>|undefined;
-export function loadVisitorArticles():Promise<Record<string,VisitorArticle>> {
- return pending??=import('./data/visitor-articles.json',{with:{type:'json'}}).then(module=>module.default);
+type ArticleMap=Record<string,VisitorArticle>;
+/** Cache successful loads and share concurrent requests; failed loads remain retryable. */
+export function createArticleLoader(load:()=>Promise<ArticleMap>):()=>Promise<ArticleMap> {
+ let pending:Promise<ArticleMap>|undefined;
+ return ()=>pending??=(Promise.resolve().then(load).catch(error=>{pending=undefined;throw error;}));
 }
+// Vite transforms JSON into a JavaScript module; a browser JSON assertion is inappropriate.
+export const loadVisitorArticles=createArticleLoader(()=>import('./data/visitor-articles.json').then(module=>module.default));

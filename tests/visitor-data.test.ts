@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
 import {createVisitorCatalog} from '../src/visitor-catalog.ts';
-import {loadVisitorArticles} from '../src/visitor-articles.ts';
+import {createArticleLoader} from '../src/visitor-articles.ts';
+const loadVisitorArticles=async()=>JSON.parse(readFileSync(new URL('../src/data/visitor-articles.json',import.meta.url),'utf8'));
 import {searchEntries} from '../src/visitor-search.ts';
 import {normalizePreferences,readPreferences,savePreferences} from '../src/visitor-preferences.ts';
 import {parseFullRoute,fullRouteUrl} from '../src/full-navigation.ts';
@@ -14,7 +15,7 @@ test('all scenes,207 pages and orphan article sources are accessible',async()=>{
  assert.equal(new Set(catalog.entries.map(e=>e.id)).size,catalog.entries.length);
  const articles=await loadVisitorArticles();assert.equal(Object.keys(articles).length,225);
  for(const path of Object.keys(articles))assert.ok(catalog.entries.some(e=>e.sourceAction.type==='article'&&e.sourceAction.path===path),path);
- for(const article of Object.values(articles))for(const image of article.images){assert.ok(image.src.startsWith('/media/full/'));assert.ok(existsSync('E:/CodexAssets/youngnak-full/'+image.src.slice('/media/full/'.length)),image.src);}
+ for(const article of Object.values(articles) as import('../src/visitor-articles.ts').VisitorArticle[])for(const image of article.images){assert.ok(image.src.startsWith('/media/full/'));assert.ok(existsSync('E:/CodexAssets/youngnak-full/'+image.src.slice('/media/full/'.length)),image.src);}
 });
 test('exhibition navigation crosses sections instead of moving one page',()=>{
  const first=catalog.getEntry(data.zones[0].scene,1)!;const next=catalog.getAdjacentExhibit(first.id,'next')!;
@@ -39,4 +40,10 @@ test('preferences tolerate corrupt,blocked,unknown schema and prune invalid IDs'
  Object.defineProperty(globalThis,'localStorage',{configurable:true,get(){throw Error('blocked');}});assert.equal(readPreferences().fontSize,21);savePreferences(normalizePreferences(null));
  Object.defineProperty(globalThis,'localStorage',{configurable:true,value:{getItem:()=>'{broken',setItem:()=>{throw Error('blocked');}}});assert.equal(readPreferences().quality,'auto');savePreferences(normalizePreferences(null));
  if(descriptor)Object.defineProperty(globalThis,'localStorage',descriptor);else delete (globalThis as any).localStorage;
+});
+
+test('lazy article loading shares pending requests and retries after a rejected load',async()=>{
+ let calls=0;const expected={};const loader=createArticleLoader(async()=>{calls++;if(calls===1)throw Error('chunk load failed');return expected;});
+ const first=loader();assert.equal(loader(),first);await assert.rejects(first,/chunk load failed/);
+ const retry=loader();assert.notEqual(retry,first);assert.equal(await retry,expected);assert.equal(await loader(),expected);assert.equal(calls,2);
 });
