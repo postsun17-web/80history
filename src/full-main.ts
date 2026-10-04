@@ -53,7 +53,7 @@ let readerKey='',renderedModal='',internalClose=false,previousRoute:FullRoute|un
 const panel=$<HTMLDialogElement>('#visitor-panel'),dialog=$<HTMLDialogElement>('#content-dialog');
 let panelFocus:HTMLElement|null=null,panelGeneration=0,activePanel='';
 const coursePositions=new Map<string,number>();
-function currentEntry(){return (route.exhibit?catalog.entries.find(e=>JSON.stringify(e.sourceAction)===route.exhibit):undefined)||catalog.getEntry(route.scene,route.page);}
+function currentEntry(){return (route.exhibit?catalog.entries.find(e=>e.scene===route.scene&&e.page===route.page&&JSON.stringify(e.sourceAction)===route.exhibit):undefined)||catalog.getEntry(route.scene,route.page);}
 function updateCourses(){const entry=currentEntry();for(const c of catalog.courses){const index=c.entryIds.indexOf(entry?.id||'');if(index>=0)coursePositions.set(c.id,index);}}
 let articlesPromise:ReturnType<typeof import('./visitor-articles').loadVisitorArticles>|undefined;
 const articles=()=>articlesPromise??=import('./visitor-articles').then(m=>m.loadVisitorArticles());
@@ -126,7 +126,7 @@ function renderSceneUI(){
  $('#previous-space').toggleAttribute('disabled',!previousRoute);$('#next-exhibit').toggleAttribute('disabled',!entry||!catalog.getAdjacentExhibit(entry.id,'next'));
  document.querySelectorAll<HTMLButtonElement>('[data-scene]').forEach(b=>b.setAttribute('aria-current',b.dataset.scene===scene.id?'location':'false'));
  const dir=$('#map-direction');dir.hidden=!scene.map;if(scene.map){dir.style.left=scene.map.x+'%';dir.style.top=scene.map.y+'%';}
- $('#page-bar').hidden=!zone||route.mode==='read';
+ $('#page-bar').hidden=!zone;
  if(zone&&page)$('#page-bar').innerHTML=`<div class="page-caption"><strong>${escape(page.title)}</strong></div><div class="page-step"><button data-page="${route.page-1}" ${route.page<=1?'disabled':''} aria-label="이전 페이지">‹</button><select id="page-select" aria-label="전시 페이지 선택">${zone.pages.map(p=>`<option value="${p.number}" ${p.number===route.page?'selected':''}>${p.number}. ${escape(p.title)}</option>`).join('')}</select><span>${route.page} / ${zone.pages.length}</span><button data-page="${route.page+1}" ${route.page>=zone.pages.length?'disabled':''} aria-label="다음 페이지">›</button>${button({type:'image',src:page.image,title:page.title},'크게 보기','read-page')}</div>`;
  const materials=catalog.entries.filter(e=>e.scene===route.scene&&e.page===route.page&&e.kind!=='exhibit'&&e.kind!=='scene');
  $('#scene-resources').hidden=materials.length===0||route.mode==='read';$('#scene-resources > div').innerHTML=materials.map(e=>`<button data-entry="${escape(e.id)}">${escape(e.title)}</button>`).join('');
