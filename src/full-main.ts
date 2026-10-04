@@ -52,14 +52,17 @@ let readerArticle='',readerLocation='',tourLoad:Promise<void>=Promise.resolve();
 let readerKey='',renderedModal='',internalClose=false,previousRoute:FullRoute|undefined,bgm:HTMLAudioElement|undefined;
 const panel=$<HTMLDialogElement>('#visitor-panel'),dialog=$<HTMLDialogElement>('#content-dialog');
 let panelFocus:HTMLElement|null=null,panelGeneration=0,activePanel='';
+const coursePositions=new Map<string,number>();
+function currentEntry(){return (route.exhibit?catalog.entries.find(e=>JSON.stringify(e.sourceAction)===route.exhibit):undefined)||catalog.getEntry(route.scene,route.page);}
+function updateCourses(){const entry=currentEntry();for(const c of catalog.courses){const index=c.entryIds.indexOf(entry?.id||'');if(index>=0)coursePositions.set(c.id,index);}}
 let articlesPromise:ReturnType<typeof import('./visitor-articles').loadVisitorArticles>|undefined;
 const articles=()=>articlesPromise??=import('./visitor-articles').then(m=>m.loadVisitorArticles());
 function persist(){preferences.lastRoute={...route};savePreferences(preferences);}
 function saveView(){if(viewer&&loaded===route.scene&&route.mode!=='read'){route={...route,look:viewer.getLook()};history.replaceState({route},'',fullRouteUrl(route));}persist();}
-function navigate(next:FullRoute,replace=false){saveView();previousRoute={...route};route=parseFullRoute(fullRouteUrl(next),data.scenes,data.zones);generation++;history[replace?'replaceState':'pushState']({route},'',fullRouteUrl(route));persist();renderSceneUI();void apply();}
+function navigate(next:FullRoute,replace=false){saveView();if(next.scene!==route.scene){previousRoute={...route};delete previousRoute.exhibit;}route=parseFullRoute(fullRouteUrl(next),data.scenes,data.zones);generation++;history[replace?'replaceState':'pushState']({route},'',fullRouteUrl(route));persist();updateCourses();renderSceneUI();void apply();}
 function perform(action:SourceAction){
  if(action.type==='scene')navigate({scene:action.scene,page:1,mode:route.mode,look:action.look||(viewer&&loaded===route.scene?viewer.getLook():undefined)});
- else if(action.type==='page'){const z=data.zones.find(z=>z.id===action.zone);if(z)navigate({scene:z.scene,page:action.page,mode:route.mode,look:z.scene===route.scene?route.look:undefined});}
+ else if(action.type==='page'){const z=data.zones.find(z=>z.id===action.zone);if(z)navigate({scene:z.scene,page:action.page,mode:route.mode,look:z.scene===route.scene?(viewer&&loaded===route.scene?viewer.getLook():route.look):undefined});}
  else if(action.type==='external')window.open(action.url,'_blank','noopener,noreferrer');
  else if(action.type==='chatbot')openPanel('search');
  else if(action.type==='help')openPanel('help');
@@ -143,7 +146,7 @@ async function openPanel(name:string){
  if(name==='materials')body.innerHTML=entryCards(catalog.entries.filter(e=>e.scene===route.scene&&e.page===route.page&&e.kind!=='exhibit'&&e.kind!=='scene').map(e=>e.id))||'<p>이 공간에는 별도 자료가 없습니다. 전시 페이지를 글과 사진으로 살펴보세요.</p><button id="panel-read">글과 사진으로 보기</button>';
  if(name==='help')body.innerHTML='<p>전시실에서 공간을 선택하고 화면을 드래그하여 둘러보세요. 다음 전시는 다른 전시로, 페이지 화살표는 현재 전시의 다음 페이지로 이동합니다.</p><p>글과 사진으로 보기에서는 화면을 아래로 내려 읽을 수 있습니다. 사진은 눌러 크게 볼 수 있습니다.</p><p>대화형 안내는 연결되지 않았습니다. 자료 검색에서 원문 자료를 찾을 수 있습니다.</p><button data-panel="search">자료 검색 열기</button>';
  if(name==='more'){
- const entry=catalog.getEntry(route.scene,route.page);body.innerHTML=`<div class="more-utilities"><button data-panel="help">관람 안내</button><button data-control="sound" aria-pressed="${!!bgm&&!bgm.paused}">배경 음악 ${bgm&&!bgm.paused?'끄기':'재생'}</button><button data-control="fullscreen">전체 화면</button></div><label>글자 크기<select id="font-size">${[18,21,24].map(n=>`<option value="${n}" ${preferences.fontSize===n?'selected':''}>${n}px</option>`).join('')}</select></label><label>화질<select id="quality">${[['auto','자동'],['high','높음'],['economy','절약']].map(([v,t])=>`<option value="${v}" ${preferences.quality===v?'selected':''}>${t}</option>`).join('')}</select></label><button id="bookmark">${entry&&preferences.bookmarks.includes(entry.id)?'책갈피 해제':'현재 전시 책갈피'}</button><button id="share">주소와 제목 복사</button><p id="share-status" role="status"></p><button id="start-over">처음부터 관람</button><h3>내 책갈피</h3>${entryCards(preferences.bookmarks)||'<p>저장한 책갈피가 없습니다.</p>'}<h3>추천 관람 코스</h3>${catalog.courses.map(c=>`<article class="material-card"><h3>${escape(c.title)}</h3><p>${escape(c.description)}</p><p>${Math.max(0,c.entryIds.indexOf(entry?.id||'')+1)} / ${c.entryIds.length} 전시</p><button data-course="${escape(c.id)}">${c.entryIds.includes(entry?.id||'')?'다음 단계':'코스 시작'}</button></article>`).join('')}`;
+ const entry=catalog.getEntry(route.scene,route.page);body.innerHTML=`<div class="more-utilities"><button data-panel="help">관람 안내</button><button data-control="sound" aria-pressed="${!!bgm&&!bgm.paused}">배경 음악 ${bgm&&!bgm.paused?'끄기':'재생'}</button><button data-control="fullscreen">전체 화면</button></div><label>글자 크기<select id="font-size">${[18,21,24].map(n=>`<option value="${n}" ${preferences.fontSize===n?'selected':''}>${n}px</option>`).join('')}</select></label><label>화질<select id="quality">${[['auto','자동'],['high','높음'],['economy','절약']].map(([v,t])=>`<option value="${v}" ${preferences.quality===v?'selected':''}>${t}</option>`).join('')}</select></label><button id="bookmark">${entry&&preferences.bookmarks.includes(entry.id)?'책갈피 해제':'현재 전시 책갈피'}</button><button id="share">주소와 제목 복사</button><p id="share-status" role="status"></p><button id="start-over">처음부터 관람</button><h3>내 책갈피</h3>${entryCards(preferences.bookmarks)||'<p>저장한 책갈피가 없습니다.</p>'}<h3>추천 관람 코스</h3>${catalog.courses.map(c=>`<article class="material-card"><h3>${escape(c.title)}</h3><p>${escape(c.description)}</p><p>${Math.max(0,(coursePositions.get(c.id)??-1)+1)} / ${c.entryIds.length} 전시</p><button data-course="${escape(c.id)}">${coursePositions.has(c.id)?'다음 단계':'코스 시작'}</button></article>`).join('')}`;
  }
  bindPreviews();
  if(name==='search'){
@@ -164,7 +167,7 @@ document.addEventListener('click',event=>{
  if(t.dataset.panel)void openPanel(t.dataset.panel);
  if(t.dataset.entry){const e=catalog.entries.find(e=>e.id===t.dataset.entry);if(e)perform(e.sourceAction);}
  if(t.dataset.entryRead||t.dataset.entryTour){const next=entryRoute((t.dataset.entryRead||t.dataset.entryTour)!,t.dataset.entryRead?'read':'tour');if(next){closePanel();navigate(next);}}
- if(t.dataset.course){const c=catalog.courses.find(c=>c.id===t.dataset.course),e=catalog.getEntry(route.scene,route.page);if(c){const index=c.entryIds.indexOf(e?.id||'');const next=entryRoute(c.entryIds[(index+1)%c.entryIds.length],route.mode==='read'?'read':'tour');if(next){closePanel();navigate(next);}}}
+ if(t.dataset.course){const c=catalog.courses.find(c=>c.id===t.dataset.course);if(c){const index=coursePositions.get(c.id)??-1;const next=entryRoute(c.entryIds[(index+1)%c.entryIds.length],route.mode==='read'?'read':'tour');if(next){closePanel();navigate(next);}}}
  const control=t.dataset.control;
  if(control==='in'&&viewer)viewer.viewer.zoom(Math.min(100,viewer.viewer.getZoomLevel()+10));
  if(control==='out'&&viewer)viewer.viewer.zoom(Math.max(0,viewer.viewer.getZoomLevel()-10));
@@ -201,5 +204,5 @@ function enter(next:FullRoute){if($('#welcome').hidden)return;$('#welcome').hidd
 $('#enter-museum').onclick=()=>enter({scene:'scene_f-c-0',page:1});$('#start-read').onclick=()=>enter({scene:'scene_f-c-0',page:1,mode:'read'});$('#exterior').onclick=()=>enter({scene:'scene_vr02',page:1});
 $('#resume').hidden=!preferences.lastRoute;$('#resume').onclick=()=>{if(preferences.lastRoute)enter(preferences.lastRoute);};
 $('#welcome').addEventListener('cancel',e=>e.preventDefault());
-renderSceneUI();if(welcome){$('#welcome').hidden=false;$<HTMLDialogElement>('#welcome').showModal();$('#enter-museum').focus();}else{history.replaceState({route},'',fullRouteUrl(route));void apply();}
+updateCourses();renderSceneUI();if(welcome){$('#welcome').hidden=false;$<HTMLDialogElement>('#welcome').showModal();$('#enter-museum').focus();}else{history.replaceState({route},'',fullRouteUrl(route));void apply();}
 }

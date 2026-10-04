@@ -20,3 +20,5 @@ Concerns / follow-up:
 - Image previews depend on worker-generated derivative index; helper falls back to original source.
 
 Additional review fixes: welcome is native modal dialog with initial focus, boot failures provide visible retry, direct room shortcut grid precedes collapsed complete scene groups, More includes mobile help/audio/fullscreen.
+
+Correctness follow-up: page changes capture live camera look; previous-space route updates only when scene changes and clears media overlays; course progress recognizes material actions and retains the last selected course step after overlays close.
