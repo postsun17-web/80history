@@ -65,7 +65,7 @@ test('repeated actual source material retains each page and room context',async(
  const b05=data.zones.find(z=>z.id==='b05')!;assert.ok(at('html/b05_02.html').some(e=>e.scene===b05.scene&&e.page===3));assert.ok(at('html/b05_02.html').some(e=>e.scene===b05.scene&&e.page===5));
  const c04=data.zones.find(z=>z.id==='c04')!,c05=data.zones.find(z=>z.id==='c05')!;
  assert.ok(at('html/c04_01.html').some(e=>e.scene===c04.scene&&e.page===1));assert.ok(at('html/c04_01.html').some(e=>e.scene===c05.scene&&e.page===6));
- const youtube=catalog.entries.filter(e=>e.sourceAction.type==='youtube'&&e.sourceAction.id==='Cs8PwMg7TIM');assert.ok(new Set(youtube.map(e=>e.scene)).size>=19);assert.ok(youtube.some(e=>e.room==='lobby'));assert.ok(youtube.some(e=>e.room==='e'));
+ const youtube=catalog.entries.filter(e=>e.sourceAction.type==='youtube'&&e.sourceAction.id==='Cs8PwMg7TIM');assert.ok(new Set(youtube.map(e=>e.scene)).size>=19);assert.ok(youtube.some(e=>e.scene==='scene_f-c-0'&&e.room==='lobby'));assert.ok(youtube.some(e=>e.scene==='scene_e-c-e+1'&&e.room==='lobby'));
  const articles=await loadVisitorArticles();const target=at('html/c04_01.html').find(e=>e.scene===c05.scene&&e.page===6)!;
  assert.ok(searchEntries(target.title.slice(0,8),catalog.entries,articles,{room:'c',kind:'article'}).some(result=>result.entryId===target.id));
 });
