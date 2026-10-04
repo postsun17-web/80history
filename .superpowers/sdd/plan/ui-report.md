@@ -24,3 +24,5 @@ Additional review fixes: welcome is native modal dialog with initial focus, boot
 Correctness follow-up: page changes capture live camera look; previous-space route updates only when scene changes and clears media overlays; course progress recognizes material actions and retains the last selected course step after overlays close.
 
 Read-page integration: previous/next page arrows and page selector remain available in read mode without constructing FullViewer; reader scroll viewport reserves their fixed footer. Current material/course lookup now prefers matching scene/page action context after data context IDs were introduced.
+
+Independent review fix: rejected FullContent lazy imports reset the shared pending promise; visible error explains material load failure and existing retry requests the chunk again. Generation guards remain in place. Typecheck after generated media JSON passed.

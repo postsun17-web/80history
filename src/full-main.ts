@@ -95,7 +95,7 @@ async function showModal(token:number){
  if(!a||(route.mode==='read'&&a.type==='article')){if(dialog.open){internalClose=true;content?.close();internalClose=false;}renderedModal='';return;}
  if(a.type==='chatbot'||a.type==='help'){openPanel(a.type==='help'?'help':'search');return;}
  if(renderedModal===route.exhibit&&dialog.open)return;
- contentPromise??=import('./full-content').then(({FullContent})=>content=new FullContent(dialog,data,perform));
+ contentPromise??=import('./full-content').then(({FullContent})=>content=new FullContent(dialog,data,perform)).catch(error=>{contentPromise=undefined;throw Object.assign(error instanceof Error?error:new Error('Content unavailable'),{visitorContent:true});});
  const c=await contentPromise;if(token!==generation)return;
  (c as FullContent&{setFontSize?:(n:18|21|24)=>void}).setFontSize?.(preferences.fontSize);
  renderedModal=route.exhibit!;viewer?.viewer.stopKeyboardControl();c.open(a);
@@ -116,7 +116,7 @@ async function apply(){
  const task=tourLoad.catch(()=>{}).then(async()=>{if(token!==generation)return;const v=await ensureViewer(token);if(token!==generation)return;await v.show(current);if(token!==generation)return;loaded=current.scene;v.viewer.startKeyboardControl();});tourLoad=task;await task;if(token!==generation)return;
  }
  if(token!==generation)return;$('#loading').textContent='';await showModal(token);
- }catch(error){if(token!==generation)return;console.error(error);$('#loading').textContent='';$('#scene-error').hidden=false;}
+ }catch(error){if(token!==generation)return;console.error(error);$('#loading').textContent='';$('#scene-error p').textContent=(error as {visitorContent?:boolean})?.visitorContent?'자료 화면을 불러오지 못했습니다. 다시 불러오기를 눌러 재시도해 주세요.':'이 공간을 불러오지 못했습니다. 다시 시도하거나 글과 사진으로 관람해 주세요.';$('#scene-error').hidden=false;}
 }
 function renderSceneUI(){
  for(const key of actions.keys())if(Number(key)>=persistentActionCount)actions.delete(key);
