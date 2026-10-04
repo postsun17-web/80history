@@ -3,7 +3,7 @@ import {Viewer} from '@photo-sphere-viewer/core';
 import {CubemapAdapter} from '@photo-sphere-viewer/cubemap-adapter';
 import {assetUrl,sourcePath,type FullMuseum,type GalleryImage} from './full-types';
 import type {SourceAction} from './source-actions';
-import {sourceGalleryIssue} from './source-defects';
+import {sourceGalleryIssue,sourceGalleryNote} from './source-defects';
 import './full-content.css';
 
 const escape=(text:string)=>text.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
@@ -82,6 +82,10 @@ export class FullContent {
   if(command==='close')this.close();
   else if(command==='previous')this.moveGallery(-1);
   else if(command==='next')this.moveGallery(1);
+  else if(command==='related-photo'){
+   const gallery=target.dataset.gallery,index=Number(target.dataset.index);
+   if(gallery&&Number.isInteger(index)&&this.data.galleries.find(item=>item.id===gallery)?.items[index])this.onAction({type:'gallery',gallery,index});
+  }
   else if(command==='zoom-in'){this.zoom?.viewport.zoomBy(1.4);this.zoom?.viewport.applyConstraints();if(this.sphere)this.sphere.zoom(Math.min(100,this.sphere.getZoomLevel()+10));}
   else if(command==='zoom-out'){this.zoom?.viewport.zoomBy(1/1.4);this.zoom?.viewport.applyConstraints();if(this.sphere)this.sphere.zoom(Math.max(0,this.sphere.getZoomLevel()-10));}
   else if(command==='home'){this.zoom?.viewport.goHome();if(this.sphere){this.sphere.zoom(40);void this.sphere.animate({yaw:0,pitch:0,speed:'8rpm'});}}
@@ -115,20 +119,26 @@ export class FullContent {
   const gallery=this.data.galleries.find(item=>item.id===id);
   if(!gallery?.items.length){this.heading.textContent=id==='help'?'관람 안내':'사진 자료';this.notice('자료를 불러올 수 없습니다. 잠시 후 다시 열어 주세요.');return;}
   const position=Math.min(gallery.items.length-1,Math.max(0,Math.floor(index)));
-  this.gallery={id,index:position};const item=gallery.items[position];
-  const sourceIssue=sourceGalleryIssue(id,item.id);
-  this.heading.textContent=id==='help'?`관람 안내 · ${position+1} / ${gallery.items.length}`:item.title||gallery.title||'사진 자료';
+  this.gallery={id,index:position};const original=gallery.items[position];
+  const sourceIssue=sourceGalleryIssue(id,original.id,this.data.galleries),recovery=sourceIssue?.recovery;
+  const item=recovery?.type==='photo'?recovery.item:original;
+  const imageAvailable=!sourceIssue||recovery?.type==='photo';
+  this.heading.textContent=id==='help'?`관람 안내 · ${position+1} / ${gallery.items.length}`:recovery?.type==='collection'?recovery.title:item.title||gallery.title||'사진 자료';
   this.body.classList.add('full-content-gallery');
   const canPrevious=position>0,canNext=position<gallery.items.length-1;
-  this.body.innerHTML=`<div class="full-content-media-stage" role="img" aria-label="${escape(item.title||'확대 가능한 사진 자료')}"></div><div class="full-content-toolbar"><div class="full-content-paging">${button('previous','이전 사진','←')}<span aria-live="polite">${position+1} / ${gallery.items.length}</span>${button('next','다음 사진','→')}</div><p>${sourceIssue?'이전·다음 버튼으로 다른 사진을 확인할 수 있습니다.':item.faces?'드래그하여 360° 둘러보기':'드래그하여 이동 · 휠 또는 두 손가락으로 확대'}</p><div>${button('zoom-out','자료 축소','−')}${button('home','자료 전체 보기','↺')}${button('zoom-in','자료 확대','＋')}</div></div>`;
+  this.body.innerHTML=`<div class="full-content-media-stage" role="img" aria-label="${escape(item.title||'확대 가능한 사진 자료')}"></div><div class="full-content-toolbar"><div class="full-content-paging">${button('previous','이전 사진','←')}<span aria-live="polite">${position+1} / ${gallery.items.length}</span>${button('next','다음 사진','→')}</div><p>${recovery?.type==='collection'?'사진을 선택하면 확대해서 볼 수 있습니다.':!imageAvailable?'이전·다음 버튼으로 다른 사진을 확인할 수 있습니다.':item.faces?'드래그하여 360° 둘러보기':'드래그하여 이동 · 휠 또는 두 손가락으로 확대'}</p><div>${button('zoom-out','자료 축소','−')}${button('home','자료 전체 보기','↺')}${button('zoom-in','자료 확대','＋')}</div></div>`;
   this.body.querySelector<HTMLButtonElement>('[data-content-command="previous"]')!.disabled=!canPrevious;
   this.body.querySelector<HTMLButtonElement>('[data-content-command="next"]')!.disabled=!canNext;
-  if(sourceIssue){
+  if(!imageAvailable){
    const stage=this.body.querySelector<HTMLElement>('.full-content-media-stage')!;
    stage.removeAttribute('role');stage.removeAttribute('aria-label');
-   stage.innerHTML=`<div class="full-content-source-note" role="status"><span aria-hidden="true">▧</span><p>${escape(sourceIssue.message)}</p></div>`;
+   if(recovery?.type==='collection'){
+    stage.classList.add('full-content-related');
+    stage.innerHTML=`<p>관련 전시 사진 ${recovery.items.length}장</p><div class="full-content-related-grid">${recovery.items.map(({gallery,index,item})=>`<button type="button" data-content-command="related-photo" data-gallery="${escape(gallery)}" data-index="${index}" aria-label="${escape(item.title||'사진 자료')} 확대"><img src="${escape(item.image)}" alt=""><span>${escape(item.title||'사진 자료')}</span></button>`).join('')}</div>`;
+   }else stage.innerHTML=`<div class="full-content-source-note" role="status"><span aria-hidden="true">▧</span><p>${escape(sourceIssue!.message)}</p></div>`;
    for(const button of this.body.querySelectorAll<HTMLButtonElement>('[data-content-command="zoom-in"],[data-content-command="zoom-out"],[data-content-command="home"]'))button.disabled=true;
   }else this.showGalleryImage(item);
+  const sourceNote=sourceGalleryNote(id,original.id);if(sourceNote)this.notice(sourceNote);
  }
  private moveGallery(offset:number):void {
   if(!this.gallery)return;

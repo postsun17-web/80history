@@ -1,0 +1,793 @@
+{
+  "date": "2026-10-04",
+  "task": "Cross-branch alternate source investigation for20white gallery items; no application edits",
+  "archive": {
+    "archive": "G:\\내 드라이브\\영락역사관\\영락교회_디지털역사관_1.최종소스및이미지.zip",
+    "bytes": 11761765594,
+    "mtime": 1790091287025000000
+  },
+  "scope": {
+    "catalogEntriesInspected": 138650,
+    "topLevelBranchCounts": {
+      "a2_111.xml": 1,
+      "action.xml": 1,
+      "black.png": 1,
+      "combobox.xml": 1,
+      "css.xml": 1,
+      "e-book.html": 1,
+      "e-book2.html": 1,
+      "floorplan_SM": 336,
+      "html": 682,
+      "images": 251,
+      "img": 582,
+      "index.html": 1,
+      "index1.html": 1,
+      "info": 1186,
+      "lang_kr.xml": 1,
+      "lensflare": 7,
+      "list_a02_action.xml": 1,
+      "list_a03_action.xml": 1,
+      "list_a04_action.xml": 1,
+      "list_a05_action.xml": 1,
+      "list_a06_action.xml": 1,
+      "list_a07_action.xml": 1,
+      "list_b01_action.xml": 1,
+      "list_b02_action.xml": 1,
+      "list_b03_action.xml": 1,
+      "list_b04_action.xml": 1,
+      "list_b05_action.xml": 1,
+      "list_c01_action.xml": 1,
+      "list_c02_action.xml": 1,
+      "list_c03_action.xml": 1,
+      "list_c04_action.xml": 1,
+      "list_c05_action.xml": 1,
+      "list_d01_action.xml": 1,
+      "list_d02_action.xml": 1,
+      "list_d03_action.xml": 1,
+      "list_d04_action.xml": 1,
+      "list_d05_action.xml": 1,
+      "list_spot.xml": 1,
+      "logo3.jpg": 1,
+      "logo4.jpg": 1,
+      "media_mobile.xml": 1,
+      "menu_css.xml": 1,
+      "mobile_menu.xml": 1,
+      "mov": 16,
+      "mp3": 9,
+      "object_hotspot": 3,
+      "outside.xml": 1,
+      "ovr": 365,
+      "pannel.xml": 1,
+      "panos": 89506,
+      "pdf_viewer.html": 1,
+      "photo": 45566,
+      "plugins": 32,
+      "qmenu.xml": 1,
+      "qmenu_m.xml": 1,
+      "skin": 23,
+      "tour.html": 1,
+      "tour.js": 1,
+      "tour.xml": 1,
+      "tour_testingserver.exe": 1,
+      "tour_testingserver_macos": 1,
+      "usvrplugins": 37,
+      "youngnak_cms.js": 1,
+      "youngnak_cms.xml": 1
+    },
+    "looseFilesEnumerated": 77906,
+    "looseFilesNotInZip": [
+      "영락교회_디지털역사관_1.최종소스및이미지.zip",
+      "영락교회_디지털역사관_이관안내서.docx"
+    ],
+    "excludedLooseProjectDirectories": [
+      "psv-museum-full",
+      "psv-poc",
+      "psv-poc-e-room"
+    ],
+    "localTextSourceFileCount": 366,
+    "searchTerms": [
+      "19550426",
+      "1955",
+      "1976",
+      "WCC",
+      "총회",
+      "빌리",
+      "그래함",
+      "그레이엄",
+      "100주년",
+      "추가",
+      "추후",
+      "c03",
+      "1955 transliterated tile paths",
+      "1976 transliterated tile paths",
+      "할렐루야",
+      "찬양",
+      "소그룹"
+    ],
+    "catalogPathInventory": "C:\\Users\\user\\Projects\\youngnak-e-room\\.cache\\defect-alternate-all-paths.txt",
+    "loosePathInventory": "C:\\Users\\user\\Projects\\youngnak-e-room\\.cache\\defect-alternate-loose-paths.txt",
+    "limitations": [
+      "Archive-wide filename metadata and source text searched; not every anonymous image or PSD layer visually inspected.",
+      "Nested photo/master.zip was not hydrated: its surrounding photo/master/ gallery has8master01–08 slides; Drive cache pressure halted additional optional binary reads.",
+      "Matching source item identities are distinguished from thematic/representative candidates."
+    ]
+  },
+  "sourceXmlCatalogVerification": [
+    {
+      "path": "photo/c03/tour.xml",
+      "bytes": 16097,
+      "zipBytes": 16097,
+      "crc32": 3226181917,
+      "zipCrc32": 3226181917,
+      "matches": true
+    },
+    {
+      "path": "photo/c03-01/tour.xml",
+      "bytes": 7872,
+      "zipBytes": 7872,
+      "crc32": 2398881669,
+      "zipCrc32": 2398881669,
+      "matches": true
+    },
+    {
+      "path": "photo/c03-02/tour.xml",
+      "bytes": 3822,
+      "zipBytes": 3822,
+      "crc32": 2575599945,
+      "zipCrc32": 2575599945,
+      "matches": true
+    },
+    {
+      "path": "list_c03_action.xml",
+      "bytes": 14941,
+      "zipBytes": 14941,
+      "crc32": 2379452335,
+      "zipCrc32": 2379452335,
+      "matches": true
+    },
+    {
+      "path": "photo/d01/tour.xml",
+      "bytes": 14166,
+      "zipBytes": 14166,
+      "crc32": 2786318243,
+      "zipCrc32": 2786318243,
+      "matches": true
+    },
+    {
+      "path": "photo/d04/tour.xml",
+      "bytes": 11489,
+      "zipBytes": 11489,
+      "crc32": 2351650480,
+      "zipCrc32": 2351650480,
+      "matches": true
+    },
+    {
+      "path": "list_d01_action.xml",
+      "bytes": 16139,
+      "zipBytes": 16139,
+      "crc32": 3537655521,
+      "zipCrc32": 3537655521,
+      "matches": true
+    },
+    {
+      "path": "list_d04_action.xml",
+      "bytes": 9921,
+      "zipBytes": 9921,
+      "crc32": 1260617914,
+      "zipCrc32": 1260617914,
+      "matches": true
+    }
+  ],
+  "results": [
+    {
+      "id": "c03:7",
+      "status": "confirmed_same_photo",
+      "candidates": [
+        {
+          "galleryItem": "c03-01:1",
+          "sourceTitle": "한경직 목사 총회장 기념촬영(1955.4.26.)",
+          "sourceScene": "scene_a2",
+          "sourceTilePattern": "photo/c03-01/panos/a2.tiles/l%l/%v/l%l_%v_%h.jpg",
+          "convertedImage": "C:\\Users\\user\\Projects\\youngnak-e-room\\public\\media\\full\\galleries\\c03-01\\1.webp",
+          "convertedDimensions": [
+            2688,
+            1786
+          ],
+          "convertedRgbExtrema": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ],
+          "convertedSha256": "5d2dc3eb0d8d511c0f12a25fa7fe600b43f5ce10d9328cfe8049dc8cd63759be",
+          "sourceReferences": [
+            "photo/c03-01/tour.xml:22",
+            "list_c03_action.xml:284",
+            "img/sector_c03_03.png"
+          ],
+          "visualInspection": "Black-and-white large group on stone church steps, visually identical to sector_c03_03 embedded photo. Title and date agree with c03:7 after punctuation normalization.",
+          "qualification": null
+        }
+      ],
+      "reason": "Exact historical title/date plus source panel image and direct supplemental route."
+    },
+    {
+      "id": "c03:8",
+      "status": "confirmed_same_photo_with_date_conflict",
+      "candidates": [
+        {
+          "galleryItem": "c03-01:2",
+          "sourceTitle": "WCC 지도자들의 한경직 목사 예방(1991.6.16.)",
+          "sourceScene": "scene_a3",
+          "sourceTilePattern": "photo/c03-01/panos/a3.tiles/l%l/%v/l%l_%v_%h.jpg",
+          "convertedImage": "C:\\Users\\user\\Projects\\youngnak-e-room\\public\\media\\full\\galleries\\c03-01\\2.webp",
+          "convertedDimensions": [
+            3840,
+            2661
+          ],
+          "convertedRgbExtrema": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ],
+          "convertedSha256": "03cc14c1a2ef387240045dd4f5ccd882e9eda9b36a862206620793278edcf0df",
+          "sourceReferences": [
+            "photo/c03-01/tour.xml:36",
+            "list_c03_action.xml:296",
+            "img/sector_c03_04.png"
+          ],
+          "visualInspection": "Color meeting around green sofas, visually identical to sector_c03_04 embedded photo. Panel caption explicitly says 1976.6.16., matching blank c03:8 title.",
+          "qualification": "Image identity is supported; date metadata conflicts between supplemental XML (1991) and main XML/panel (1976). Preserve/document conflict rather than silently asserting a corrected year."
+        }
+      ],
+      "reason": "Exact visual panel match and direct source route; conflicting year is metadata issue."
+    },
+    {
+      "id": "c03:9",
+      "status": "group_placeholder_no_one_to_one_match",
+      "candidates": [
+        {
+          "galleryItems": [
+            "c03-01:3",
+            "c03-01:4",
+            "c03-01:5"
+          ],
+          "sourceTitles": [
+            "밥 피얼스의 복음선교대회(1957.8.)",
+            "빌리 그래함 대전도집회(1956.2.26.)",
+            "분열된 한국교회가 한국기독교연합회 주관으로 드린 부활절연합예배(1962.4)"
+          ],
+          "sourceReferences": [
+            "list_c03_action.xml:306",
+            "list_c03_action.xml:310",
+            "list_c03_action.xml:313",
+            "img/sector_c03_05.png"
+          ]
+        }
+      ],
+      "reason": "Original filename 10(사진 2-3)추가 전달.jpg has no title or identifiable photo. Supplemental triplet is wired to following Korean Christian Council panel, but numbering does not establish which specific image replaces this placeholder."
+    },
+    {
+      "id": "c03:10",
+      "status": "group_placeholder_no_one_to_one_match",
+      "candidates": [
+        {
+          "galleryItems": [
+            "c03-01:6",
+            "c03-01:7",
+            "c03-01:8"
+          ],
+          "sourceTitle": "전국복음화운동(1965.12.5.)",
+          "sourceReferences": [
+            "list_c03_action.xml:322",
+            "list_c03_action.xml:326",
+            "list_c03_action.xml:330",
+            "img/sector_c03_06.png"
+          ]
+        }
+      ],
+      "reason": "Original filename 11관련 자료 1-3)추후 전달.jpg is an untitled future-delivery marker. Three normal supplemental national-evangelization images exist, but no direct cross-reference assigns any one of them to this blank slot. c03:11 already names national evangelization 1-3."
+    },
+    {
+      "id": "c03:12",
+      "status": "confirmed_same_poster",
+      "candidates": [
+        {
+          "galleryItem": "c03-01:9",
+          "sourceTitle": "빌리 그래함 한국전도대회(1973.5.30.)",
+          "sourceScene": "scene_a10",
+          "sourceTilePattern": "photo/c03-01/panos/a10.tiles/l%l/%v/l%l_%v_%h.jpg",
+          "convertedImage": "C:\\Users\\user\\Projects\\youngnak-e-room\\public\\media\\full\\galleries\\c03-01\\9.webp",
+          "convertedDimensions": [
+            576,
+            436
+          ],
+          "convertedRgbExtrema": [
+            [
+              1,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              243
+            ]
+          ],
+          "convertedSha256": "82199fa0c2fcc785704f894ef1304076244f7f9f9f45747d6a0eb611ed174510",
+          "sourceReferences": [
+            "photo/c03-01/tour.xml:134",
+            "list_c03_action.xml:349",
+            "img/sector_c03_07.png"
+          ],
+          "visualInspection": "Actual pixels are the orange Billy Graham Korean evangelism rally poster showing May 30–June 3, 1973, Yeouido 5.16 plaza, portrait and timetable. Exact same poster appears in sector_c03_07 panel.",
+          "qualification": "Low resolution (576x436) is source resolution, not new generation."
+        }
+      ],
+      "reason": "Visual poster text and exact same embedded panel image prove subject identity despite shorter supplemental XML title."
+    },
+    {
+      "id": "c03:16",
+      "status": "source_linked_centennial_representative",
+      "candidates": [
+        {
+          "galleryItem": "c03-02:0",
+          "sourceTitle": "한국기독교100주년선교대회에서 한경직 목사 설교(1984.8.19.)",
+          "sourceScene": "scene_a14",
+          "sourceTilePattern": "photo/c03-02/panos/a14.tiles/l%l/%v/l%l_%v_%h.jpg",
+          "convertedImage": "C:\\Users\\user\\Projects\\youngnak-e-room\\public\\media\\full\\galleries\\c03-02\\0.webp",
+          "convertedDimensions": [
+            3840,
+            2754
+          ],
+          "convertedRgbExtrema": [
+            [
+              22,
+              255
+            ],
+            [
+              22,
+              255
+            ],
+            [
+              22,
+              255
+            ]
+          ],
+          "convertedSha256": "d66c4fa819b894be5cf5ebdd6b3d18d22f9c2f13cb2434f757306ab3909367c2",
+          "sourceReferences": [
+            "photo/c03-02/tour.xml:12",
+            "list_c03_action.xml:375",
+            "img/sector_c03_09.png"
+          ],
+          "visualInspection": "Candidate corresponds to the single image in the centennial panel (preacher at lectern overlooking crowd), and the panel more-photo button opens this scene.",
+          "qualification": "Source-backed representative for intended centennial section; blank filename promised 1–8 photos, so it is not possible to prove a one-to-one replacement for that composite placeholder. Supplemental gallery contains five scenes, and c03-01:11–12 contain two more centennial event scenes."
+        }
+      ],
+      "reason": "The source centennial panel directly opens c03-02:0 and embeds that same photo; the blank old file is an unfulfilled 1–8-photo collection marker."
+    },
+    {
+      "id": "a07:35",
+      "status": "no_confirmed_replacement",
+      "sourceScene": "scene_36",
+      "sourceTitle": "",
+      "candidates": [],
+      "reason": "No identified historical title; exact source scene is an anonymous/00/blank reserve slot. No direct active source panel reference assigns content to this blank, per independent .cache/defect-screen-map.json."
+    },
+    {
+      "id": "a07:36",
+      "status": "no_confirmed_replacement",
+      "sourceScene": "scene_37",
+      "sourceTitle": "37",
+      "candidates": [],
+      "reason": "No identified historical title; exact source scene is an anonymous/00/blank reserve slot. No direct active source panel reference assigns content to this blank, per independent .cache/defect-screen-map.json."
+    },
+    {
+      "id": "a07:37",
+      "status": "no_confirmed_replacement",
+      "sourceScene": "scene_38",
+      "sourceTitle": "",
+      "candidates": [],
+      "reason": "No identified historical title; exact source scene is an anonymous/00/blank reserve slot. No direct active source panel reference assigns content to this blank, per independent .cache/defect-screen-map.json."
+    },
+    {
+      "id": "a07:38",
+      "status": "no_confirmed_replacement",
+      "sourceScene": "scene_39",
+      "sourceTitle": "",
+      "candidates": [],
+      "reason": "No identified historical title; exact source scene is an anonymous/00/blank reserve slot. No direct active source panel reference assigns content to this blank, per independent .cache/defect-screen-map.json."
+    },
+    {
+      "id": "a07:39",
+      "status": "no_confirmed_replacement",
+      "sourceScene": "scene_40",
+      "sourceTitle": "40",
+      "candidates": [],
+      "reason": "No identified historical title; exact source scene is an anonymous/00/blank reserve slot. No direct active source panel reference assigns content to this blank, per independent .cache/defect-screen-map.json."
+    },
+    {
+      "id": "b01:0",
+      "status": "no_confirmed_replacement",
+      "sourceScene": "scene_b01_00",
+      "sourceTitle": "",
+      "candidates": [],
+      "reason": "No identified historical title; exact source scene is an anonymous/00/blank reserve slot. No direct active source panel reference assigns content to this blank, per independent .cache/defect-screen-map.json."
+    },
+    {
+      "id": "c01:0",
+      "status": "no_confirmed_replacement",
+      "sourceScene": "scene_00",
+      "sourceTitle": "00",
+      "candidates": [],
+      "reason": "No identified historical title; exact source scene is an anonymous/00/blank reserve slot. No direct active source panel reference assigns content to this blank, per independent .cache/defect-screen-map.json."
+    },
+    {
+      "id": "d01:0",
+      "status": "no_confirmed_replacement",
+      "sourceScene": "scene_00",
+      "sourceTitle": "00",
+      "candidates": [],
+      "reason": "No identified historical title; exact source scene is an anonymous/00/blank reserve slot. No direct active source panel reference assigns content to this blank, per independent .cache/defect-screen-map.json."
+    },
+    {
+      "id": "d01:5",
+      "status": "no_confirmed_replacement",
+      "sourceScene": "scene_05",
+      "sourceTitle": "",
+      "candidates": [],
+      "reason": "No identified historical title; exact source scene is an anonymous/00/blank reserve slot. No direct active source panel reference assigns content to this blank, per independent .cache/defect-screen-map.json."
+    },
+    {
+      "id": "d01:16",
+      "status": "no_confirmed_replacement",
+      "sourceScene": "scene_16",
+      "sourceTitle": "",
+      "candidates": [
+        {
+          "path": "html/photo/d01_38a.jpg",
+          "convertedImage": "C:\\Users\\user\\Projects\\youngnak-e-room\\public\\media\\full\\html\\photo\\d01_38a.jpg.webp",
+          "sourceReferences": [
+            "list_d01_action.xml:381 (COMMENTED OUT)",
+            "html/d01_17.html",
+            "img/sector_d01_08.png"
+          ],
+          "description": "Same Hallelujah choir group image appears on panel 8 right and article. Photo lettering dates2025.6.4; article alt says2025.07.09.",
+          "qualification": "Deprecated commented route plus_16 connects old index16 with this panel position; strong thematic candidate but no live direct route or gallery title confirms equivalence."
+        }
+      ],
+      "reason": "No identified historical title; exact source scene is an anonymous/00/blank reserve slot. No direct active source panel reference assigns content to this blank, per independent .cache/defect-screen-map.json. A commented-out old route suggests Hallelujah choir, and that exact panel photograph survives in an article, but identity of an untitled placeholder cannot be proven from active source metadata."
+    },
+    {
+      "id": "d02:0",
+      "status": "no_confirmed_replacement",
+      "sourceScene": "scene_00",
+      "sourceTitle": "00",
+      "candidates": [],
+      "reason": "No identified historical title; exact source scene is an anonymous/00/blank reserve slot. No direct active source panel reference assigns content to this blank, per independent .cache/defect-screen-map.json."
+    },
+    {
+      "id": "d04:0",
+      "status": "no_confirmed_replacement",
+      "sourceScene": "scene_00",
+      "sourceTitle": "00",
+      "candidates": [],
+      "reason": "No identified historical title; exact source scene is an anonymous/00/blank reserve slot. No direct active source panel reference assigns content to this blank, per independent .cache/defect-screen-map.json."
+    },
+    {
+      "id": "d04:2",
+      "status": "no_confirmed_replacement",
+      "sourceScene": "scene_02",
+      "sourceTitle": "",
+      "candidates": [
+        {
+          "galleryItems": [
+            "d04-02:0",
+            "d04-02:1",
+            "d04-02:2",
+            "d04-02:3"
+          ],
+          "sourceReferences": [
+            "list_d04_action.xml:174",
+            "list_d04_action.xml:177",
+            "list_d04_action.xml:180",
+            "list_d04_action.xml:183"
+          ],
+          "description": "Four normal small-group photos exist in supplemental gallery; main blank slots2,3 precede magazine image4.",
+          "qualification": "No source route maps old blank2/3 one-to-one to these four photos."
+        }
+      ],
+      "reason": "No identified historical title; exact source scene is an anonymous/00/blank reserve slot. No direct active source panel reference assigns content to this blank, per independent .cache/defect-screen-map.json."
+    },
+    {
+      "id": "d04:3",
+      "status": "no_confirmed_replacement",
+      "sourceScene": "scene_03",
+      "sourceTitle": "",
+      "candidates": [
+        {
+          "galleryItems": [
+            "d04-02:0",
+            "d04-02:1",
+            "d04-02:2",
+            "d04-02:3"
+          ],
+          "sourceReferences": [
+            "list_d04_action.xml:174",
+            "list_d04_action.xml:177",
+            "list_d04_action.xml:180",
+            "list_d04_action.xml:183"
+          ],
+          "description": "Four normal small-group photos exist in supplemental gallery; main blank slots2,3 precede magazine image4.",
+          "qualification": "No source route maps old blank2/3 one-to-one to these four photos."
+        }
+      ],
+      "reason": "No identified historical title; exact source scene is an anonymous/00/blank reserve slot. No direct active source panel reference assigns content to this blank, per independent .cache/defect-screen-map.json."
+    }
+  ],
+  "numericallyNamedC03Originals": [
+    {
+      "zipPath": "photo/jpg파일모음/c03_jpg/1/image00002.png",
+      "localPath": "E:\\CodexAssets\\youngnak-defect-reaudit\\raw\\zip\\photo\\jpg파일모음\\c03_jpg\\1\\image00002.png",
+      "dimensions": [
+        411,
+        309
+      ],
+      "visuallyMatchesNormalGalleryItem": "c03:0",
+      "visualDescription": "피얼스 박사 일행 대 부흥전도회",
+      "isNewReplacementForBlank": false
+    },
+    {
+      "zipPath": "photo/jpg파일모음/c03_jpg/1/image00003.png",
+      "localPath": "E:\\CodexAssets\\youngnak-defect-reaudit\\raw\\zip\\photo\\jpg파일모음\\c03_jpg\\1\\image00003.png",
+      "dimensions": [
+        607,
+        459
+      ],
+      "visuallyMatchesNormalGalleryItem": "c03:2",
+      "visualDescription": "교역자수양회 실내",
+      "isNewReplacementForBlank": false
+    },
+    {
+      "zipPath": "photo/jpg파일모음/c03_jpg/1/image00004.jpg",
+      "localPath": "E:\\CodexAssets\\youngnak-defect-reaudit\\raw\\zip\\photo\\jpg파일모음\\c03_jpg\\1\\image00004.jpg",
+      "dimensions": [
+        2889,
+        1346
+      ],
+      "visuallyMatchesNormalGalleryItem": "c03:3",
+      "visualDescription": "전국교역자수양회 실내",
+      "isNewReplacementForBlank": false
+    },
+    {
+      "zipPath": "photo/jpg파일모음/c03_jpg/1/image00005.bmp",
+      "localPath": "E:\\CodexAssets\\youngnak-defect-reaudit\\raw\\zip\\photo\\jpg파일모음\\c03_jpg\\1\\image00005.bmp",
+      "dimensions": [
+        3867,
+        2806
+      ],
+      "visuallyMatchesNormalGalleryItem": "c03:4",
+      "visualDescription": "빌리 그래함 대전도회 서울운동장 입구",
+      "isNewReplacementForBlank": false
+    },
+    {
+      "zipPath": "photo/jpg파일모음/c03_jpg/1/image00006.bmp",
+      "localPath": "E:\\CodexAssets\\youngnak-defect-reaudit\\raw\\zip\\photo\\jpg파일모음\\c03_jpg\\1\\image00006.bmp",
+      "dimensions": [
+        3786,
+        3200
+      ],
+      "visuallyMatchesNormalGalleryItem": "c03:5",
+      "visualDescription": "1956.2.26. 집회 미군 참석자",
+      "isNewReplacementForBlank": false
+    },
+    {
+      "zipPath": "photo/jpg파일모음/c03_jpg/1/image00007.jpg",
+      "localPath": "E:\\CodexAssets\\youngnak-defect-reaudit\\raw\\zip\\photo\\jpg파일모음\\c03_jpg\\1\\image00007.jpg",
+      "dimensions": [
+        2662,
+        1830
+      ],
+      "visuallyMatchesNormalGalleryItem": "c03:6",
+      "visualDescription": "빌리 그래함 설교와 한경직 통역",
+      "isNewReplacementForBlank": false
+    },
+    {
+      "zipPath": "photo/jpg파일모음/c03_jpg/1/image00008.bmp",
+      "localPath": "E:\\CodexAssets\\youngnak-defect-reaudit\\raw\\zip\\photo\\jpg파일모음\\c03_jpg\\1\\image00008.bmp",
+      "dimensions": [
+        593,
+        662
+      ],
+      "visuallyMatchesNormalGalleryItem": "c03:15",
+      "visualDescription": "기독교지도자협의회 매일경제 기사",
+      "isNewReplacementForBlank": false
+    },
+    {
+      "zipPath": "photo/jpg파일모음/c03_jpg/1/image00009.bmp",
+      "localPath": "E:\\CodexAssets\\youngnak-defect-reaudit\\raw\\zip\\photo\\jpg파일모음\\c03_jpg\\1\\image00009.bmp",
+      "dimensions": [
+        2344,
+        1560
+      ],
+      "visuallyMatchesNormalGalleryItem": "c03:17",
+      "visualDescription": "한기총 창립총회 준비기도회",
+      "isNewReplacementForBlank": false
+    },
+    {
+      "zipPath": "photo/jpg파일모음/c03_jpg/1/image00011.jpg",
+      "localPath": "E:\\CodexAssets\\youngnak-defect-reaudit\\raw\\zip\\photo\\jpg파일모음\\c03_jpg\\1\\image00011.jpg",
+      "dimensions": [
+        2600,
+        3756
+      ],
+      "visuallyMatchesNormalGalleryItem": "c03:19",
+      "visualDescription": "한기총 공동기도회 참석 여성들",
+      "isNewReplacementForBlank": false
+    }
+  ],
+  "otherNamedCandidates": [
+    {
+      "path": "html/photo/chan할렐루야.jpg",
+      "bytes": 455543,
+      "crc32": 2619466334
+    },
+    {
+      "path": "html/photo/할렐루야찬양대 내리교회 방문(2025.9.25.).jpg",
+      "bytes": 100515,
+      "crc32": 481966586
+    },
+    {
+      "path": "html/photo/할렐루야찬양대 송악산기도처 방문(2023).jpg",
+      "bytes": 149051,
+      "crc32": 3170899174
+    },
+    {
+      "path": "photo/jpg파일모음/a01_img/0000한국기독교 100주년 선교대회.jpg",
+      "bytes": 761262,
+      "crc32": 195475760
+    },
+    {
+      "path": "photo/jpg파일모음/a01_img/한국기독교 100주년 선교대회.jpeg",
+      "bytes": 9010171,
+      "crc32": 1231340494
+    },
+    {
+      "path": "photo/jpg파일모음/a06jpg/01한국기독교 100주년 선교대회.jpg",
+      "bytes": 761262,
+      "crc32": 195475760
+    },
+    {
+      "path": "photo/jpg파일모음/a06jpg/02빌리 그레이엄 전도집회 중 영락교회 예배 설교-한경직 목사 통역.jpg",
+      "bytes": 427087,
+      "crc32": 2382503442
+    },
+    {
+      "path": "photo/jpg파일모음/a06jpg/65.빌리 그레이엄 목사 전도대회 참석 환영식-19730525.jpg",
+      "bytes": 722875,
+      "crc32": 953658444
+    },
+    {
+      "path": "photo/jpg파일모음/a06jpg/jpg/1/00한국기독교 100주년 선교대회 - 복사본.jpg",
+      "bytes": 1605943,
+      "crc32": 3550588114
+    },
+    {
+      "path": "photo/jpg파일모음/a06jpg/jpg/1/01한국기독교 100주년 선교대회.jpg",
+      "bytes": 1605943,
+      "crc32": 3550588114
+    },
+    {
+      "path": "photo/jpg파일모음/a06jpg/jpg/1/02.빌리 그레이엄 목사 전도대회 참석 환영식-19730525.jpg",
+      "bytes": 1711403,
+      "crc32": 2217540844
+    },
+    {
+      "path": "photo/jpg파일모음/a06jpg/jpg/1/03빌리 그레이엄 전도집회 중 영락교회 예배 설교-한경직 목사 통역.jpg",
+      "bytes": 903472,
+      "crc32": 2717704279
+    },
+    {
+      "path": "photo/jpg파일모음/a06jpg/jpg/1/17한경직목사기념사업회 창립총회(1981.11.20.).jpg",
+      "bytes": 37037,
+      "crc32": 2754733535
+    },
+    {
+      "path": "photo/jpg파일모음/c03_jpg/07말씀을 전하는 빌리 그래함과 통역하는 한경직 목사(1956.2.26.).jpg",
+      "bytes": 1917598,
+      "crc32": 825010343
+    },
+    {
+      "path": "photo/jpg파일모음/c03_jpg/08(한경직 목사 총회장 기념촬영-19550426).jpg",
+      "bytes": 78677,
+      "crc32": 254498858
+    },
+    {
+      "path": "photo/jpg파일모음/c03_jpg/09WCC 지도자들의 한경직 목사 예방(1976.6.16.).jpg",
+      "bytes": 79117,
+      "crc32": 2246831581
+    },
+    {
+      "path": "photo/jpg파일모음/c03_jpg/13빌리 그래함 한국전도대회 포스터.jpg",
+      "bytes": 79133,
+      "crc32": 2315127611
+    },
+    {
+      "path": "photo/jpg파일모음/c03_jpg/14빌리 그래함 한국전도대회-1973.JPG",
+      "bytes": 3097613,
+      "crc32": 128842302
+    },
+    {
+      "path": "photo/jpg파일모음/c03_jpg/15빌리 그래함의 영락교회 방문-197305.jpg",
+      "bytes": 2245968,
+      "crc32": 3390582654
+    },
+    {
+      "path": "photo/jpg파일모음/c03_jpg/17.100주년 행사 사진 1-8장.jpg",
+      "bytes": 79121,
+      "crc32": 2161312936
+    },
+    {
+      "path": "photo/jpg파일모음/c03_jpg/18한기총 창립총회 준비기도회(1989.6.12.).jpg",
+      "bytes": 2224741,
+      "crc32": 2215402146
+    },
+    {
+      "path": "photo/jpg파일모음/c03_jpg/19제2회 한기총 총회에서 인사하는 한경직 명예회장(1990.12.4.).jpg",
+      "bytes": 3058290,
+      "crc32": 499832803
+    },
+    {
+      "path": "photo/jpg파일모음/d05jpg/04총회농촌선교센터 준공 감사예배-20200609.png",
+      "bytes": 251030,
+      "crc32": 1575058071
+    },
+    {
+      "path": "photo/영락교회에서 열린 제40회 총회-19550422.jpg",
+      "bytes": 445469,
+      "crc32": 2836241549
+    },
+    {
+      "path": "photo/한경직 목사의 총회장 취임식에 축사하는 세계가정생활위원회 하이버 박사-19550426.jpg",
+      "bytes": 972793,
+      "crc32": 533253261
+    }
+  ],
+  "summary": {
+    "confirmedImageReplacements": [
+      "c03:7",
+      "c03:8",
+      "c03:12"
+    ],
+    "dateConflict": [
+      "c03:8"
+    ],
+    "sourceLinkedRepresentative": [
+      "c03:16"
+    ],
+    "ambiguousUntitledC03GroupSlots": [
+      "c03:9",
+      "c03:10"
+    ],
+    "additional14NoConfirmedOneToOneReplacement": 14
+  }
+}

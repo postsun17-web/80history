@@ -1,0 +1,1366 @@
+{
+  "session": "defect-captures",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "annotationMethod": "Temporary browser DOM overlay only; native browser screenshots.",
+  "captures": [
+    {
+      "kind": "before",
+      "id": "a07:35",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_a-s-e%2B1%2B&page=14&startlookat=-178.228%2C-10.6265%2C100&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22a07%22%2C%22index%22%3A35%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/a07-35.png",
+      "observed": {
+        "annotation": "검수 대상 a07:35 · 사진 목록 36/50",
+        "capturedAt": "2026-10-04T06:21:43.633Z",
+        "heading": "세계기독교의 중심을 향하다 (1998-현재)",
+        "loading": "",
+        "pageTitle": "제6대 김운성 담임목사",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "세계기독교의 중심을 향하다 (1998-현재) · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_a-s-e%2B1%2B&page=14&startlookat=-178.228%2C-10.6265%2C100&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22a07%22%2C%22index%22%3A35%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "a07:36",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_a-s-e%2B1%2B&page=14&startlookat=-178.228%2C-10.6265%2C100&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22a07%22%2C%22index%22%3A36%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/a07-36.png",
+      "observed": {
+        "annotation": "검수 대상 a07:36 · 사진 목록 37/50",
+        "capturedAt": "2026-10-04T06:21:46.162Z",
+        "heading": "37",
+        "loading": "",
+        "pageTitle": "제6대 김운성 담임목사",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "세계기독교의 중심을 향하다 (1998-현재) · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_a-s-e%2B1%2B&page=14&startlookat=-178.228%2C-10.6265%2C100&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22a07%22%2C%22index%22%3A36%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "a07:37",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_a-s-e%2B1%2B&page=19&startlookat=-178.228%2C-10.6265%2C100&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22a07%22%2C%22index%22%3A37%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/a07-37.png",
+      "observed": {
+        "annotation": "검수 대상 a07:37 · 사진 목록 38/50",
+        "capturedAt": "2026-10-04T06:21:48.981Z",
+        "heading": "세계기독교의 중심을 향하다 (1998-현재)",
+        "loading": "",
+        "pageTitle": "신앙포털 서비스 오픈: 영락교회 앱",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "세계기독교의 중심을 향하다 (1998-현재) · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_a-s-e%2B1%2B&page=19&startlookat=-178.228%2C-10.6265%2C100&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22a07%22%2C%22index%22%3A37%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "a07:38",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_a-s-e%2B1%2B&page=19&startlookat=-178.228%2C-10.6265%2C100&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22a07%22%2C%22index%22%3A38%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/a07-38.png",
+      "observed": {
+        "annotation": "검수 대상 a07:38 · 사진 목록 39/50",
+        "capturedAt": "2026-10-04T06:21:51.617Z",
+        "heading": "세계기독교의 중심을 향하다 (1998-현재)",
+        "loading": "",
+        "pageTitle": "신앙포털 서비스 오픈: 영락교회 앱",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "세계기독교의 중심을 향하다 (1998-현재) · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_a-s-e%2B1%2B&page=19&startlookat=-178.228%2C-10.6265%2C100&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22a07%22%2C%22index%22%3A38%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "a07:39",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_a-s-e%2B1%2B&page=19&startlookat=-178.228%2C-10.6265%2C100&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22a07%22%2C%22index%22%3A39%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/a07-39.png",
+      "observed": {
+        "annotation": "검수 대상 a07:39 · 사진 목록 40/50",
+        "capturedAt": "2026-10-04T06:21:54.169Z",
+        "heading": "40",
+        "loading": "",
+        "pageTitle": "신앙포털 서비스 오픈: 영락교회 앱",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "세계기독교의 중심을 향하다 (1998-현재) · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_a-s-e%2B1%2B&page=19&startlookat=-178.228%2C-10.6265%2C100&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22a07%22%2C%22index%22%3A39%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "b01:0",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_b-c-s-1&page=1&startlookat=179.9597%2C-11.676%2C120&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22b01%22%2C%22index%22%3A0%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/b01-0.png",
+      "observed": {
+        "annotation": "검수 대상 b01:0 · 사진 목록 1/8",
+        "capturedAt": "2026-10-04T06:21:58.189Z",
+        "heading": "해방 전후 신의주",
+        "loading": "",
+        "pageTitle": "신도시 신의주(新義州)",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "해방 전후 신의주 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_b-c-s-1&page=1&startlookat=179.9597%2C-11.676%2C120&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22b01%22%2C%22index%22%3A0%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "c01:0",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-c-s-1&page=2&startlookat=179.9597%2C-11.676%2C120&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c01%22%2C%22index%22%3A0%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/c01-0.png",
+      "observed": {
+        "annotation": "검수 대상 c01:0 · 사진 목록 1/24",
+        "capturedAt": "2026-10-04T06:22:01.942Z",
+        "heading": "00",
+        "loading": "",
+        "pageTitle": "대광중학교·대광고등학교",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "교육기관 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-c-s-1&page=2&startlookat=179.9597%2C-11.676%2C120&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c01%22%2C%22index%22%3A0%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "c03:7",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A7%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/c03-7.png",
+      "observed": {
+        "annotation": "검수 대상 c03:7 · 사진 목록 8/22",
+        "capturedAt": "2026-10-04T06:22:04.394Z",
+        "heading": "한경직 목사 총회장 기념촬영(1955,04,26)",
+        "loading": "",
+        "pageTitle": "1950년대 빌리 그래함의 전도집회",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A7%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "c03:8",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A8%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/c03-8.png",
+      "observed": {
+        "annotation": "검수 대상 c03:8 · 사진 목록 9/22",
+        "capturedAt": "2026-10-04T06:22:06.763Z",
+        "heading": "WCC 지도자들의 한경직 목사 예방(1976.6.16.)",
+        "loading": "",
+        "pageTitle": "1950년대 빌리 그래함의 전도집회",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A8%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "c03:9",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A9%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/c03-9.png",
+      "observed": {
+        "annotation": "검수 대상 c03:9 · 사진 목록 10/22",
+        "capturedAt": "2026-10-04T06:22:09.098Z",
+        "heading": "민족복음화&연합운동",
+        "loading": "",
+        "pageTitle": "1950년대 빌리 그래함의 전도집회",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A9%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "c03:10",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A10%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/c03-10.png",
+      "observed": {
+        "annotation": "검수 대상 c03:10 · 사진 목록 11/22",
+        "capturedAt": "2026-10-04T06:22:11.433Z",
+        "heading": "민족복음화&연합운동",
+        "loading": "",
+        "pageTitle": "1950년대 빌리 그래함의 전도집회",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A10%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "c03:12",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=7&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A12%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/c03-12.png",
+      "observed": {
+        "annotation": "검수 대상 c03:12 · 사진 목록 13/22",
+        "capturedAt": "2026-10-04T06:22:13.869Z",
+        "heading": "빌리 그래함 한국전도대회 포스터",
+        "loading": "",
+        "pageTitle": "빌리 그래함의 한국전도대회",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=7&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A12%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "c03:16",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=8&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A16%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/c03-16.png",
+      "observed": {
+        "annotation": "검수 대상 c03:16 · 사진 목록 17/22",
+        "capturedAt": "2026-10-04T06:22:16.371Z",
+        "heading": "100주년 행사 사진",
+        "loading": "",
+        "pageTitle": "한국기독교지도자협의회",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=8&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A16%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "d01:0",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-w-2&page=3&startlookat=-95.5537%2C-10.83%2C108&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22d01%22%2C%22index%22%3A0%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/d01-0.png",
+      "observed": {
+        "annotation": "검수 대상 d01:0 · 사진 목록 1/21",
+        "capturedAt": "2026-10-04T06:22:20.027Z",
+        "heading": "00",
+        "loading": "",
+        "pageTitle": "교회의 본질로써 예배",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "예배 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-w-2&page=3&startlookat=-95.5537%2C-10.83%2C108&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22d01%22%2C%22index%22%3A0%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "d01:5",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-w-2&page=3&startlookat=-95.5537%2C-10.83%2C108&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22d01%22%2C%22index%22%3A5%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/d01-5.png",
+      "observed": {
+        "annotation": "검수 대상 d01:5 · 사진 목록 6/21",
+        "capturedAt": "2026-10-04T06:22:22.631Z",
+        "heading": "예배",
+        "loading": "",
+        "pageTitle": "교회의 본질로써 예배",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "예배 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-w-2&page=3&startlookat=-95.5537%2C-10.83%2C108&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22d01%22%2C%22index%22%3A5%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "d01:16",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-w-2&page=9&startlookat=-95.5537%2C-10.83%2C108&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22d01%22%2C%22index%22%3A16%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/d01-16.png",
+      "observed": {
+        "annotation": "검수 대상 d01:16 · 사진 목록 17/21",
+        "capturedAt": "2026-10-04T06:22:25.232Z",
+        "heading": "예배",
+        "loading": "",
+        "pageTitle": "국제예배",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "예배 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-w-2&page=9&startlookat=-95.5537%2C-10.83%2C108&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22d01%22%2C%22index%22%3A16%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "d02:0",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-0&page=2&startlookat=13.069%2C-10.931%2C113&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22d02%22%2C%22index%22%3A0%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/d02-0.png",
+      "observed": {
+        "annotation": "검수 대상 d02:0 · 사진 목록 1/13",
+        "capturedAt": "2026-10-04T06:22:29.085Z",
+        "heading": "00",
+        "loading": "",
+        "pageTitle": "교육기관 조직",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "교육 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-0&page=2&startlookat=13.069%2C-10.931%2C113&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22d02%22%2C%22index%22%3A0%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "d04:0",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-e%2B1&page=2&startlookat=14.489%2C-12.091%2C116&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22d04%22%2C%22index%22%3A0%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/d04-0.png",
+      "observed": {
+        "annotation": "검수 대상 d04:0 · 사진 목록 1/17",
+        "capturedAt": "2026-10-04T06:22:32.704Z",
+        "heading": "00",
+        "loading": "",
+        "pageTitle": "구역모임을 통한 성도의 교제",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "성도의 교제 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-e%2B1&page=2&startlookat=14.489%2C-12.091%2C116&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22d04%22%2C%22index%22%3A0%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "d04:2",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-e%2B1&page=2&startlookat=14.489%2C-12.091%2C116&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22d04%22%2C%22index%22%3A2%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/d04-2.png",
+      "observed": {
+        "annotation": "검수 대상 d04:2 · 사진 목록 3/17",
+        "capturedAt": "2026-10-04T06:22:35.223Z",
+        "heading": "성도의 교제",
+        "loading": "",
+        "pageTitle": "구역모임을 통한 성도의 교제",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "성도의 교제 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-e%2B1&page=2&startlookat=14.489%2C-12.091%2C116&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22d04%22%2C%22index%22%3A2%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "before",
+      "id": "d04:3",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-e%2B1&page=4&startlookat=14.489%2C-12.091%2C116&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22d04%22%2C%22index%22%3A3%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/before/d04-3.png",
+      "observed": {
+        "annotation": "검수 대상 d04:3 · 사진 목록 4/17",
+        "capturedAt": "2026-10-04T06:22:37.775Z",
+        "heading": "성도의 교제",
+        "loading": "",
+        "pageTitle": "문서를 통한 교제",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "sourceNotice": "▧전달받은 원본 이미지가 비어 있어 사진을 표시할 수 없습니다.",
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "성도의 교제 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-e%2B1&page=4&startlookat=14.489%2C-12.091%2C116&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22d04%22%2C%22index%22%3A3%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "a07:35",
+        "a07:36"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_a-s-e%2B1%2B&page=14&startlookat=-178.228%2C-10.6265%2C100",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/a07-page-14.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "capturedAt": "2026-10-04T06:22:48.915Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "제6대 김운성 담임목사",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "stageRect": null,
+        "title": "세계기독교의 중심을 향하다 (1998-현재) · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_a-s-e%2B1%2B&page=14&startlookat=-178.228%2C-10.6265%2C100",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "a07:37",
+        "a07:38",
+        "a07:39"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_a-s-e%2B1%2B&page=19&startlookat=-178.228%2C-10.6265%2C100",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/a07-page-19.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "capturedAt": "2026-10-04T06:22:51.467Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "신앙포털 서비스 오픈: 영락교회 앱",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "stageRect": null,
+        "title": "세계기독교의 중심을 향하다 (1998-현재) · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_a-s-e%2B1%2B&page=19&startlookat=-178.228%2C-10.6265%2C100",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "b01:0"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_b-c-s-1&page=1&startlookat=179.9597%2C-11.676%2C120",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/b01-page-01.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "capturedAt": "2026-10-04T06:22:53.919Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "신도시 신의주(新義州)",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "stageRect": null,
+        "title": "해방 전후 신의주 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_b-c-s-1&page=1&startlookat=179.9597%2C-11.676%2C120",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "c01:0"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-c-s-1&page=2&startlookat=179.9597%2C-11.676%2C120",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/c01-page-02.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "capturedAt": "2026-10-04T06:22:56.504Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "대광중학교·대광고등학교",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "stageRect": null,
+        "title": "교육기관 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-c-s-1&page=2&startlookat=179.9597%2C-11.676%2C120",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "c03:7",
+        "c03:8",
+        "c03:9",
+        "c03:10"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/c03-page-02.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "capturedAt": "2026-10-04T06:22:59.140Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "1950년대 빌리 그래함의 전도집회",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "stageRect": null,
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "c03:7"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=3&startlookat=90%2C-9.8523%2C90",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/c03-page-03.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "capturedAt": "2026-10-04T06:23:01.792Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "한경직 목사 대한예수교장로회 총회장 선출",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "stageRect": null,
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=3&startlookat=90%2C-9.8523%2C90",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "c03:8"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=4&startlookat=90%2C-9.8523%2C90",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/c03-page-04.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "capturedAt": "2026-10-04T06:23:04.461Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "대한예수교장로회의 WCC 가입문제",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "stageRect": null,
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=4&startlookat=90%2C-9.8523%2C90",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "c03:12"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=7&startlookat=90%2C-9.8523%2C90",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/c03-page-07.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "capturedAt": "2026-10-04T06:23:06.846Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "빌리 그래함의 한국전도대회",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "stageRect": null,
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=7&startlookat=90%2C-9.8523%2C90",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "c03:16"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=8&startlookat=90%2C-9.8523%2C90",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/c03-page-08.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "capturedAt": "2026-10-04T06:23:09.249Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "한국기독교지도자협의회",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "stageRect": null,
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=8&startlookat=90%2C-9.8523%2C90",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "c03:16"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=9&startlookat=90%2C-9.8523%2C90",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/c03-page-09.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "capturedAt": "2026-10-04T06:23:11.867Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "한국기독교100주년선교대회",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "stageRect": null,
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=9&startlookat=90%2C-9.8523%2C90",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "d01:0",
+        "d01:5"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-w-2&page=3&startlookat=-95.5537%2C-10.83%2C108",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/d01-page-03.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "capturedAt": "2026-10-04T06:23:14.357Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "교회의 본질로써 예배",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "stageRect": null,
+        "title": "예배 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-w-2&page=3&startlookat=-95.5537%2C-10.83%2C108",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "d01:16"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-w-2&page=9&startlookat=-95.5537%2C-10.83%2C108",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/d01-page-09.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "capturedAt": "2026-10-04T06:23:17.092Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "국제예배",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "stageRect": null,
+        "title": "예배 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-w-2&page=9&startlookat=-95.5537%2C-10.83%2C108",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "d02:0"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-0&page=2&startlookat=13.069%2C-10.931%2C113",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/d02-page-02.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "capturedAt": "2026-10-04T06:23:19.994Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "교육기관 조직",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "stageRect": null,
+        "title": "교육 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-0&page=2&startlookat=13.069%2C-10.931%2C113",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "d04:0",
+        "d04:2"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-e%2B1&page=2&startlookat=14.489%2C-12.091%2C116",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/d04-page-02.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "capturedAt": "2026-10-04T06:23:22.814Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "구역모임을 통한 성도의 교제",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "stageRect": null,
+        "title": "성도의 교제 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-e%2B1&page=2&startlookat=14.489%2C-12.091%2C116",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "d04:3"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-e%2B1&page=4&startlookat=14.489%2C-12.091%2C116",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/d04-page-04.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "capturedAt": "2026-10-04T06:23:25.715Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "문서를 통한 교제",
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-Cbhdg7PH.js"
+        ],
+        "stageRect": null,
+        "title": "성도의 교제 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_d-n-e%2B1&page=4&startlookat=14.489%2C-12.091%2C116",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "c03:9"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=5&startlookat=90%2C-9.8523%2C90",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/c03-page-05.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "canvasCount": 0,
+        "capturedAt": "2026-10-04T06:29:23.869Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "한국기독교연합회",
+        "relatedImages": [],
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-BgaYrZ4W.js"
+        ],
+        "stageRect": null,
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=5&startlookat=90%2C-9.8523%2C90",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      },
+      "contextAssociation": "Inferred topic group, not one-to-one original photograph identity."
+    },
+    {
+      "kind": "panels",
+      "id": null,
+      "items": [
+        "c03:10"
+      ],
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=6&startlookat=90%2C-9.8523%2C90",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/panels/c03-page-06.png",
+      "observed": {
+        "annotation": "관련 전시판 · 자료는 사진목록 이전/다음에서 접근",
+        "canvasCount": 0,
+        "capturedAt": "2026-10-04T06:29:27.567Z",
+        "heading": "",
+        "loading": "",
+        "pageTitle": "전국복음화운동",
+        "relatedImages": [],
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-BgaYrZ4W.js"
+        ],
+        "stageRect": null,
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=6&startlookat=90%2C-9.8523%2C90",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      },
+      "contextAssociation": "Inferred topic group, not one-to-one original photograph identity."
+    },
+    {
+      "kind": "after",
+      "id": "c03:7",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A7%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/after/c03-7.png",
+      "observed": {
+        "annotation": "보강 후 c03:7",
+        "canvasCount": 1,
+        "capturedAt": "2026-10-04T06:29:32.404Z",
+        "heading": "한경직 목사 총회장 기념촬영(1955,04,26)",
+        "loading": "",
+        "pageTitle": "1950년대 빌리 그래함의 전도집회",
+        "relatedImages": [],
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-BgaYrZ4W.js"
+        ],
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A7%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "after",
+      "id": "c03:8",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A8%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/after/c03-8.png",
+      "observed": {
+        "annotation": "보강 후 c03:8",
+        "canvasCount": 1,
+        "capturedAt": "2026-10-04T06:29:36.624Z",
+        "dateNote": "같은 사진의 촬영 연도가 전시판에는 1976년, 사진 목록에는 1991년으로 표기되어 있어 확인이 필요합니다.",
+        "heading": "WCC 지도자들의 한경직 목사 예방(1976.6.16.)",
+        "loading": "",
+        "pageTitle": "1950년대 빌리 그래함의 전도집회",
+        "relatedImages": [],
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-BgaYrZ4W.js"
+        ],
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A8%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "after",
+      "id": "c03:9",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A9%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/after/c03-9.png",
+      "observed": {
+        "annotation": "보강 후 c03:9",
+        "canvasCount": 0,
+        "capturedAt": "2026-10-04T06:29:40.344Z",
+        "heading": "한국기독교연합회 활동",
+        "loading": "",
+        "pageTitle": "1950년대 빌리 그래함의 전도집회",
+        "relatedImages": [
+          {
+            "complete": true,
+            "height": 1786,
+            "src": "https://youngnak-museum-poc.vercel.app/media/full/galleries/c03-01/3.webp",
+            "width": 2624
+          },
+          {
+            "complete": true,
+            "height": 3003,
+            "src": "https://youngnak-museum-poc.vercel.app/media/full/galleries/c03-01/4.webp",
+            "width": 3840
+          },
+          {
+            "complete": true,
+            "height": 1820,
+            "src": "https://youngnak-museum-poc.vercel.app/media/full/galleries/c03-01/5.webp",
+            "width": 2688
+          }
+        ],
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-BgaYrZ4W.js"
+        ],
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A9%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "after",
+      "id": "c03:10",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A10%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/after/c03-10.png",
+      "observed": {
+        "annotation": "보강 후 c03:10",
+        "canvasCount": 0,
+        "capturedAt": "2026-10-04T06:29:44.131Z",
+        "heading": "전국복음화운동",
+        "loading": "",
+        "pageTitle": "1950년대 빌리 그래함의 전도집회",
+        "relatedImages": [
+          {
+            "complete": true,
+            "height": 1812,
+            "src": "https://youngnak-museum-poc.vercel.app/media/full/galleries/c03-01/6.webp",
+            "width": 2688
+          },
+          {
+            "complete": true,
+            "height": 1800,
+            "src": "https://youngnak-museum-poc.vercel.app/media/full/galleries/c03-01/7.webp",
+            "width": 2688
+          },
+          {
+            "complete": true,
+            "height": 1804,
+            "src": "https://youngnak-museum-poc.vercel.app/media/full/galleries/c03-01/8.webp",
+            "width": 2624
+          }
+        ],
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-BgaYrZ4W.js"
+        ],
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=2&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A10%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "after",
+      "id": "c03:12",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=7&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A12%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/after/c03-12.png",
+      "observed": {
+        "annotation": "보강 후 c03:12",
+        "canvasCount": 1,
+        "capturedAt": "2026-10-04T06:29:47.767Z",
+        "heading": "빌리 그래함 한국전도대회 포스터",
+        "loading": "",
+        "pageTitle": "빌리 그래함의 한국전도대회",
+        "relatedImages": [],
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-BgaYrZ4W.js"
+        ],
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=7&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A12%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "kind": "after",
+      "id": "c03:16",
+      "items": null,
+      "requestedUrl": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=8&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A16%7D",
+      "path": "E:/CodexAssets/youngnak-defect-reaudit/screenshots/after/c03-16.png",
+      "observed": {
+        "annotation": "보강 후 c03:16",
+        "canvasCount": 0,
+        "capturedAt": "2026-10-04T06:29:52.855Z",
+        "heading": "한국기독교 100주년 행사 사진",
+        "loading": "",
+        "pageTitle": "한국기독교지도자협의회",
+        "relatedImages": [
+          {
+            "complete": true,
+            "height": 2754,
+            "src": "https://youngnak-museum-poc.vercel.app/media/full/galleries/c03-02/0.webp",
+            "width": 3840
+          },
+          {
+            "complete": true,
+            "height": 1834,
+            "src": "https://youngnak-museum-poc.vercel.app/media/full/galleries/c03-02/1.webp",
+            "width": 2816
+          },
+          {
+            "complete": true,
+            "height": 2188,
+            "src": "https://youngnak-museum-poc.vercel.app/media/full/galleries/c03-02/2.webp",
+            "width": 1536
+          },
+          {
+            "complete": true,
+            "height": 3840,
+            "src": "https://youngnak-museum-poc.vercel.app/media/full/galleries/c03-02/3.webp",
+            "width": 2608
+          },
+          {
+            "complete": true,
+            "height": 1956,
+            "src": "https://youngnak-museum-poc.vercel.app/media/full/galleries/c03-02/4.webp",
+            "width": 2816
+          }
+        ],
+        "sceneError": false,
+        "scripts": [
+          "https://youngnak-museum-poc.vercel.app/assets/index-BgaYrZ4W.js"
+        ],
+        "stageRect": {
+          "height": 660,
+          "width": 1198,
+          "x": 121,
+          "y": 121.34375
+        },
+        "title": "민족복음화&연합운동 · 영락교회 디지털역사관",
+        "url": "https://youngnak-museum-poc.vercel.app/?startscene=scene_c-n-e%2B1&page=8&startlookat=90%2C-9.8523%2C90&exhibit=%7B%22type%22%3A%22gallery%22%2C%22gallery%22%3A%22c03%22%2C%22index%22%3A16%7D",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    }
+  ],
+  "updatedAt": "2026-10-04T06:29:53.197590+00:00"
+}
