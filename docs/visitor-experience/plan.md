@@ -1,5 +1,6 @@
 # 영락교회 디지털역사관 UI·UX 및 성능 개선 Implementation Plan
 
+> 구현 현황과 실제 검증 결과는 [최종 구현·검증 보고서](implementation.md)를 참고하세요. 이 문서는 제안 당시의 계획을 보존합니다. 사용자 지시에 따라 기존 원본 주소는 유지하고 개선본은 별도 프로젝트로 배포합니다.
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** 처음 온 관람객이 PC·모바일에서 쉽게 입장하고, 길을 찾고, 내용을 읽고, 원래 위치로 돌아오는 관람 경험을 만든다.
@@ -8,7 +9,7 @@
 
 **Tech Stack:** 기존 TypeScript, Vite, Photo Sphere Viewer 5.15.1, OpenSeadragon, Vercel, 공개 Blob 자산. Node.js 22.12 이상.
 
-**Spec:** [관람 편의·성능 개선 설계안](개선설계.md)
+**Spec:** [관람 편의·성능 개선 설계안](design.md)
 
 **상태:** 2026-10-04 제안 플랜. 현재 공개 사이트와 GitHub 제품 코드는 변경하지 않았다. 구현 전 아래 제안 우선순위와 화면 규칙을 기준으로 해당 단계의 작업 범위를 확정한다.
 
@@ -174,7 +175,7 @@
 
 ## 참고
 
-- [전체 설계와 현황 근거](개선설계.md)
+- [전체 설계와 현황 근거](design.md)
 - [W3C 44px 터치 영역 강화 기준](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html)
 - [Core Web Vitals 평가 기준](https://web.dev/articles/vitals)
 

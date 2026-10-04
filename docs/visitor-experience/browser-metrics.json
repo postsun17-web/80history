@@ -1,0 +1,143 @@
+{
+  "visitor": {
+    "site": "new visitor welcome",
+    "network": "10Mbps down / 5Mbps up / 80ms latency, cold cache",
+    "results": [
+      {
+        "run": 1,
+        "welcomeReadyMs": 670,
+        "jsBytes": 135371,
+        "transferBytes": 142798,
+        "requests": 4,
+        "webgl": 0,
+        "bgmRequested": false,
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "run": 2,
+        "welcomeReadyMs": 542,
+        "jsBytes": 135371,
+        "transferBytes": 142419,
+        "requests": 3,
+        "webgl": 0,
+        "bgmRequested": false,
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "run": 3,
+        "welcomeReadyMs": 563,
+        "jsBytes": 135371,
+        "transferBytes": 142419,
+        "requests": 3,
+        "webgl": 0,
+        "bgmRequested": false,
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "run": 4,
+        "welcomeReadyMs": 564,
+        "jsBytes": 135371,
+        "transferBytes": 142419,
+        "requests": 3,
+        "webgl": 0,
+        "bgmRequested": false,
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "run": 5,
+        "welcomeReadyMs": 541,
+        "jsBytes": 135371,
+        "transferBytes": 142419,
+        "requests": 3,
+        "webgl": 0,
+        "bgmRequested": false,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    ],
+    "note": "Welcome-ready time is not equivalent to baseline panorama-ready time. Compare initial JS bytes only."
+  },
+  "initialJsReductionPercent": 65.58107723287839,
+  "date": "2026-10-04",
+  "note": "준비 시간은 서로 다른 화면을 기준으로 하므로 감소율로 비교하지 않음. 실제 휴대폰이나 LCP/INP/CLS 측정이 아님.",
+  "baseline": {
+    "site": "baseline",
+    "network": "10Mbps down / 5Mbps up / 80ms latency, cold cache",
+    "results": [
+      {
+        "run": 1,
+        "readyMs": 2347,
+        "jsBytes": 393304,
+        "transferBytes": 1749612,
+        "requests": 26,
+        "bgmRequested": false,
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "run": 2,
+        "readyMs": 2437,
+        "jsBytes": 393304,
+        "transferBytes": 1749612,
+        "requests": 26,
+        "bgmRequested": false,
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "run": 3,
+        "readyMs": 2506,
+        "jsBytes": 393304,
+        "transferBytes": 1749612,
+        "requests": 26,
+        "bgmRequested": false,
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "run": 4,
+        "readyMs": 2558,
+        "jsBytes": 393304,
+        "transferBytes": 1749612,
+        "requests": 26,
+        "bgmRequested": false,
+        "viewport": [
+          1440,
+          900
+        ]
+      },
+      {
+        "run": 5,
+        "readyMs": 2472,
+        "jsBytes": 393304,
+        "transferBytes": 1749612,
+        "requests": 26,
+        "bgmRequested": false,
+        "viewport": [
+          1440,
+          900
+        ]
+      }
+    ]
+  }
+}

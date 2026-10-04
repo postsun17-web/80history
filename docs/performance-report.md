@@ -25,3 +25,7 @@ vercel.json immutable cache applies versioned visitor-assets only; existing /med
 
 ## Remaining limits
 Generated source galleries have preview coverage; article images and non-gallery source media fall back to existing original when no derivative exists. No new visual claims or fabricated assets. Dynamic import failure retry displays useful controls; actual forced-network failure and slow-navigation browser paths remain root QA. Bounded device quality is selected when panorama loads; current panorama does not rebuild merely on resize. Original source next-room bases for approved E are1024 rather than512.
+
+## 최종 통합 변경 사항
+
+초기 성능 보고서 이후 실제 브라우저에서 공간 전환/화질 변경 직후 읽기 모드로 전환할 때 PSV의 페이드 콜백이 남는 오류가 확인되었다. 최종 구현은 파노라마를 즉시 교체하여 읽기 전환 시 뷰어를 안전하게 파기한다. 최종 고장 복구 재검사 여섯 경우는 모두 통과했으며, 실패한 ES 모듈은 현재 URL 새로고침으로 복구한다. 구현·검증·배포의 최신 상태는 [최종 보고서](visitor-experience/implementation.md)를 따른다.
