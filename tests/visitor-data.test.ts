@@ -47,3 +47,25 @@ test('lazy article loading shares pending requests and retries after a rejected 
  const first=loader();assert.equal(loader(),first);await assert.rejects(first,/chunk load failed/);
  const retry=loader();assert.notEqual(retry,first);assert.equal(await retry,expected);assert.equal(await loader(),expected);assert.equal(calls,2);
 });
+
+test('reader exposes actual scene objects, controlled video, and inherited scene material on all pages',()=>{
+ const has=(scene:string,page:number,type:string,value:string)=>catalog.getReaderEntry(scene,page)?.mediaActions.some(a=>a.type===type&&JSON.stringify(a).includes(value));
+ assert.ok(has('scene_a-c-0',1,'object','ovr/04'));
+ assert.ok(has('scene_b-c-s-0',1,'object','ovr/01'));
+ assert.ok(has('scene_c-c-s-0',1,'object','ovr/02'));
+ assert.ok(has('scene_d-n-w-2',1,'video','mov/b01_01.mp4'));
+ assert.ok(has('scene_f-c-w-1',1,'youtube','Cs8PwMg7TIM'));
+ for(const scene of ['scene_a-c-w-1','scene_a-n-e+1','scene_a-n-w-1','scene_a-s-w-1+']){
+  const zone=data.zones.find(z=>z.scene===scene)!;
+  for(const page of zone.pages){assert.ok(has(scene,page.number,'youtube','Cs8PwMg7TIM'));assert.ok(catalog.entries.some(e=>e.scene===scene&&e.page===page.number&&e.kind==='youtube'));}
+ }
+});
+test('repeated actual source material retains each page and room context',async()=>{
+ const at=(path:string)=>catalog.entries.filter(e=>e.sourceAction.type==='article'&&e.sourceAction.path===path);
+ const b05=data.zones.find(z=>z.id==='b05')!;assert.ok(at('html/b05_02.html').some(e=>e.scene===b05.scene&&e.page===3));assert.ok(at('html/b05_02.html').some(e=>e.scene===b05.scene&&e.page===5));
+ const c04=data.zones.find(z=>z.id==='c04')!,c05=data.zones.find(z=>z.id==='c05')!;
+ assert.ok(at('html/c04_01.html').some(e=>e.scene===c04.scene&&e.page===1));assert.ok(at('html/c04_01.html').some(e=>e.scene===c05.scene&&e.page===6));
+ const youtube=catalog.entries.filter(e=>e.sourceAction.type==='youtube'&&e.sourceAction.id==='Cs8PwMg7TIM');assert.ok(new Set(youtube.map(e=>e.scene)).size>=19);assert.ok(youtube.some(e=>e.room==='lobby'));assert.ok(youtube.some(e=>e.room==='e'));
+ const articles=await loadVisitorArticles();const target=at('html/c04_01.html').find(e=>e.scene===c05.scene&&e.page===6)!;
+ assert.ok(searchEntries(target.title.slice(0,8),catalog.entries,articles,{room:'c',kind:'article'}).some(result=>result.entryId===target.id));
+});
