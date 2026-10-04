@@ -4,7 +4,7 @@
 
 ## 실행 및 배포
 
-Node.js 22 이상과 npm을 사용한다.
+Node.js 22.12 이상과 npm을 사용한다.
 
 ```powershell
 npm ci
@@ -42,4 +42,4 @@ Vercel은 `npm run build:vercel`을 실행한다. 업로드 소스는 약 2.8MB�
 
 ## GitHub
 
-현재 저장소에 GitHub 원격 저장소가 연결되어 있지 않으며, GitHub 푸시는 수행하지 않았다. 배포는 Vercel CLI로 직접 수행한다.
+GitHub 저장소는 [postsun17-web/80history](https://github.com/postsun17-web/80history)이며, `main` 브랜치에 **영락교회 디지털역사관 — 원사이트 최초 전체 복원 버전**을 보관한다. 전체 관람 복원, C 오른쪽 E방, 빈 사진 위치 보강, 교회 상단 파노라마 수정이 포함된 기준 버전이다. 대용량 자산은 위의 아카이브 복원 절차로 준비한다. Vercel 배포는 CLI로 직접 수행하며 GitHub 자동 배포는 연결하지 않았다.
