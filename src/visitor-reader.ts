@@ -38,7 +38,7 @@ export class VisitorReader {
    const scene=this.data.scenes.find(s=>s.id===route.scene);const page=this.data.zones.find(z=>z.id===scene?.zone)?.pages.find(p=>p.number===route.page);
    if(page){const src=safeReaderUrl(page.image);if(src)addButton(media,'원본 전시판 확대',()=>this.callbacks.action({type:'image',src,title:page.title}));}
    this.container.append(media);
-  }catch{if(generation!==this.generation)return;status.textContent='본문을 불러오지 못했습니다. 연결을 확인해 주세요.';addButton(this.container,'다시 불러오기',()=>{void this.render(route,fontSize);});}
+  }catch{if(generation!==this.generation)return;status.textContent='본문을 불러오지 못했습니다. 연결을 확인해 주세요.';addButton(this.container,'다시 불러오기',()=>{void this.render(route,fontSize);});addButton(this.container,'현재 화면 새로고침',()=>location.reload());}
  }
  destroy():void{this.generation++;this.container.replaceChildren();}
 }

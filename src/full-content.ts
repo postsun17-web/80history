@@ -180,12 +180,12 @@ export class FullContent {
   this.renderPreview(this.body.querySelector<HTMLDivElement>('.full-content-media-stage')!,url,title);
  }
  private renderPreview(stage:HTMLDivElement,url:string,title:string):void {
-  stage.dataset.original=url;const image=document.createElement('img');image.className='full-content-preview';image.alt=title;useMediaPreview(image,url);stage.replaceChildren(image);
-  const toolbar=this.body.querySelector('.full-content-toolbar');toolbar?.insertAdjacentHTML('afterbegin',button('original','원본 확대 보기'));
+  const generation=this.generation;stage.dataset.original=url;const image=document.createElement('img');image.className='full-content-preview';image.alt=title;stage.replaceChildren(image);useMediaPreview(image,url,false,()=>{if(generation===this.generation&&stage.contains(image))this.engineFailure(stage,()=>this.renderPreview(stage,url,title),'사진을 불러오지 못했습니다. 연결을 확인하고 다시 시도해 주세요.');});
+  const toolbar=this.body.querySelector('.full-content-toolbar');if(toolbar&&!toolbar.querySelector('[data-content-command="original"]'))toolbar.insertAdjacentHTML('afterbegin',button('original','원본 확대 보기'));
   for(const control of this.body.querySelectorAll<HTMLButtonElement>('[data-content-command="zoom-in"],[data-content-command="zoom-out"],[data-content-command="home"]'))control.disabled=true;
  }
- private engineFailure(stage:HTMLDivElement,retry:()=>void):void {
-  stage.replaceChildren();const p=document.createElement('p');p.textContent='확대 자료를 불러오지 못했습니다. 연결을 확인해 주세요.';const b=document.createElement('button');b.type='button';b.textContent='다시 불러오기';b.addEventListener('click',retry);stage.append(p,b);
+ private engineFailure(stage:HTMLDivElement,retry:()=>void,message='확대 자료를 불러오지 못했습니다. 연결을 확인해 주세요.'):void {
+  stage.replaceChildren();const p=document.createElement('p');p.textContent=message;p.setAttribute('role','status');const b=document.createElement('button');b.type='button';b.textContent='다시 불러오기';b.addEventListener('click',retry);const reload=document.createElement('button');reload.type='button';reload.textContent='현재 화면 새로고침';reload.addEventListener('click',()=>location.reload());stage.append(p,b,reload);
  }
  private async createZoom(stage:HTMLDivElement,url:string):Promise<void> {
   const generation=this.generation;stage.textContent='원본 자료를 불러오는 중…';
@@ -211,7 +211,7 @@ export class FullContent {
    const url=safeReaderUrl(source.url);if(!url){this.notice('올바른 자료 주소가 아닙니다.');return;}
    const iframe=document.createElement('iframe');iframe.className='full-content-article';iframe.title=source.title||'역사 자료 본문';iframe.src=url;iframe.setAttribute('sandbox','allow-same-origin allow-popups');this.body.append(iframe);
    iframe.addEventListener('load',()=>{try{const doc=iframe.contentDocument;if(!doc)return;const handler=(event:MouseEvent)=>{const anchor=(event.target as Element|null)?.closest?.('a');if(!anchor)return;const href=anchor.getAttribute('href')??'';if(/\.(jpe?g|png|webp|gif)(?:\.webp)?(?:\?|$)/i.test(href)){event.preventDefault();const src=safeReaderUrl(new URL(href,iframe.src).href);if(src)this.expandArticleImage(src,anchor.textContent?.trim()||'본문 이미지');}else {anchor.target='_blank';anchor.rel='noopener noreferrer';}};doc.addEventListener('click',handler);this.cleanupTasks.push(()=>doc.removeEventListener('click',handler));}catch{}});
-  }catch{if(generation!==this.generation)return;this.body.replaceChildren();this.notice('본문을 불러오지 못했습니다. 연결을 확인하고 다시 시도해 주세요.');const retry=document.createElement('button');retry.type='button';retry.textContent='다시 불러오기';retry.addEventListener('click',()=>{void this.renderArticle(path);});this.body.append(retry);}
+  }catch{if(generation!==this.generation)return;this.body.replaceChildren();this.notice('본문을 불러오지 못했습니다. 연결을 확인하고 다시 시도해 주세요.');const retry=document.createElement('button');retry.type='button';retry.textContent='다시 불러오기';retry.addEventListener('click',()=>{void this.renderArticle(path);});const reload=document.createElement('button');reload.type='button';reload.textContent='현재 화면 새로고침';reload.addEventListener('click',()=>location.reload());this.body.append(retry,reload);}
  }
  private safeExternal(value:string):string|null {
   try{const url=new URL(value);return /^https?:$/.test(url.protocol)?url.href:null;}catch{return null;}

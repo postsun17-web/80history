@@ -1,3 +1,4 @@
+import {readerArticleForRoute,bindDeferredSearch} from './visitor-ui-state';
 import type {FullViewer} from './full-viewer';
 import type {FullContent} from './full-content';
 import type {VisitorReader} from './visitor-reader';
@@ -108,7 +109,7 @@ async function apply(){
  if(read){if(viewer){viewer.viewer.stopKeyboardControl();const old=viewer as FullViewer&{destroy?:()=>void};if(old.destroy)old.destroy();else old.viewer.destroy();viewer=undefined;viewerPromise=undefined;loaded='';}
  if(!reader){const {VisitorReader}=await import('./visitor-reader');if(token!==generation)return;reader=new VisitorReader($('#reader'),data,catalog,{navigate,action:perform,fontSize:size=>{preferences.fontSize=size;savePreferences(preferences);readerKey='';void apply();}});}
  const a=current.exhibit?safeModal(current.exhibit):null;
- const place=current.scene+':'+current.page;if(place!==readerLocation){readerArticle='';readerLocation=place;}if(a?.type==='article')readerArticle=current.exhibit!;
+ const place=current.scene+':'+current.page;if(place!==readerLocation){readerArticle='';readerLocation=place;}readerArticle=readerArticleForRoute(readerArticle,current.exhibit,a);
  const key=JSON.stringify([current.scene,current.page,readerArticle,preferences.fontSize]);
  if(key!==readerKey){readerKey=key;await reader.render({...current,exhibit:readerArticle||undefined},preferences.fontSize);}
  }else{
@@ -151,16 +152,18 @@ async function openPanel(name:string){
  bindPreviews();
  if(name==='search'){
  body.innerHTML=`<form id="search-form"><label>검색어<input id="search-query" type="search" placeholder="인물, 사건, 자료 이름"></label><label>전시실<select id="search-room"><option value="">전체</option>${catalog.rooms.map(r=>`<option value="${r.id}">${escape(r.title)}</option>`).join('')}</select></label><label>자료 종류<select id="search-kind"><option value="">전체</option>${[...new Set(catalog.entries.map(e=>e.kind))].map(k=>`<option value="${k}">${escape(({scene:'공간',help:'안내',external:'연계 자료',chatbot:'자료 검색',exhibit:'전시',article:'글',image:'사진',gallery:'사진 모음',youtube:'영상',video:'영상',audio:'음성',object:'유물',document:'문서',books:'도서'} as Record<string,string>)[k]||k)}</option>`).join('')}</select></label><button>검색</button></form><p id="search-status" role="status">원문 자료를 준비하고 있습니다…</p><div id="search-results"></div>`;
+ const form=$<HTMLFormElement>('#search-form'),pendingSearch=bindDeferredSearch(form),submit=form.querySelector<HTMLButtonElement>('button')!;submit.disabled=true;form.setAttribute('aria-busy','true');
  try{const texts=await articles();if(token!==panelGeneration||activePanel!=='search')return;
  const search=()=>{const results=searchEntries($<HTMLInputElement>('#search-query').value,catalog.entries,texts,{room:$<HTMLSelectElement>('#search-room').value||undefined,kind:$<HTMLSelectElement>('#search-kind').value||undefined});$('#search-status').textContent=`${results.length}개 자료`;
  $('#search-results').innerHTML=results.slice(0,150).map(r=>`<article class="material-card"><h3>${escape(r.title)}</h3><p>${escape(kindLabels[r.kind]||r.kind)} · ${escape(r.locationLabel)}</p><p>${escape(r.snippet)}</p><button data-entry-read="${escape(r.entryId)}">자료 읽기</button><button data-entry-tour="${escape(r.entryId)}">공간에서 보기</button></article>`).join('');bindPreviews();};
- $('#search-form').onsubmit=e=>{e.preventDefault();search();};$('#search-room').onchange=search;$('#search-kind').onchange=search;search();
- }catch{if(token===panelGeneration)$('#search-status').textContent='검색 자료를 불러오지 못했습니다. 검색을 다시 열어 주세요.';articlesPromise=undefined;}
+ submit.disabled=false;form.setAttribute('aria-busy','false');$('#search-room').onchange=search;$('#search-kind').onchange=search;pendingSearch.ready(search);
+ }catch{if(token===panelGeneration){form.setAttribute('aria-busy','false');$('#search-status').innerHTML='검색 자료를 불러오지 못했습니다. <button data-reload>현재 화면 새로고침</button>';}articlesPromise=undefined;}
  }
 }
 function switchMode(){saveView();navigate({...route,mode:route.mode==='read'?'tour':'read'});}
 document.addEventListener('click',event=>{
  const t=(event.target as HTMLElement).closest<HTMLButtonElement>('button');if(!t)return;
+ if(t.hasAttribute('data-reload'))location.reload();
  if(t.dataset.action){const a=actions.get(t.dataset.action);if(a)perform(a);}
  if(t.dataset.scene){const s=data.scenes.find(s=>s.id===t.dataset.scene);if(s){navigate({scene:s.id,page:1,look:catalog.getEntry(s.id,1)?.look||s.view,mode:route.mode});if(panel.open)closePanel();$('#scene-list').hidden=true;}}
  if(t.dataset.page){const zone=data.scenes.find(s=>s.id===route.scene)?.zone;if(zone)perform({type:'page',zone,page:Number(t.dataset.page)});}
@@ -191,7 +194,7 @@ function setMap(open:boolean){$('#floorplan').hidden=!open;$('#map-open').hidden
 $('#map-close').onclick=()=>setMap(false);$('#map-open').onclick=()=>setMap(true);$('#map-enlarge').onclick=()=>$('#floorplan').classList.toggle('expanded');
 $('#quick-toggle').onclick=()=>{const folded=$('#quick-menu').classList.toggle('folded');$('#quick-toggle').setAttribute('aria-expanded',String(!folded));};
 $('#all-scenes').onclick=()=>void openPanel('rooms');$('#scene-list-close').onclick=()=>$('#scene-list').hidden=true;
-$('#retry').onclick=()=>void apply();$('#scene-error').insertAdjacentHTML('beforeend','<button id="error-read">글과 사진으로 보기</button><button id="error-back">이전 공간</button>');
+$('#retry').onclick=()=>void apply();$('#scene-error').insertAdjacentHTML('beforeend','<button id="error-read">글과 사진으로 보기</button><button id="error-back">이전 공간</button><button data-reload>현재 화면 새로고침</button>');
 $('#error-read').onclick=()=>navigate({...route,mode:'read'});$('#error-back').onclick=()=>navigate(previousRoute||{scene:'scene_f-c-0',page:1,mode:'read'});
 $('#mode-switch').onclick=switchMode;$('#lobby').onclick=()=>navigate({scene:'scene_f-c-0',page:1,mode:route.mode});$('#previous-space').onclick=()=>{if(previousRoute)navigate(previousRoute);};
 $('#next-exhibit').onclick=()=>{const e=catalog.getEntry(route.scene,route.page),next=e&&catalog.getAdjacentExhibit(e.id,'next');if(next)navigate({scene:next.scene,page:next.page,look:next.look,mode:route.mode});};
