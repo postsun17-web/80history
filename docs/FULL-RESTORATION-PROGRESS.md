@@ -37,3 +37,9 @@
 - Latest source checks: 41 Node tests, 9 Python compiler tests, TypeScript and diff whitespace checks pass. Source catalogue SHA normalizes CRLF/LF so a Linux Git checkout restores the same verified archives.
 - Production candidate `dpl_7HcBjnhPxsedqtGEZLk3qNcJL9U1`, preview `https://youngnak-museum-2pzrfo7of-postsun17-webs-projects.vercel.app`, built successfully on Vercel after verification of all 8,028 assets. Entry JS `index-Cbhdg7PH.js`.
 - Promotion to the existing domain has been issued; public verification remains before completion.
+
+## Production release confirmed
+
+- Fixed domain `https://youngnak-museum-poc.vercel.app/` now serves `index-Cbhdg7PH.js` from production deployment `dpl_8FnXcB3ANFnHDAR3jWYXmXMZgFat` (`https://youngnak-museum-bu8rhvvrq-postsun17-webs-projects.vercel.app`). Vercel promotion rebuilt the preview under production environment, then attached existing aliases.
+- Public unauthenticated HTTP checks returned 200 for entry HTML, A06 panel, article, gallery image, exterior panorama and 12.9MB PDF. Browser opened the actual C02 production room successfully.
+- Implementation commit `1cbfe5b` was fast-forwarded into primary `master`; unrelated README/audit working files remain untouched. Git remotes remain empty and there has been no GitHub push.
