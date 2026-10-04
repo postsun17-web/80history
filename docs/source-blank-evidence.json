@@ -1,0 +1,493 @@
+[
+  {
+    "gallery": "a07",
+    "index": 35,
+    "id": "a07:35",
+    "title": "",
+    "sourceScene": "scene_36",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 1,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/a07/panos/36blank_(2).tiles/l1/1/l1_1_1.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "a07",
+    "index": 36,
+    "id": "a07:36",
+    "title": "37",
+    "sourceScene": "scene_37",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 1,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/a07/panos/37blank_(3).tiles/l1/1/l1_1_1.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "a07",
+    "index": 37,
+    "id": "a07:37",
+    "title": "",
+    "sourceScene": "scene_38",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 1,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/a07/panos/38blank_(4).tiles/l1/1/l1_1_1.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "a07",
+    "index": 38,
+    "id": "a07:38",
+    "title": "",
+    "sourceScene": "scene_39",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 1,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/a07/panos/39blank_.tiles/l1/1/l1_1_1.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "a07",
+    "index": 39,
+    "id": "a07:39",
+    "title": "40",
+    "sourceScene": "scene_40",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 1,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/a07/panos/40blank.tiles/l1/1/l1_1_1.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "b01",
+    "index": 0,
+    "id": "b01:0",
+    "title": "",
+    "sourceScene": "scene_b01_00",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 6,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/b01/panos/b01_00.tiles/l2/1/l2_1_1.jpg",
+        "photo/b01/panos/b01_00.tiles/l2/1/l2_1_2.jpg",
+        "photo/b01/panos/b01_00.tiles/l2/2/l2_2_1.jpg",
+        "photo/b01/panos/b01_00.tiles/l2/2/l2_2_2.jpg",
+        "photo/b01/panos/b01_00.tiles/l2/3/l2_3_1.jpg",
+        "photo/b01/panos/b01_00.tiles/l2/3/l2_3_2.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "c01",
+    "index": 0,
+    "id": "c01:0",
+    "title": "00",
+    "sourceScene": "scene_00",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 6,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/c01/panos/00.tiles/l2/1/l2_1_1.jpg",
+        "photo/c01/panos/00.tiles/l2/1/l2_1_2.jpg",
+        "photo/c01/panos/00.tiles/l2/2/l2_2_1.jpg",
+        "photo/c01/panos/00.tiles/l2/2/l2_2_2.jpg",
+        "photo/c01/panos/00.tiles/l2/3/l2_3_1.jpg",
+        "photo/c01/panos/00.tiles/l2/3/l2_3_2.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "c03",
+    "index": 7,
+    "id": "c03:7",
+    "title": "한경직 목사 총회장 기념촬영(1955,04,26)",
+    "sourceScene": "scene_08",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 12,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/c03/panos/08(fvccyjenb_dqpecs_eadfameel_cewdfqeaseyb-19550426).tiles/1/f/l1/1/l1_1/f_1_1.jpg",
+        "photo/c03/panos/08(fvccyjenb_dqpecs_eadfameel_cewdfqeaseyb-19550426).tiles/1/b/l1/1/l1_1/b_1_1.jpg",
+        "photo/c03/panos/08(fvccyjenb_dqpecs_eadfameel_cewdfqeaseyb-19550426).tiles/1/l/l1/1/l1_1/l_1_1.jpg",
+        "photo/c03/panos/08(fvccyjenb_dqpecs_eadfameel_cewdfqeaseyb-19550426).tiles/1/r/l1/1/l1_1/r_1_1.jpg",
+        "photo/c03/panos/08(fvccyjenb_dqpecs_eadfameel_cewdfqeaseyb-19550426).tiles/1/u/l1/1/l1_1/u_1_1.jpg",
+        "photo/c03/panos/08(fvccyjenb_dqpecs_eadfameel_cewdfqeaseyb-19550426).tiles/1/d/l1/1/l1_1/d_1_1.jpg",
+        "photo/c03/panos/08(fvccyjenb_dqpecs_eadfameel_cewdfqeaseyb-19550426).tiles/2/f/l1/1/l1_2/f_1_1.jpg",
+        "photo/c03/panos/08(fvccyjenb_dqpecs_eadfameel_cewdfqeaseyb-19550426).tiles/2/b/l1/1/l1_2/b_1_1.jpg",
+        "photo/c03/panos/08(fvccyjenb_dqpecs_eadfameel_cewdfqeaseyb-19550426).tiles/2/l/l1/1/l1_2/l_1_1.jpg",
+        "photo/c03/panos/08(fvccyjenb_dqpecs_eadfameel_cewdfqeaseyb-19550426).tiles/2/r/l1/1/l1_2/r_1_1.jpg",
+        "photo/c03/panos/08(fvccyjenb_dqpecs_eadfameel_cewdfqeaseyb-19550426).tiles/2/u/l1/1/l1_2/u_1_1.jpg",
+        "photo/c03/panos/08(fvccyjenb_dqpecs_eadfameel_cewdfqeaseyb-19550426).tiles/2/d/l1/1/l1_2/d_1_1.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "c03",
+    "index": 8,
+    "id": "c03:8",
+    "title": "WCC 지도자들의 한경직 목사 예방(1976.6.16.)",
+    "sourceScene": "scene_09",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 12,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/c03/panos/09WCC_enadpeeeqdtkedy_fvccyjenb_dqpecs_eyidwp(1976_6_16_).tiles/1/f/l1/1/l1_1/f_1_1.jpg",
+        "photo/c03/panos/09WCC_enadpeeeqdtkedy_fvccyjenb_dqpecs_eyidwp(1976_6_16_).tiles/1/b/l1/1/l1_1/b_1_1.jpg",
+        "photo/c03/panos/09WCC_enadpeeeqdtkedy_fvccyjenb_dqpecs_eyidwp(1976_6_16_).tiles/1/l/l1/1/l1_1/l_1_1.jpg",
+        "photo/c03/panos/09WCC_enadpeeeqdtkedy_fvccyjenb_dqpecs_eyidwp(1976_6_16_).tiles/1/r/l1/1/l1_1/r_1_1.jpg",
+        "photo/c03/panos/09WCC_enadpeeeqdtkedy_fvccyjenb_dqpecs_eyidwp(1976_6_16_).tiles/1/u/l1/1/l1_1/u_1_1.jpg",
+        "photo/c03/panos/09WCC_enadpeeeqdtkedy_fvccyjenb_dqpecs_eyidwp(1976_6_16_).tiles/1/d/l1/1/l1_1/d_1_1.jpg",
+        "photo/c03/panos/09WCC_enadpeeeqdtkedy_fvccyjenb_dqpecs_eyidwp(1976_6_16_).tiles/2/f/l1/1/l1_2/f_1_1.jpg",
+        "photo/c03/panos/09WCC_enadpeeeqdtkedy_fvccyjenb_dqpecs_eyidwp(1976_6_16_).tiles/2/b/l1/1/l1_2/b_1_1.jpg",
+        "photo/c03/panos/09WCC_enadpeeeqdtkedy_fvccyjenb_dqpecs_eyidwp(1976_6_16_).tiles/2/l/l1/1/l1_2/l_1_1.jpg",
+        "photo/c03/panos/09WCC_enadpeeeqdtkedy_fvccyjenb_dqpecs_eyidwp(1976_6_16_).tiles/2/r/l1/1/l1_2/r_1_1.jpg",
+        "photo/c03/panos/09WCC_enadpeeeqdtkedy_fvccyjenb_dqpecs_eyidwp(1976_6_16_).tiles/2/u/l1/1/l1_2/u_1_1.jpg",
+        "photo/c03/panos/09WCC_enadpeeeqdtkedy_fvccyjenb_dqpecs_eyidwp(1976_6_16_).tiles/2/d/l1/1/l1_2/d_1_1.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "c03",
+    "index": 9,
+    "id": "c03:9",
+    "title": "",
+    "sourceScene": "scene_10",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 12,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/c03/panos/10(ecsene_2-3)ecucwa_egedls.tiles/1/f/l1/1/l1_1/f_1_1.jpg",
+        "photo/c03/panos/10(ecsene_2-3)ecucwa_egedls.tiles/1/b/l1/1/l1_1/b_1_1.jpg",
+        "photo/c03/panos/10(ecsene_2-3)ecucwa_egedls.tiles/1/l/l1/1/l1_1/l_1_1.jpg",
+        "photo/c03/panos/10(ecsene_2-3)ecucwa_egedls.tiles/1/r/l1/1/l1_1/r_1_1.jpg",
+        "photo/c03/panos/10(ecsene_2-3)ecucwa_egedls.tiles/1/u/l1/1/l1_1/u_1_1.jpg",
+        "photo/c03/panos/10(ecsene_2-3)ecucwa_egedls.tiles/1/d/l1/1/l1_1/d_1_1.jpg",
+        "photo/c03/panos/10(ecsene_2-3)ecucwa_egedls.tiles/2/f/l1/1/l1_2/f_1_1.jpg",
+        "photo/c03/panos/10(ecsene_2-3)ecucwa_egedls.tiles/2/b/l1/1/l1_2/b_1_1.jpg",
+        "photo/c03/panos/10(ecsene_2-3)ecucwa_egedls.tiles/2/l/l1/1/l1_2/l_1_1.jpg",
+        "photo/c03/panos/10(ecsene_2-3)ecucwa_egedls.tiles/2/r/l1/1/l1_2/r_1_1.jpg",
+        "photo/c03/panos/10(ecsene_2-3)ecucwa_egedls.tiles/2/u/l1/1/l1_2/u_1_1.jpg",
+        "photo/c03/panos/10(ecsene_2-3)ecucwa_egedls.tiles/2/d/l1/1/l1_2/d_1_1.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "c03",
+    "index": 10,
+    "id": "c03:10",
+    "title": "",
+    "sourceScene": "scene_11",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 12,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/c03/panos/11caadgo_eeqdjm_1-3)ecufbe_egedls.tiles/1/f/l1/1/l1_1/f_1_1.jpg",
+        "photo/c03/panos/11caadgo_eeqdjm_1-3)ecufbe_egedls.tiles/1/b/l1/1/l1_1/b_1_1.jpg",
+        "photo/c03/panos/11caadgo_eeqdjm_1-3)ecufbe_egedls.tiles/1/l/l1/1/l1_1/l_1_1.jpg",
+        "photo/c03/panos/11caadgo_eeqdjm_1-3)ecufbe_egedls.tiles/1/r/l1/1/l1_1/r_1_1.jpg",
+        "photo/c03/panos/11caadgo_eeqdjm_1-3)ecufbe_egedls.tiles/1/u/l1/1/l1_1/u_1_1.jpg",
+        "photo/c03/panos/11caadgo_eeqdjm_1-3)ecufbe_egedls.tiles/1/d/l1/1/l1_1/d_1_1.jpg",
+        "photo/c03/panos/11caadgo_eeqdjm_1-3)ecufbe_egedls.tiles/2/f/l1/1/l1_2/f_1_1.jpg",
+        "photo/c03/panos/11caadgo_eeqdjm_1-3)ecufbe_egedls.tiles/2/b/l1/1/l1_2/b_1_1.jpg",
+        "photo/c03/panos/11caadgo_eeqdjm_1-3)ecufbe_egedls.tiles/2/l/l1/1/l1_2/l_1_1.jpg",
+        "photo/c03/panos/11caadgo_eeqdjm_1-3)ecufbe_egedls.tiles/2/r/l1/1/l1_2/r_1_1.jpg",
+        "photo/c03/panos/11caadgo_eeqdjm_1-3)ecufbe_egedls.tiles/2/u/l1/1/l1_2/u_1_1.jpg",
+        "photo/c03/panos/11caadgo_eeqdjm_1-3)ecufbe_egedls.tiles/2/d/l1/1/l1_2/d_1_1.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "c03",
+    "index": 12,
+    "id": "c03:12",
+    "title": "빌리 그래함 한국전도대회 포스터",
+    "sourceScene": "scene_13",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 12,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/c03/panos/13dfmdms_cdedeyfvo_fvccbtegedpedmafam_fpsekkfew.tiles/1/f/l1/1/l1_1/f_1_1.jpg",
+        "photo/c03/panos/13dfmdms_cdedeyfvo_fvccbtegedpedmafam_fpsekkfew.tiles/1/b/l1/1/l1_1/b_1_1.jpg",
+        "photo/c03/panos/13dfmdms_cdedeyfvo_fvccbtegedpedmafam_fpsekkfew.tiles/1/l/l1/1/l1_1/l_1_1.jpg",
+        "photo/c03/panos/13dfmdms_cdedeyfvo_fvccbtegedpedmafam_fpsekkfew.tiles/1/r/l1/1/l1_1/r_1_1.jpg",
+        "photo/c03/panos/13dfmdms_cdedeyfvo_fvccbtegedpedmafam_fpsekkfew.tiles/1/u/l1/1/l1_1/u_1_1.jpg",
+        "photo/c03/panos/13dfmdms_cdedeyfvo_fvccbtegedpedmafam_fpsekkfew.tiles/1/d/l1/1/l1_1/d_1_1.jpg",
+        "photo/c03/panos/13dfmdms_cdedeyfvo_fvccbtegedpedmafam_fpsekkfew.tiles/2/f/l1/1/l1_2/f_1_1.jpg",
+        "photo/c03/panos/13dfmdms_cdedeyfvo_fvccbtegedpedmafam_fpsekkfew.tiles/2/b/l1/1/l1_2/b_1_1.jpg",
+        "photo/c03/panos/13dfmdms_cdedeyfvo_fvccbtegedpedmafam_fpsekkfew.tiles/2/l/l1/1/l1_2/l_1_1.jpg",
+        "photo/c03/panos/13dfmdms_cdedeyfvo_fvccbtegedpedmafam_fpsekkfew.tiles/2/r/l1/1/l1_2/r_1_1.jpg",
+        "photo/c03/panos/13dfmdms_cdedeyfvo_fvccbtegedpedmafam_fpsekkfew.tiles/2/u/l1/1/l1_2/u_1_1.jpg",
+        "photo/c03/panos/13dfmdms_cdedeyfvo_fvccbtegedpedmafam_fpsekkfew.tiles/2/d/l1/1/l1_2/d_1_1.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "c03",
+    "index": 16,
+    "id": "c03:16",
+    "title": "100주년 행사 사진",
+    "sourceScene": "scene_17",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 12,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/c03/panos/17_100ejidfe_fwjecs_ecsene_1-8eel.tiles/1/f/l1/1/l1_1/f_1_1.jpg",
+        "photo/c03/panos/17_100ejidfe_fwjecs_ecsene_1-8eel.tiles/1/b/l1/1/l1_1/b_1_1.jpg",
+        "photo/c03/panos/17_100ejidfe_fwjecs_ecsene_1-8eel.tiles/1/l/l1/1/l1_1/l_1_1.jpg",
+        "photo/c03/panos/17_100ejidfe_fwjecs_ecsene_1-8eel.tiles/1/r/l1/1/l1_1/r_1_1.jpg",
+        "photo/c03/panos/17_100ejidfe_fwjecs_ecsene_1-8eel.tiles/1/u/l1/1/l1_1/u_1_1.jpg",
+        "photo/c03/panos/17_100ejidfe_fwjecs_ecsene_1-8eel.tiles/1/d/l1/1/l1_1/d_1_1.jpg",
+        "photo/c03/panos/17_100ejidfe_fwjecs_ecsene_1-8eel.tiles/2/f/l1/1/l1_2/f_1_1.jpg",
+        "photo/c03/panos/17_100ejidfe_fwjecs_ecsene_1-8eel.tiles/2/b/l1/1/l1_2/b_1_1.jpg",
+        "photo/c03/panos/17_100ejidfe_fwjecs_ecsene_1-8eel.tiles/2/l/l1/1/l1_2/l_1_1.jpg",
+        "photo/c03/panos/17_100ejidfe_fwjecs_ecsene_1-8eel.tiles/2/r/l1/1/l1_2/r_1_1.jpg",
+        "photo/c03/panos/17_100ejidfe_fwjecs_ecsene_1-8eel.tiles/2/u/l1/1/l1_2/u_1_1.jpg",
+        "photo/c03/panos/17_100ejidfe_fwjecs_ecsene_1-8eel.tiles/2/d/l1/1/l1_2/d_1_1.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "d01",
+    "index": 0,
+    "id": "d01:0",
+    "title": "00",
+    "sourceScene": "scene_00",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 6,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/d01/panos/00.tiles/l2/1/l2_1_1.jpg",
+        "photo/d01/panos/00.tiles/l2/1/l2_1_2.jpg",
+        "photo/d01/panos/00.tiles/l2/2/l2_2_1.jpg",
+        "photo/d01/panos/00.tiles/l2/2/l2_2_2.jpg",
+        "photo/d01/panos/00.tiles/l2/3/l2_3_1.jpg",
+        "photo/d01/panos/00.tiles/l2/3/l2_3_2.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "d01",
+    "index": 5,
+    "id": "d01:5",
+    "title": "",
+    "sourceScene": "scene_05",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 6,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/d01/panos/05.tiles/l2/1/l2_1_1.jpg",
+        "photo/d01/panos/05.tiles/l2/1/l2_1_2.jpg",
+        "photo/d01/panos/05.tiles/l2/2/l2_2_1.jpg",
+        "photo/d01/panos/05.tiles/l2/2/l2_2_2.jpg",
+        "photo/d01/panos/05.tiles/l2/3/l2_3_1.jpg",
+        "photo/d01/panos/05.tiles/l2/3/l2_3_2.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "d01",
+    "index": 16,
+    "id": "d01:16",
+    "title": "",
+    "sourceScene": "scene_16",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 6,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/d01/panos/16.tiles/l2/1/l2_1_1.jpg",
+        "photo/d01/panos/16.tiles/l2/1/l2_1_2.jpg",
+        "photo/d01/panos/16.tiles/l2/2/l2_2_1.jpg",
+        "photo/d01/panos/16.tiles/l2/2/l2_2_2.jpg",
+        "photo/d01/panos/16.tiles/l2/3/l2_3_1.jpg",
+        "photo/d01/panos/16.tiles/l2/3/l2_3_2.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "d02",
+    "index": 0,
+    "id": "d02:0",
+    "title": "00",
+    "sourceScene": "scene_00",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 6,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/d02/panos/00.tiles/l2/1/l2_1_1.jpg",
+        "photo/d02/panos/00.tiles/l2/1/l2_1_2.jpg",
+        "photo/d02/panos/00.tiles/l2/2/l2_2_1.jpg",
+        "photo/d02/panos/00.tiles/l2/2/l2_2_2.jpg",
+        "photo/d02/panos/00.tiles/l2/3/l2_3_1.jpg",
+        "photo/d02/panos/00.tiles/l2/3/l2_3_2.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "d04",
+    "index": 0,
+    "id": "d04:0",
+    "title": "00",
+    "sourceScene": "scene_00",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 6,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/d04/panos/00.tiles/l2/1/l2_1_1.jpg",
+        "photo/d04/panos/00.tiles/l2/1/l2_1_2.jpg",
+        "photo/d04/panos/00.tiles/l2/2/l2_2_1.jpg",
+        "photo/d04/panos/00.tiles/l2/2/l2_2_2.jpg",
+        "photo/d04/panos/00.tiles/l2/3/l2_3_1.jpg",
+        "photo/d04/panos/00.tiles/l2/3/l2_3_2.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "d04",
+    "index": 2,
+    "id": "d04:2",
+    "title": "",
+    "sourceScene": "scene_02",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 6,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/d04/panos/02.tiles/l2/1/l2_1_1.jpg",
+        "photo/d04/panos/02.tiles/l2/1/l2_1_2.jpg",
+        "photo/d04/panos/02.tiles/l2/2/l2_2_1.jpg",
+        "photo/d04/panos/02.tiles/l2/2/l2_2_2.jpg",
+        "photo/d04/panos/02.tiles/l2/3/l2_3_1.jpg",
+        "photo/d04/panos/02.tiles/l2/3/l2_3_2.jpg"
+      ]
+    }
+  },
+  {
+    "gallery": "d04",
+    "index": 3,
+    "id": "d04:3",
+    "title": "",
+    "sourceScene": "scene_03",
+    "sourceEvidence": {
+      "allInputTilesPureWhite": true,
+      "tileCount": 6,
+      "rgbRange": [
+        255,
+        255
+      ],
+      "zipCrcVerified": true,
+      "sourceTilePaths": [
+        "photo/d04/panos/03.tiles/l2/1/l2_1_1.jpg",
+        "photo/d04/panos/03.tiles/l2/1/l2_1_2.jpg",
+        "photo/d04/panos/03.tiles/l2/2/l2_2_1.jpg",
+        "photo/d04/panos/03.tiles/l2/2/l2_2_2.jpg",
+        "photo/d04/panos/03.tiles/l2/3/l2_3_1.jpg",
+        "photo/d04/panos/03.tiles/l2/3/l2_3_2.jpg"
+      ]
+    }
+  }
+]

@@ -6,3 +6,7 @@ artifacts
 tools
 tests
 docs
+
+public/media
+.env*
+.scratch

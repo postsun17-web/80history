@@ -1,1 +1,28 @@
-{"name":"youngnak-museum-poc","private":true,"version":"0.1.0","type":"module","scripts":{"dev":"vite --host 127.0.0.1","build":"tsc --noEmit && vite build","preview":"vite preview --host 127.0.0.1","test":"node --experimental-strip-types --test tests/*.test.ts","verify:assets":"python tools/verify_assets.py"},"dependencies":{"@photo-sphere-viewer/core":"5.15.1","@photo-sphere-viewer/cubemap-adapter":"5.15.1","@photo-sphere-viewer/cubemap-tiles-adapter":"5.15.1","@photo-sphere-viewer/markers-plugin":"5.15.1","openseadragon":"6.1.1"},"devDependencies":{"@types/openseadragon":"^4.1.0","three":"^0.185.1","typescript":"~5.9.3","vite":"8.3.0"}}
+{
+  "name": "youngnak-museum-poc",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "verify:assets": "python tools/verify_assets.py",
+    "build:vercel": "node scripts/restore-deploy-assets.mjs && npm run build"
+  },
+  "dependencies": {
+    "@photo-sphere-viewer/core": "5.15.1",
+    "@photo-sphere-viewer/cubemap-adapter": "5.15.1",
+    "@photo-sphere-viewer/cubemap-tiles-adapter": "5.15.1",
+    "@photo-sphere-viewer/markers-plugin": "5.15.1",
+    "fflate": "0.8.3",
+    "openseadragon": "6.1.1"
+  },
+  "devDependencies": {
+    "@types/openseadragon": "^4.1.0",
+    "three": "^0.185.1",
+    "typescript": "~5.9.3",
+    "vite": "8.3.0"
+  }
+}
