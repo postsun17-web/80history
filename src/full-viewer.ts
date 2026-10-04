@@ -61,7 +61,8 @@ export class FullViewer {
    this.dimensions.clear();this.markerImages.clear();
    const p=scene.pano,baseUrl=Object.fromEntries(Object.entries(faces).map(([name,f])=>[name,`${p.root}/${f}/base.webp`])) as Record<keyof typeof faces,string>;
    await Promise.all(Object.values(baseUrl).map(src=>this.size(src)));
-   const panorama:CubemapMultiTilesPanorama={baseUrl,levels:[{faceSize:p.faceSize,nbTiles:p.tiles}],tileUrl:(face,col,row)=>`${p.root}/${faces[face]}/${p.level}/${row}_${col}.${p.ext}`};
+   // Delivered krpano polar faces need a 180° turn; the generated E rooms already use PSV orientation.
+   const panorama:CubemapMultiTilesPanorama={baseUrl,flipTopBottom:scene.source!=='approved-e-extension',levels:[{faceSize:p.faceSize,nbTiles:p.tiles}],tileUrl:(face,col,row)=>`${p.root}/${faces[face]}/${p.level}/${row}_${col}.${p.ext}`};
    const look=route.look||scene.view;
    this.markers.clearMarkers();
    await this.viewer.setPanorama(panorama,{position:toPosition(look[0],look[1]),zoom:this.zoom(look[2]),transition:this.scene?{speed:500,rotation:false,effect:'fade'}:false});
