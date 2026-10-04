@@ -1,6 +1,6 @@
-import OpenSeadragon from 'openseadragon';
-import {Viewer} from '@photo-sphere-viewer/core';
-import {CubemapAdapter} from '@photo-sphere-viewer/cubemap-adapter';
+import type OpenSeadragon from 'openseadragon';
+import type {Viewer} from '@photo-sphere-viewer/core';
+import {safeReaderUrl} from './visitor-reader-utils';
 import {assetUrl,sourcePath,type FullMuseum,type GalleryImage} from './full-types';
 import type {SourceAction} from './source-actions';
 import {sourceGalleryIssue,sourceGalleryNote} from './source-defects';
@@ -21,6 +21,8 @@ export class FullContent {
  private zoom?:OpenSeadragon.Viewer;
  private sphere?:Viewer;
  private gallery?:{id:string;index:number};
+ private generation=0;
+ private articleReturn?:{nodes:Node[];title:string;scroll:number;action:SourceAction;focus:HTMLElement|null};
  private frames:string[]=[];
  private frame=0;
  private dragStart?:{x:number;frame:number};
@@ -36,7 +38,7 @@ export class FullContent {
   this.body=dialog.querySelector<HTMLDivElement>('.full-content-body')!;
   this.heading=dialog.querySelector<HTMLHeadingElement>('h2')!;
   dialog.addEventListener('click',event=>this.controls(event));
-  dialog.addEventListener('cancel',event=>{event.preventDefault();this.close();});
+  dialog.addEventListener('cancel',event=>{event.preventDefault();if(this.articleReturn)this.returnToArticle();else this.close();});
   dialog.addEventListener('close',()=>{if(dialog.open)return;this.teardown();this.previousFocus?.focus();this.previousFocus=null;});
   dialog.addEventListener('keydown',event=>{
    if((event.target as HTMLElement).matches('input,textarea,select'))return;
@@ -51,7 +53,7 @@ export class FullContent {
  open(action:SourceAction):void {
   if(action.type==='scene'||action.type==='page'){this.onAction(action);return;}
   if(!this.dialog.open)this.previousFocus=document.activeElement instanceof HTMLElement?document.activeElement:null;
-  this.teardown();this.activeAction=action;
+  this.articleReturn=undefined;this.teardown();this.activeAction=action;
   this.body.className='full-content-body';this.body.replaceChildren();
   this.dialog.dataset.contentType=action.type;
   if(!this.dialog.open)this.dialog.showModal();
@@ -72,7 +74,14 @@ export class FullContent {
   this.dialog.querySelector<HTMLButtonElement>('[data-content-command="close"]')?.focus();
  }
 
- close():void {this.teardown();if(this.dialog.open)this.dialog.close();}
+ setFontSize(size:18|21|24):void {this.dialog.style.setProperty('--reader-font-size',`${size}px`);}
+ close():void {this.articleReturn=undefined;this.teardown();if(this.dialog.open)this.dialog.close();}
+ private expandArticleImage(src:string,title:string):void {
+  const action=this.activeAction;if(!action)return;
+  this.articleReturn={nodes:Array.from(this.body.childNodes),title:this.heading.textContent??'',scroll:this.body.scrollTop,action,focus:document.activeElement instanceof HTMLElement?document.activeElement:null};
+  this.teardown();this.body.replaceChildren();this.heading.textContent=title;this.renderImage(src,title);this.body.insertAdjacentHTML('afterbegin',button('article-return','본문으로 돌아가기','← 본문으로'));this.body.querySelector<HTMLButtonElement>('button')?.focus();
+ }
+ private returnToArticle():void {const saved=this.articleReturn;if(!saved)return;this.teardown();this.body.replaceChildren(...saved.nodes);this.heading.textContent=saved.title;this.activeAction=saved.action;this.body.scrollTop=saved.scroll;this.articleReturn=undefined;saved.focus?.focus();}
 
  /** Event delegation is local to the content dialog; main can call this for forwarded events. */
  controls(event:Event):boolean {
@@ -80,6 +89,7 @@ export class FullContent {
   if(!target||!this.dialog.contains(target))return false;
   const command=target.dataset.contentCommand!;
   if(command==='close')this.close();
+  else if(command==='article-return')this.returnToArticle();
   else if(command==='previous')this.moveGallery(-1);
   else if(command==='next')this.moveGallery(1);
   else if(command==='related-photo'){
@@ -105,6 +115,7 @@ export class FullContent {
 
  private url(path:string):string {return this.data.assets[sourcePath(path)]??assetUrl(path);}
  private teardown():void {
+  this.generation++;
   this.zoom?.destroy();this.zoom=undefined;
   this.sphere?.destroy();this.sphere=undefined;
   for(const media of this.body?.querySelectorAll<HTMLMediaElement>('audio,video')??[]){media.pause();media.removeAttribute('src');media.load();}
@@ -150,10 +161,12 @@ export class FullContent {
   narration?.remove();
   this.teardown();this.renderGallery(id,index+offset);if(narration)this.body.append(narration);
  }
- private showGalleryImage(item:GalleryImage):void {
+ private async showGalleryImage(item:GalleryImage):Promise<void> {
+  const generation=this.generation;
   const stage=this.body.querySelector<HTMLDivElement>('.full-content-media-stage')!;
   if(item.faces){
    const faces=item.faces;
+   const [{Viewer},{CubemapAdapter}]=await Promise.all([import('@photo-sphere-viewer/core'),import('@photo-sphere-viewer/cubemap-adapter')]);if(generation!==this.generation)return;
    this.sphere=new Viewer({container:stage,adapter:CubemapAdapter,panorama:Object.fromEntries(Object.entries(faceNames).map(([name,key])=>[name,faces[key]??faces[name]])),navbar:false,defaultZoomLvl:40,mousewheelCtrlKey:false,touchmoveTwoFingers:false,loadingTxt:'자료를 불러오는 중…'});
   }else this.createZoom(stage,item.image);
  }
@@ -161,33 +174,28 @@ export class FullContent {
   this.body.innerHTML=`<div class="full-content-media-stage" role="img" aria-label="${escape(title)}"></div><div class="full-content-toolbar"><p>드래그하여 이동 · 휠 또는 두 손가락으로 확대</p><div>${button('zoom-out','자료 축소','−')}${button('home','자료 전체 보기','↺')}${button('zoom-in','자료 확대','＋')}</div></div>`;
   this.createZoom(this.body.querySelector<HTMLDivElement>('.full-content-media-stage')!,url);
  }
- private createZoom(stage:HTMLDivElement,url:string):void {
+ private async createZoom(stage:HTMLDivElement,url:string):Promise<void> {
+  const generation=this.generation;const {default:OpenSeadragon}=await import('openseadragon');if(generation!==this.generation)return;
   this.zoom=OpenSeadragon({element:stage,tileSources:{type:'image',url},showNavigationControl:false,showNavigator:false,minZoomImageRatio:0.8,maxZoomPixelRatio:4,visibilityRatio:0.5,constrainDuringPan:true,gestureSettingsMouse:{clickToZoom:false,dblClickToZoom:true,scrollToZoom:true},gestureSettingsTouch:{pinchToZoom:true,clickToZoom:false}});
   this.zoom.addHandler('open-failed',()=>{stage.textContent='이미지를 불러오지 못했습니다. 네트워크 연결을 확인하고 다시 열어 주세요.';});
  }
- private renderArticle(path:string):void {
-  const key=sourcePath(path),article=this.data.articles[key];
-  this.heading.textContent=article&&article.title.length<=90?article.title:'역사 자료';
-  if(!article){this.notice('이 자료의 본문을 찾을 수 없습니다.');return;}
-  const iframe=document.createElement('iframe');iframe.className='full-content-article';iframe.title=article.title||'역사 자료 본문';iframe.src=article.url;iframe.setAttribute('sandbox','allow-same-origin allow-popups');
-  this.body.append(iframe);
-  // Delivered articles are script-free; wire in-document image links for accessible enlargement.
-  iframe.addEventListener('load',()=>{
-   try{
-    const doc=iframe.contentDocument;if(!doc)return;
-    const handler=(event:MouseEvent)=>{
-     const element=event.target as Element|null;
-     const target=element?.nodeType===1?element.closest<HTMLAnchorElement>('a'):null;
-     if(!target)return;
-     const href=target.getAttribute('href')??'';
-     if(/\.(jpe?g|png|webp|gif)(?:\.webp)?(?:\?|$)/i.test(href)){
-      event.preventDefault();const imageUrl=new URL(href,iframe.src).href;
-      this.open({type:'image',src:imageUrl,title:target.textContent?.trim()||'본문 이미지'});
-     }else if(/^https?:/i.test(href)){target.target='_blank';target.rel='noopener noreferrer';}
-    };
-    doc.addEventListener('click',handler);this.cleanupTasks.push(()=>doc.removeEventListener('click',handler));
-   }catch{/* A linked external page can have a different origin. */}
-  });
+ private async renderArticle(path:string):Promise<void> {
+  const generation=this.generation,key=sourcePath(path),source=this.data.articles[key];
+  this.heading.textContent=source?.title||'역사 자료';this.notice('본문을 불러오는 중…');
+  try {
+   const {loadVisitorArticles}=await import('./visitor-articles');const articles=await loadVisitorArticles();if(generation!==this.generation)return;
+   const article=articles[key];this.body.replaceChildren();
+   if(article&&(article.paragraphs.length||article.images.length)){
+    this.heading.textContent=article.title;const section=document.createElement('article');section.className='full-content-readable';
+    for(const text of article.paragraphs){const p=document.createElement('p');p.textContent=text;section.append(p);}
+    for(const item of article.images){const src=safeReaderUrl(item.src);if(!src)continue;const b=document.createElement('button');b.type='button';b.className='full-content-article-photo';b.textContent='사진 확대';const img=document.createElement('img');img.src=src;img.alt=item.alt;img.loading='lazy';b.prepend(img);b.addEventListener('click',()=>this.expandArticleImage(src,item.alt||article.title));section.append(b);}
+    this.body.append(section);return;
+   }
+   if(!source){this.notice('이 자료의 본문을 찾을 수 없습니다.');return;}
+   const url=safeReaderUrl(source.url);if(!url){this.notice('올바른 자료 주소가 아닙니다.');return;}
+   const iframe=document.createElement('iframe');iframe.className='full-content-article';iframe.title=source.title||'역사 자료 본문';iframe.src=url;iframe.setAttribute('sandbox','allow-same-origin allow-popups');this.body.append(iframe);
+   iframe.addEventListener('load',()=>{try{const doc=iframe.contentDocument;if(!doc)return;const handler=(event:MouseEvent)=>{const anchor=(event.target as Element|null)?.closest?.('a');if(!anchor)return;const href=anchor.getAttribute('href')??'';if(/\.(jpe?g|png|webp|gif)(?:\.webp)?(?:\?|$)/i.test(href)){event.preventDefault();const src=safeReaderUrl(new URL(href,iframe.src).href);if(src)this.expandArticleImage(src,anchor.textContent?.trim()||'본문 이미지');}else {anchor.target='_blank';anchor.rel='noopener noreferrer';}};doc.addEventListener('click',handler);this.cleanupTasks.push(()=>doc.removeEventListener('click',handler));}catch{}});
+  }catch{if(generation!==this.generation)return;this.body.replaceChildren();this.notice('본문을 불러오지 못했습니다. 연결을 확인하고 다시 시도해 주세요.');const retry=document.createElement('button');retry.type='button';retry.textContent='다시 불러오기';retry.addEventListener('click',()=>{void this.renderArticle(path);});this.body.append(retry);}
  }
  private safeExternal(value:string):string|null {
   try{const url=new URL(value);return /^https?:$/.test(url.protocol)?url.href:null;}catch{return null;}
