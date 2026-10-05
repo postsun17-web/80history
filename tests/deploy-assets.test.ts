@@ -4,11 +4,22 @@ import {mkdtemp,readFile,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {zipSync,strToU8} from 'fflate';
-import {restoreArchive,sha256,validateAssetPath,catalogueSha256} from '../scripts/restore-deploy-assets.mjs';
+import {restoreArchive,sha256,validateAssetPath,catalogueSha256,validateArchiveUrl} from '../scripts/restore-deploy-assets.mjs';
+
+test('build archives accept only the asset store and this repository release namespace',()=>{
+ const url='https://github.com/postsun17-web/80history/releases/download/museum-assets-20261005/assets-1234567890abcdef1234.zip';
+ assert.equal(validateArchiveUrl(url).href,url);
+ assert.equal(validateArchiveUrl('https://store.public.blob.vercel-storage.com/museum-v1/assets.zip').protocol,'https:');
+ for(const invalid of [url.replace('https:','http:'),url.replace('80history/','other/'),url.replace('github.com','github.com.evil.test'),url+'?token=secret',url.replace('museum-assets-','unrelated-')])assert.throws(()=>validateArchiveUrl(invalid),/Untrusted/);
+});
 
 test('catalogue integrity survives Git line-ending conversion without accepting content changes',()=>{
  assert.equal(catalogueSha256(Buffer.from('{\r\n"title":"영락"\r\n}')),catalogueSha256(Buffer.from('{\n"title":"영락"\n}')));
  assert.notEqual(catalogueSha256(Buffer.from('{"page":1}')),catalogueSha256(Buffer.from('{"page":2}')));
+});
+test('memorial assets have a dedicated deployment namespace',()=>{
+ assert.equal(validateAssetPath('media/memorial/panos/scene_hkj_1f_01/f/4/0_0.webp'),'media/memorial/panos/scene_hkj_1f_01/f/4/0_0.webp');
+ assert.throws(()=>validateAssetPath('media/memorial/../../secret'),/Unsafe/);
 });
 
 test('archive restoration verifies bytes and recreates nested public URLs',async()=>{

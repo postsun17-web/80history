@@ -2,9 +2,13 @@
 export interface SourceHotspot {
  name:string; attrs:Record<string,string>; points?:[number,number][];
 }
+export type MuseumId='history'|'memorial';
+export interface AudioTrack {src:string;title:string;volume?:number}
+export interface MuseumObject {id:string;title:string;frames:string[];poster?:string}
 export interface FullScene {
  id:string; title:string; source:string; view:[number,number,number];
- pano:{root:string; faceSize:number; tiles:number; level:number; ext:string};
+ pano:{root:string; faceSize:number; tiles:number; level:number; ext:string;levels?:{faceSize:number;tiles:number;level:number}[]};
+ narration?:AudioTrack;
  map?:{x:number;y:number;heading:number}; zone?:string;
  hotspots:SourceHotspot[];
 }
@@ -14,6 +18,8 @@ export interface GalleryImage {id:string;title:string;image:string;width:number;
 export interface FullGallery {id:string;title:string;items:GalleryImage[]}
 export interface MenuItem {title:string;scene?:string;look?:[number,number,number];action?:string;url?:string}
 export interface FullMuseum {
+ id?:MuseumId; title?:string; defaultScene?:string;
+ objects?:Record<string,MuseumObject>;
  scenes:FullScene[]; zones:ExhibitZone[];
  galleries:FullGallery[];
  articles:Record<string,{title:string;url:string}>;

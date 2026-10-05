@@ -1,0 +1,3109 @@
+{
+  "id": "memorial",
+  "title": "한경직목사기념관",
+  "defaultScene": "scene_vr11",
+  "scenes": [
+    {
+      "id": "scene_vr11",
+      "title": "한경직목사기념관 입구",
+      "source": "hgj.xml",
+      "view": [
+        90.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_vr11",
+        "faceSize": 5120,
+        "tiles": 8,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 640,
+            "tiles": 1,
+            "level": 1
+          },
+          {
+            "faceSize": 1280,
+            "tiles": 2,
+            "level": 2
+          },
+          {
+            "faceSize": 2560,
+            "tiles": 4,
+            "level": 3
+          },
+          {
+            "faceSize": 5120,
+            "tiles": 8,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801103205",
+          "attrs": {
+            "name": "spot1801103205",
+            "style": "skin_hotspotstyle",
+            "ath": "78.735",
+            "atv": "11.612",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_01",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801105634",
+          "attrs": {
+            "name": "spot1801105634",
+            "style": "skin_hotspotstyle",
+            "ath": "102.053",
+            "atv": "7.18",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_01",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ],
+      "narration": {
+        "src": "/media/memorial/mp3/h01.mp3",
+        "title": "한경직목사기념관 입구 해설",
+        "volume": 0.7
+      }
+    },
+    {
+      "id": "scene_hkj_1f_01",
+      "title": "기념관 1층 입구",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_1f_01",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801103443",
+          "attrs": {
+            "name": "spot1801103443",
+            "style": "skin_hotspotstyle",
+            "ath": "-97.793",
+            "atv": "17.189",
+            "depth": "1000.0",
+            "linkedscene": "scene_vr11",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801103515",
+          "attrs": {
+            "name": "spot1801103515",
+            "style": "skin_hotspotstyle",
+            "ath": "-1.105",
+            "atv": "28.895",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_02",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_1f_02",
+      "title": "기념관 1층 관람 지점 2",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_1f_02",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801103567",
+          "attrs": {
+            "name": "spot1801103567",
+            "style": "skin_hotspotstyle",
+            "ath": "1.889",
+            "atv": "27.791",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_03",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801105473",
+          "attrs": {
+            "name": "spot1801105473",
+            "style": "skin_hotspotstyle",
+            "ath": "176.299",
+            "atv": "27.022",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_01",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_1f_03",
+      "title": "기념관 1층 관람 지점 3",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_1f_03",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801103618",
+          "attrs": {
+            "name": "spot1801103618",
+            "style": "skin_hotspotstyle",
+            "ath": "-90.26",
+            "atv": "39.033",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_04",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801104166",
+          "attrs": {
+            "name": "spot1801104166",
+            "style": "skin_hotspotstyle",
+            "ath": "82.021",
+            "atv": "34.463",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_07",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801104346",
+          "attrs": {
+            "name": "spot1801104346",
+            "style": "skin_hotspotstyle",
+            "ath": "1.278",
+            "atv": "21.401",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_08",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801105392",
+          "attrs": {
+            "name": "spot1801105392",
+            "style": "skin_hotspotstyle",
+            "ath": "175.07",
+            "atv": "28.459",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_02",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_1f_04",
+      "title": "기념관 1층 관람 지점 4",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_1f_04",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801103650",
+          "attrs": {
+            "name": "spot1801103650",
+            "style": "skin_hotspotstyle",
+            "ath": "-90.608",
+            "atv": "39.185",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_05",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801104112",
+          "attrs": {
+            "name": "spot1801104112",
+            "style": "skin_hotspotstyle",
+            "ath": "87.021",
+            "atv": "33.049",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_03",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "floor1_1",
+          "attrs": {
+            "name": "floor1_1",
+            "style": "object_button",
+            "ath": "-11.594",
+            "atv": "28.4764",
+            "tooltip": "영락교회 창립 25주년 기념 메달",
+            "id": "scene_hkj_1f_04",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519164', 800, 600, false);"
+          }
+        },
+        {
+          "name": "floor1_2",
+          "attrs": {
+            "name": "floor1_2",
+            "style": "object_button",
+            "ath": "-35.8389",
+            "atv": "12.551",
+            "tooltip": "월드비전 공로패",
+            "id": "scene_hkj_1f_04",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519132', 800, 600, false);"
+          }
+        },
+        {
+          "name": "floor1_3",
+          "attrs": {
+            "name": "floor1_3",
+            "style": "object_button",
+            "ath": "-41.9699",
+            "atv": "25.424",
+            "tooltip": "숭실대학교 개교 95주년 기념 감사패(1992년 10월 10일)",
+            "id": "scene_hkj_1f_04",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519162', 800, 600, false);"
+          }
+        },
+        {
+          "name": "floor1_4",
+          "attrs": {
+            "name": "floor1_4",
+            "style": "object_button",
+            "ath": "4.6541",
+            "atv": "30.0641",
+            "tooltip": "영락교회 공로패(1985년 12월 2일)",
+            "id": "scene_hkj_1f_04",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519134', 800, 600, false);"
+          }
+        },
+        {
+          "name": "floor1_6",
+          "attrs": {
+            "name": "floor1_6",
+            "style": "object_button",
+            "ath": "-31.0629",
+            "atv": "29.6196",
+            "tooltip": "장로회신학대학 감사패(1981년 5월 15일)",
+            "id": "scene_hkj_1f_04",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519127', 800, 600, false);"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_1f_05",
+      "title": "기념관 1층 관람 지점 5",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_1f_05",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801103717",
+          "attrs": {
+            "name": "spot1801103717",
+            "style": "skin_hotspotstyle",
+            "ath": "171.521",
+            "atv": "26.023",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_06",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801104057",
+          "attrs": {
+            "name": "spot1801104057",
+            "style": "skin_hotspotstyle",
+            "ath": "86.901",
+            "atv": "32.789",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_04",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "floor1_5",
+          "attrs": {
+            "name": "floor1_5",
+            "style": "object_button",
+            "ath": "-11.4071",
+            "atv": "31.3856",
+            "tooltip": "영락교회창립50주년 광복50주년 기념패(1995년)",
+            "id": "scene_hkj_1f_05",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519018', 800, 600, false);"
+          }
+        },
+        {
+          "name": "floor1_7",
+          "attrs": {
+            "name": "floor1_7",
+            "style": "object_button",
+            "ath": "-76.0729",
+            "atv": "40.4802",
+            "tooltip": "아세아연합신학대학원 감사패(1984년 5월 1일)",
+            "id": "scene_hkj_1f_05",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519137', 800, 600, false);"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_1f_06",
+      "title": "기념관 1층 관람 지점 6",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_1f_06",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801103760",
+          "attrs": {
+            "name": "spot1801103760",
+            "style": "skin_hotspotstyle",
+            "ath": "-28.605",
+            "atv": "43.267",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_05",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801103843",
+          "attrs": {
+            "name": "spot1801103843",
+            "style": "skin_hotspotstyle",
+            "ath": "37.425",
+            "atv": "30.187",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_03",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "floor1_8",
+          "attrs": {
+            "name": "floor1_8",
+            "style": "object_button",
+            "ath": "-134.2259",
+            "atv": "34.6809",
+            "tooltip": "한경직 목사 친필 도자기(영락교회 선교기금 후원을 위해 판매)",
+            "id": "scene_hkj_1f_06",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519169', 800, 600, false);"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_1f_07",
+      "title": "기념관 1층 관람 지점 7",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_1f_07",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801104245",
+          "attrs": {
+            "name": "spot1801104245",
+            "style": "skin_hotspotstyle",
+            "ath": "-94.19",
+            "atv": "36.845",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_03",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_1f_08",
+      "title": "기념관 1층 관람 지점 8",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_1f_08",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801104454",
+          "attrs": {
+            "name": "spot1801104454",
+            "style": "skin_hotspotstyle",
+            "ath": "-115.301",
+            "atv": "32.83",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_09",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801104807",
+          "attrs": {
+            "name": "spot1801104807",
+            "style": "skin_hotspotstyle",
+            "ath": "-52.257",
+            "atv": "40.86",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_10",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801104926",
+          "attrs": {
+            "name": "spot1801104926",
+            "style": "skin_hotspotstyle",
+            "ath": "-178.563",
+            "atv": "32.007",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_03",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801105085",
+          "attrs": {
+            "name": "spot1801105085",
+            "style": "skin_hotspotstyle",
+            "ath": "0.236",
+            "atv": "25.045",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_11",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_1f_09",
+      "title": "기념관 1층 관람 지점 9",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_1f_09",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801104513",
+          "attrs": {
+            "name": "spot1801104513",
+            "style": "skin_hotspotstyle",
+            "ath": "0.662",
+            "atv": "38.512",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_10",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801104724",
+          "attrs": {
+            "name": "spot1801104724",
+            "style": "skin_hotspotstyle",
+            "ath": "86.505",
+            "atv": "29.616",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_08",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_1f_10",
+      "title": "기념관 1층 관람 지점 10",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_1f_10",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801104570",
+          "attrs": {
+            "name": "spot1801104570",
+            "style": "skin_hotspotstyle",
+            "ath": "94.455",
+            "atv": "29.304",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_08",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801104647",
+          "attrs": {
+            "name": "spot1801104647",
+            "style": "skin_hotspotstyle",
+            "ath": "179.038",
+            "atv": "36.633",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_09",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_1f_11",
+      "title": "기념관 1층 관람 지점 11",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_1f_11",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801105155",
+          "attrs": {
+            "name": "spot1801105155",
+            "style": "skin_hotspotstyle",
+            "ath": "77.763",
+            "atv": "33.821",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_12",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801105315",
+          "attrs": {
+            "name": "spot1801105315",
+            "style": "skin_hotspotstyle",
+            "ath": "178.705",
+            "atv": "24.369",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_08",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_1f_12",
+      "title": "기념관 1층 관람 지점 12",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_1f_12",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801105212",
+          "attrs": {
+            "name": "spot1801105212",
+            "style": "skin_hotspotstyle",
+            "ath": "-109.752",
+            "atv": "32.067",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_1f_11",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_2f_01",
+      "title": "기념관 2층 입구",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_01",
+        "faceSize": 8960,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1152,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2304,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4608,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8960,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801105746",
+          "attrs": {
+            "name": "spot1801105746",
+            "style": "skin_hotspotstyle",
+            "ath": "1.193",
+            "atv": "26.628",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_02",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1",
+          "attrs": {
+            "name": "spot1",
+            "style": "skin_hotspotstyle",
+            "ath": "-92.933",
+            "atv": "26.483",
+            "linkedscene": "scene_vr11",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_2f_02",
+      "title": "기념관 2층 관람 지점 2",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_02",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801105804",
+          "attrs": {
+            "name": "spot1801105804",
+            "style": "skin_hotspotstyle",
+            "ath": "86.001",
+            "atv": "28.341",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_03",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1",
+          "attrs": {
+            "name": "spot1",
+            "style": "skin_hotspotstyle",
+            "ath": "178.031",
+            "atv": "27.278",
+            "linkedscene": "scene_hkj_2f_01",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ],
+      "narration": {
+        "src": "/media/memorial/mp3/h02.mp3",
+        "title": "기념관 2층 관람 지점 2 해설",
+        "volume": 0.7
+      }
+    },
+    {
+      "id": "scene_hkj_2f_03",
+      "title": "기념관 2층 관람 지점 3",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_03",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801105855",
+          "attrs": {
+            "name": "spot1801105855",
+            "style": "skin_hotspotstyle",
+            "ath": "-1.688",
+            "atv": "29.383",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_04",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1",
+          "attrs": {
+            "name": "spot1",
+            "style": "skin_hotspotstyle",
+            "ath": "-94.576",
+            "atv": "31.274",
+            "linkedscene": "scene_hkj_2f_02",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_2f_04",
+      "title": "기념관 2층 관람 지점 4",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_04",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801105906",
+          "attrs": {
+            "name": "spot1801105906",
+            "style": "skin_hotspotstyle",
+            "ath": "62.627",
+            "atv": "34.332",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_05",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801116811",
+          "attrs": {
+            "name": "spot1801116811",
+            "style": "skin_hotspotstyle",
+            "ath": "-90.425",
+            "atv": "27.810",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_16",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801117025",
+          "attrs": {
+            "name": "spot1801117025",
+            "style": "skin_hotspotstyle",
+            "ath": "-9.916",
+            "atv": "26.718",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_15",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1",
+          "attrs": {
+            "name": "spot1",
+            "style": "skin_hotspotstyle",
+            "ath": "177.007",
+            "atv": "35.281",
+            "linkedscene": "scene_hkj_2f_03",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_2f_05",
+      "title": "기념관 2층 관람 지점 5",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_05",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801105970",
+          "attrs": {
+            "name": "spot1801105970",
+            "style": "skin_hotspotstyle",
+            "ath": "8.018",
+            "atv": "31.065",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_06",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801116590",
+          "attrs": {
+            "name": "spot1801116590",
+            "style": "skin_hotspotstyle",
+            "ath": "-56.203",
+            "atv": "34.142",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_15",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801116701",
+          "attrs": {
+            "name": "spot1801116701",
+            "style": "skin_hotspotstyle",
+            "ath": "-142.996",
+            "atv": "37.959",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_04",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "floor2_9",
+          "attrs": {
+            "name": "floor2_9",
+            "style": "object_button",
+            "ath": "65.2344",
+            "atv": "27.431",
+            "tooltip": "유학 시절 사용하시던 여행용 케이스",
+            "id": "scene_hkj_2f_05",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519171', 800, 600, false);"
+          }
+        }
+      ],
+      "narration": {
+        "src": "/media/memorial/mp3/h03.mp3",
+        "title": "기념관 2층 관람 지점 5 해설",
+        "volume": 0.7
+      }
+    },
+    {
+      "id": "scene_hkj_2f_06",
+      "title": "기념관 2층 관람 지점 6",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_06",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801106010",
+          "attrs": {
+            "name": "spot1801106010",
+            "style": "skin_hotspotstyle",
+            "ath": "-1.439",
+            "atv": "32.118",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_07",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801108042",
+          "attrs": {
+            "name": "spot1801108042",
+            "style": "skin_hotspotstyle",
+            "ath": "177.472",
+            "atv": "28.425",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_05",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801117506",
+          "attrs": {
+            "name": "spot1801117506",
+            "style": "skin_hotspotstyle",
+            "ath": "-122.104",
+            "atv": "35.762",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_15",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ],
+      "narration": {
+        "src": "/media/memorial/mp3/h04.mp3",
+        "title": "기념관 2층 관람 지점 6 해설",
+        "volume": 0.7
+      }
+    },
+    {
+      "id": "scene_hkj_2f_07",
+      "title": "기념관 2층 관람 지점 7",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_07",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801106058",
+          "attrs": {
+            "name": "spot1801106058",
+            "style": "skin_hotspotstyle",
+            "ath": "2.045",
+            "atv": "33.12",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_08",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801107982",
+          "attrs": {
+            "name": "spot1801107982",
+            "style": "skin_hotspotstyle",
+            "ath": "178.496",
+            "atv": "21.909",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_06",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "floor2_1",
+          "attrs": {
+            "name": "floor2_1",
+            "style": "object_button",
+            "ath": "43.823",
+            "atv": "25.6264",
+            "tooltip": "사용하시던 성경책(표지 안쪽 기도문)",
+            "id": "scene_hkj_2f_07",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519125', 800, 600, false);"
+          }
+        }
+      ],
+      "narration": {
+        "src": "/media/memorial/mp3/h07.mp3",
+        "title": "기념관 2층 관람 지점 7 해설",
+        "volume": 0.7
+      }
+    },
+    {
+      "id": "scene_hkj_2f_08",
+      "title": "기념관 2층 관람 지점 8",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_08",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801106107",
+          "attrs": {
+            "name": "spot1801106107",
+            "style": "skin_hotspotstyle",
+            "ath": "-89.278",
+            "atv": "26.89",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_09",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801107276",
+          "attrs": {
+            "name": "spot1801107276",
+            "style": "skin_hotspotstyle",
+            "ath": "169.408",
+            "atv": "25.984",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_07",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "floor2_2",
+          "attrs": {
+            "name": "floor2_2",
+            "style": "object_button",
+            "ath": "81.4695",
+            "atv": "42.2395",
+            "tooltip": "40회 총회장 후드",
+            "id": "scene_hkj_2f_08",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519081', 800, 600, false);"
+          }
+        },
+        {
+          "name": "floor2_5",
+          "attrs": {
+            "name": "floor2_5",
+            "style": "object_button",
+            "ath": "104.1836",
+            "atv": "39.7265",
+            "tooltip": "사용하시던 안경",
+            "id": "scene_hkj_2f_08",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519148', 800, 600, false);"
+          }
+        },
+        {
+          "name": "floor2_6",
+          "attrs": {
+            "name": "floor2_6",
+            "style": "object_button",
+            "ath": "59.5891",
+            "atv": "33.2431",
+            "tooltip": "한경직 원로목사 추대기념(1973년 1월 2일)",
+            "id": "scene_hkj_2f_08",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519130', 800, 600, false);"
+          }
+        },
+        {
+          "name": "floor2_7",
+          "attrs": {
+            "name": "floor2_7",
+            "style": "object_button",
+            "ath": "72.82",
+            "atv": "40.1069",
+            "tooltip": "한경직목사기념사업회 성찬기 세트",
+            "id": "scene_hkj_2f_08",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519149', 800, 600, false);"
+          }
+        }
+      ],
+      "narration": {
+        "src": "/media/memorial/mp3/h09.mp3",
+        "title": "기념관 2층 관람 지점 8 해설",
+        "volume": 0.7
+      }
+    },
+    {
+      "id": "scene_hkj_2f_09",
+      "title": "기념관 2층 관람 지점 9",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_09",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801106157",
+          "attrs": {
+            "name": "spot1801106157",
+            "style": "skin_hotspotstyle",
+            "ath": "-88.78",
+            "atv": "25.188",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_10",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801106206",
+          "attrs": {
+            "name": "spot1801106206",
+            "style": "skin_hotspotstyle",
+            "ath": "176.662",
+            "atv": "22.545",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_14",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801107191",
+          "attrs": {
+            "name": "spot1801107191",
+            "style": "skin_hotspotstyle",
+            "ath": "88.058",
+            "atv": "27.803",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_08",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_2f_10",
+      "title": "기념관 2층 관람 지점 10",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_10",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801106338",
+          "attrs": {
+            "name": "spot1801106338",
+            "style": "skin_hotspotstyle",
+            "ath": "-176.283",
+            "atv": "29.319",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_11",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801107126",
+          "attrs": {
+            "name": "spot1801107126",
+            "style": "skin_hotspotstyle",
+            "ath": "84.628",
+            "atv": "30.234",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_09",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "floor2_3",
+          "attrs": {
+            "name": "floor2_3",
+            "style": "object_button",
+            "ath": "-74.1155",
+            "atv": "40.6646",
+            "tooltip": "국민훈장 무궁화장(1970)",
+            "id": "scene_hkj_2f_10",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519080', 800, 600, false);"
+          }
+        },
+        {
+          "name": "floor2_4",
+          "attrs": {
+            "name": "floor2_4",
+            "style": "object_button",
+            "ath": "-64.8387",
+            "atv": "39.472",
+            "tooltip": "대한민국 건국공로장(1998)",
+            "id": "scene_hkj_2f_10",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519020', 800, 600, false);"
+          }
+        },
+        {
+          "name": "floor2_8",
+          "attrs": {
+            "name": "floor2_8",
+            "style": "object_button",
+            "ath": "-127.3599",
+            "atv": "38.7297",
+            "tooltip": "템플턴 메달",
+            "id": "scene_hkj_2f_10",
+            "onclick": "popup2('iframe', 'https://spinzam.com/shot/?idx=519163', 800, 600, false);"
+          }
+        }
+      ],
+      "narration": {
+        "src": "/media/memorial/mp3/h12.mp3",
+        "title": "기념관 2층 관람 지점 10 해설",
+        "volume": 0.7
+      }
+    },
+    {
+      "id": "scene_hkj_2f_11",
+      "title": "기념관 2층 관람 지점 11",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_11",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801106396",
+          "attrs": {
+            "name": "spot1801106396",
+            "style": "skin_hotspotstyle",
+            "ath": "179.211",
+            "atv": "44.58",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_12",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801107042",
+          "attrs": {
+            "name": "spot1801107042",
+            "style": "skin_hotspotstyle",
+            "ath": "-1.253",
+            "atv": "31.289",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_10",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ],
+      "narration": {
+        "src": "/media/memorial/mp3/h14.mp3",
+        "title": "기념관 2층 관람 지점 11 해설",
+        "volume": 0.7
+      }
+    },
+    {
+      "id": "scene_hkj_2f_12",
+      "title": "기념관 2층 관람 지점 12",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_12",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801106474",
+          "attrs": {
+            "name": "spot1801106474",
+            "style": "skin_hotspotstyle",
+            "ath": "121.958",
+            "atv": "35.946",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_13",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801106982",
+          "attrs": {
+            "name": "spot1801106982",
+            "style": "skin_hotspotstyle",
+            "ath": "-49.749",
+            "atv": "41.559",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_11",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ],
+      "narration": {
+        "src": "/media/memorial/mp3/h15.mp3",
+        "title": "기념관 2층 관람 지점 12 해설",
+        "volume": 0.7
+      }
+    },
+    {
+      "id": "scene_hkj_2f_13",
+      "title": "기념관 2층 관람 지점 13",
+      "source": "hgj.xml",
+      "view": [
+        -459.629,
+        26.969,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_13",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801106531",
+          "attrs": {
+            "name": "spot1801106531",
+            "style": "skin_hotspotstyle",
+            "ath": "90.63",
+            "atv": "36.327",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_14",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801106917",
+          "attrs": {
+            "name": "spot1801106917",
+            "style": "skin_hotspotstyle",
+            "ath": "-89.884",
+            "atv": "39.34",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_12",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ],
+      "narration": {
+        "src": "/media/memorial/mp3/h16.mp3",
+        "title": "기념관 2층 관람 지점 13 해설",
+        "volume": 0.7
+      }
+    },
+    {
+      "id": "scene_hkj_2f_14",
+      "title": "기념관 2층 관람 지점 14",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_14",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801106605",
+          "attrs": {
+            "name": "spot1801106605",
+            "style": "skin_hotspotstyle",
+            "ath": "2.152",
+            "atv": "29.863",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_09",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801106694",
+          "attrs": {
+            "name": "spot1801106694",
+            "style": "skin_hotspotstyle",
+            "ath": "175.029",
+            "atv": "22.167",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_15",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801106841",
+          "attrs": {
+            "name": "spot1801106841",
+            "style": "skin_hotspotstyle",
+            "ath": "-139.86",
+            "atv": "36.13",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_13",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_2f_15",
+      "title": "기념관 2층 관람 지점 15",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_15",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801106777",
+          "attrs": {
+            "name": "spot1801106777",
+            "style": "skin_hotspotstyle",
+            "ath": "-17.957",
+            "atv": "29.334",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_14",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801117150",
+          "attrs": {
+            "name": "spot1801117150",
+            "style": "skin_hotspotstyle",
+            "ath": "177.784",
+            "atv": "28.252",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_04",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801117235",
+          "attrs": {
+            "name": "spot1801117235",
+            "style": "skin_hotspotstyle",
+            "ath": "116.691",
+            "atv": "34.477",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_05",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        },
+        {
+          "name": "spot1801117312",
+          "attrs": {
+            "name": "spot1801117312",
+            "style": "skin_hotspotstyle",
+            "ath": "73.651",
+            "atv": "35.303",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_06",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene_hkj_2f_16",
+      "title": "기념관 2층 관람 지점 16",
+      "source": "hgj.xml",
+      "view": [
+        0.0,
+        0.0,
+        120.0
+      ],
+      "pano": {
+        "root": "/media/memorial/panos/scene_hkj_2f_16",
+        "faceSize": 8704,
+        "tiles": 16,
+        "level": 4,
+        "ext": "webp",
+        "levels": [
+          {
+            "faceSize": 1024,
+            "tiles": 2,
+            "level": 1
+          },
+          {
+            "faceSize": 2176,
+            "tiles": 4,
+            "level": 2
+          },
+          {
+            "faceSize": 4352,
+            "tiles": 8,
+            "level": 3
+          },
+          {
+            "faceSize": 8704,
+            "tiles": 16,
+            "level": 4
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "name": "spot1801116915",
+          "attrs": {
+            "name": "spot1801116915",
+            "style": "skin_hotspotstyle",
+            "ath": "125.117",
+            "atv": "35.025",
+            "depth": "1000.0",
+            "linkedscene": "scene_hkj_2f_04",
+            "linkedscene_hoffset": "0.0",
+            "use3dtransition": "true"
+          }
+        }
+      ]
+    }
+  ],
+  "zones": [],
+  "galleries": [],
+  "articles": {},
+  "ebooks": [],
+  "objects": {
+    "519164": {
+      "id": "519164",
+      "title": "영락교회 창립 25주년 기념 메달",
+      "frames": [
+        "/media/memorial/objects/519164/00.webp",
+        "/media/memorial/objects/519164/01.webp",
+        "/media/memorial/objects/519164/02.webp",
+        "/media/memorial/objects/519164/03.webp",
+        "/media/memorial/objects/519164/04.webp",
+        "/media/memorial/objects/519164/05.webp",
+        "/media/memorial/objects/519164/06.webp",
+        "/media/memorial/objects/519164/07.webp",
+        "/media/memorial/objects/519164/08.webp",
+        "/media/memorial/objects/519164/09.webp",
+        "/media/memorial/objects/519164/10.webp",
+        "/media/memorial/objects/519164/11.webp",
+        "/media/memorial/objects/519164/12.webp",
+        "/media/memorial/objects/519164/13.webp",
+        "/media/memorial/objects/519164/14.webp",
+        "/media/memorial/objects/519164/15.webp",
+        "/media/memorial/objects/519164/16.webp",
+        "/media/memorial/objects/519164/17.webp",
+        "/media/memorial/objects/519164/18.webp",
+        "/media/memorial/objects/519164/19.webp",
+        "/media/memorial/objects/519164/20.webp",
+        "/media/memorial/objects/519164/21.webp",
+        "/media/memorial/objects/519164/22.webp",
+        "/media/memorial/objects/519164/23.webp",
+        "/media/memorial/objects/519164/24.webp",
+        "/media/memorial/objects/519164/25.webp",
+        "/media/memorial/objects/519164/26.webp",
+        "/media/memorial/objects/519164/27.webp",
+        "/media/memorial/objects/519164/28.webp",
+        "/media/memorial/objects/519164/29.webp",
+        "/media/memorial/objects/519164/30.webp",
+        "/media/memorial/objects/519164/31.webp",
+        "/media/memorial/objects/519164/32.webp",
+        "/media/memorial/objects/519164/33.webp",
+        "/media/memorial/objects/519164/34.webp",
+        "/media/memorial/objects/519164/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519164/00.webp"
+    },
+    "519132": {
+      "id": "519132",
+      "title": "월드비전 공로패",
+      "frames": [
+        "/media/memorial/objects/519132/00.webp",
+        "/media/memorial/objects/519132/01.webp",
+        "/media/memorial/objects/519132/02.webp",
+        "/media/memorial/objects/519132/03.webp",
+        "/media/memorial/objects/519132/04.webp",
+        "/media/memorial/objects/519132/05.webp",
+        "/media/memorial/objects/519132/06.webp",
+        "/media/memorial/objects/519132/07.webp",
+        "/media/memorial/objects/519132/08.webp",
+        "/media/memorial/objects/519132/09.webp",
+        "/media/memorial/objects/519132/10.webp",
+        "/media/memorial/objects/519132/11.webp",
+        "/media/memorial/objects/519132/12.webp",
+        "/media/memorial/objects/519132/13.webp",
+        "/media/memorial/objects/519132/14.webp",
+        "/media/memorial/objects/519132/15.webp",
+        "/media/memorial/objects/519132/16.webp",
+        "/media/memorial/objects/519132/17.webp",
+        "/media/memorial/objects/519132/18.webp",
+        "/media/memorial/objects/519132/19.webp",
+        "/media/memorial/objects/519132/20.webp",
+        "/media/memorial/objects/519132/21.webp",
+        "/media/memorial/objects/519132/22.webp",
+        "/media/memorial/objects/519132/23.webp",
+        "/media/memorial/objects/519132/24.webp",
+        "/media/memorial/objects/519132/25.webp",
+        "/media/memorial/objects/519132/26.webp",
+        "/media/memorial/objects/519132/27.webp",
+        "/media/memorial/objects/519132/28.webp",
+        "/media/memorial/objects/519132/29.webp",
+        "/media/memorial/objects/519132/30.webp",
+        "/media/memorial/objects/519132/31.webp",
+        "/media/memorial/objects/519132/32.webp",
+        "/media/memorial/objects/519132/33.webp",
+        "/media/memorial/objects/519132/34.webp",
+        "/media/memorial/objects/519132/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519132/00.webp"
+    },
+    "519162": {
+      "id": "519162",
+      "title": "숭실대학교 개교 95주년 기념 감사패(1992년 10월 10일)",
+      "frames": [
+        "/media/memorial/objects/519162/00.webp",
+        "/media/memorial/objects/519162/01.webp",
+        "/media/memorial/objects/519162/02.webp",
+        "/media/memorial/objects/519162/03.webp",
+        "/media/memorial/objects/519162/04.webp",
+        "/media/memorial/objects/519162/05.webp",
+        "/media/memorial/objects/519162/06.webp",
+        "/media/memorial/objects/519162/07.webp",
+        "/media/memorial/objects/519162/08.webp",
+        "/media/memorial/objects/519162/09.webp",
+        "/media/memorial/objects/519162/10.webp",
+        "/media/memorial/objects/519162/11.webp",
+        "/media/memorial/objects/519162/12.webp",
+        "/media/memorial/objects/519162/13.webp",
+        "/media/memorial/objects/519162/14.webp",
+        "/media/memorial/objects/519162/15.webp",
+        "/media/memorial/objects/519162/16.webp",
+        "/media/memorial/objects/519162/17.webp",
+        "/media/memorial/objects/519162/18.webp",
+        "/media/memorial/objects/519162/19.webp",
+        "/media/memorial/objects/519162/20.webp",
+        "/media/memorial/objects/519162/21.webp",
+        "/media/memorial/objects/519162/22.webp",
+        "/media/memorial/objects/519162/23.webp",
+        "/media/memorial/objects/519162/24.webp",
+        "/media/memorial/objects/519162/25.webp",
+        "/media/memorial/objects/519162/26.webp",
+        "/media/memorial/objects/519162/27.webp",
+        "/media/memorial/objects/519162/28.webp",
+        "/media/memorial/objects/519162/29.webp",
+        "/media/memorial/objects/519162/30.webp",
+        "/media/memorial/objects/519162/31.webp",
+        "/media/memorial/objects/519162/32.webp",
+        "/media/memorial/objects/519162/33.webp",
+        "/media/memorial/objects/519162/34.webp",
+        "/media/memorial/objects/519162/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519162/00.webp"
+    },
+    "519134": {
+      "id": "519134",
+      "title": "영락교회 공로패(1985년 12월 2일)",
+      "frames": [
+        "/media/memorial/objects/519134/00.webp",
+        "/media/memorial/objects/519134/01.webp",
+        "/media/memorial/objects/519134/02.webp",
+        "/media/memorial/objects/519134/03.webp",
+        "/media/memorial/objects/519134/04.webp",
+        "/media/memorial/objects/519134/05.webp",
+        "/media/memorial/objects/519134/06.webp",
+        "/media/memorial/objects/519134/07.webp",
+        "/media/memorial/objects/519134/08.webp",
+        "/media/memorial/objects/519134/09.webp",
+        "/media/memorial/objects/519134/10.webp",
+        "/media/memorial/objects/519134/11.webp",
+        "/media/memorial/objects/519134/12.webp",
+        "/media/memorial/objects/519134/13.webp",
+        "/media/memorial/objects/519134/14.webp",
+        "/media/memorial/objects/519134/15.webp",
+        "/media/memorial/objects/519134/16.webp",
+        "/media/memorial/objects/519134/17.webp",
+        "/media/memorial/objects/519134/18.webp",
+        "/media/memorial/objects/519134/19.webp",
+        "/media/memorial/objects/519134/20.webp",
+        "/media/memorial/objects/519134/21.webp",
+        "/media/memorial/objects/519134/22.webp",
+        "/media/memorial/objects/519134/23.webp",
+        "/media/memorial/objects/519134/24.webp",
+        "/media/memorial/objects/519134/25.webp",
+        "/media/memorial/objects/519134/26.webp",
+        "/media/memorial/objects/519134/27.webp",
+        "/media/memorial/objects/519134/28.webp",
+        "/media/memorial/objects/519134/29.webp",
+        "/media/memorial/objects/519134/30.webp",
+        "/media/memorial/objects/519134/31.webp",
+        "/media/memorial/objects/519134/32.webp",
+        "/media/memorial/objects/519134/33.webp",
+        "/media/memorial/objects/519134/34.webp",
+        "/media/memorial/objects/519134/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519134/00.webp"
+    },
+    "519127": {
+      "id": "519127",
+      "title": "장로회신학대학 감사패(1981년 5월 15일)",
+      "frames": [
+        "/media/memorial/objects/519127/00.webp",
+        "/media/memorial/objects/519127/01.webp",
+        "/media/memorial/objects/519127/02.webp",
+        "/media/memorial/objects/519127/03.webp",
+        "/media/memorial/objects/519127/04.webp",
+        "/media/memorial/objects/519127/05.webp",
+        "/media/memorial/objects/519127/06.webp",
+        "/media/memorial/objects/519127/07.webp",
+        "/media/memorial/objects/519127/08.webp",
+        "/media/memorial/objects/519127/09.webp",
+        "/media/memorial/objects/519127/10.webp",
+        "/media/memorial/objects/519127/11.webp",
+        "/media/memorial/objects/519127/12.webp",
+        "/media/memorial/objects/519127/13.webp",
+        "/media/memorial/objects/519127/14.webp",
+        "/media/memorial/objects/519127/15.webp",
+        "/media/memorial/objects/519127/16.webp",
+        "/media/memorial/objects/519127/17.webp",
+        "/media/memorial/objects/519127/18.webp",
+        "/media/memorial/objects/519127/19.webp",
+        "/media/memorial/objects/519127/20.webp",
+        "/media/memorial/objects/519127/21.webp",
+        "/media/memorial/objects/519127/22.webp",
+        "/media/memorial/objects/519127/23.webp",
+        "/media/memorial/objects/519127/24.webp",
+        "/media/memorial/objects/519127/25.webp",
+        "/media/memorial/objects/519127/26.webp",
+        "/media/memorial/objects/519127/27.webp",
+        "/media/memorial/objects/519127/28.webp",
+        "/media/memorial/objects/519127/29.webp",
+        "/media/memorial/objects/519127/30.webp",
+        "/media/memorial/objects/519127/31.webp",
+        "/media/memorial/objects/519127/32.webp",
+        "/media/memorial/objects/519127/33.webp",
+        "/media/memorial/objects/519127/34.webp",
+        "/media/memorial/objects/519127/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519127/00.webp"
+    },
+    "519018": {
+      "id": "519018",
+      "title": "영락교회창립50주년 광복50주년 기념패(1995년)",
+      "frames": [
+        "/media/memorial/objects/519018/00.webp",
+        "/media/memorial/objects/519018/01.webp",
+        "/media/memorial/objects/519018/02.webp",
+        "/media/memorial/objects/519018/03.webp",
+        "/media/memorial/objects/519018/04.webp",
+        "/media/memorial/objects/519018/05.webp",
+        "/media/memorial/objects/519018/06.webp",
+        "/media/memorial/objects/519018/07.webp",
+        "/media/memorial/objects/519018/08.webp",
+        "/media/memorial/objects/519018/09.webp",
+        "/media/memorial/objects/519018/10.webp",
+        "/media/memorial/objects/519018/11.webp",
+        "/media/memorial/objects/519018/12.webp",
+        "/media/memorial/objects/519018/13.webp",
+        "/media/memorial/objects/519018/14.webp",
+        "/media/memorial/objects/519018/15.webp",
+        "/media/memorial/objects/519018/16.webp",
+        "/media/memorial/objects/519018/17.webp",
+        "/media/memorial/objects/519018/18.webp",
+        "/media/memorial/objects/519018/19.webp",
+        "/media/memorial/objects/519018/20.webp",
+        "/media/memorial/objects/519018/21.webp",
+        "/media/memorial/objects/519018/22.webp",
+        "/media/memorial/objects/519018/23.webp",
+        "/media/memorial/objects/519018/24.webp",
+        "/media/memorial/objects/519018/25.webp",
+        "/media/memorial/objects/519018/26.webp",
+        "/media/memorial/objects/519018/27.webp",
+        "/media/memorial/objects/519018/28.webp",
+        "/media/memorial/objects/519018/29.webp",
+        "/media/memorial/objects/519018/30.webp",
+        "/media/memorial/objects/519018/31.webp",
+        "/media/memorial/objects/519018/32.webp",
+        "/media/memorial/objects/519018/33.webp",
+        "/media/memorial/objects/519018/34.webp",
+        "/media/memorial/objects/519018/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519018/00.webp"
+    },
+    "519137": {
+      "id": "519137",
+      "title": "아세아연합신학대학원 감사패(1984년 5월 1일)",
+      "frames": [
+        "/media/memorial/objects/519137/00.webp",
+        "/media/memorial/objects/519137/01.webp",
+        "/media/memorial/objects/519137/02.webp",
+        "/media/memorial/objects/519137/03.webp",
+        "/media/memorial/objects/519137/04.webp",
+        "/media/memorial/objects/519137/05.webp",
+        "/media/memorial/objects/519137/06.webp",
+        "/media/memorial/objects/519137/07.webp",
+        "/media/memorial/objects/519137/08.webp",
+        "/media/memorial/objects/519137/09.webp",
+        "/media/memorial/objects/519137/10.webp",
+        "/media/memorial/objects/519137/11.webp",
+        "/media/memorial/objects/519137/12.webp",
+        "/media/memorial/objects/519137/13.webp",
+        "/media/memorial/objects/519137/14.webp",
+        "/media/memorial/objects/519137/15.webp",
+        "/media/memorial/objects/519137/16.webp",
+        "/media/memorial/objects/519137/17.webp",
+        "/media/memorial/objects/519137/18.webp",
+        "/media/memorial/objects/519137/19.webp",
+        "/media/memorial/objects/519137/20.webp",
+        "/media/memorial/objects/519137/21.webp",
+        "/media/memorial/objects/519137/22.webp",
+        "/media/memorial/objects/519137/23.webp",
+        "/media/memorial/objects/519137/24.webp",
+        "/media/memorial/objects/519137/25.webp",
+        "/media/memorial/objects/519137/26.webp",
+        "/media/memorial/objects/519137/27.webp",
+        "/media/memorial/objects/519137/28.webp",
+        "/media/memorial/objects/519137/29.webp",
+        "/media/memorial/objects/519137/30.webp",
+        "/media/memorial/objects/519137/31.webp",
+        "/media/memorial/objects/519137/32.webp",
+        "/media/memorial/objects/519137/33.webp",
+        "/media/memorial/objects/519137/34.webp",
+        "/media/memorial/objects/519137/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519137/00.webp"
+    },
+    "519169": {
+      "id": "519169",
+      "title": "한경직 목사 친필 도자기(영락교회 선교기금 후원을 위해 판매)",
+      "frames": [
+        "/media/memorial/objects/519169/00.webp",
+        "/media/memorial/objects/519169/01.webp",
+        "/media/memorial/objects/519169/02.webp",
+        "/media/memorial/objects/519169/03.webp",
+        "/media/memorial/objects/519169/04.webp",
+        "/media/memorial/objects/519169/05.webp",
+        "/media/memorial/objects/519169/06.webp",
+        "/media/memorial/objects/519169/07.webp",
+        "/media/memorial/objects/519169/08.webp",
+        "/media/memorial/objects/519169/09.webp",
+        "/media/memorial/objects/519169/10.webp",
+        "/media/memorial/objects/519169/11.webp",
+        "/media/memorial/objects/519169/12.webp",
+        "/media/memorial/objects/519169/13.webp",
+        "/media/memorial/objects/519169/14.webp",
+        "/media/memorial/objects/519169/15.webp",
+        "/media/memorial/objects/519169/16.webp",
+        "/media/memorial/objects/519169/17.webp",
+        "/media/memorial/objects/519169/18.webp",
+        "/media/memorial/objects/519169/19.webp",
+        "/media/memorial/objects/519169/20.webp",
+        "/media/memorial/objects/519169/21.webp",
+        "/media/memorial/objects/519169/22.webp",
+        "/media/memorial/objects/519169/23.webp",
+        "/media/memorial/objects/519169/24.webp",
+        "/media/memorial/objects/519169/25.webp",
+        "/media/memorial/objects/519169/26.webp",
+        "/media/memorial/objects/519169/27.webp",
+        "/media/memorial/objects/519169/28.webp",
+        "/media/memorial/objects/519169/29.webp",
+        "/media/memorial/objects/519169/30.webp",
+        "/media/memorial/objects/519169/31.webp",
+        "/media/memorial/objects/519169/32.webp",
+        "/media/memorial/objects/519169/33.webp",
+        "/media/memorial/objects/519169/34.webp",
+        "/media/memorial/objects/519169/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519169/00.webp"
+    },
+    "519171": {
+      "id": "519171",
+      "title": "유학 시절 사용하시던 여행용 케이스",
+      "frames": [
+        "/media/memorial/objects/519171/00.webp",
+        "/media/memorial/objects/519171/01.webp",
+        "/media/memorial/objects/519171/02.webp",
+        "/media/memorial/objects/519171/03.webp",
+        "/media/memorial/objects/519171/04.webp",
+        "/media/memorial/objects/519171/05.webp",
+        "/media/memorial/objects/519171/06.webp",
+        "/media/memorial/objects/519171/07.webp",
+        "/media/memorial/objects/519171/08.webp",
+        "/media/memorial/objects/519171/09.webp",
+        "/media/memorial/objects/519171/10.webp",
+        "/media/memorial/objects/519171/11.webp",
+        "/media/memorial/objects/519171/12.webp",
+        "/media/memorial/objects/519171/13.webp",
+        "/media/memorial/objects/519171/14.webp",
+        "/media/memorial/objects/519171/15.webp",
+        "/media/memorial/objects/519171/16.webp",
+        "/media/memorial/objects/519171/17.webp",
+        "/media/memorial/objects/519171/18.webp",
+        "/media/memorial/objects/519171/19.webp",
+        "/media/memorial/objects/519171/20.webp",
+        "/media/memorial/objects/519171/21.webp",
+        "/media/memorial/objects/519171/22.webp",
+        "/media/memorial/objects/519171/23.webp",
+        "/media/memorial/objects/519171/24.webp",
+        "/media/memorial/objects/519171/25.webp",
+        "/media/memorial/objects/519171/26.webp",
+        "/media/memorial/objects/519171/27.webp",
+        "/media/memorial/objects/519171/28.webp",
+        "/media/memorial/objects/519171/29.webp",
+        "/media/memorial/objects/519171/30.webp",
+        "/media/memorial/objects/519171/31.webp",
+        "/media/memorial/objects/519171/32.webp",
+        "/media/memorial/objects/519171/33.webp",
+        "/media/memorial/objects/519171/34.webp",
+        "/media/memorial/objects/519171/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519171/00.webp"
+    },
+    "519125": {
+      "id": "519125",
+      "title": "사용하시던 성경책(표지 안쪽 기도문)",
+      "frames": [
+        "/media/memorial/objects/519125/00.webp",
+        "/media/memorial/objects/519125/01.webp",
+        "/media/memorial/objects/519125/02.webp",
+        "/media/memorial/objects/519125/03.webp",
+        "/media/memorial/objects/519125/04.webp",
+        "/media/memorial/objects/519125/05.webp",
+        "/media/memorial/objects/519125/06.webp",
+        "/media/memorial/objects/519125/07.webp",
+        "/media/memorial/objects/519125/08.webp",
+        "/media/memorial/objects/519125/09.webp",
+        "/media/memorial/objects/519125/10.webp",
+        "/media/memorial/objects/519125/11.webp",
+        "/media/memorial/objects/519125/12.webp",
+        "/media/memorial/objects/519125/13.webp",
+        "/media/memorial/objects/519125/14.webp",
+        "/media/memorial/objects/519125/15.webp",
+        "/media/memorial/objects/519125/16.webp",
+        "/media/memorial/objects/519125/17.webp",
+        "/media/memorial/objects/519125/18.webp",
+        "/media/memorial/objects/519125/19.webp",
+        "/media/memorial/objects/519125/20.webp",
+        "/media/memorial/objects/519125/21.webp",
+        "/media/memorial/objects/519125/22.webp",
+        "/media/memorial/objects/519125/23.webp",
+        "/media/memorial/objects/519125/24.webp",
+        "/media/memorial/objects/519125/25.webp",
+        "/media/memorial/objects/519125/26.webp",
+        "/media/memorial/objects/519125/27.webp",
+        "/media/memorial/objects/519125/28.webp",
+        "/media/memorial/objects/519125/29.webp",
+        "/media/memorial/objects/519125/30.webp",
+        "/media/memorial/objects/519125/31.webp",
+        "/media/memorial/objects/519125/32.webp",
+        "/media/memorial/objects/519125/33.webp",
+        "/media/memorial/objects/519125/34.webp",
+        "/media/memorial/objects/519125/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519125/00.webp"
+    },
+    "519081": {
+      "id": "519081",
+      "title": "40회 총회장 후드",
+      "frames": [
+        "/media/memorial/objects/519081/00.webp",
+        "/media/memorial/objects/519081/01.webp",
+        "/media/memorial/objects/519081/02.webp",
+        "/media/memorial/objects/519081/03.webp",
+        "/media/memorial/objects/519081/04.webp",
+        "/media/memorial/objects/519081/05.webp",
+        "/media/memorial/objects/519081/06.webp",
+        "/media/memorial/objects/519081/07.webp",
+        "/media/memorial/objects/519081/08.webp",
+        "/media/memorial/objects/519081/09.webp",
+        "/media/memorial/objects/519081/10.webp",
+        "/media/memorial/objects/519081/11.webp",
+        "/media/memorial/objects/519081/12.webp",
+        "/media/memorial/objects/519081/13.webp",
+        "/media/memorial/objects/519081/14.webp",
+        "/media/memorial/objects/519081/15.webp",
+        "/media/memorial/objects/519081/16.webp",
+        "/media/memorial/objects/519081/17.webp",
+        "/media/memorial/objects/519081/18.webp",
+        "/media/memorial/objects/519081/19.webp",
+        "/media/memorial/objects/519081/20.webp",
+        "/media/memorial/objects/519081/21.webp",
+        "/media/memorial/objects/519081/22.webp",
+        "/media/memorial/objects/519081/23.webp",
+        "/media/memorial/objects/519081/24.webp",
+        "/media/memorial/objects/519081/25.webp",
+        "/media/memorial/objects/519081/26.webp",
+        "/media/memorial/objects/519081/27.webp",
+        "/media/memorial/objects/519081/28.webp",
+        "/media/memorial/objects/519081/29.webp",
+        "/media/memorial/objects/519081/30.webp",
+        "/media/memorial/objects/519081/31.webp",
+        "/media/memorial/objects/519081/32.webp",
+        "/media/memorial/objects/519081/33.webp",
+        "/media/memorial/objects/519081/34.webp",
+        "/media/memorial/objects/519081/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519081/00.webp"
+    },
+    "519148": {
+      "id": "519148",
+      "title": "사용하시던 안경",
+      "frames": [
+        "/media/memorial/objects/519148/00.webp",
+        "/media/memorial/objects/519148/01.webp",
+        "/media/memorial/objects/519148/02.webp",
+        "/media/memorial/objects/519148/03.webp",
+        "/media/memorial/objects/519148/04.webp",
+        "/media/memorial/objects/519148/05.webp",
+        "/media/memorial/objects/519148/06.webp",
+        "/media/memorial/objects/519148/07.webp",
+        "/media/memorial/objects/519148/08.webp",
+        "/media/memorial/objects/519148/09.webp",
+        "/media/memorial/objects/519148/10.webp",
+        "/media/memorial/objects/519148/11.webp",
+        "/media/memorial/objects/519148/12.webp",
+        "/media/memorial/objects/519148/13.webp",
+        "/media/memorial/objects/519148/14.webp",
+        "/media/memorial/objects/519148/15.webp",
+        "/media/memorial/objects/519148/16.webp",
+        "/media/memorial/objects/519148/17.webp",
+        "/media/memorial/objects/519148/18.webp",
+        "/media/memorial/objects/519148/19.webp",
+        "/media/memorial/objects/519148/20.webp",
+        "/media/memorial/objects/519148/21.webp",
+        "/media/memorial/objects/519148/22.webp",
+        "/media/memorial/objects/519148/23.webp",
+        "/media/memorial/objects/519148/24.webp",
+        "/media/memorial/objects/519148/25.webp",
+        "/media/memorial/objects/519148/26.webp",
+        "/media/memorial/objects/519148/27.webp",
+        "/media/memorial/objects/519148/28.webp",
+        "/media/memorial/objects/519148/29.webp",
+        "/media/memorial/objects/519148/30.webp",
+        "/media/memorial/objects/519148/31.webp",
+        "/media/memorial/objects/519148/32.webp",
+        "/media/memorial/objects/519148/33.webp",
+        "/media/memorial/objects/519148/34.webp",
+        "/media/memorial/objects/519148/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519148/00.webp"
+    },
+    "519130": {
+      "id": "519130",
+      "title": "한경직 원로목사 추대기념(1973년 1월 2일)",
+      "frames": [
+        "/media/memorial/objects/519130/00.webp",
+        "/media/memorial/objects/519130/01.webp",
+        "/media/memorial/objects/519130/02.webp",
+        "/media/memorial/objects/519130/03.webp",
+        "/media/memorial/objects/519130/04.webp",
+        "/media/memorial/objects/519130/05.webp",
+        "/media/memorial/objects/519130/06.webp",
+        "/media/memorial/objects/519130/07.webp",
+        "/media/memorial/objects/519130/08.webp",
+        "/media/memorial/objects/519130/09.webp",
+        "/media/memorial/objects/519130/10.webp",
+        "/media/memorial/objects/519130/11.webp",
+        "/media/memorial/objects/519130/12.webp",
+        "/media/memorial/objects/519130/13.webp",
+        "/media/memorial/objects/519130/14.webp",
+        "/media/memorial/objects/519130/15.webp",
+        "/media/memorial/objects/519130/16.webp",
+        "/media/memorial/objects/519130/17.webp",
+        "/media/memorial/objects/519130/18.webp",
+        "/media/memorial/objects/519130/19.webp",
+        "/media/memorial/objects/519130/20.webp",
+        "/media/memorial/objects/519130/21.webp",
+        "/media/memorial/objects/519130/22.webp",
+        "/media/memorial/objects/519130/23.webp",
+        "/media/memorial/objects/519130/24.webp",
+        "/media/memorial/objects/519130/25.webp",
+        "/media/memorial/objects/519130/26.webp",
+        "/media/memorial/objects/519130/27.webp",
+        "/media/memorial/objects/519130/28.webp",
+        "/media/memorial/objects/519130/29.webp",
+        "/media/memorial/objects/519130/30.webp",
+        "/media/memorial/objects/519130/31.webp",
+        "/media/memorial/objects/519130/32.webp",
+        "/media/memorial/objects/519130/33.webp",
+        "/media/memorial/objects/519130/34.webp",
+        "/media/memorial/objects/519130/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519130/00.webp"
+    },
+    "519149": {
+      "id": "519149",
+      "title": "한경직목사기념사업회 성찬기 세트",
+      "frames": [
+        "/media/memorial/objects/519149/00.webp",
+        "/media/memorial/objects/519149/01.webp",
+        "/media/memorial/objects/519149/02.webp",
+        "/media/memorial/objects/519149/03.webp",
+        "/media/memorial/objects/519149/04.webp",
+        "/media/memorial/objects/519149/05.webp",
+        "/media/memorial/objects/519149/06.webp",
+        "/media/memorial/objects/519149/07.webp",
+        "/media/memorial/objects/519149/08.webp",
+        "/media/memorial/objects/519149/09.webp",
+        "/media/memorial/objects/519149/10.webp",
+        "/media/memorial/objects/519149/11.webp",
+        "/media/memorial/objects/519149/12.webp",
+        "/media/memorial/objects/519149/13.webp",
+        "/media/memorial/objects/519149/14.webp",
+        "/media/memorial/objects/519149/15.webp",
+        "/media/memorial/objects/519149/16.webp",
+        "/media/memorial/objects/519149/17.webp",
+        "/media/memorial/objects/519149/18.webp",
+        "/media/memorial/objects/519149/19.webp",
+        "/media/memorial/objects/519149/20.webp",
+        "/media/memorial/objects/519149/21.webp",
+        "/media/memorial/objects/519149/22.webp",
+        "/media/memorial/objects/519149/23.webp",
+        "/media/memorial/objects/519149/24.webp",
+        "/media/memorial/objects/519149/25.webp",
+        "/media/memorial/objects/519149/26.webp",
+        "/media/memorial/objects/519149/27.webp",
+        "/media/memorial/objects/519149/28.webp",
+        "/media/memorial/objects/519149/29.webp",
+        "/media/memorial/objects/519149/30.webp",
+        "/media/memorial/objects/519149/31.webp",
+        "/media/memorial/objects/519149/32.webp",
+        "/media/memorial/objects/519149/33.webp",
+        "/media/memorial/objects/519149/34.webp",
+        "/media/memorial/objects/519149/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519149/00.webp"
+    },
+    "519080": {
+      "id": "519080",
+      "title": "국민훈장 무궁화장(1970)",
+      "frames": [
+        "/media/memorial/objects/519080/00.webp",
+        "/media/memorial/objects/519080/01.webp",
+        "/media/memorial/objects/519080/02.webp",
+        "/media/memorial/objects/519080/03.webp",
+        "/media/memorial/objects/519080/04.webp",
+        "/media/memorial/objects/519080/05.webp",
+        "/media/memorial/objects/519080/06.webp",
+        "/media/memorial/objects/519080/07.webp",
+        "/media/memorial/objects/519080/08.webp",
+        "/media/memorial/objects/519080/09.webp",
+        "/media/memorial/objects/519080/10.webp",
+        "/media/memorial/objects/519080/11.webp",
+        "/media/memorial/objects/519080/12.webp",
+        "/media/memorial/objects/519080/13.webp",
+        "/media/memorial/objects/519080/14.webp",
+        "/media/memorial/objects/519080/15.webp",
+        "/media/memorial/objects/519080/16.webp",
+        "/media/memorial/objects/519080/17.webp",
+        "/media/memorial/objects/519080/18.webp",
+        "/media/memorial/objects/519080/19.webp",
+        "/media/memorial/objects/519080/20.webp",
+        "/media/memorial/objects/519080/21.webp",
+        "/media/memorial/objects/519080/22.webp",
+        "/media/memorial/objects/519080/23.webp",
+        "/media/memorial/objects/519080/24.webp",
+        "/media/memorial/objects/519080/25.webp",
+        "/media/memorial/objects/519080/26.webp",
+        "/media/memorial/objects/519080/27.webp",
+        "/media/memorial/objects/519080/28.webp",
+        "/media/memorial/objects/519080/29.webp",
+        "/media/memorial/objects/519080/30.webp",
+        "/media/memorial/objects/519080/31.webp",
+        "/media/memorial/objects/519080/32.webp",
+        "/media/memorial/objects/519080/33.webp",
+        "/media/memorial/objects/519080/34.webp",
+        "/media/memorial/objects/519080/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519080/00.webp"
+    },
+    "519020": {
+      "id": "519020",
+      "title": "대한민국 건국공로장(1998)",
+      "frames": [
+        "/media/memorial/objects/519020/00.webp",
+        "/media/memorial/objects/519020/01.webp",
+        "/media/memorial/objects/519020/02.webp",
+        "/media/memorial/objects/519020/03.webp",
+        "/media/memorial/objects/519020/04.webp",
+        "/media/memorial/objects/519020/05.webp",
+        "/media/memorial/objects/519020/06.webp",
+        "/media/memorial/objects/519020/07.webp",
+        "/media/memorial/objects/519020/08.webp",
+        "/media/memorial/objects/519020/09.webp",
+        "/media/memorial/objects/519020/10.webp",
+        "/media/memorial/objects/519020/11.webp",
+        "/media/memorial/objects/519020/12.webp",
+        "/media/memorial/objects/519020/13.webp",
+        "/media/memorial/objects/519020/14.webp",
+        "/media/memorial/objects/519020/15.webp",
+        "/media/memorial/objects/519020/16.webp",
+        "/media/memorial/objects/519020/17.webp",
+        "/media/memorial/objects/519020/18.webp",
+        "/media/memorial/objects/519020/19.webp",
+        "/media/memorial/objects/519020/20.webp",
+        "/media/memorial/objects/519020/21.webp",
+        "/media/memorial/objects/519020/22.webp",
+        "/media/memorial/objects/519020/23.webp",
+        "/media/memorial/objects/519020/24.webp",
+        "/media/memorial/objects/519020/25.webp",
+        "/media/memorial/objects/519020/26.webp",
+        "/media/memorial/objects/519020/27.webp",
+        "/media/memorial/objects/519020/28.webp",
+        "/media/memorial/objects/519020/29.webp",
+        "/media/memorial/objects/519020/30.webp",
+        "/media/memorial/objects/519020/31.webp",
+        "/media/memorial/objects/519020/32.webp",
+        "/media/memorial/objects/519020/33.webp",
+        "/media/memorial/objects/519020/34.webp",
+        "/media/memorial/objects/519020/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519020/00.webp"
+    },
+    "519163": {
+      "id": "519163",
+      "title": "템플턴 메달",
+      "frames": [
+        "/media/memorial/objects/519163/00.webp",
+        "/media/memorial/objects/519163/01.webp",
+        "/media/memorial/objects/519163/02.webp",
+        "/media/memorial/objects/519163/03.webp",
+        "/media/memorial/objects/519163/04.webp",
+        "/media/memorial/objects/519163/05.webp",
+        "/media/memorial/objects/519163/06.webp",
+        "/media/memorial/objects/519163/07.webp",
+        "/media/memorial/objects/519163/08.webp",
+        "/media/memorial/objects/519163/09.webp",
+        "/media/memorial/objects/519163/10.webp",
+        "/media/memorial/objects/519163/11.webp",
+        "/media/memorial/objects/519163/12.webp",
+        "/media/memorial/objects/519163/13.webp",
+        "/media/memorial/objects/519163/14.webp",
+        "/media/memorial/objects/519163/15.webp",
+        "/media/memorial/objects/519163/16.webp",
+        "/media/memorial/objects/519163/17.webp",
+        "/media/memorial/objects/519163/18.webp",
+        "/media/memorial/objects/519163/19.webp",
+        "/media/memorial/objects/519163/20.webp",
+        "/media/memorial/objects/519163/21.webp",
+        "/media/memorial/objects/519163/22.webp",
+        "/media/memorial/objects/519163/23.webp",
+        "/media/memorial/objects/519163/24.webp",
+        "/media/memorial/objects/519163/25.webp",
+        "/media/memorial/objects/519163/26.webp",
+        "/media/memorial/objects/519163/27.webp",
+        "/media/memorial/objects/519163/28.webp",
+        "/media/memorial/objects/519163/29.webp",
+        "/media/memorial/objects/519163/30.webp",
+        "/media/memorial/objects/519163/31.webp",
+        "/media/memorial/objects/519163/32.webp",
+        "/media/memorial/objects/519163/33.webp",
+        "/media/memorial/objects/519163/34.webp",
+        "/media/memorial/objects/519163/35.webp"
+      ],
+      "poster": "/media/memorial/objects/519163/00.webp"
+    }
+  },
+  "styles": {
+    "object_button": {
+      "type": "image",
+      "keep": "false",
+      "url": "/media/memorial/images/object.png.webp",
+      "width": "35",
+      "height": "prop",
+      "visible": "true",
+      "zorder": "1115",
+      "edge": "bottom",
+      "onover": "tween(scale,1.2);        copy(layer[usvrtooltip].html, tooltip);                  set(layer[usvrtooltip].visible, true);                 tween(layer[usvrtooltip].alpha, 1.0, 0.5);        asyncloop(hovering, copy(layer[usvrtooltip].x,mouse.stagex); copy(layer[usvrtooltip].y,mouse.stagey); );",
+      "onout": "tween(scale,1.0);        tween(layer[usvrtooltip].alpha, 0.0, 0.25, default,         set(layer[usvrtooltip].visible,false),         copy(layer[usvrtooltip].x,mouse.stagex);         copy(layer[usvrtooltip].y,mouse.stagey);"
+    }
+  },
+  "assets": {
+    "images/object.png": "/media/memorial/images/object.png.webp",
+    "mp3/h01.mp3": "/media/memorial/mp3/h01.mp3",
+    "mp3/h02.mp3": "/media/memorial/mp3/h02.mp3",
+    "mp3/h03.mp3": "/media/memorial/mp3/h03.mp3",
+    "mp3/h04.mp3": "/media/memorial/mp3/h04.mp3",
+    "mp3/h07.mp3": "/media/memorial/mp3/h07.mp3",
+    "mp3/h09.mp3": "/media/memorial/mp3/h09.mp3",
+    "mp3/h12.mp3": "/media/memorial/mp3/h12.mp3",
+    "mp3/h14.mp3": "/media/memorial/mp3/h14.mp3",
+    "mp3/h15.mp3": "/media/memorial/mp3/h15.mp3",
+    "mp3/h16.mp3": "/media/memorial/mp3/h16.mp3"
+  },
+  "map": "",
+  "logo": "",
+  "intro": "",
+  "menus": [
+    {
+      "title": "층 이동",
+      "items": [
+        {
+          "title": "1층",
+          "scene": "scene_hkj_1f_01",
+          "look": [
+            0,
+            0,
+            110
+          ]
+        },
+        {
+          "title": "2층",
+          "scene": "scene_hkj_2f_01",
+          "look": [
+            0,
+            0,
+            110
+          ]
+        }
+      ]
+    }
+  ]
+}

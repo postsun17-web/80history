@@ -30,7 +30,7 @@ def main():
     groups, current, size = [], [], 0
     for item in sorted(source['assets'], key=lambda x: x['path']):
         path = PurePosixPath(item['path'])
-        if path.is_absolute() or '..' in path.parts or '\\' in item['path'] or path.parts[:2] not in [('media', 'full'), ('media', 'v1')]:
+        if path.is_absolute() or '..' in path.parts or '\\' in item['path'] or path.parts[:2] not in [('media', 'full'), ('media', 'v1'), ('media', 'memorial')]:
             raise ValueError(f'Unsafe asset path: {path}')
         target = root.joinpath(*path.parts)
         if not item['exists'] or not item.get('sha256') or target.stat().st_size != item['bytes'] or digest(target) != item['sha256']:

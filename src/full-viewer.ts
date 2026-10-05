@@ -1,9 +1,11 @@
 import {Viewer} from '@photo-sphere-viewer/core';
-import {CubemapTilesAdapter,type CubemapMultiTilesPanorama} from '@photo-sphere-viewer/cubemap-tiles-adapter';
+import {CubemapTilesAdapter} from '@photo-sphere-viewer/cubemap-tiles-adapter';
 import {MarkersPlugin,type MarkerConfig} from '@photo-sphere-viewer/markers-plugin';
 import {assetUrl,sourcePath,type FullMuseum,type SourceHotspot} from './full-types';
 import {decodeAction,type SourceAction} from './source-actions';
-import {contentTitles} from './content-titles';
+import {titlesForMuseum} from './content-titles';
+import {panoramaSource} from './museum-viewer-data';
+import type {MuseumAudio} from './museum-audio';
 import {projectPlane} from './source-projection';
 import {applySourcePlane} from './source-plane-mesh';
 import mediaScreen from './assets/media-screen.svg';
@@ -13,14 +15,18 @@ import type {FullRoute} from './full-navigation';
 import '@photo-sphere-viewer/core/index.css';
 import '@photo-sphere-viewer/markers-plugin/index.css';
 
-const faces={front:'f',back:'b',left:'l',right:'r',top:'u',bottom:'d'};
 export class FullViewer {
  viewer:Viewer; markers:MarkersPlugin; scene=''; page=0;
  missingAssets=new Set<string>();
  private dimensions=new Map<string,Promise<[number,number]>>();
  private markerImages=new Map<string,HTMLImageElement>();
  private activePage=1;
- constructor(private container:HTMLElement,private data:FullMuseum,private action:(a:SourceAction)=>void,heading:(yaw:number)=>void){
+ private titles:ReturnType<typeof titlesForMuseum>;
+ private revision=0;
+ private mediaCleanup:(()=>void)[]=[];
+ private wallVideos=new Map<string,{video:HTMLVideoElement;button:HTMLButtonElement;audible:boolean}>();
+ constructor(private container:HTMLElement,private data:FullMuseum,private action:(a:SourceAction)=>void,heading:(yaw:number)=>void,private audio?:MuseumAudio){
+  this.titles=titlesForMuseum(data);
   this.viewer=new Viewer({container,adapter:[CubemapTilesAdapter,{baseBlur:false}],navbar:false,minFov:25,maxFov:110,defaultZoomLvl:30,
    keyboard:'always',mousewheelCtrlKey:false,touchmoveTwoFingers:false,loadingTxt:'전시 공간을 불러오는 중입니다',plugins:[MarkersPlugin]});
   this.markers=this.viewer.getPlugin(MarkersPlugin);
@@ -33,7 +39,17 @@ export class FullViewer {
    return loadImage(...args);
   };
   this.markers.addEventListener('select-marker',({marker})=>{if(marker.data?.action)this.action(marker.data.action);});
+  this.markers.addEventListener('enter-marker',({marker})=>{if(matchMedia('(hover: hover)').matches)this.setVideoAudible(marker.id,true);});
+  this.markers.addEventListener('leave-marker',({marker})=>{if(matchMedia('(hover: hover)').matches)this.setVideoAudible(marker.id,false);});
   this.viewer.addEventListener('position-updated',({position})=>heading(position.yaw*180/Math.PI));
+  this.viewer.addEventListener('zoom-updated',()=>heading(this.viewer.getPosition().yaw*180/Math.PI));
+ }
+ destroy(){this.revision++;this.releaseMedia();this.dimensions.clear();this.markerImages.clear();this.viewer.destroy();}
+ private releaseMedia(){for(const task of this.mediaCleanup)task();this.mediaCleanup=[];this.wallVideos.clear();}
+ private setVideoAudible(id:string,audible:boolean){
+  const item=this.wallVideos.get(id);if(!item)return;
+  item.audible=audible;item.button.setAttribute('aria-pressed',String(audible));item.button.textContent=audible?'영상 소리 끄기':'영상 소리 켜기';
+  if(this.audio)this.audio.setMediaAudible(item.video,audible);else item.video.muted=!audible;
  }
  getLook():[number,number,number]{
   const p=this.viewer.getPosition(),vfov=110-this.viewer.getZoomLevel()*.85;
@@ -56,19 +72,22 @@ export class FullViewer {
   }catch{/* A blocked video must not prevent entering the exhibition. */}
  }
  async show(route:FullRoute){
+  const revision=++this.revision;
   const scene=this.data.scenes.find(s=>s.id===route.scene);if(!scene)throw new Error('Unknown scene '+route.scene);
   if(this.scene!==scene.id){
+   this.releaseMedia();
    this.dimensions.clear();this.markerImages.clear();
-   const p=scene.pano,baseUrl=Object.fromEntries(Object.entries(faces).map(([name,f])=>[name,`${p.root}/${f}/base.webp`])) as Record<keyof typeof faces,string>;
-   await Promise.all(Object.values(baseUrl).map(src=>this.size(src)));
+   const panorama=panoramaSource(scene.pano);
+   await Promise.all(Object.values(panorama.baseUrl).map(src=>this.size(src)));
+   if(revision!==this.revision)return;
    // Delivered krpano polar faces need a 180° turn.
-   const panorama:CubemapMultiTilesPanorama={baseUrl,flipTopBottom:true,levels:[{faceSize:p.faceSize,nbTiles:p.tiles}],tileUrl:(face,col,row)=>`${p.root}/${faces[face]}/${p.level}/${row}_${col}.${p.ext}`};
    const look=route.look||scene.view;
    this.markers.clearMarkers();
    await this.viewer.setPanorama(panorama,{position:toPosition(look[0],look[1]),zoom:this.zoom(look[2]),transition:this.scene?{speed:500,rotation:false,effect:'fade'}:false});
+   if(revision!==this.revision)return;
    this.scene=scene.id;this.page=0;
   }else if(route.look){this.viewer.rotate(toPosition(route.look[0],route.look[1]));this.viewer.zoom(this.zoom(route.look[2]));}
-  if(this.page!==route.page){await this.updateMarkers(route);this.page=route.page;}
+  if(this.page!==route.page){await this.updateMarkers(route,revision);if(revision===this.revision)this.page=route.page;}
  }
  resolve(h:SourceHotspot):Record<string,string>{
   const attrs:Record<string,string>={};
@@ -96,14 +115,15 @@ export class FullViewer {
   const old=this.dimensions.get(src);if(old)return old;
   const promise=new Promise<[number,number]>((resolve,reject)=>{
    const element=video?document.createElement('video'):new Image();
-   const done=()=>{clearTimeout(timer);resolve(video?[(element as HTMLVideoElement).videoWidth,(element as HTMLVideoElement).videoHeight]:[(element as HTMLImageElement).naturalWidth,(element as HTMLImageElement).naturalHeight]);};
-   const fail=()=>{clearTimeout(timer);this.missingAssets.add(src);reject(new Error('Media missing: '+src));};
+   const release=()=>{clearTimeout(timer);element.removeEventListener('loadedmetadata',done);element.removeEventListener('error',fail);if(video){element.removeAttribute('src');(element as HTMLVideoElement).load();}};
+   const done=()=>{const dimensions:[number,number]=video?[(element as HTMLVideoElement).videoWidth,(element as HTMLVideoElement).videoHeight]:[(element as HTMLImageElement).naturalWidth,(element as HTMLImageElement).naturalHeight];release();resolve(dimensions);};
+   const fail=()=>{release();this.missingAssets.add(src);reject(new Error('Media missing: '+src));};
    const timer=setTimeout(fail,20000);
    if(!video){void this.viewer.textureLoader.loadImage(src).then(img=>{clearTimeout(timer);this.markerImages.set(src,img);resolve([img.naturalWidth,img.naturalHeight]);},fail);return;}
-   element.addEventListener('loadedmetadata',done,{once:true});element.addEventListener('error',fail,{once:true});element.src=src;
+   (element as HTMLVideoElement).preload='metadata';element.addEventListener('loadedmetadata',done,{once:true});element.addEventListener('error',fail,{once:true});element.src=src;
   });this.dimensions.set(src,promise);void promise.catch(()=>this.dimensions.delete(src));return promise;
  }
- async updateMarkers(route:FullRoute){
+ async updateMarkers(route:FullRoute,revision=this.revision){
   this.dimensions.clear();this.markerImages.clear();
   const scene=this.data.scenes.find(s=>s.id===route.scene)!,zone=this.data.zones.find(z=>z.id===scene.zone),page=zone?.pages[route.page-1];
   this.activePage=route.page;
@@ -121,10 +141,10 @@ export class FullViewer {
    if(/(?:^|\|)(nextb|prevb)(?:\||$)/.test(a.style||'')&&!action)return null;
    if(action?.type==='page')a.alpha=action.page===route.page?'1':'.45';
    const dynamicPanel=!!(zone&&h.name===`sector_${zone.id}_01`&&page);
-   if(dynamicPanel){a.url=page!.image;action={type:'image',src:page!.image,title:contentTitles.page(zone!.id,page!.number)};}
-   if(action)action=contentTitles.action(action);
+   if(dynamicPanel){a.url=page!.image;action={type:'image',src:page!.image,title:this.titles.page(zone!.id,page!.number)};}
+   if(action)action=this.titles.action(action);
    const defaultLabels:Record<string,string>={scene:'다른 공간으로 이동',page:'전시 페이지',gallery:'사진 보기',article:'설명 더 보기',youtube:'영상 보기',object:'유물 둘러보기',books:'전자책',chatbot:'챗봇',help:'관람 안내',image:'크게 보기',video:'영상 보기',audio:'해설 듣기',document:'자료 읽기'};
-   const sourceLabel=action?.type==='image'?action.title||'':action?.type==='article'?contentTitles.article(action.path):action?.type==='page'?contentTitles.page(action.zone,action.page):a.tooltip||a.title||a.html||a.text||'';
+   const sourceLabel=action?.type==='image'?action.title||'':action?.type==='article'?this.titles.article(action.path):action?.type==='page'?this.titles.page(action.zone,action.page):a.tooltip||a.title||a.html||a.text||'';
    const label=((/^hotspot_\d+$/.test(sourceLabel)?'':sourceLabel)||defaultLabels[action?.type||'']||'자료 보기').replace(/\[br\]/g,' ').replace(/<[^>]+>/g,'');
    const position=()=>toPosition(Number(a.ath),Number(a.atv));
    const base={id,data:{action},tooltip:action?label:undefined,zIndex:Math.min(1000,Number(a.zorder)||1)};
@@ -145,7 +165,7 @@ export class FullViewer {
       const plane=projectPlane(a,w,h);
       if(a.videourl){
        const chroma=(a.chromakey||'').split('|');
-       return {...base,data:{...base.data,sourcePlane:plane,shouldAutoplay:a.pausedonstart!=='true'},videoLayer:url,position:plane,opacity,autoplay:false,...(a.chromakey?{chromaKey:{enabled:true,color:Number(chroma[0]),similarity:Number(chroma[1]),smoothness:Number(chroma[2])}}:{})};
+       return {...base,data:{...base.data,sourcePlane:plane,shouldAutoplay:a.pausedonstart!=='true',soundControl:a.html5controls==='true',volume:Number(a.volume)||0,loop:a.loop!=='false'},videoLayer:url,position:plane,opacity,autoplay:false,...(a.chromakey?{chromaKey:{enabled:true,color:Number(chroma[0]),similarity:Number(chroma[1]),smoothness:Number(chroma[2])}}:{})};
       }
       // A transparent original hotspot still needs a clickable hit area.
       if(opacity===0&&action)return {...base,polygon:plane,svgStyle:{fill:'rgba(255,255,255,.001)',stroke:'transparent'}};
@@ -165,10 +185,27 @@ export class FullViewer {
    button.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();this.action(action!);}});
    return {...base,element:button,position:position()};
   }));
+  if(revision!==this.revision)return;
+  this.releaseMedia();
   this.markers.setMarkers(markers.filter((m):m is MarkerConfig=>m!==null));
   for(const marker of this.markers.getMarkers()){
    if(marker.data?.sourcePlane)applySourcePlane(marker,marker.data.sourcePlane);
-   if(marker.data?.shouldAutoplay)void marker.video?.play().catch(error=>{if(error?.name!=='AbortError'&&error?.name!=='NotAllowedError')console.warn('Unable to play exhibit video',error);});
+   if(marker.video){
+    const video=marker.video;video.loop=marker.data?.loop!==false;
+    const release=this.audio?.bindMedia(video,{volume:marker.data?.volume??0,muted:true,autoplay:!!marker.data?.shouldAutoplay});
+    this.mediaCleanup.push(()=>{release?.();video.pause();video.removeAttribute('src');video.load();});
+    if(marker.data?.soundControl){
+     const button=document.createElement('button');button.type='button';button.className='wall-video-sound';button.textContent='영상 소리 켜기';button.setAttribute('aria-pressed','false');
+     const corners=marker.data.sourcePlane as ReturnType<typeof projectPlane>,left=corners[2],right=corners[3];
+     this.wallVideos.set(marker.id,{video,button,audible:false});
+     const onClick=(event:MouseEvent)=>{event.stopPropagation();const audible=!this.wallVideos.get(marker.id)?.audible;if(audible){this.audio?.setMuted(false);void this.audio?.unlock();}this.setVideoAudible(marker.id,audible);};
+     button.addEventListener('click',onClick);
+     button.addEventListener('pointerdown',event=>event.stopPropagation());
+     this.markers.addMarker({id:marker.id+'-sound',element:button,position:{yaw:Math.atan2(Math.sin(left.yaw)+Math.sin(right.yaw),Math.cos(left.yaw)+Math.cos(right.yaw)),pitch:(left.pitch+right.pitch)/2-.035},zIndex:1000},false);
+    }
+   }
+   if(marker.data?.shouldAutoplay&&!this.audio)void marker.video?.play().catch(error=>{if(error?.name!=='AbortError'&&error?.name!=='NotAllowedError')console.warn('Unable to play exhibit video',error);});
   }
+  this.markers.renderMarkers();
  }
 }

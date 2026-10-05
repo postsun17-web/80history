@@ -6,8 +6,15 @@ import {unzipSync} from 'fflate';
 
 export const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 export const catalogueSha256 = bytes => sha256(Buffer.from(Buffer.from(bytes).toString('utf8').replace(/\r\n/g, '\n')));
+export function validateArchiveUrl(value) {
+  const url = new URL(value);
+  const blob = url.hostname.endsWith('.public.blob.vercel-storage.com');
+  const release = url.hostname === 'github.com' && /^\/postsun17-web\/80history\/releases\/download\/museum-assets-[\w-]+\/assets-[a-f0-9]{20}\.zip$/.test(url.pathname);
+  if (url.protocol !== 'https:' || url.username || url.password || url.search || url.hash || (!blob && !release)) throw new Error('Untrusted asset host');
+  return url;
+}
 export function validateAssetPath(path) {
-  if (typeof path !== 'string' || !/^media\/(?:full|v1)\//.test(path) || /[\\\x00-\x1f]/.test(path) || path.split('/').some(p => !p || p === '.' || p === '..')) {
+  if (typeof path !== 'string' || !/^media\/(?:full|v1|memorial)\//.test(path) || /[\\\x00-\x1f]/.test(path) || path.split('/').some(p => !p || p === '.' || p === '..')) {
     throw new Error(`Unsafe asset path: ${path}`);
   }
   return path;
@@ -57,8 +64,7 @@ export async function restoreDeployment(manifest, root, localArchives) {
       if (!/^assets-[a-f0-9]{20}\.zip$/.test(archive.filename)) throw new Error('Invalid archive name');
       bytes = await readFile(resolve(localArchives, archive.filename));
     } else {
-      const url = new URL(archive.url);
-      if (url.protocol !== 'https:' || !url.hostname.endsWith('.public.blob.vercel-storage.com')) throw new Error('Untrusted asset host');
+      const url = validateArchiveUrl(archive.url);
       const response = await fetch(url, {signal: AbortSignal.timeout(180000)});
       if (!response.ok) throw new Error(`Asset download failed: ${response.status}`);
       bytes = new Uint8Array(await response.arrayBuffer());
@@ -71,5 +77,8 @@ export async function restoreDeployment(manifest, root, localArchives) {
 if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
   const manifest = JSON.parse(await readFile('deployment-assets.json', 'utf8'));
   if (catalogueSha256(await readFile('src/data/full-museum.json')) !== manifest.sourceDataSha256) throw new Error('Asset manifest belongs to a different museum catalogue');
+  for (const catalogue of manifest.additionalCatalogues || []) {
+    if (catalogue.path !== 'src/data/memorial-museum.json' || catalogueSha256(await readFile(catalogue.path)) !== catalogue.sha256) throw new Error('Asset manifest belongs to a different memorial catalogue');
+  }
   await restoreDeployment(manifest, resolve('public'), process.env.MUSEUM_LOCAL_ARCHIVES);
 }

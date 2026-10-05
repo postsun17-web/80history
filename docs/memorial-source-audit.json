@@ -1,0 +1,1348 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-10-05T08:56:39.588810+00:00",
+  "source": "http://youngnakdhm.net/hkjmuseum.html",
+  "catalogue": "src/data/memorial-museum.json",
+  "counts": {
+    "scenes": 29,
+    "movementLinks": 67,
+    "objects": 17,
+    "objectFrames": 612,
+    "narrations": 10,
+    "sourceFiles": 50136,
+    "outputFiles": 58427,
+    "outputBytes": 2551965688
+  },
+  "panoramas": [
+    {
+      "scene": "scene_vr11",
+      "sourceFaceSizes": [
+        640,
+        1280,
+        2560,
+        5120
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 640,
+          "tiles": 1,
+          "level": 1
+        },
+        {
+          "faceSize": 1280,
+          "tiles": 2,
+          "level": 2
+        },
+        {
+          "faceSize": 2560,
+          "tiles": 4,
+          "level": 3
+        },
+        {
+          "faceSize": 5120,
+          "tiles": 8,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_1f_01",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_1f_02",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_1f_03",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_1f_04",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_1f_05",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_1f_06",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_1f_07",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_1f_08",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_1f_09",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_1f_10",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_1f_11",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_1f_12",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_01",
+      "sourceFaceSizes": [
+        1152,
+        2304,
+        4608,
+        8960
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1152,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2304,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4608,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8960,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_02",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_03",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_04",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_05",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_06",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_07",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_08",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_09",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_10",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_11",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_12",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_13",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_14",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_15",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    },
+    {
+      "scene": "scene_hkj_2f_16",
+      "sourceFaceSizes": [
+        1024,
+        2176,
+        4352,
+        8704
+      ],
+      "outputLevels": [
+        {
+          "faceSize": 1024,
+          "tiles": 2,
+          "level": 1
+        },
+        {
+          "faceSize": 2176,
+          "tiles": 4,
+          "level": 2
+        },
+        {
+          "faceSize": 4352,
+          "tiles": 8,
+          "level": 3
+        },
+        {
+          "faceSize": 8704,
+          "tiles": 16,
+          "level": 4
+        }
+      ]
+    }
+  ],
+  "conversion": {
+    "format": "WebP",
+    "quality": 92,
+    "method": 4,
+    "baseFaceSize": 512,
+    "rule": "Highest original JPEG tiles are assembled without scaling; lower original face sizes are regenerated with Lanczos. Each level uses a power-of-two tile grid; maximum face dimensions are preserved."
+  },
+  "sourceProvenanceSha256": "67dc0b19d6dc73fbff0bd4cebeb73bb1a85c575b692db2637836f10f40d33e6e",
+  "sourceProvenanceFile": {
+    "path": "docs/memorial-source-provenance.json.gz",
+    "compression": "gzip",
+    "bytes": 2584513,
+    "sha256": "d2551ac9d92efcd09e6ee230b95b233f7a67c9e0473509f3de99464e69dca83d"
+  },
+  "generatedAssetsSha256": "a5c09426d56ebab491685e253aec80d12d427ea54e9609dde84a9a4c383bb2af",
+  "verification": {
+    "allOutputImagesFullyDecoded": true,
+    "allOriginalTilesFullyDecoded": true,
+    "audioEndToEndPlayback": "Runtime verification required; byte hashes alone do not prove complete playback."
+  },
+  "sources": [
+    {
+      "url": "http://youngnakdhm.net/hkjmuseum.html",
+      "path": "hkjmuseum.html",
+      "bytes": 1162,
+      "sha256": "9819b998f130c01e595b97b3c6e715f30250007cae3540cdcdc2e099d2c44f6b"
+    },
+    {
+      "url": "http://youngnakdhm.net/hgj.xml",
+      "path": "hgj.xml",
+      "bytes": 37837,
+      "sha256": "cd0df5970169ae1de62fb1d3ca3b584b5edcafa91fba397fbb885aacdb017c79"
+    },
+    {
+      "url": "http://youngnakdhm.net/usvrplugins/xml/action2.xml",
+      "path": "usvrplugins/xml/action2.xml",
+      "bytes": 17708,
+      "sha256": "dda8822211aa0b508dc922b6245a8b465adcd57891b9e399358184e857ad992c"
+    },
+    {
+      "url": "http://youngnakdhm.net/images/object.png",
+      "path": "images/object.png",
+      "bytes": 4677,
+      "sha256": "22641588ab38ca6f0282194f31d043771deacf85aad9b25fe07f3a527cfc0e3b"
+    },
+    {
+      "url": "http://youngnakdhm.net/mp3/h01.mp3",
+      "path": "mp3/h01.mp3",
+      "bytes": 522911,
+      "sha256": "ae165581cc5ac9fedd23b1d5ec5f1be9a28dcbb92cb2b49f2fa8d6cae27dda23"
+    },
+    {
+      "url": "http://youngnakdhm.net/mp3/h02.mp3",
+      "path": "mp3/h02.mp3",
+      "bytes": 516641,
+      "sha256": "0a387f217d30a89df7e9a9ce901688c7dc5d56e0aebda208c2ff1a0b2ec86898"
+    },
+    {
+      "url": "http://youngnakdhm.net/mp3/h03.mp3",
+      "path": "mp3/h03.mp3",
+      "bytes": 787479,
+      "sha256": "4e987dbdefeaeb88b1187b7c60eda48e0e71327f723f0651f326652106288820"
+    },
+    {
+      "url": "http://youngnakdhm.net/mp3/h04.mp3",
+      "path": "mp3/h04.mp3",
+      "bytes": 473853,
+      "sha256": "56803f29ac42253e7441b4d63cd956d46c908f97061c50919adbcd35999ce35c"
+    },
+    {
+      "url": "http://youngnakdhm.net/mp3/h07.mp3",
+      "path": "mp3/h07.mp3",
+      "bytes": 440782,
+      "sha256": "60e656f1cbf1c8a65ebd5baddfe7c1abe2856ab4a4e1f3adb9a65e0de4784987"
+    },
+    {
+      "url": "http://youngnakdhm.net/mp3/h09.mp3",
+      "path": "mp3/h09.mp3",
+      "bytes": 135596,
+      "sha256": "5caa36c81068343640ab5a0c6424af3b63a26c8d8f12f790d0538b116d758057"
+    },
+    {
+      "url": "http://youngnakdhm.net/mp3/h12.mp3",
+      "path": "mp3/h12.mp3",
+      "bytes": 343005,
+      "sha256": "5eacaefe20160fa39212de261267bbe91cbacfa235ded27ee6b07f8c576f7c95"
+    },
+    {
+      "url": "http://youngnakdhm.net/mp3/h14.mp3",
+      "path": "mp3/h14.mp3",
+      "bytes": 284133,
+      "sha256": "8b885549f4781745e8d366ce4dd4046c8bb105aa553c7be921a2527a29b8d902"
+    },
+    {
+      "url": "http://youngnakdhm.net/mp3/h15.mp3",
+      "path": "mp3/h15.mp3",
+      "bytes": 236229,
+      "sha256": "5381e95ffb75fed6e03fab9476c8b0f8ee544261da7ac26b67260b9149c518ca"
+    },
+    {
+      "url": "http://youngnakdhm.net/mp3/h16.mp3",
+      "path": "mp3/h16.mp3",
+      "bytes": 237285,
+      "sha256": "01171c89ffb2e2ffbc6cacbc6de1946050bd0a833e412d803952e147a15ed243"
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519164",
+      "path": "objects/519164/index.html",
+      "bytes": 8954,
+      "sha256": "4b9bd69fbcde250051144ed9777931cba2972b085d47913983a136094c568da1"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571757000823_film.jpg",
+      "path": "objects/519164/film.jpg",
+      "bytes": 3399958,
+      "sha256": "ec1304f0984b369bd2aa3fafd1eeae3b9a0c5143969636c51d6f2e283d50e70a",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519132",
+      "path": "objects/519132/index.html",
+      "bytes": 8829,
+      "sha256": "c25805b343459c8780a52c72c7011950a7634517976267ed980859a15304d92a"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571756983727_film.jpg",
+      "path": "objects/519132/film.jpg",
+      "bytes": 3422734,
+      "sha256": "a63f75912dd97e219790571bffd558b7e5a9a18550cf69476726c3d2c119d07e",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519162",
+      "path": "objects/519162/index.html",
+      "bytes": 9114,
+      "sha256": "2a6a7e7e0d3cf2dccdc6b56e8fad65ee90ec387b1f75d1fbcf422b18319507b6"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571757000535_film.jpg",
+      "path": "objects/519162/film.jpg",
+      "bytes": 2724217,
+      "sha256": "c183af846949ce7893db446a94710d269c524020b11044f10b604d0a0226880e",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519134",
+      "path": "objects/519134/index.html",
+      "bytes": 8774,
+      "sha256": "c672692d4192be3b882f34ff3914e529d6feb93d008ca681f65d2225a3179c50"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571756984448_film.jpg",
+      "path": "objects/519134/film.jpg",
+      "bytes": 3046846,
+      "sha256": "7d6002a791167563efa4345dbe4b979f92823c06608d0418126c7fa9f3877ab7",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519127",
+      "path": "objects/519127/index.html",
+      "bytes": 9015,
+      "sha256": "720b4b7b91bdb0b2198785b71622cdbe49c7748a40e1deff2d0a173ef1c0c699"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571756979650_film.jpg",
+      "path": "objects/519127/film.jpg",
+      "bytes": 2635150,
+      "sha256": "03dc96fbdf574c3f31f6efaecaa45e69809b83d93b836dbdb490679ad3aa9b03",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519018",
+      "path": "objects/519018/index.html",
+      "bytes": 9245,
+      "sha256": "b2a1b55fdda30426bfa6b7135613a2a7213526fede18fbfd92e4bd7cf43c92f0"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571756871664_film.jpg",
+      "path": "objects/519018/film.jpg",
+      "bytes": 2711894,
+      "sha256": "8d56eaf69ba1aa51720cf146ea613bac17faa2eb862e22f205639d3fc50435d4",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519137",
+      "path": "objects/519137/index.html",
+      "bytes": 9084,
+      "sha256": "04ee31f01e2cf1718ef87d2cf13b73479a5c44aa2c4c68e187dc55c420e1e9ca"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571756987599_film.jpg",
+      "path": "objects/519137/film.jpg",
+      "bytes": 4091452,
+      "sha256": "0164972c46e1f5d732869df178512b723b94a85877af5d60ecd90f1969c2ef53",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519169",
+      "path": "objects/519169/index.html",
+      "bytes": 8916,
+      "sha256": "e764298cd41a28681aa84f1174bfe3f943f4fe1d0ce171f8cd173dcb1eeeaee3"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571757003868_film.jpg",
+      "path": "objects/519169/film.jpg",
+      "bytes": 2619838,
+      "sha256": "fae6df774553817637a70e9a19a4c1d253f5f364f2ebe2c7204f37f2bcd2da9f",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519171",
+      "path": "objects/519171/index.html",
+      "bytes": 8991,
+      "sha256": "8851860ddaaa103bfc31557f94f4a3bddf691d7d13f8bb472f621d094bff2b7a"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571757004292_film.jpg",
+      "path": "objects/519171/film.jpg",
+      "bytes": 3529004,
+      "sha256": "9738e6d0ea84e0ac51b606535b59fc1bf43ef66a36be8fc29ef286cc3ab05413",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519125",
+      "path": "objects/519125/index.html",
+      "bytes": 8858,
+      "sha256": "693bb526291d6b59db3ec291551ad8b7935ad700f95d40d23abe0034c346f6cd"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571756979184_film.jpg",
+      "path": "objects/519125/film.jpg",
+      "bytes": 3240479,
+      "sha256": "1cff0e0da77f091dda5a1017eb6dcb42bec54b7aabb3eca9ded486dead920baf",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519081",
+      "path": "objects/519081/index.html",
+      "bytes": 8755,
+      "sha256": "f8314014b8a062365455c4331b9fc0f1835c136a3ec0651796b31fc434a5878f"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571756939030_film.jpg",
+      "path": "objects/519081/film.jpg",
+      "bytes": 5177130,
+      "sha256": "a98cd8982b7d1ce7f19fd18f4ec809cc8492a2b729bb7908e6cb8983651cc296",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519148",
+      "path": "objects/519148/index.html",
+      "bytes": 8838,
+      "sha256": "9638a14560fefb65bc8afafab25e4c2faf802b66ac32d00833d826eda5abe57e"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571756995543_film.jpg",
+      "path": "objects/519148/film.jpg",
+      "bytes": 1452961,
+      "sha256": "c412a99ef47d0eeaca1b0e06e3aee62e0ee81e4eb56a3e0f912a06d142cffff1",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519130",
+      "path": "objects/519130/index.html",
+      "bytes": 9044,
+      "sha256": "49bc87e2baa316b619303224c6a0aa83e7f94d537fd52cfb2c956231d92226e5"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571756981415_film.jpg",
+      "path": "objects/519130/film.jpg",
+      "bytes": 4414408,
+      "sha256": "855fdcfe0b2b1a37660209330df5ac93a9892a8235b6ff5ae21276b5e75315bb",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519149",
+      "path": "objects/519149/index.html",
+      "bytes": 9003,
+      "sha256": "202fa627abc604924ab22fe69539eaab02fcc79c6869a390254a18d7b6a7d111"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571756995949_film.jpg",
+      "path": "objects/519149/film.jpg",
+      "bytes": 2933465,
+      "sha256": "d74459c413ca418fc9c4fe66acf077b3754ae67eb8beeb87cd5c58ba9d934b4d",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519080",
+      "path": "objects/519080/index.html",
+      "bytes": 8985,
+      "sha256": "93be9566cdefae5b9d6b9465615dc7d77336ff80cabb9abf1301158ab9e10610"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571756938381_film.jpg",
+      "path": "objects/519080/film.jpg",
+      "bytes": 4191767,
+      "sha256": "002421eba86a141f18e6b874107333bbcbe441f6688e0a319c93bfe2d16f2ed0",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519020",
+      "path": "objects/519020/index.html",
+      "bytes": 8791,
+      "sha256": "d11729300f5d627399449fbe6a616edebc59150fb6a4e06881c5b9f2a857b50b"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571756874833_film.jpg",
+      "path": "objects/519020/film.jpg",
+      "bytes": 2686088,
+      "sha256": "f14250dcddd4916dedede0e976cae6616f317392508e2fd7eb444af6c0da0515",
+      "width": 640,
+      "height": 23040
+    },
+    {
+      "url": "https://spinzam.com/shot/?idx=519163",
+      "path": "objects/519163/index.html",
+      "bytes": 8804,
+      "sha256": "2a3be8dbe36d590d03ee8f730546cc2b1afd820f3e9930abe8899a98a4fccd1e"
+    },
+    {
+      "url": "https://dc0sih4595mw5.cloudfront.net/contents/member/254757/2547571757000655_film.jpg",
+      "path": "objects/519163/film.jpg",
+      "bytes": 2732012,
+      "sha256": "094dbbe2434c7346d5f1a90e636502d12d08fc378dc7b6dcb87d2748a092c6c2",
+      "width": 640,
+      "height": 23040
+    }
+  ],
+  "objects": [
+    {
+      "id": "519164",
+      "title": "영락교회 창립 25주년 기념 메달",
+      "frames": 36
+    },
+    {
+      "id": "519132",
+      "title": "월드비전 공로패",
+      "frames": 36
+    },
+    {
+      "id": "519162",
+      "title": "숭실대학교 개교 95주년 기념 감사패(1992년 10월 10일)",
+      "frames": 36
+    },
+    {
+      "id": "519134",
+      "title": "영락교회 공로패(1985년 12월 2일)",
+      "frames": 36
+    },
+    {
+      "id": "519127",
+      "title": "장로회신학대학 감사패(1981년 5월 15일)",
+      "frames": 36
+    },
+    {
+      "id": "519018",
+      "title": "영락교회창립50주년 광복50주년 기념패(1995년)",
+      "frames": 36
+    },
+    {
+      "id": "519137",
+      "title": "아세아연합신학대학원 감사패(1984년 5월 1일)",
+      "frames": 36
+    },
+    {
+      "id": "519169",
+      "title": "한경직 목사 친필 도자기(영락교회 선교기금 후원을 위해 판매)",
+      "frames": 36
+    },
+    {
+      "id": "519171",
+      "title": "유학 시절 사용하시던 여행용 케이스",
+      "frames": 36
+    },
+    {
+      "id": "519125",
+      "title": "사용하시던 성경책(표지 안쪽 기도문)",
+      "frames": 36
+    },
+    {
+      "id": "519081",
+      "title": "40회 총회장 후드",
+      "frames": 36
+    },
+    {
+      "id": "519148",
+      "title": "사용하시던 안경",
+      "frames": 36
+    },
+    {
+      "id": "519130",
+      "title": "한경직 원로목사 추대기념(1973년 1월 2일)",
+      "frames": 36
+    },
+    {
+      "id": "519149",
+      "title": "한경직목사기념사업회 성찬기 세트",
+      "frames": 36
+    },
+    {
+      "id": "519080",
+      "title": "국민훈장 무궁화장(1970)",
+      "frames": 36
+    },
+    {
+      "id": "519020",
+      "title": "대한민국 건국공로장(1998)",
+      "frames": 36
+    },
+    {
+      "id": "519163",
+      "title": "템플턴 메달",
+      "frames": 36
+    }
+  ]
+}

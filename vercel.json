@@ -2,6 +2,7 @@
   "buildCommand": "npm run build:vercel",
   "outputDirectory": "dist",
   "framework": "vite",
+  "rewrites": [{"source":"/hkjmuseum.html","destination":"/index.html"}],
   "headers": [
     {
       "source": "/(.*)",
@@ -28,6 +29,10 @@
           "value": "public,max-age=31536000,immutable"
         }
       ]
+    },
+    {
+      "source": "/media/memorial/(.*)",
+      "headers": [{"key":"Cache-Control","value":"public,max-age=0,must-revalidate"}]
     },
     {
       "source": "/media/full/(.*)",
