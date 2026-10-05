@@ -1,0 +1,23 @@
+{
+  "title": "보린의 정신과 영락사회복지재단의 발자취",
+  "script": "/assets/index-ChbOgBP3.js",
+  "background": "rgb(238, 232, 221)",
+  "canvas2d": true,
+  "corner": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "canonical": "보린의 정신과 영락사회복지재단의 발자취",
+  "navAssist": 0,
+  "mapPoints": 51,
+  "sceneCount": 62,
+  "assets": {
+    "total": 439,
+    "passed": 439,
+    "failures": []
+  },
+  "deployment": "dpl_CHBZ72SuYCpNEy1ttqTZvuYEnVrX",
+  "url": "https://youngnak-museum-poc.vercel.app/"
+}
