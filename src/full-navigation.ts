@@ -1,7 +1,9 @@
 export type FullRoute={scene:string;page:number;look?:[number,number,number];exhibit?:string};
 export function parseFullRoute(search:string,scenes:{id:string;zone?:string}[],zones:{id:string;pages:unknown[]}[]):FullRoute{
- const params=new URLSearchParams(search.replace(/\+/g,'%2B'));
- const requested=(params.get('startscene')||'').toLowerCase();
+ const params=new URLSearchParams(search);
+ const decoded=(params.get('startscene')||'').toLowerCase();
+ // Old krpano links left '+' unescaped in scene IDs. Never apply this to content.
+ const requested=scenes.some(s=>s.id===decoded)?decoded:decoded.replace(/ /g,'+');
  if((requested==='scene_ext-e-entry'||requested==='scene_ext-e-center')&&scenes.some(s=>s.id==='scene_c-s-e+1'))return {scene:'scene_c-s-e+1',page:1,look:[90,0,105]};
  const scene=scenes.find(s=>s.id===requested)||scenes.find(s=>s.id==='scene_vr02')||scenes[0];
  const max=zones.find(z=>z.id===scene.zone)?.pages.length||1;

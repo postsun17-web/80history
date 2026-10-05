@@ -4,6 +4,7 @@ import {CubemapAdapter} from '@photo-sphere-viewer/cubemap-adapter';
 import {assetUrl,sourcePath,type FullMuseum,type GalleryImage} from './full-types';
 import type {SourceAction} from './source-actions';
 import {sourceGalleryIssue,sourceGalleryNote} from './source-defects';
+import {contentTitles} from './content-titles';
 import './full-content.css';
 
 const escape=(text:string)=>text.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
@@ -49,6 +50,7 @@ export class FullContent {
  }
 
  open(action:SourceAction):void {
+  action=contentTitles.action(action);
   if(action.type==='scene'||action.type==='page'){this.onAction(action);return;}
   if(!this.dialog.open)this.previousFocus=document.activeElement instanceof HTMLElement?document.activeElement:null;
   this.teardown();this.activeAction=action;
@@ -123,10 +125,11 @@ export class FullContent {
   const sourceIssue=sourceGalleryIssue(id,original.id,this.data.galleries),recovery=sourceIssue?.recovery;
   const item=recovery?.type==='photo'?recovery.item:original;
   const imageAvailable=!sourceIssue||recovery?.type==='photo';
-  this.heading.textContent=id==='help'?`관람 안내 · ${position+1} / ${gallery.items.length}`:recovery?.type==='collection'?recovery.title:item.title||gallery.title||'사진 자료';
+  const itemTitle=contentTitles.gallery(item.id);
+  this.heading.textContent=recovery?.type==='collection'?recovery.title:itemTitle;
   this.body.classList.add('full-content-gallery');
   const canPrevious=position>0,canNext=position<gallery.items.length-1;
-  this.body.innerHTML=`<div class="full-content-media-stage" role="img" aria-label="${escape(item.title||'확대 가능한 사진 자료')}"></div><div class="full-content-toolbar"><div class="full-content-paging">${button('previous','이전 사진','←')}<span aria-live="polite">${position+1} / ${gallery.items.length}</span>${button('next','다음 사진','→')}</div><p>${recovery?.type==='collection'?'사진을 선택하면 확대해서 볼 수 있습니다.':!imageAvailable?'이전·다음 버튼으로 다른 사진을 확인할 수 있습니다.':item.faces?'드래그하여 360° 둘러보기':'드래그하여 이동 · 휠 또는 두 손가락으로 확대'}</p><div>${button('zoom-out','자료 축소','−')}${button('home','자료 전체 보기','↺')}${button('zoom-in','자료 확대','＋')}</div></div>`;
+  this.body.innerHTML=`<div class="full-content-media-stage" role="img" aria-label="${escape(itemTitle)}"></div><div class="full-content-toolbar"><div class="full-content-paging">${button('previous','이전 사진','←')}<span aria-live="polite">${position+1} / ${gallery.items.length}</span>${button('next','다음 사진','→')}</div><p>${recovery?.type==='collection'?'사진을 선택하면 확대해서 볼 수 있습니다.':!imageAvailable?'이전·다음 버튼으로 다른 사진을 확인할 수 있습니다.':item.faces?'드래그하여 360° 둘러보기':'드래그하여 이동 · 휠 또는 두 손가락으로 확대'}</p><div>${button('zoom-out','자료 축소','−')}${button('home','자료 전체 보기','↺')}${button('zoom-in','자료 확대','＋')}</div></div>`;
   this.body.querySelector<HTMLButtonElement>('[data-content-command="previous"]')!.disabled=!canPrevious;
   this.body.querySelector<HTMLButtonElement>('[data-content-command="next"]')!.disabled=!canNext;
   if(!imageAvailable){
@@ -134,7 +137,7 @@ export class FullContent {
    stage.removeAttribute('role');stage.removeAttribute('aria-label');
    if(recovery?.type==='collection'){
     stage.classList.add('full-content-related');
-    stage.innerHTML=`<p>관련 전시 사진 ${recovery.items.length}장</p><div class="full-content-related-grid">${recovery.items.map(({gallery,index,item})=>`<button type="button" data-content-command="related-photo" data-gallery="${escape(gallery)}" data-index="${index}" aria-label="${escape(item.title||'사진 자료')} 확대"><img src="${escape(item.image)}" alt=""><span>${escape(item.title||'사진 자료')}</span></button>`).join('')}</div>`;
+    stage.innerHTML=`<p>관련 전시 사진 ${recovery.items.length}장</p><div class="full-content-related-grid">${recovery.items.map(({gallery,index,item})=>`<button type="button" data-content-command="related-photo" data-gallery="${escape(gallery)}" data-index="${index}" aria-label="${escape(contentTitles.gallery(item.id))} 확대"><img src="${escape(item.image)}" alt=""><span>${escape(contentTitles.gallery(item.id))}</span></button>`).join('')}</div>`;
    }else stage.innerHTML=`<div class="full-content-source-note" role="status"><span aria-hidden="true">▧</span><p>${escape(sourceIssue!.message)}</p></div>`;
    for(const button of this.body.querySelectorAll<HTMLButtonElement>('[data-content-command="zoom-in"],[data-content-command="zoom-out"],[data-content-command="home"]'))button.disabled=true;
   }else this.showGalleryImage(item);
@@ -159,17 +162,23 @@ export class FullContent {
  }
  private renderImage(url:string,title:string):void {
   this.body.innerHTML=`<div class="full-content-media-stage" role="img" aria-label="${escape(title)}"></div><div class="full-content-toolbar"><p>드래그하여 이동 · 휠 또는 두 손가락으로 확대</p><div>${button('zoom-out','자료 축소','−')}${button('home','자료 전체 보기','↺')}${button('zoom-in','자료 확대','＋')}</div></div>`;
-  this.createZoom(this.body.querySelector<HTMLDivElement>('.full-content-media-stage')!,url);
+  const stage=this.body.querySelector<HTMLDivElement>('.full-content-media-stage')!;
+  stage.dataset.matte=contentTitles.matte(url);
+  this.createZoom(stage,url);
  }
  private createZoom(stage:HTMLDivElement,url:string):void {
-  this.zoom=OpenSeadragon({element:stage,tileSources:{type:'image',url},showNavigationControl:false,showNavigator:false,minZoomImageRatio:0.8,maxZoomPixelRatio:4,visibilityRatio:0.5,constrainDuringPan:true,gestureSettingsMouse:{clickToZoom:false,dblClickToZoom:true,scrollToZoom:true},gestureSettingsTouch:{pinchToZoom:true,clickToZoom:false}});
+  // OSD 6 supports drawer selection; @types/openseadragon currently describes v4.
+  // Canvas composites the originals' alpha correctly, including text edges and shadows.
+  const tileSource={type:'image',url,buildPyramid:true};
+  const options:OpenSeadragon.Options & {drawer:'canvas'}={element:stage,drawer:'canvas',tileSources:tileSource,showNavigationControl:false,showNavigator:false,minZoomImageRatio:0.8,maxZoomPixelRatio:4,visibilityRatio:0.5,constrainDuringPan:true,gestureSettingsMouse:{clickToZoom:false,dblClickToZoom:true,scrollToZoom:true},gestureSettingsTouch:{pinchToZoom:true,clickToZoom:false}};
+  this.zoom=OpenSeadragon(options);
   this.zoom.addHandler('open-failed',()=>{stage.textContent='이미지를 불러오지 못했습니다. 네트워크 연결을 확인하고 다시 열어 주세요.';});
  }
  private renderArticle(path:string):void {
   const key=sourcePath(path),article=this.data.articles[key];
-  this.heading.textContent=article&&article.title.length<=90?article.title:'역사 자료';
+  const title=contentTitles.article(key);this.heading.textContent=title;
   if(!article){this.notice('이 자료의 본문을 찾을 수 없습니다.');return;}
-  const iframe=document.createElement('iframe');iframe.className='full-content-article';iframe.title=article.title||'역사 자료 본문';iframe.src=article.url;iframe.setAttribute('sandbox','allow-same-origin allow-popups');
+  const iframe=document.createElement('iframe');iframe.className='full-content-article';iframe.title=title;iframe.src=article.url;iframe.setAttribute('sandbox','allow-same-origin allow-popups');
   this.body.append(iframe);
   // Delivered articles are script-free; wire in-document image links for accessible enlargement.
   iframe.addEventListener('load',()=>{

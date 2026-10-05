@@ -3,6 +3,7 @@ import {CubemapTilesAdapter,type CubemapMultiTilesPanorama} from '@photo-sphere-
 import {MarkersPlugin,type MarkerConfig} from '@photo-sphere-viewer/markers-plugin';
 import {assetUrl,sourcePath,type FullMuseum,type SourceHotspot} from './full-types';
 import {decodeAction,type SourceAction} from './source-actions';
+import {contentTitles} from './content-titles';
 import {projectPlane} from './source-projection';
 import {applySourcePlane} from './source-plane-mesh';
 import mediaScreen from './assets/media-screen.svg';
@@ -131,9 +132,10 @@ export class FullViewer {
    if(/(?:^|\|)(nextb|prevb)(?:\||$)/.test(a.style||'')&&!action)return null;
    if(action?.type==='page')a.alpha=action.page===route.page?'1':'.45';
    const dynamicPanel=!!(zone&&h.name===`sector_${zone.id}_01`&&page);
-   if(dynamicPanel){a.url=page!.image;action={type:'image',src:page!.image,title:`${zone!.title} · ${page!.title}`};}
+   if(dynamicPanel){a.url=page!.image;action={type:'image',src:page!.image,title:contentTitles.page(zone!.id,page!.number)};}
+   if(action)action=contentTitles.action(action);
    const defaultLabels:Record<string,string>={scene:'다른 공간으로 이동',page:'전시 페이지',gallery:'사진 보기',article:'설명 더 보기',youtube:'영상 보기',object:'유물 둘러보기',books:'전자책',chatbot:'챗봇',help:'관람 안내',image:'크게 보기',video:'영상 보기',audio:'해설 듣기',document:'자료 읽기'};
-   const sourceLabel=a.tooltip||a.title||a.html||a.text||'';
+   const sourceLabel=action?.type==='image'?action.title||'':action?.type==='article'?contentTitles.article(action.path):action?.type==='page'?contentTitles.page(action.zone,action.page):a.tooltip||a.title||a.html||a.text||'';
    const label=((/^hotspot_\d+$/.test(sourceLabel)?'':sourceLabel)||defaultLabels[action?.type||'']||'자료 보기').replace(/\[br\]/g,' ').replace(/<[^>]+>/g,'');
    const position=()=>toPosition(Number(a.ath),Number(a.atv));
    const base={id,data:{action},tooltip:action?label:undefined,zIndex:Math.min(1000,Number(a.zorder)||1)};

@@ -1,6 +1,7 @@
 import raw from './data/full-museum.json';
 import {FullViewer} from './full-viewer';
 import {FullContent} from './full-content';
+import {contentTitles} from './content-titles';
 import {decodeAction,type SourceAction} from './source-actions';
 import {assetUrl,type FullMuseum,type MenuItem} from './full-types';
 import {parseFullRoute,fullRouteUrl,type FullRoute} from './full-navigation';
@@ -76,6 +77,7 @@ function navigate(next:FullRoute,replace=false){
  history[replace?'replaceState':'pushState']({route},'',fullRouteUrl(route));void sceneHistory.request(route);
 }
 function perform(action:SourceAction){
+ action=contentTitles.action(action);
  if(action.type==='scene'){
   if(loaded==='scene_vr02'&&action.scene==='scene_f-c-0'){
    if(entering)return;entering=true;
@@ -110,8 +112,10 @@ function safeModal(value:string):SourceAction|null{
 function showModal(){
  if(!route.exhibit){if(dialog.open){internalClose=true;content.close();internalClose=false;}renderedModal='';viewer.viewer.startKeyboardControl();return;}
  if(route.exhibit===renderedModal&&dialog.open)return;
- const a=safeModal(route.exhibit);if(!a)return;
- renderedModal=route.exhibit;viewer.viewer.stopKeyboardControl();content.open(a);
+ const parsed=safeModal(route.exhibit);if(!parsed)return;
+ const a=contentTitles.action(parsed);
+ if(a!==parsed){route={...route,exhibit:JSON.stringify(a)};history.replaceState({route},'',fullRouteUrl(route));}
+ renderedModal=route.exhibit!;viewer.viewer.stopKeyboardControl();content.open(a);
 }
 dialog.addEventListener('close',()=>{viewer.viewer.startKeyboardControl();if(!internalClose&&route.exhibit){const next={...route};delete next.exhibit;navigate(next,true);}});
 function renderSceneUI(){
@@ -125,12 +129,12 @@ function renderSceneUI(){
  const dir=$('#map-direction');dir.hidden=!scene.map;if(scene.map){dir.style.left=scene.map.x+'%';dir.style.top=scene.map.y+'%';}
  $('#page-bar').hidden=!zone;
  if(zone&&page){
-  $('#page-bar').innerHTML=`<div class="page-caption"><span>${escape(zone.title)}</span><strong>${escape(page.title)}</strong></div><div class="page-step"><button data-page="${route.page-1}" ${route.page<=1?'disabled':''} aria-label="이전 전시 페이지">‹</button><select id="page-select" aria-label="전시 페이지 선택">${zone.pages.map(p=>`<option value="${p.number}" ${p.number===route.page?'selected':''}>${p.number}. ${escape(p.title)}</option>`).join('')}</select><span>${route.page} / ${zone.pages.length}</span><button data-page="${route.page+1}" ${route.page>=zone.pages.length?'disabled':''} aria-label="다음 전시 페이지">›</button>${button({type:'image',src:page.image,title:page.title},'크게 보기','read-page')}</div>`;
+  $('#page-bar').innerHTML=`<div class="page-caption"><span>${escape(zone.title)}</span><strong>${escape(contentTitles.page(zone.id,page.number))}</strong></div><div class="page-step"><button data-page="${route.page-1}" ${route.page<=1?'disabled':''} aria-label="이전 전시 페이지">‹</button><select id="page-select" aria-label="전시 페이지 선택">${zone.pages.map(p=>`<option value="${p.number}" ${p.number===route.page?'selected':''}>${p.number}. ${escape(contentTitles.page(zone.id,p.number))}</option>`).join('')}</select><span>${route.page} / ${zone.pages.length}</span><button data-page="${route.page+1}" ${route.page>=zone.pages.length?'disabled':''} aria-label="다음 전시 페이지">›</button>${button({type:'image',src:page.image,title:contentTitles.page(zone.id,page.number)},'크게 보기','read-page')}</div>`;
  }
  const resources=[...scene.hotspots,...(page?.hotspots||[])].map(h=>({h,a:viewer.hotspotAction(h)})).filter(p=>p.a&&p.a.type!=='scene'&&p.a.type!=='page');
  const seen=new Set<string>();
  $('#scene-resources').hidden=resources.length===0;
- $('#scene-resources > div').innerHTML=resources.filter(p=>{const key=JSON.stringify(p.a);if(seen.has(key))return false;seen.add(key);return true;}).map(({h,a},i)=>{const attrs=viewer.resolve(h),sourceTitle=attrs.tooltip||attrs.title||'',title=/^hotspot_\d+$/.test(sourceTitle)?'':sourceTitle;return button(a!,title||`${a!.type==='gallery'?'사진':a!.type==='youtube'?'영상':a!.type==='object'?'유물':'자료'} ${i+1}`);}).join('');
+ $('#scene-resources > div').innerHTML=resources.filter(p=>{const key=JSON.stringify(p.a);if(seen.has(key))return false;seen.add(key);return true;}).map(({h,a},i)=>{const attrs=viewer.resolve(h),sourceTitle=attrs.tooltip||attrs.title||'',title=a!.type==='article'?contentTitles.article(a!.path):a!.type==='image'?contentTitles.image(a!.src,a!.title):/^hotspot_\d+$/.test(sourceTitle)?'':sourceTitle;return button(a!,title||`${a!.type==='gallery'?'사진':a!.type==='youtube'?'영상':a!.type==='object'?'유물':'자료'} ${i+1}`);}).join('');
  $('#media-shelf').hidden=scene.id!=='scene_f-c-w-1';
  if(scene.id==='scene_f-c-w-1')$('#media-shelf').innerHTML=`<details><summary>미디어센터 · 영상 선택</summary><div class="media-categories">${(data.mediaSections||[]).map(g=>`<details><summary>${escape(g.title)} <span>${g.items.length}</span></summary><div>${g.items.map(m=>{const a=menuAction(m);return a?button(a,m.title):`<p>${escape(m.title)} · 준비 중</p>`;}).join('')}</div></details>`).join('')}</div></details>`;
  positionSceneResources();
