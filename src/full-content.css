@@ -1,7 +1,19 @@
 .wall-video-sound{border:1px solid #ffffffb3;border-radius:18px;padding:9px 13px;min-height:40px;background:#173734e8;color:#fff;font:600 13px/1.3 sans-serif;box-shadow:0 3px 12px #0005;white-space:nowrap;cursor:pointer;touch-action:manipulation}.wall-video-sound[aria-pressed=true]{background:#fff;color:#173734}.wall-video-sound:focus-visible{outline:3px solid #efdca2;outline-offset:3px}
 .full-content-object{position:relative}.full-content-object-error{position:absolute;bottom:12px;left:12px;right:12px;margin:0;padding:12px;border-radius:8px;background:#fff;color:#4d5c51;text-align:center;font-size:13px}
-.full-content-media-wrap{position:relative;padding-inline:60px;background:#142326}.full-content-media-wrap[data-matte=ivory]{background:#EEE8DD}.full-content-media-wrap[data-matte=contrast]{background:#7A766D}.full-content-side-nav{position:absolute;inset:0;pointer-events:none}.full-content .full-content-side-nav button{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:56px;min-width:44px;min-height:44px;display:grid;place-items:center;padding:0;border:1px solid #637572;border-radius:9px;background:#f8faf8;color:#20453d;font-size:38px;line-height:1;pointer-events:auto;touch-action:manipulation}.full-content-side-nav button:first-child{left:6px}.full-content-side-nav button:last-child{right:6px}.full-content-side-nav button:disabled{opacity:.32;cursor:default}.full-content-side-nav button:hover:not(:disabled){background:#e8f0e9}.full-content-image-status{position:absolute;z-index:1;bottom:18px;left:50%;transform:translateX(-50%);max-width:calc(100% - 144px);margin:0;padding:10px 14px;border-radius:8px;background:#f8faf8ed;color:#294b44;font-size:13px;line-height:1.6;text-align:center;pointer-events:none}.full-content-page-count{font-weight:600;color:#294b44}
-@media(max-width:640px){.full-content-media-wrap{padding-inline:48px}.full-content .full-content-side-nav button{width:44px;height:52px;font-size:34px}.full-content-side-nav button:first-child{left:2px}.full-content-side-nav button:last-child{right:2px}.full-content-image-status{max-width:calc(100% - 110px);font-size:12px}}
+/* Overlay navigation leaves the full image width available on desktop and touch screens. */
+.full-content-media-wrap{position:relative;padding-inline:0;background:#142326}
+.full-content-media-wrap[data-matte=ivory]{background:#EEE8DD}
+.full-content-media-wrap[data-matte=contrast]{background:#7A766D}
+.full-content-side-nav{position:absolute;inset:0;z-index:2;pointer-events:none}
+.full-content .full-content-side-nav button{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;min-width:44px;min-height:44px;display:grid;place-items:center;padding:0;border:1px solid #ffffff73;border-radius:50%;background:rgba(20,35,38,.48);color:#fff;font-size:32px;line-height:1;text-shadow:0 1px 2px #0008;box-shadow:0 1px 4px #0003;pointer-events:auto;touch-action:manipulation}
+.full-content-side-nav button:first-child{left:max(6px,env(safe-area-inset-left,0px))}
+.full-content-side-nav button:last-child{right:max(6px,env(safe-area-inset-right,0px))}
+.full-content-side-nav button:disabled{opacity:.32;cursor:default}
+.full-content .full-content-side-nav button:hover:not(:disabled){background:rgba(20,35,38,.48)}
+.full-content .full-content-side-nav button:active:not(:disabled){background:rgba(20,35,38,.65)}
+.full-content-image-status{position:absolute;z-index:1;bottom:18px;left:50%;transform:translateX(-50%);max-width:calc(100% - 144px);margin:0;padding:10px 14px;border-radius:8px;background:#f8faf8ed;color:#294b44;font-size:13px;line-height:1.6;text-align:center;pointer-events:none}
+.full-content-page-count{font-weight:600;color:#294b44}
+@media(max-width:640px){.full-content-image-status{max-width:calc(100% - 110px);font-size:12px}}
 dialog.full-content{width:min(1200px,94vw);max-width:94vw;max-height:94dvh;height:auto;margin:auto;padding:0;border:1px solid #cdd3d5;border-radius:14px;background:#f8f8f5;color:#182e37;box-shadow:0 24px 90px #0008;overflow:hidden}
 dialog.full-content::backdrop{background:#07151ed6;backdrop-filter:blur(6px)}
 dialog.full-content[open]{display:flex;flex-direction:column}.full-content-header{flex:0 0 auto}.full-content-body{min-height:0}
