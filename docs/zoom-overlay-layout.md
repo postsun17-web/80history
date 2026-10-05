@@ -27,3 +27,7 @@
 ## 공개 반영
 
 미리보기 검증 후 GitHub main 및 기존 Vercel 공개 주소에 반영한다. 별도 이동 편의 기능 브랜치는 포함하지 않는다.
+
+첫 미리보기에서 기존 Blob 보관소가 HTTP 403 `Your store is blocked`를 반환하여 자산 복원이 실패했다. 역사관 ZIP 10개(809,845,371 bytes)를 기념관에서 사용하는 같은 GitHub 릴리스 `museum-assets-20261005`에 추가하고 manifest의 URL 10개만 변경했다. 각 ZIP의 로컬 SHA, 업로드된 API 크기·digest와 익명 전체 다운로드 SHA가 모두 일치한다. 총 38개 ZIP 및 내부 파일의 기존 해시·연결은 그대로다. 런타임 이미지는 계속 Vercel의 동일 경로에서 제공한다.
+
+이관 증거: `E:/CodexAssets/youngnak-visitor-qa/history-github-assets-verification.json`.
