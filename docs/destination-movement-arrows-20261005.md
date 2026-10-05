@@ -28,4 +28,23 @@
 - 긴 이름, 기념관 입구 및 실내의 세로·가로: `movement-{long,memorial-entrance,memorial-interior}-{390,844}.png`
 - 이름표 터치 드래그: `movement-label-touch-drag.png`
 
-배포 결과는 검증 후 아래에 기록.
+## 미리보기 검증
+
+- 코드 커밋: `c68b22c`(이동 화살표), `e5dc840`(자료 패널 제거).
+- 미리보기: https://youngnak-museum-f859tcvmc-postsun17-webs-projects.vercel.app
+- 배포 ID: `dpl_8PozgenxzAqso4QMtLk13Mscum5A`, Ready 확인.
+- Vercel 전체 빌드에서 66,557개 자산 무결성 확인 및 TypeScript/Vite 빌드 통과.
+- 최종 코드 번들: `index-DAERYJjd.js`, `index-BC5U9pR7.css`.
+- 두 관에서 1280×900, 390×844, 844×390의 44px 버튼 및 자료 패널 제거 확인. 대표 이동과 PC 전시 확대 확인. 별도 오류 수집 실행에서 pageerror 없음.
+- 캡처: `movement-preview-{history,memorial}-{1280,390,844}.png`, `movement-preview-exhibit.png`.
+- 기존 경계 동작: 화면 가장자리를 벗어나는 원본 이동 좌표의 버튼/이름표는 일부 잘릴 수 있음. 좁은 가로 화면에서 기존 소리 켜기 버튼이 전시 확대 버튼에 겹치는 배치는 이번 변경 대상에 포함하지 않음.
+
+## 공개 배포 완료
+
+- 공개 배포: `dpl_Ff6bYE1hFJwjtsfZowUxZzmospPP`, Ready 및 기존 별칭 연결 확인.
+- 배포 원본 URL: https://youngnak-museum-kzwsy79gv-postsun17-webs-projects.vercel.app
+- https://youngnak-museum-poc.vercel.app/ 및 /hkjmuseum.html 모두 익명 HTTP 200, 최종 JS/CSS 번들 일치.
+- 공개 화면에서 역사관(390×844)·기념관(1280×900) 모두 44×44px, 목적지 이름, 실제 이동 및 자료 패널 부재 확인. pageerror 없음.
+- 캡처: `movement-production-history.png`, `movement-production-memorial.png`.
+- GitHub `postsun17-web/80history` main에 기능 커밋 `e5dc840`까지 반영. 별도 이동 편의 기능 브랜치 및 자산은 변경하지 않음.
+
