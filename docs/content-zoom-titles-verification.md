@@ -45,3 +45,17 @@
 ## 배포 분리
 
 공개본은 복원 기준 커밋 `14b0309`에 이미지·제목 수정만 적용한다. 이동 기능을 가진 미리보기는 `feat/3d-navigation-assist` 브랜치와 `http://127.0.0.1:4176/`에 유지한다. `full-museum.json`, 원본 미디어, `deployment-assets.json`은 변경하지 않는다.
+
+## 공개 반영 결과
+
+2026-10-05 기존 [공개 주소](https://youngnak-museum-poc.vercel.app/)에 반영했다. [GitHub main](https://github.com/postsun17-web/80history/commit/8b684752faf7c7ca784cc0dfa0e569ec60c0cabe)은 이미지·제목 수정만 포함하고, 미리보기의 이동 기능은 합치지 않았다.
+
+- 구현 커밋: 공개본 `8b68475`, 이동 미리보기 `815ec73`.
+- 배포: `dpl_CHBZ72SuYCpNEy1ttqTZvuYEnVrX`, 운영 JS `/assets/index-ChbOgBP3.js`.
+- Vercel에서 원본 자산 8,130개의 복원·해시 검증 및 운영 빌드 통과.
+- 공개용 브랜치의 테스트 54개·TypeScript·운영 빌드 통과. 미리보기의 72개와 차이는 미리보기 전용 이동 기능 테스트 18개다.
+- 공개 주소에서 전시판 207개·본문 224개·로비 8개, 총 439개 자산의 HTTP 응답과 콘텐츠 형식 검증 통과.
+- 공개 주소의 C02에서 교정 제목, 오래된 공유 링크, Canvas 2D, 아이보리와 투명 픽셀, 확대·복귀·닫기를 확인했다. A07 혼합 글자와 D02 흰 글자 자료 및 본문 제목도 확인했다.
+- 지도 51개 지점·원본 62개 공간을 유지하며 미리보기의 ‘이전 위치’·지도 바로가기·이동 이름표가 공개본에 없음을 확인했다.
+
+[공개 검증 데이터](content-review/production-check.json) · [공개 PC 화면](content-review/screenshots/after-production-desktop.png) · [모바일 수정 전](content-review/screenshots/before-mobile-c02.png) · [모바일 수정 후](content-review/screenshots/after-mobile-c02.png)
