@@ -11,7 +11,7 @@
 - [x] /hkjmuseum.html 연결·왕복 위치 복원·공통 화면 통합
 - [x] 전체 테스트·브라우저 시각/재생 검증·독립 코드 리뷰
 - [x] 확대 이미지 이전·다음, 207개 페이지와 3D 상태 동기화, 사진집·본문·도움말 이동
-- [ ] 미리보기 확인 후 GitHub main 반영·기존 Vercel 주소 배포
+- [x] 미리보기 확인 후 GitHub main 반영·기존 Vercel 주소 배포
 
 ## 인터페이스
 
@@ -50,3 +50,15 @@
 ## 배포 자산 경로
 
 Vercel Blob의 Hobby 저장 한도에 도달하여 기념관의 28개 검증 ZIP은 기존 공개 GitHub 저장소의 `museum-assets-20261005` 릴리스에 보관한다. 기존 역사관 Blob ZIP은 유지한다. 빌드 복원기는 해당 저장소 릴리스 경로만 추가 허용하고 ZIP 전체 및 내부 파일 SHA 검증을 유지한다. 런타임 요청은 모두 Vercel `/media/memorial/`로 향한다. 유료 플랜이나 새로운 외부 런타임 서비스는 추가하지 않는다.
+
+## 공개 반영 완료
+
+- 구현 커밋: `2063c0161c77f0b2ab7f3e81a5d133a20e820c08`, GitHub `postsun17-web/80history`의 main에 fast-forward 반영.
+- 검증 미리보기: `https://youngnak-museum-cqphuzq00-postsun17-webs-projects.vercel.app`, `dpl_8ueLcr5BmG9eDEp86Q7iqygvWYwd`.
+- 공개 배포: `dpl_Y6HV4jgj7aJ6QUypmGoJxmu1HA1L`, `https://youngnak-museum-17um4rz97-postsun17-webs-projects.vercel.app`.
+- 기존 주소 `https://youngnak-museum-poc.vercel.app/`와 `/hkjmuseum.html`에 적용 완료. 공개 환경에서 자산 66,557개·3,360,539,007바이트 해시 확인 후 빌드. 미리보기와 공개 JS/CSS 번들 해시 이름 일치.
+- 공개 주소는 익명 HTTP 200(역사관/기념관/최고 해상도 타일/음원), Chrome D01 2→3→2·닫은 뒤 page2, 모바일 44px 화살표, 기념관 입구 해설 및 층 이동 확인. 페이지 오류·미디어 HTTP 실패 없음.
+- 연속 확대 열기/닫기 8회 후 Canvas는 열린 상태 2개, 닫은 상태 1개, dialog는 항상 1개로 정리됨.
+- 캡처: `production-zoom-desktop.png`, `production-zoom-mobile.png`, `production-memorial-desktop.png`, `production-memorial-mobile.png`. 결과: `production-release-smoke.log`.
+- 배포 자료 릴리스의 28 ZIP은 GitHub API 크기·SHA와 익명 전체 다운로드 SHA가 모두 일치. 실패했던 Blob 업로드의 임시 5개만 삭제하여 기존 역사관 Blob 파일을 보존함.
+- 별도 `feat/3d-navigation-assist` 브랜치는 병합하지 않았으며 원본 62장면·C방 구조를 유지함.
