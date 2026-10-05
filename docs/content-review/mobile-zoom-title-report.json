@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "testedAt": "2026-10-05T07:33:49.21Z",
+  "url": "http://127.0.0.1:4176",
+  "session": "content-mobile",
+  "browser": "154.0.8037.93",
+  "method": "Playwright CLI; mobile Chromium context at 390x844; actual FullContent/stylesheet/catalogue Vite imports in isolated same-origin harness; trusted CDP touch input; HeapProfiler GC",
+  "catalogue": {
+    "pages": 207,
+    "articles": 224,
+    "images": 8,
+    "galleries": 603
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "title": "세계선교와 새로운 사역으로 이어진 발자취(1998–2025)",
+    "titleLines": 2,
+    "titleFits": true,
+    "toolbarVisible": true,
+    "checks": {
+      "titleFits": true,
+      "toolbarVisible": true,
+      "plus": true,
+      "minus": true,
+      "home": true,
+      "pinch": true,
+      "drag": true,
+      "reset": true,
+      "close": true
+    },
+    "pinchZoom": {
+      "before": 1,
+      "after": 3.285714285714285
+    },
+    "dragCenter": {
+      "before": {
+        "x": 0.4904965550011879,
+        "y": 0.2565841939033174
+      },
+      "after": {
+        "x": 0.40705887366230237,
+        "y": 0.22320912136776316
+      }
+    },
+    "trustedTouchEvents": true
+  },
+  "largePhoto": {
+    "id": "a06:43",
+    "image": "/media/full/galleries/a06/43.webp",
+    "title": "교회창립 40주년 기념예배(1985.12.2)",
+    "sourceMetadata": {
+      "width": 4352,
+      "height": 4886
+    },
+    "deliveredAsset": {
+      "width": 3420,
+      "height": 3840
+    },
+    "loaded": true,
+    "pass": true,
+    "zoomBefore": 1,
+    "zoomAfter": 1.4,
+    "note": "Source metadata retains original dimensions; existing WebP is capped at height 3840 and its full decoded dimensions match the viewer."
+  },
+  "lifecycle": {
+    "cycles": 20,
+    "images": 10,
+    "galleries": 10,
+    "allClosedAndCleaned": true,
+    "samples": [
+      {
+        "label": "baseline",
+        "usedSize": 19713312,
+        "totalSize": 21282816,
+        "embedderHeapUsedSize": 7211256,
+        "backingStorageSize": 17777397,
+        "documents": 1,
+        "nodes": 83,
+        "jsEventListeners": 37,
+        "canvases": 0,
+        "osd": 0,
+        "open": false,
+        "zoomPresent": false,
+        "spherePresent": false
+      },
+      {
+        "label": "after-5",
+        "usedSize": 19877628,
+        "totalSize": 20758528,
+        "embedderHeapUsedSize": 7090544,
+        "backingStorageSize": 17777466,
+        "documents": 1,
+        "nodes": 110,
+        "jsEventListeners": 37,
+        "canvases": 0,
+        "osd": 0,
+        "open": false,
+        "zoomPresent": false,
+        "spherePresent": false
+      },
+      {
+        "label": "after-10",
+        "usedSize": 20271680,
+        "totalSize": 21282816,
+        "embedderHeapUsedSize": 7076304,
+        "backingStorageSize": 17777466,
+        "documents": 1,
+        "nodes": 162,
+        "jsEventListeners": 37,
+        "canvases": 0,
+        "osd": 0,
+        "open": false,
+        "zoomPresent": false,
+        "spherePresent": false
+      },
+      {
+        "label": "after-15",
+        "usedSize": 20333324,
+        "totalSize": 21282816,
+        "embedderHeapUsedSize": 7234680,
+        "backingStorageSize": 17777466,
+        "documents": 1,
+        "nodes": 200,
+        "jsEventListeners": 37,
+        "canvases": 0,
+        "osd": 0,
+        "open": false,
+        "zoomPresent": false,
+        "spherePresent": false
+      },
+      {
+        "label": "after-20",
+        "usedSize": 20411240,
+        "totalSize": 21282816,
+        "embedderHeapUsedSize": 7345672,
+        "backingStorageSize": 17777466,
+        "documents": 1,
+        "nodes": 252,
+        "jsEventListeners": 37,
+        "canvases": 0,
+        "osd": 0,
+        "open": false,
+        "zoomPresent": false,
+        "spherePresent": false
+      }
+    ],
+    "settled": {
+      "label": "settled-after-20",
+      "usedSize": 20121244,
+      "totalSize": 20758528,
+      "embedderHeapUsedSize": 6765680,
+      "backingStorageSize": 17777466,
+      "documents": 1,
+      "nodes": 72,
+      "jsEventListeners": 37,
+      "state": {
+        "elements": 26,
+        "canvas": 0,
+        "osd": 0
+      }
+    },
+    "heapDeltaBytes": 407932,
+    "eventListenersBefore": 37,
+    "eventListenersAfter": 37,
+    "remainingCanvases": 0,
+    "remainingOsdContainers": 0,
+    "conclusion": "No accumulation of canvases, viewer references or listeners. Settled GC heap increase 0.41 MB; nodes returned below baseline."
+  },
+  "screenshots": [
+    "output/playwright/zoom-titles-mobile-long-title.png",
+    "output/playwright/zoom-titles-mobile-pinched.png",
+    "output/playwright/zoom-titles-mobile-largest-photo.png",
+    "output/playwright/zoom-titles-mobile-largest-photo-zoom.png"
+  ],
+  "bugs": [],
+  "environmentNotes": [
+    "Initial real application route returned favicon.ico 404.",
+    "Isolated routed harness triggered Chromium local-network restrictions for the Vite HMR WebSocket; HTTP modules/assets and interactions succeeded.",
+    "Canvas readback sampling generated only a willReadFrequently performance hint."
+  ],
+  "limits": [
+    "Emulated Chrome mobile, not a physical iOS/Android device.",
+    "Component lifecycle measured in isolated FullContent harness to remove background panorama memory."
+  ],
+  "sourceChanges": false,
+  "sessionClosed": true,
+  "matteFollowup": {
+    "status": "passed",
+    "fixedIssue": "A07:1 white year numerals washed out on ivory; mixed-color panels now use contrast matte.",
+    "reviewedAPanels": 90,
+    "contrastCases": [
+      "a02:1",
+      "a03:2",
+      "a03:5",
+      "a03:9",
+      "a03:11",
+      "a03:12",
+      "a06:10",
+      "a07:1"
+    ],
+    "additionalDarkCase": "a05:9",
+    "actualBackground": "rgb(122, 118, 109)",
+    "actualCodeScreenshotsManuallyInspected": [
+      "output/playwright/zoom-titles-mobile-long-title-final.png",
+      "output/playwright/zoom-titles-a03-5-contrast-final.png",
+      "output/playwright/zoom-titles-a03-11-contrast-final.png"
+    ],
+    "repoScreenshot": "docs/content-review/screenshots/after-mobile.png",
+    "note": "Updated original mobile-long-title filename and designated repo binary; original artwork remains unchanged."
+  }
+}

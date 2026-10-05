@@ -48,6 +48,7 @@ npm run build:vercel
 | 화면 및 콘텐츠 스타일 | `src/full-style.css`, `src/full-content.css` |
 | 공간·전시·콘텐츠 데이터 | `src/data/full-museum.json` |
 | 배포 자산 목록·해시 | `deployment-assets.json` |
+| 검토한 콘텐츠 제목·판단 근거 | `src/data/content-titles.json` |
 | 대용량 자산 복원 | `scripts/restore-deploy-assets.mjs` |
 | 원본 XML 컴파일·자산 변환 | `tools/compile_full_museum.py`, `tools/build_full_assets.py` |
 
@@ -69,3 +70,5 @@ npx vercel deploy --prod
 - [교회 상단 연결 수정과 배포 검증](docs/ENTRANCE-ORIENTATION-FIX.md)
 - [전달 자료의 빈 파일 재검증 및 보강 근거](docs/SOURCE-DEFECTS.md)
 - [전체 복원 작업 기록](docs/FULL-RESTORATION-PROGRESS.md)
+
+- [전시 확대 이미지와 콘텐츠 제목 수정·검증](docs/content-zoom-titles-verification.md)

@@ -27,3 +27,12 @@ test('content actions survive safe JSON deep-link round trip without executing s
  const route={scene:'scene_a-c-e+1',page:12,look:[10,-1,100] as [number,number,number],exhibit:'gallery:a07-02:3'};
  assert.deepEqual(parseFullRoute(fullRouteUrl(route),scenes,zones),route);
 });
+
+test('Korean titles, spaces, literal plus and ampersand survive shared links',()=>{
+ const action={type:'image',src:'/media/full/img/A+B & 기록.png.webp',title:'보린의 정신 + 사랑 & 나눔'};
+ const route={scene:'scene_c-s-e+1',page:1,exhibit:JSON.stringify(action)};
+ assert.deepEqual(parseFullRoute(fullRouteUrl(route),scenes,zones),route);
+ // Only the legacy raw-plus scene ID receives compatibility treatment.
+ const legacy='?startscene=scene_c-s-e+1&page=1&exhibit='+encodeURIComponent(JSON.stringify(action)).replace(/%20/g,'+');
+ assert.deepEqual(parseFullRoute(legacy,scenes,zones),route);
+});

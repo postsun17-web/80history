@@ -1,0 +1,2271 @@
+{
+  "pages": [
+    {
+      "id": "a02:1",
+      "title": "한국 기독교의 시작과 영락교회의 뿌리(1866–1945)",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a02:2",
+      "title": "초기 한국 기독교",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a02:3",
+      "title": "서북지역 기독교의 시작과 한글 성경 번역",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a02:4",
+      "title": "서북지역 기독교의 성장과 확산",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a02:5",
+      "title": "신의주제2교회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a02:6",
+      "title": "신의주보린원",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a03:1",
+      "title": "월남 신앙공동체와 영락교회의 시작(1945–1950)",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a03:2",
+      "title": "월남 기독교인들의 중심이 된 영락교회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a03:3",
+      "title": "베다니전도교회 터",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a03:4",
+      "title": "베다니전도교회 설립 과정",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a03:5",
+      "title": "베다니전도교회 창립과 성도들의 거주지",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a03:6",
+      "title": "첫 예배당 — 베들레헴 성전",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a03:7",
+      "title": "두 번째 예배당 — 천막성전",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a03:8",
+      "title": "세 번째 예배당 — 백석(白石) 성전",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a03:9",
+      "title": "교회 기관 및 부서 조직",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a03:10",
+      "title": "주보 제1호 발행과 영락보린원 개원",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a03:11",
+      "title": "대광중학교 개교와 교회 개척·지역예배처",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a03:12",
+      "title": "이북신도대표회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a04:1",
+      "title": "전쟁과 재건 속 영락교회의 발자취(1950–1955)",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a04:2",
+      "title": "한경직 목사의 장로회 총회장 및 한국기독교연합회 회장 취임",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a04:3",
+      "title": "피난 시절의 영락교회, 복음 확장 기회로 삼다",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a04:4",
+      "title": "부산·대구·제주영락교회의 설립",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a04:5",
+      "title": "순교한 성도들과 환도감사예배·헌당예배",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a04:6",
+      "title": "첫 산상기도회와 복지·교육사업의 확장",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a04:7",
+      "title": "창립 10주년 설교 — 10년의 은총",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a04:8",
+      "title": "창립 10주년 기념사업 — 교육관·기도원·교회사·해외선교",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a05:1",
+      "title": "영락교회의 성장과 사역 확장(1956–1970)",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a05:2",
+      "title": "사회 혼란과 한국교회 지킴이",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a05:3",
+      "title": "교회 성장과 성도들의 직업별 통계",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a05:4",
+      "title": "영락교회 성도들의 출신 지역 다변화",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a05:5",
+      "title": "영락교회 성도들의 직업별 변화",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a05:6",
+      "title": "영락교회 성도들의 세대별 비율",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a05:7",
+      "title": "평신도 체계화 및 신앙교육 강화",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a05:8",
+      "title": "영락학원·영락사회복지재단·영락교회유지재단 설립",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a05:9",
+      "title": "교구제 도입과 초기 교구 편성",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a05:10",
+      "title": "방송·찬양·선교·의료 등 사역의 다각화",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a05:11",
+      "title": "복지시설 및 교육기관의 변화",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a05:12",
+      "title": "창립 20주년 기념예배와 주요 사업",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a05:13",
+      "title": "창립 20주년 기념사업 — 선교관·부흥집회·기념강좌",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a05:14",
+      "title": "창립 25주년 기념예배와 기념사업",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:1",
+      "title": "기독교 연합운동과 영락교회의 변화(1973–1997)",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:2",
+      "title": "한국기독교 연합운동 및 전국복음화운동 중심에 선 영락교회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:3",
+      "title": "영락교회 리더십의 변화",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:4",
+      "title": "제2대 박조준 담임목사",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:5",
+      "title": "박조준 목사 재임기 교회 성장과 변화",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:6",
+      "title": "십자가형 성전 증축",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:7",
+      "title": "영락교회 행정장정 제정 및 교회행정 전산화",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:8",
+      "title": "한경직목사기념사업회 창립",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:9",
+      "title": "평신도부의 『만남』 창간",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:10",
+      "title": "설교집·설교 테이프 보급과 평신도 선교사 파송",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:11",
+      "title": "경로대학 개강과 은평·잠실 주일학교 분교",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:12",
+      "title": "의료선교봉사회 창립과 교역자 사택 건립",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:13",
+      "title": "창립 30주년 기념사업 — 한경직목사기념관",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:14",
+      "title": "창립 35주년 기념사업 — 성전 증축·교육·교회사",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:15",
+      "title": "제3대 김윤국 담임목사",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:16",
+      "title": "창립 40주년 기념사업 — 주요 행사",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:17",
+      "title": "창립 40주년 기념사업 — 영락농아인교회와 복지시설",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:18",
+      "title": "제4대 임영수 담임목사",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:19",
+      "title": "당회 및 목회 제도의 변화",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:20",
+      "title": "교회 심벌마크 및 로고 선정",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:21",
+      "title": "교육부의 교육 다변화 — 유니게학교와 베드로부",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:22",
+      "title": "평신도교육원·교회교육원과 평신도교육 강화",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:23",
+      "title": "추양안식관 건립",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:24",
+      "title": "창립 50주년 기념사업 — 준비 워크숍·강연회·세미나",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:25",
+      "title": "창립 50주년 기념사업 — 기념예배·교회음악",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:26",
+      "title": "창립 50주년 기념사업 — 기념관 건축과 개관 행사",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:27",
+      "title": "창립 50주년 기념사업 — 애니아의집과 노인복지시설",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:28",
+      "title": "창립 50주년 기념사업 — 한경직기념예배당·기념관 기증",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a06:29",
+      "title": "창립 50주년 기념사업 — 체육대회와 『영락교회 50년사』",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:1",
+      "title": "세계선교와 새로운 사역으로 이어진 발자취(1998–2025)",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:2",
+      "title": "세계를 향한 열망 및 기독교 네트워크 확장",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:3",
+      "title": "세계선교의 확대와 영락교회 디지털 역사관 개관",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:4",
+      "title": "제5대 이철신 담임목사",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:5",
+      "title": "새천년 시대 개막 및 한경직 목사 소천",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:6",
+      "title": "한경직 목사 관련 주요 행사",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:7",
+      "title": "북한선교센터 설립",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:8",
+      "title": "포이메네스 영성아카데미 수련",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:9",
+      "title": "역사자료실 개관과 국제 프로그램 확대",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:10",
+      "title": "창립 55주년 기념사업 — 기념대회와 체육한마당",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:11",
+      "title": "창립 70주년 기념사업 — 감사예배·기념음악회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:12",
+      "title": "창립 70주년 기념사업 — 역사 다큐멘터리·한마음 잔치",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:13",
+      "title": "창립 70주년 기념사업 — 선교대회·심포지엄·화보집",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:14",
+      "title": "제6대 김운성 담임목사",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:15",
+      "title": "코로나19 확산과 교회의 대응 — 비대면 예배·교육",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:16",
+      "title": "코로나19 시기 홈페이지를 통한 교육·훈련",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:17",
+      "title": "기도운동 119대작전과 말씀운동 성경대로 365운동",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:18",
+      "title": "코로나19 대응의 결과 — 교회 성장과 3040세대 유입",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:19",
+      "title": "코로나19 이후 활동 재개와 영락꿈터 준공",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:20",
+      "title": "영락교회 신앙포털 앱과 김운성 목사의 말씀산책",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "a07:21",
+      "title": "영락사회복지재단 위탁사업과 다일공동체 섬김",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b01:1",
+      "title": "신도시 신의주의 형성",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b01:2",
+      "title": "일제의 기독교 박해",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b01:3",
+      "title": "신의주자치위원회 조직",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b01:4",
+      "title": "사회민주당 결성과 용암포사건",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b01:5",
+      "title": "신의주학생사건",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b01:6",
+      "title": "한경직 목사의 서신에 담긴 신의주와 북한 상황",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b02:1",
+      "title": "영락교회와 신탁통치 반대 운동",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b02:2",
+      "title": "기독교연합신도대회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b02:3",
+      "title": "영락교회와 기독교민주청년동맹",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b02:4",
+      "title": "한경직 목사와 한국여론협회·웨드마이어 특사",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b02:5",
+      "title": "영락교회 대학부와 마셜 제안달성국민대회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b02:6",
+      "title": "유엔임시위원단 면담과 총선거일 변경",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b02:7",
+      "title": "마셜 제안달성국민대회와 이북동포에게 보내는 글",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b02:8",
+      "title": "한경직 목사와 유엔임시위원단",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b02:9",
+      "title": "영락교회와 5·10 총선거일 변경",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b03:1",
+      "title": "영락교회의 구국전도",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b03:2",
+      "title": "한경직 목사와 밥 피얼스",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b03:3",
+      "title": "영락교회와 존 포스터 덜레스",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b03:4",
+      "title": "한경직 목사와 대한기독교구국회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b03:5",
+      "title": "한경직 목사의 평양 방문과 기독교의용대 창설",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b03:6",
+      "title": "한국기독교 비상대책위원회와 피란민 구호",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b04:1",
+      "title": "한경직 목사의 교회와 국가에 관한 대담",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b04:2",
+      "title": "한경직 목사와 이승만 정부",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b04:3",
+      "title": "4·19의 주역, 영락교회 대학생 김치호",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b04:4",
+      "title": "5·16 군사쿠데타와 한경직 목사의 민간외교",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b04:5",
+      "title": "언론윤리위원회법 파동과 한경직 목사",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b04:6",
+      "title": "유신헌법과 한경직 목사",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b04:7",
+      "title": "긴급조치 해제 건의와 한경직 목사",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b04:8",
+      "title": "박조준 목사의 자유 인식",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b05:1",
+      "title": "통일에 대한 영락교회 성도들의 인식",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b05:2",
+      "title": "귀순자를 맞이한 영락교회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b05:3",
+      "title": "대한예수교장로회 북한선교위원회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b05:4",
+      "title": "북한선교를 위한 필승교회 건립",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b05:5",
+      "title": "남북적십자회담과 이산가족 찾기",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "b05:6",
+      "title": "7·4 공동성명과 한경직 목사의 통일 인식",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c01:1",
+      "title": "대광학교의 교육 정신과 한경직 목사의 권면",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c01:2",
+      "title": "대광중학교·대광고등학교",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c01:3",
+      "title": "대광초등학교",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c01:4",
+      "title": "영락성경구락부의 초등·중등 교육",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c01:5",
+      "title": "영락중·고등학교와 영락의료과학고등학교",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c01:6",
+      "title": "숭실대학 재건과 한경직기념관",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c01:7",
+      "title": "보성여자중·고등학교",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c01:8",
+      "title": "영락여자신학교",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c01:9",
+      "title": "영락유치원과 부설 영락어린이집",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c01:10",
+      "title": "아세아연합신학대학원 설립",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c02:1",
+      "title": "보린의 정신과 영락사회복지재단의 발자취",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c02:2",
+      "title": "아동복지사업",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c02:3",
+      "title": "모자복지사업",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c02:4",
+      "title": "노인복지사업",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c02:5",
+      "title": "장애인복지사업",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c02:6",
+      "title": "영유아 보육사업",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c02:7",
+      "title": "월드비전 사업",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c02:8",
+      "title": "실로암 안과병원",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c03:1",
+      "title": "밥 피얼스의 전국교역자수양회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c03:2",
+      "title": "1950년대 빌리 그래함의 전도집회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c03:3",
+      "title": "한경직 목사 대한예수교장로회 총회장 선출",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c03:4",
+      "title": "대한예수교장로회의 WCC 가입 문제",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c03:5",
+      "title": "한국기독교연합회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c03:6",
+      "title": "전국복음화운동",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c03:7",
+      "title": "빌리 그래함의 한국전도대회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c03:8",
+      "title": "한국기독교지도자협의회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c03:9",
+      "title": "한국기독교 100주년 선교대회와 기념사업",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c03:10",
+      "title": "한국기독교총연합회의 창립",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c04:1",
+      "title": "교회개척 및 농어촌교회 지원",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c04:2",
+      "title": "교회 개척·지원의 지역별 현황",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c04:3",
+      "title": "교회 개척·지원의 시기별 현황",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c04:4",
+      "title": "1940년대: 월남인교회 개척 및 지원",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c04:5",
+      "title": "1950~1960년대 교회 개척·지원의 전국 확대",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c04:6",
+      "title": "1970~1980년대 교회 개척과 복음화운동",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c04:7",
+      "title": "1990년대 이후 교회 리모델링·건축 지원",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c04:8",
+      "title": "군인교회 개척 및 지원",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c04:9",
+      "title": "주요 군선교 사역",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c05:1",
+      "title": "해외선교 1단계 · 첫 해외선교사 파송",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c05:2",
+      "title": "해외선교 2단계 · 선교사 파송 확대",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c05:3",
+      "title": "해외선교 3단계 · 평신도 기관의 참여",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c05:4",
+      "title": "해외선교 4단계 · 평신도 해외선교 확대",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c05:5",
+      "title": "한·러 찬송가 번역 및 출판",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c05:6",
+      "title": "대만 루카이어 신약성경 번역 및 출판",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c05:7",
+      "title": "미얀마 테딤어 신약성경 번역 및 출판",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "c05:8",
+      "title": "선교지와 장기적인 관계 구축",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d01:1",
+      "title": "예배 중심 공동체, 영락교회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d01:2",
+      "title": "영락교회 예배의 특징과 변화",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d01:3",
+      "title": "교회의 본질로서의 예배와 예배 중심의 교회",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d01:4",
+      "title": "예배부와 찬양 사역",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d01:5",
+      "title": "시온찬양대와 베다니찬양대",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d01:6",
+      "title": "호산나찬양대와 임마누엘찬양대",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d01:7",
+      "title": "갈보리찬양대와 갈릴리찬양대",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d01:8",
+      "title": "베들레헴찬양대와 할렐루야찬양대",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "ivory",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d01:9",
+      "title": "국제예배의 시작과 사역",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d02:1",
+      "title": "영락교회 신앙교육의 발자취",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d02:2",
+      "title": "교육기관 조직과 교육관 건축",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d02:3",
+      "title": "교육부 개편과 지역·평신도 교육 확대",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d02:4",
+      "title": "평신도교육원 설립과 교회교육원 개편",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d02:5",
+      "title": "교육혁신과 신앙성장 로드맵",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d03:1",
+      "title": "영락교회 사회봉사의 발자취",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d03:2",
+      "title": "사회봉사부의 변천",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d03:3",
+      "title": "사회봉사의 시작과 피란민 구호",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d03:4",
+      "title": "영락원 설립과 사회봉사 확대",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d03:5",
+      "title": "봉사미 수집과 이웃 나눔",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d03:6",
+      "title": "전도회 봉사와 의료봉사",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d03:7",
+      "title": "사랑의 쌀 나누기와 사회봉사 확장",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d04:1",
+      "title": "영락교회 성도의 교제",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d04:2",
+      "title": "구역모임을 통한 성도의 교제",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d04:3",
+      "title": "소그룹을 통한 성도의 교제",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d04:4",
+      "title": "문서와 인터넷을 통한 성도의 교제",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d04:5",
+      "title": "친교부와 상담부를 통한 교제",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d04:6",
+      "title": "경조부와 은퇴제직상조회의 섬김",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d05:1",
+      "title": "영락교회 선교의 발자취",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d05:2",
+      "title": "전도 본위의 신앙공동체",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d05:3",
+      "title": "농어촌선교와 미자립교회 지원",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d05:4",
+      "title": "군선교와 경찰선교",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d05:5",
+      "title": "학원선교와 기관선교",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d05:6",
+      "title": "해외선교와 문화선교",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d05:7",
+      "title": "유학생 선교와 선교부 자치단체",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d05:8",
+      "title": "북한선교센터와 북한선교학교",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d05:9",
+      "title": "북한선교부와 사랑의 쌀 나누기 운동",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    },
+    {
+      "id": "d05:10",
+      "title": "의료실 개설과 의료선교 사역",
+      "drawer": "canvas",
+      "loaded": true,
+      "matte": "dark",
+      "pyramid": true,
+      "canvasCount": 1
+    }
+  ],
+  "articles": [
+    "html/a02_04.html",
+    "html/a02_02.html",
+    "html/a02_05.html",
+    "html/a03_01.html",
+    "html/a02_03.html",
+    "html/a03_03.html",
+    "html/a03_07.html",
+    "html/a03_02.html",
+    "html/a03_08.html",
+    "html/a03_09.html",
+    "html/a03_06.html",
+    "html/a03_10.html",
+    "html/a03_12.html",
+    "html/a03_14.html",
+    "html/a03_15.html",
+    "html/a03_11.html",
+    "html/a03_19.html",
+    "html/a03_18.html",
+    "html/a03_17.html",
+    "html/a03_20.html",
+    "html/a03_21.html",
+    "html/a04_01.html",
+    "html/a04_03.html",
+    "html/a04_02.html",
+    "html/a04_05.html",
+    "html/a04_04.html",
+    "html/a04_06.html",
+    "html/a04_07.html",
+    "html/a04_09.html",
+    "html/a04_08.html",
+    "html/a04_11.html",
+    "html/a04_10.html",
+    "html/a04_12.html",
+    "html/a04_15.html",
+    "html/a04_16.html",
+    "html/a04_17.html",
+    "html/a04_18.html",
+    "html/a05_01.html",
+    "html/a05_03.html",
+    "html/a05_02.html",
+    "html/a05_04.html",
+    "html/a05_06.html",
+    "html/a05_05.html",
+    "html/a05_10.html",
+    "html/a05_08.html",
+    "html/a05_07.html",
+    "html/a05_09.html",
+    "html/a05_11.html",
+    "html/a05_13.html",
+    "html/a05_14.html",
+    "html/a05_15.html",
+    "html/a05_12.html",
+    "html/a05_16.html",
+    "html/a05_19.html",
+    "html/a05_17.html",
+    "html/a05_18.html",
+    "html/a05_20.html",
+    "html/a05_21.html",
+    "html/a05_22.html",
+    "html/a05_23.html",
+    "html/a05_25.html",
+    "html/a05_26.html",
+    "html/a06_02.html",
+    "html/a06_01.html",
+    "html/a06_04.html",
+    "html/a06_03.html",
+    "html/a06_06.html",
+    "html/a06_05.html",
+    "html/a06_09.html",
+    "html/a06_07.html",
+    "html/a06_08.html",
+    "html/a06_11.html",
+    "html/a06_14.html",
+    "html/a06_15.html",
+    "html/a06_13.html",
+    "html/a06_12.html",
+    "html/a06_17.html",
+    "html/a06_16.html",
+    "html/a07_03.html",
+    "html/a07_06.html",
+    "html/a07_08.html",
+    "html/a07_04.html",
+    "html/a07_07.html",
+    "html/b01_02.html",
+    "html/b01_04.html",
+    "html/b01_05.html",
+    "html/b01_03.html",
+    "html/b01_07.html",
+    "html/b02_03.html",
+    "html/b02_02.html",
+    "html/b02_01.html",
+    "html/b02_04.html",
+    "html/b02_05.html",
+    "html/b02_06.html",
+    "html/b02_08.html",
+    "html/b02_07.html",
+    "html/b03_01.html",
+    "html/b03_02.html",
+    "html/b03_03.html",
+    "html/b03_05.html",
+    "html/b03_04.html",
+    "html/b04_03.html",
+    "html/b05_01.html",
+    "html/b04_01.html",
+    "html/b04_02.html",
+    "html/b05_03.html",
+    "html/build001.html",
+    "html/b05_02.html",
+    "html/build005.html",
+    "html/build004.html",
+    "html/build003.html",
+    "html/build002.html",
+    "html/build006.html",
+    "html/build007.html",
+    "html/build_new01.html",
+    "html/build008.html",
+    "html/build017.html",
+    "html/build_new03.html",
+    "html/build_new02.html",
+    "html/build_new04.html",
+    "html/c01_02.html",
+    "html/c01_01.html",
+    "html/c01_03.html",
+    "html/c01_05.html",
+    "html/c01_04.html",
+    "html/c01_08.html",
+    "html/c01_09.html",
+    "html/c02_01.html",
+    "html/c01_06.html",
+    "html/c01_07.html",
+    "html/c01_10.html",
+    "html/c02_02.html",
+    "html/c02_03.html",
+    "html/c02_04.html",
+    "html/c02_05.html",
+    "html/c03_01.html",
+    "html/c02_06.html",
+    "html/c02_07.html",
+    "html/c02_08.html",
+    "html/c03_03.html",
+    "html/c03_04.html",
+    "html/c03_05.html",
+    "html/c03_02.html",
+    "html/c03_06.html",
+    "html/c04_01.html",
+    "html/c04_02.html",
+    "html/c03_07.html",
+    "html/c03_08.html",
+    "html/d01_02.html",
+    "html/d01_03.html",
+    "html/d01_01.html",
+    "html/d01_06.html",
+    "html/d01_05.html",
+    "html/d01_04.html",
+    "html/d01_07.html",
+    "html/d01_08.html",
+    "html/d01_10.html",
+    "html/d01_13.html",
+    "html/d01_12.html",
+    "html/d01_09.html",
+    "html/d01_11.html",
+    "html/d01_15.html",
+    "html/d01_14.html",
+    "html/d02_01.html",
+    "html/d01_17.html",
+    "html/d01_16.html",
+    "html/d02_02.html",
+    "html/d02_03.html",
+    "html/d02_04.html",
+    "html/d02_06.html",
+    "html/d02_07.html",
+    "html/d02_05.html",
+    "html/d02_08.html",
+    "html/d02_09.html",
+    "html/d03_01.html",
+    "html/d02_11.html",
+    "html/d02_10.html",
+    "html/d02_12.html",
+    "html/d03_02.html",
+    "html/d03_03.html",
+    "html/d04_01.html",
+    "html/d04_03.html",
+    "html/d04_02.html",
+    "html/d03_04.html",
+    "html/d04_06.html",
+    "html/d04_04.html",
+    "html/d04_08.html",
+    "html/d04_05.html",
+    "html/d04_07.html",
+    "html/d04_09.html",
+    "html/d05_03.html",
+    "html/d05_02.html",
+    "html/d05_05.html",
+    "html/d05_06.html",
+    "html/d05_04.html",
+    "html/d05_07.html",
+    "html/dacu01.html",
+    "html/d05_09.html",
+    "html/d05_08.html",
+    "html/d05_10.html",
+    "html/dacu04.html",
+    "html/dacu03.html",
+    "html/dacu02.html",
+    "html/newpaper01.html",
+    "html/newpaper03.html",
+    "html/newpaper04.html",
+    "html/newpaper02.html",
+    "html/newpaper05.html",
+    "html/newpaper06.html",
+    "html/newpaper07.html",
+    "html/newpaper08.html",
+    "html/newpaper09.html",
+    "html/newpaper10.html",
+    "html/newpaper13.html",
+    "html/newpaper11.html",
+    "html/newpaper12.html",
+    "html/newpaper18.html",
+    "html/newpaper16.html",
+    "html/newpaper14.html",
+    "html/newpaper15.html",
+    "html/newpaper20.html",
+    "html/newpaper21.html",
+    "html/newpaper22.html",
+    "html/newpaper19.html"
+  ],
+  "lobby": [
+    "images/zone_info01.png",
+    "images/zone_info01_text.jpg",
+    "images/zone_info02.png",
+    "images/zone_info02_text.jpg",
+    "images/zone_info03.png",
+    "images/zone_info03_text.jpg",
+    "images/zone_info04.png",
+    "images/zone_info04_text.jpg"
+  ],
+  "comparisons": [
+    {
+      "src": "/media/full/img/sector_a03_01.png.webp",
+      "factor": 1,
+      "drawer": "canvas",
+      "rgbMeanError": 2.964428379197725,
+      "alphaMeanError": 3.220324328883828,
+      "transparentErrors": 901,
+      "transparentCoreSamples": 112051,
+      "transparentCoreErrors": 0,
+      "fullyLoaded": true
+    },
+    {
+      "src": "/media/full/img/sector_a03_01.png.webp",
+      "factor": 2,
+      "drawer": "canvas",
+      "rgbMeanError": 5.266039585433171,
+      "alphaMeanError": 5.727757744459206,
+      "transparentErrors": 1571,
+      "transparentCoreSamples": 91493,
+      "transparentCoreErrors": 0,
+      "fullyLoaded": true
+    },
+    {
+      "src": "/media/full/img/sector_a03_01.png.webp",
+      "factor": 4,
+      "drawer": "canvas",
+      "rgbMeanError": 2.402748265329624,
+      "alphaMeanError": 2.792068211692429,
+      "transparentErrors": 657,
+      "transparentCoreSamples": 104103,
+      "transparentCoreErrors": 0,
+      "fullyLoaded": true
+    },
+    {
+      "src": "/media/full/img/sector_b03_01.png.webp",
+      "factor": 1,
+      "drawer": "canvas",
+      "rgbMeanError": 3.0259451437613505,
+      "alphaMeanError": 3.0654562324708463,
+      "transparentErrors": 637,
+      "transparentCoreSamples": 82806,
+      "transparentCoreErrors": 0,
+      "fullyLoaded": true
+    },
+    {
+      "src": "/media/full/img/sector_b03_01.png.webp",
+      "factor": 2,
+      "drawer": "canvas",
+      "rgbMeanError": 4.907439057339917,
+      "alphaMeanError": 6.328012202751243,
+      "transparentErrors": 1067,
+      "transparentCoreSamples": 20085,
+      "transparentCoreErrors": 0,
+      "fullyLoaded": true
+    },
+    {
+      "src": "/media/full/img/sector_b03_01.png.webp",
+      "factor": 4,
+      "drawer": "canvas",
+      "rgbMeanError": 2.1090085338123505,
+      "alphaMeanError": 4.331709580143818,
+      "transparentErrors": 603,
+      "transparentCoreSamples": 59149,
+      "transparentCoreErrors": 0,
+      "fullyLoaded": true
+    },
+    {
+      "src": "/media/full/img/sector_c02_01.png.webp",
+      "factor": 1,
+      "drawer": "canvas",
+      "rgbMeanError": 3.5417332227216556,
+      "alphaMeanError": 1.5540653578231867,
+      "transparentErrors": 364,
+      "transparentCoreSamples": 90890,
+      "transparentCoreErrors": 0,
+      "fullyLoaded": true
+    },
+    {
+      "src": "/media/full/img/sector_c02_01.png.webp",
+      "factor": 2,
+      "drawer": "canvas",
+      "rgbMeanError": 6.344480863230457,
+      "alphaMeanError": 2.8700645986658513,
+      "transparentErrors": 491,
+      "transparentCoreSamples": 40131,
+      "transparentCoreErrors": 0,
+      "fullyLoaded": true
+    },
+    {
+      "src": "/media/full/img/sector_c02_01.png.webp",
+      "factor": 4,
+      "drawer": "canvas",
+      "rgbMeanError": 2.4001442049772397,
+      "alphaMeanError": 1.9098992710683733,
+      "transparentErrors": 219,
+      "transparentCoreSamples": 59950,
+      "transparentCoreErrors": 0,
+      "fullyLoaded": true
+    },
+    {
+      "src": "/media/full/img/sector_d02_01.png.webp",
+      "factor": 1,
+      "drawer": "canvas",
+      "rgbMeanError": 2.993598848197869,
+      "alphaMeanError": 1.7528731996372915,
+      "transparentErrors": 104,
+      "transparentCoreSamples": 103251,
+      "transparentCoreErrors": 0,
+      "fullyLoaded": true
+    },
+    {
+      "src": "/media/full/img/sector_d02_01.png.webp",
+      "factor": 2,
+      "drawer": "canvas",
+      "rgbMeanError": 7.420319265997486,
+      "alphaMeanError": 2.85596395408504,
+      "transparentErrors": 9,
+      "transparentCoreSamples": 33916,
+      "transparentCoreErrors": 0,
+      "fullyLoaded": true
+    },
+    {
+      "src": "/media/full/img/sector_d02_01.png.webp",
+      "factor": 4,
+      "drawer": "canvas",
+      "rgbMeanError": 4.798079989841214,
+      "alphaMeanError": 1.2501001665928597,
+      "transparentErrors": 0,
+      "transparentCoreSamples": 16535,
+      "transparentCoreErrors": 0,
+      "fullyLoaded": true
+    },
+    {
+      "src": "/media/full/images/zone_info03_text.jpg.webp",
+      "factor": 1,
+      "drawer": "canvas",
+      "rgbMeanError": 1.9945828032118915,
+      "alphaMeanError": 0.14160393074798086,
+      "transparentErrors": 237,
+      "transparentCoreSamples": 97308,
+      "transparentCoreErrors": 0,
+      "fullyLoaded": true
+    },
+    {
+      "src": "/media/full/images/zone_info03_text.jpg.webp",
+      "factor": 2,
+      "drawer": "canvas",
+      "rgbMeanError": 4.290478433136719,
+      "alphaMeanError": 0.2844028313756915,
+      "transparentErrors": 238,
+      "transparentCoreSamples": 61048,
+      "transparentCoreErrors": 0,
+      "fullyLoaded": true
+    },
+    {
+      "src": "/media/full/images/zone_info03_text.jpg.webp",
+      "factor": 4,
+      "drawer": "canvas",
+      "rgbMeanError": 5.797740804003852,
+      "alphaMeanError": 0,
+      "transparentErrors": 0,
+      "transparentCoreSamples": 0,
+      "transparentCoreErrors": 0,
+      "fullyLoaded": true
+    }
+  ],
+  "panAndHome": true
+}

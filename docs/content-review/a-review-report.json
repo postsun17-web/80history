@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "shard": "a",
+  "status": "complete",
+  "output": "E:/CodexAssets/youngnak-title-review/a.json",
+  "coverage": {
+    "pages": {
+      "expected": 90,
+      "reviewedImages": 90
+    },
+    "articles": {
+      "expected": 83,
+      "readWholeBodies": 83,
+      "imageOnlyArticlesInspected": [
+        "html/a03_14.html",
+        "html/a03_18.html"
+      ]
+    },
+    "galleries": {
+      "expected": 246,
+      "reviewedImagesAndXmlCaptions": 246
+    }
+  },
+  "changedTitles": {
+    "pages": 75,
+    "articles": 83,
+    "galleries": 32
+  },
+  "preservedTitles": {
+    "pages": 15,
+    "articles": 0,
+    "galleries": 214
+  },
+  "darkMatteCount": 56,
+  "darkMattePageKeys": [
+    "a03:1",
+    "a03:2",
+    "a03:3",
+    "a03:4",
+    "a03:5",
+    "a03:6",
+    "a03:8",
+    "a03:10",
+    "a03:11",
+    "a03:12",
+    "a04:1",
+    "a04:2",
+    "a04:3",
+    "a04:6",
+    "a04:7",
+    "a04:8",
+    "a05:1",
+    "a05:2",
+    "a05:3",
+    "a05:4",
+    "a05:5",
+    "a05:6",
+    "a05:7",
+    "a05:12",
+    "a05:14",
+    "a06:1",
+    "a06:2",
+    "a06:3",
+    "a06:4",
+    "a06:5",
+    "a06:6",
+    "a06:7",
+    "a06:8",
+    "a06:9",
+    "a06:10",
+    "a06:11",
+    "a06:12",
+    "a06:13",
+    "a06:14",
+    "a06:15",
+    "a06:16",
+    "a06:17",
+    "a06:18",
+    "a06:19",
+    "a06:20",
+    "a06:21",
+    "a06:22",
+    "a06:23",
+    "a06:24",
+    "a06:25",
+    "a06:26",
+    "a06:27",
+    "a06:28",
+    "a06:29",
+    "a07:4",
+    "a07:14"
+  ],
+  "sourceLinkingIssues": [
+    {
+      "page": "a07:20",
+      "linkedArticles": [
+        "html/a07_08.html"
+      ],
+      "actualImageSubject": "영락교회 신앙포털 앱과 김운성 목사의 말씀산책",
+      "linkedArticleSubject": "영락사회복지재단의 공공복지시설 위탁 운영",
+      "relevantImagePage": "a07:21",
+      "action": "Page title follows actual image; article title follows complete HTML; original hotspot links remain unchanged."
+    }
+  ],
+  "blankEntries": [
+    {
+      "id": "a07:35",
+      "title": "원본의 빈 이미지",
+      "evidence": {
+        "size": [
+          512,
+          70
+        ],
+        "allPixelsRgb": [
+          255,
+          255,
+          255
+        ],
+        "xmlImagePathContains": "blank"
+      },
+      "action": "Retain record; factual title, no invented subject."
+    },
+    {
+      "id": "a07:36",
+      "title": "원본의 빈 이미지",
+      "evidence": {
+        "size": [
+          512,
+          70
+        ],
+        "allPixelsRgb": [
+          255,
+          255,
+          255
+        ],
+        "xmlImagePathContains": "blank"
+      },
+      "action": "Retain record; factual title, no invented subject."
+    },
+    {
+      "id": "a07:37",
+      "title": "원본의 빈 이미지",
+      "evidence": {
+        "size": [
+          512,
+          70
+        ],
+        "allPixelsRgb": [
+          255,
+          255,
+          255
+        ],
+        "xmlImagePathContains": "blank"
+      },
+      "action": "Retain record; factual title, no invented subject."
+    },
+    {
+      "id": "a07:38",
+      "title": "원본의 빈 이미지",
+      "evidence": {
+        "size": [
+          512,
+          70
+        ],
+        "allPixelsRgb": [
+          255,
+          255,
+          255
+        ],
+        "xmlImagePathContains": "blank"
+      },
+      "action": "Retain record; factual title, no invented subject."
+    },
+    {
+      "id": "a07:39",
+      "title": "원본의 빈 이미지",
+      "evidence": {
+        "size": [
+          512,
+          70
+        ],
+        "allPixelsRgb": [
+          255,
+          255,
+          255
+        ],
+        "xmlImagePathContains": "blank"
+      },
+      "action": "Retain record; factual title, no invented subject."
+    }
+  ],
+  "sourceDiscrepancies": [
+    {
+      "id": "a06:31",
+      "kind": "gallery date conflict",
+      "detail": "XML 1975.3.14 vs A06:13 caption 1974.3.14; title omits disputed date."
+    },
+    {
+      "id": "a06:59",
+      "kind": "gallery date conflict",
+      "detail": "XML/HTML 1989.3.2 vs A06:22 caption 1989.3.22; title omits disputed date."
+    },
+    {
+      "id": "a06:9",
+      "kind": "gallery date correction",
+      "detail": "XML 1973.1.12 replaced with 1973.1.2 based on photo banner and A06:4."
+    },
+    {
+      "id": "a06:52",
+      "kind": "gallery date correction",
+      "detail": "XML 1985.9.25 replaced with 1988.12.5 based on A06:18 photo caption and appointment context."
+    },
+    {
+      "id": "a04:11",
+      "kind": "gallery building name correction",
+      "detail": "XML 예루살렘 성전 corrected to 베들레헴 성전 based on actual building and a04_12 body/caption."
+    },
+    {
+      "ids": [
+        "a07-01:6",
+        "a07-01:7"
+      ],
+      "kind": "gallery captions cross-assigned",
+      "detail": "Image6 banner 복음의 흔적, image7 banner Joseph Project. Use actual banner titles; avoid disputed school group/place/date."
+    },
+    {
+      "id": "a07:11",
+      "kind": "panel source typo",
+      "detail": "70th anniversary image says 2025 in one body/caption line but other image captions say 2015. No year included in new title."
+    },
+    {
+      "id": "a07-02:0",
+      "kind": "gallery uncertain funeral date",
+      "detail": "XML uses death date 2000.4.19; HTML describes funeral events around 4.24. Title omits date."
+    }
+  ],
+  "validation": {
+    "exactOwnedKeyCoverage": true,
+    "allSourceFilesExist": true,
+    "allTitlesNonblank": true,
+    "noRawNumberPipePrefixes": true,
+    "noTruncatedEllipsisTitles": true,
+    "originalMediaChanged": false,
+    "sourceOrGitChanges": false
+  },
+  "method": "Read every A panel image using ivory/dark contact sheets; read all 83 full HTML bodies including captions; visually inspect every A gallery image alongside XML scene title; inspect image-only articles at native resolution. Analysis files are on E drive."
+}
