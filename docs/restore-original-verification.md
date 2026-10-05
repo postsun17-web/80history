@@ -38,3 +38,14 @@
 - E:/CodexAssets/youngnak-visitor-qa/output/playwright/restored-c02-mobile.png
 
 최소 이동 편의 기능은 후속 별도 브랜치와 로컬 미리보기에서 구현한다. 이 복원 배포에는 추가하지 않는다.
+
+## 공개 배포 확인
+2026-10-05 원본 복원 커밋 `14b0309`를 GitHub `postsun17-web/80history`의 `main` 및 `fix/restore-original-rooms`에 푸시했다.
+
+- 기존 주소: https://youngnak-museum-poc.vercel.app/
+- 배포 ID: dpl_FThN8fzNSX9WTiZKKUxvheMC4P26
+- 빌드 진입 파일: /assets/index-hatQmsBJ.js
+- 공개 주소의 C02 원본 파일 102개를 다시 다운로드해 모든 크기와 SHA-256 일치를 확인했다.
+- 공개 주소에서도 C02 8페이지, 인접 이동, 옛 E 링크, raw + 주소, 지도51점/공간62개를 확인했다.
+- 교회 지붕과 십자가가 보이는 첫 공간의 위쪽 시선 화면도 확인했다.
+- 제거된 youngnak-museum-ux 주소는 HTTP404이다.
