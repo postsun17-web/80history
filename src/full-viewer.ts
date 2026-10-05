@@ -151,9 +151,12 @@ export class FullViewer {
    if(h.points?.length)return {...base,polygon:h.points.map(p=>toPosition(...p)),svgStyle:{fill:'rgba(255,255,255,.01)',stroke:'transparent'}};
    if(a.linkedscene&&action){
     const title=this.data.scenes.find(s=>s.id===a.linkedscene.toLowerCase())?.title||'이동';
-    const button=document.createElement('button');button.className='walk-hotspot';button.setAttribute('aria-label',title+' 이동');button.innerHTML='<span aria-hidden="true">⌃</span>';
-    button.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();this.action(action!);}});
-    return {...base,tooltip:title+' 이동',element:button,position:position()};
+    const button=document.createElement('button');button.type='button';button.className='walk-hotspot';button.setAttribute('aria-label',title+' 이동');
+    button.innerHTML='<svg class="walk-hotspot-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 14 6-6 6 6"/></svg>';
+    // The label stays outside the measured button so the source marker anchor is unchanged.
+    const destination=document.createElement('span');destination.className='walk-hotspot-label';destination.textContent=title;destination.setAttribute('aria-hidden','true');button.append(destination);
+    button.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();if(!e.repeat)this.action(action!);}});
+    return {...base,tooltip:{content:title+' 이동',position:'top center'},element:button,position:position()};
    }
    const wallVideo=h.name==='iframe'&&action?.type==='youtube'&&a.onloaded?.includes('add_iframe');
    const url=wallVideo?mediaScreen:a.videourl?this.url(a.videourl):a.url&&!/\.js(?:\?|$)/.test(a.url)?this.url(a.url):'';
