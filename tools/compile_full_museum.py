@@ -149,7 +149,7 @@ class EbookCards(HTMLParser):
                 self.card = None
 
 
-def compile_museum(source: Path, existing_file: Path, runtime_styles_file: Path) -> dict:
+def compile_museum(source: Path, runtime_styles_file: Path) -> dict:
     text_cache = {}
     tree_cache = {}
     def text(path):
@@ -192,27 +192,12 @@ def compile_museum(source: Path, existing_file: Path, runtime_styles_file: Path)
             "hotspots": [hotspot(h) for h in source_hotspots],
         }
         if point:
-            entry["map"] = {"x": float(point["x"]) / 2200 * 100, "y": float(point["y"]) / 2220 * 100, "heading": float(point.get("heading2", "0"))}
+            entry["map"] = {"x": float(point["x"]) / 1733 * 100, "y": float(point["y"]) / 2220 * 100, "heading": float(point.get("heading2", "0"))}
         if scene_id in scene_zone:
             entry["zone"] = scene_zone[scene_id]
-        if scene_id == "scene_c-s-e+1":
-            entry["pano"] = {"root": "/media/v1/panos/c-right", "faceSize": 2048, "tiles": 4, "level": 2, "ext": "jpg"}
         scenes.append(entry)
 
-    existing = json.loads(existing_file.read_text(encoding="utf-8"))
-    for s in existing["scenes"]:
-        if s["id"].startswith("scene_ext-"):
-            scenes.append({"id": s["id"], "title": s["title"], "source": "approved-e-extension", "view": [s["ath"], s["atv"], s["fov"]], "map": s["map"], "pano": {"root": "/media/v1/panos/" + s["key"], **s["pano"]}, "hotspots": []})
     by_id = {s["id"]: s for s in scenes}
-    ext_links = [
-        ("scene_c-s-e+1", "scene_ext-e-entry", 90, 15, "E 전시실로", "90,0,100"),
-        ("scene_ext-e-entry", "scene_c-s-e+1", -90, 15, "C존으로 돌아가기", "-92,0,105"),
-        ("scene_ext-e-entry", "scene_ext-e-center", 90, 16, "E 전시실 안쪽으로", "90,0,100"),
-        ("scene_ext-e-center", "scene_ext-e-entry", -90, 16, "E 전시실 입구로", "-90,0,100"),
-    ]
-    for origin, target, yaw, pitch, label, look in ext_links:
-        name = "extension_to_" + target
-        by_id[origin]["hotspots"].append({"name": name, "attrs": {"name": name, "style": "skin_hotspotstyle", "ath": str(yaw), "atv": str(pitch), "linkedscene": target, "linkedscene_lookat": look, "tooltip": label}})
 
     zones = []
     action_files = sorted(p.name for p in source.glob("list_*_action.xml"))
@@ -369,7 +354,7 @@ def compile_museum(source: Path, existing_file: Path, runtime_styles_file: Path)
     # Resolve only the asset path; retain source geometry and absent onclick.
     for raw in ["images/obob002-3.png", "%FIRSTXML%/images/obob002-3.png"]:
         assets[raw] = asset_url("images/ob002-3.png")
-    return {"scenes": scenes, "zones": zones, "galleries": galleries, "articles": articles, "menus": menus, "quickMenu": quick, "mediaSections": media_sections, "ebooks": ebooks, "styles": styles, "assets": dict(sorted(assets.items())), "map": asset_url("floorplan_SM/plan/map.png"), "mapSize": [2200, 2220], "logo": asset_url("images/logo1.png"), "intro": asset_url("info/intro.png")}
+    return {"scenes": scenes, "zones": zones, "galleries": galleries, "articles": articles, "menus": menus, "quickMenu": quick, "mediaSections": media_sections, "ebooks": ebooks, "styles": styles, "assets": dict(sorted(assets.items())), "map": asset_url("floorplan_SM/plan/map.png"), "mapSize": [1733, 2220], "logo": asset_url("images/logo1.png"), "intro": asset_url("info/intro.png")}
 
 
 def validate(data: dict, source: Path) -> dict:
@@ -397,7 +382,7 @@ def main():
     parser.add_argument("--source", type=Path, default=PROJECT / ".cache/full-source")
     parser.add_argument("--output", type=Path, default=PROJECT / "src/data/full-museum.json")
     args = parser.parse_args()
-    data = compile_museum(args.source, PROJECT / "src/data/museum.json", PROJECT / ".cache/runtime-styles.json")
+    data = compile_museum(args.source, PROJECT / ".cache/runtime-styles.json")
     counts = validate(data, args.source)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

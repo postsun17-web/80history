@@ -3,6 +3,18 @@ import assert from 'node:assert/strict';
 import {parseFullRoute, fullRouteUrl} from '../src/full-navigation.ts';
 const scenes=[{id:'scene_vr02'}, {id:'scene_c-s-e+1',zone:'c02'},{id:'scene_a-c-e+1',zone:'a06'}];
 const zones=[{id:'c02',pages:Array(8).fill({})},{id:'a06',pages:Array(29).fill({})}];
+
+test('retired E-room links normalize to original C02 page and view, discarding stale content',()=>{
+ for(const id of ['scene_ext-e-entry','scene_ext-e-center','SCENE_EXT-E-ENTRY']){
+  const route=parseFullRoute(`?startscene=${id}&page=8&startlookat=-90,20,80&exhibit=panel`,scenes,zones);
+  assert.deepEqual(route,{scene:'scene_c-s-e+1',page:1,look:[90,0,105]});
+  assert.equal(fullRouteUrl(route),'?startscene=scene_c-s-e%2B1&page=1&startlookat=90%2C0%2C105');
+ }
+});
+
+test('original scene_e lobby viewpoints remain valid destinations',()=>{
+ assert.deepEqual(parseFullRoute('?startscene=scene_e-c-0',[...scenes,{id:'scene_e-c-0'}],zones),{scene:'scene_e-c-0',page:1});
+});
 test('original upper case and raw plus deep links resolve against the full catalogue',()=>{
  assert.equal(parseFullRoute('?startscene=scene_C-s-e+1&page=8',scenes,zones).scene,'scene_c-s-e+1');
  assert.equal(parseFullRoute('?startscene=scene_C-s-e%2B1&page=80',scenes,zones).page,8);

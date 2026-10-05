@@ -5,7 +5,6 @@ import {assetUrl,sourcePath,type FullMuseum,type SourceHotspot} from './full-typ
 import {decodeAction,type SourceAction} from './source-actions';
 import {projectPlane} from './source-projection';
 import {applySourcePlane} from './source-plane-mesh';
-import {besideEDoor} from './e-room-layout';
 import mediaScreen from './assets/media-screen.svg';
 import {visiblePageControl,sourcePageControlPosition} from './source-page-controls';
 import {toPosition,verticalFov} from './navigation';
@@ -61,8 +60,8 @@ export class FullViewer {
    this.dimensions.clear();this.markerImages.clear();
    const p=scene.pano,baseUrl=Object.fromEntries(Object.entries(faces).map(([name,f])=>[name,`${p.root}/${f}/base.webp`])) as Record<keyof typeof faces,string>;
    await Promise.all(Object.values(baseUrl).map(src=>this.size(src)));
-   // Delivered krpano polar faces need a 180° turn; the generated E rooms already use PSV orientation.
-   const panorama:CubemapMultiTilesPanorama={baseUrl,flipTopBottom:scene.source!=='approved-e-extension',levels:[{faceSize:p.faceSize,nbTiles:p.tiles}],tileUrl:(face,col,row)=>`${p.root}/${faces[face]}/${p.level}/${row}_${col}.${p.ext}`};
+   // Delivered krpano polar faces need a 180° turn.
+   const panorama:CubemapMultiTilesPanorama={baseUrl,flipTopBottom:true,levels:[{faceSize:p.faceSize,nbTiles:p.tiles}],tileUrl:(face,col,row)=>`${p.root}/${faces[face]}/${p.level}/${row}_${col}.${p.ext}`};
    const look=route.look||scene.view;
    this.markers.clearMarkers();
    await this.viewer.setPanorama(panorama,{position:toPosition(look[0],look[1]),zoom:this.zoom(look[2]),transition:this.scene?{speed:500,rotation:false,effect:'fade'}:false});
@@ -125,8 +124,7 @@ export class FullViewer {
    const defaultLabels:Record<string,string>={scene:'다른 공간으로 이동',page:'전시 페이지',gallery:'사진 보기',article:'설명 더 보기',youtube:'영상 보기',object:'유물 둘러보기',books:'전자책',chatbot:'챗봇',help:'관람 안내',image:'크게 보기',video:'영상 보기',audio:'해설 듣기',document:'자료 읽기'};
    const sourceLabel=a.tooltip||a.title||a.html||a.text||'';
    const label=((/^hotspot_\d+$/.test(sourceLabel)?'':sourceLabel)||defaultLabels[action?.type||'']||'자료 보기').replace(/\[br\]/g,' ').replace(/<[^>]+>/g,'');
-   const besideDoor=scene.id==='scene_c-s-e+1'&&(dynamicPanel||!!page?.hotspots.includes(h)||/^(?:listspot_|next_|prev_)/.test(h.name));
-   const position=()=>{const p=toPosition(Number(a.ath),Number(a.atv));return besideDoor?besideEDoor({...p,distance:1},true):p;};
+   const position=()=>toPosition(Number(a.ath),Number(a.atv));
    const base={id,data:{action},tooltip:action?label:undefined,zIndex:Math.min(1000,Number(a.zorder)||1)};
    if(h.points?.length)return {...base,polygon:h.points.map(p=>toPosition(...p)),svgStyle:{fill:'rgba(255,255,255,.01)',stroke:'transparent'}};
    if(a.linkedscene&&action){
@@ -142,8 +140,7 @@ export class FullViewer {
      const [w,h]=await this.size(url,!!a.videourl);
      const opacity=a.alpha===undefined?1:Number(a.alpha);
      if(a.distorted==='true'||dynamicPanel||a.videourl){
-      const originalPlane=projectPlane(a,w,h);
-      const plane=(besideDoor?originalPlane.map(p=>besideEDoor(p)):originalPlane) as typeof originalPlane;
+      const plane=projectPlane(a,w,h);
       if(a.videourl){
        const chroma=(a.chromakey||'').split('|');
        return {...base,data:{...base.data,sourcePlane:plane,shouldAutoplay:a.pausedonstart!=='true'},videoLayer:url,position:plane,opacity,autoplay:false,...(a.chromakey?{chromaKey:{enabled:true,color:Number(chroma[0]),similarity:Number(chroma[1]),smoothness:Number(chroma[2])}}:{})};
@@ -152,8 +149,8 @@ export class FullViewer {
       if(opacity===0&&action)return {...base,polygon:plane,svgStyle:{fill:'rgba(255,255,255,.001)',stroke:'transparent'}};
       return {...base,data:{...base.data,sourcePlane:plane},imageLayer:url,position:plane,opacity};
      }
-     const scale=(Number(a.scale)||1)*(besideDoor?.65:1),width=(Number(a.width)||w)*scale,height=(Number(a.height)||width*h/w),minimum=besideDoor?8:16;
-     return {...base,opacity,image:url,size:{width:Math.max(minimum,Math.min(width,300)),height:Math.max(minimum,Math.min(height,300))},position:position()};
+     const scale=Number(a.scale)||1,width=(Number(a.width)||w)*scale,height=(Number(a.height)||width*h/w);
+     return {...base,opacity,image:url,size:{width:Math.max(16,Math.min(width,300)),height:Math.max(16,Math.min(height,300))},position:position()};
     }catch(error){console.warn('Unable to render source hotspot',h.name,error);}
    }
    if(!action&&a.style?.split('|').includes('callout')){

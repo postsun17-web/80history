@@ -172,9 +172,29 @@ def verify(root: Path, source: Path, max_examples: int = 12, write_assets: Path 
     if len(scenes) != len(data["scenes"]):
         error("scenes", "Duplicate compiled scene IDs")
     missing_scenes = sorted(original_ids - set(scenes))
-    extra_originals = sorted(s for s in scenes if not s.startswith("scene_ext-") and s not in original_ids)
+    extra_originals = sorted(set(scenes) - original_ids)
     if missing_scenes or extra_originals:
         error("scenes", f"Source scene mismatch missing={missing_scenes}, extra={extra_originals}")
+    expected_links = Counter((s.get("name").lower(), h.get("name"), h.get("linkedscene").lower())
+                             for s in originals for h in s.findall("hotspot") if h.get("linkedscene"))
+    actual_links = Counter((s["id"], h["name"], h["attrs"]["linkedscene"].lower())
+                           for s in scenes.values() for h in s["hotspots"] if h["attrs"].get("linkedscene"))
+    if actual_links != expected_links:
+        error("scene-links", f"Source direct connection mismatch missing={dict(expected_links - actual_links)}, extra={dict(actual_links - expected_links)}")
+    map_points = {n.get("erscena").lower(): n.attrib for n in xml("floorplan_SM/setting_FP.xml").iter("layer") if n.get("erscena")}
+    if data.get("mapSize") != [1733, 2220]:
+        error("floorplan", f"Original map dimensions changed: {data.get('mapSize')}")
+    if {sid for sid, scene in scenes.items() if scene.get("map")} != set(map_points):
+        error("floorplan", "Source floorplan viewpoint set changed")
+    for sid in original_ids & set(scenes):
+        expected_pano = {"root": f"/media/full/panos/{sid}", "faceSize": 2048, "tiles": 4, "level": 2, "ext": "webp"}
+        if scenes[sid]["pano"] != expected_pano:
+            error("panoramas", f"Original panorama source changed: {sid}")
+        if sid in map_points:
+            point = map_points[sid]
+            expected_map = {"x": float(point["x"]) / 1733 * 100, "y": float(point["y"]) / 2220 * 100, "heading": float(point.get("heading2", "0"))}
+            if any(abs(scenes[sid].get("map", {}).get(key, float("inf")) - value) > 1e-8 for key, value in expected_map.items()):
+                error("floorplan", f"Original map position changed: {sid}")
     original_graph = source_graph(originals)
     globals_ = xml("pannel.xml").findall("hotspot")
     expected_scene_hotspot_count = 0
@@ -237,9 +257,6 @@ def verify(root: Path, source: Path, max_examples: int = 12, write_assets: Path 
     lost_walk = sorted((source_walked & original_ids) - walked)
     if lost_walk:
         error("reachability", f"Previously walkable source viewpoints lost: {lost_walk}")
-    for sid in scenes:
-        if sid.startswith("scene_ext-") and sid not in walked:
-            error("reachability", f"Approved extension is not walkable from lobby: {sid}")
     ui_entries = {s["id"] for s in scenes.values() if s.get("map")}
     ui_entries.update(item["scene"] for m in data["menus"] for item in m["items"] if item.get("scene"))
     ui_reachable = reachable(graph, walked | ui_entries)

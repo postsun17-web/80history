@@ -30,14 +30,14 @@ export class MuseumViewer {
  async show(route:Route) {
   const scene=data.scenes.find(s=>s.id===route.scene)!;
   if(this.scene!==scene.id){
-   const root=`/media/v1/panos/${scene.key}`;
    const config='pano' in scene ? scene.pano : null;
+   const root=config&&'root' in config?config.root:`/media/v1/panos/${scene.key}`;
    const base=Object.fromEntries(Object.entries(faceNames).map(([name,face])=>[name,`${root}/${face}/base.webp`])) as Record<keyof typeof faceNames,string>;
    await Promise.all(Object.values(base).map(src=>new Promise<void>((resolve,reject)=>{
     const img=new Image();img.onload=()=>resolve();img.onerror=()=>reject(new Error(`Cannot load panorama face: ${src}`));img.src=src;
    })));
    const panorama:CubemapMultiTilesPanorama={
-    baseUrl:base,
+    baseUrl:base,flipTopBottom:true,
     levels:config?[{faceSize:config.faceSize,nbTiles:config.tiles}]:[{faceSize:2048,nbTiles:4},{faceSize:3840,nbTiles:8}],
     tileUrl:(face,col,row,level)=>`${root}/${faceNames[face]}/${config?config.level:level+2}/${row}_${col}.${config?config.ext:level===0?'jpg':'webp'}`};
    const look=route.look||[scene.ath,scene.atv,scene.fov];

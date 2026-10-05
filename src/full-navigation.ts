@@ -2,6 +2,7 @@ export type FullRoute={scene:string;page:number;look?:[number,number,number];exh
 export function parseFullRoute(search:string,scenes:{id:string;zone?:string}[],zones:{id:string;pages:unknown[]}[]):FullRoute{
  const params=new URLSearchParams(search.replace(/\+/g,'%2B'));
  const requested=(params.get('startscene')||'').toLowerCase();
+ if((requested==='scene_ext-e-entry'||requested==='scene_ext-e-center')&&scenes.some(s=>s.id==='scene_c-s-e+1'))return {scene:'scene_c-s-e+1',page:1,look:[90,0,105]};
  const scene=scenes.find(s=>s.id===requested)||scenes.find(s=>s.id==='scene_vr02')||scenes[0];
  const max=zones.find(z=>z.id===scene.zone)?.pages.length||1;
  const route:FullRoute={scene:scene.id,page:Math.max(1,Math.min(max,Math.trunc(Number(params.get('page')))||1))};

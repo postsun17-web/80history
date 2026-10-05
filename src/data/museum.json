@@ -10,7 +10,7 @@
       "atv": 0,
       "fov": 100,
       "map": {
-        "x": 39.272727272727266,
+        "x": 49.85574148874783,
         "y": 78.82882882882883,
         "heading": 179.5
       },
@@ -27,7 +27,7 @@
       "atv": 0,
       "fov": 95,
       "map": {
-        "x": 39.36363636363637,
+        "x": 49.971148297749565,
         "y": 45.090090090090094,
         "heading": 179.5
       },
@@ -44,7 +44,7 @@
       "atv": 0,
       "fov": 95,
       "map": {
-        "x": 33.22727272727273,
+        "x": 42.18118869013272,
         "y": 40.22522522522522,
         "heading": 179.51
       },
@@ -61,7 +61,7 @@
       "atv": 0,
       "fov": 105,
       "map": {
-        "x": 48.77272727272727,
+        "x": 61.915753029428735,
         "y": 45.22522522522522,
         "heading": 179.5
       },
@@ -84,7 +84,7 @@
       "atv": 0,
       "fov": 105,
       "map": {
-        "x": 60.13636363636363,
+        "x": 76.34160415464513,
         "y": 45.67567567567568,
         "heading": 179.5
       },
@@ -107,7 +107,7 @@
       "atv": 0,
       "fov": 105,
       "map": {
-        "x": 60.13636363636363,
+        "x": 76.34160415464513,
         "y": 41.891891891891895,
         "heading": 179.5
       },
@@ -125,67 +125,22 @@
       "key": "c-right",
       "title": "C존 오른쪽",
       "label": "C · EAST",
-      "subtitle": "새 전시실로 이어지는 곳",
+      "subtitle": "영락교회 사회봉사기관",
       "ath": 90,
       "atv": 0,
       "fov": 105,
       "map": {
-        "x": 65.13636363636364,
+        "x": 82.68897864974033,
         "y": 41.75675675675676,
         "heading": 179.5
       },
       "viewSource": "tour.xml and floorplan_SM/setting_FP.xml; framing chosen for linked room",
-      "thumb": "/media/v1/thumbs/c-right.jpg",
+      "thumb": "/media/full/panos/scene_c-s-e+1/r/base.webp",
       "pano": {
+        "root": "/media/full/panos/scene_c-s-e+1",
         "faceSize": 2048,
         "tiles": 4,
         "level": 2,
-        "ext": "jpg"
-      }
-    },
-    {
-      "id": "scene_ext-e-entry",
-      "key": "e-entry",
-      "title": "E 전시실 입구",
-      "label": "E · ENTRY",
-      "subtitle": "새로운 전시를 준비하는 공간",
-      "ath": 90,
-      "atv": 0,
-      "fov": 100,
-      "map": {
-        "x": 75.0,
-        "y": 41.891891891891895,
-        "heading": 179.5
-      },
-      "viewSource": "Proposed E-room extension; original did not contain these rooms",
-      "thumb": "/media/v1/thumbs/e-entry.jpg",
-      "pano": {
-        "faceSize": 1024,
-        "tiles": 1,
-        "level": 1,
-        "ext": "webp"
-      }
-    },
-    {
-      "id": "scene_ext-e-center",
-      "key": "e-center",
-      "title": "E 전시실",
-      "label": "E · GALLERY",
-      "subtitle": "기존 공간과 이어지는 빈 전시실",
-      "ath": -90,
-      "atv": 0,
-      "fov": 100,
-      "map": {
-        "x": 84.54545454545455,
-        "y": 38.288288288288285,
-        "heading": 179.5
-      },
-      "viewSource": "Proposed E-room extension; original did not contain these rooms",
-      "thumb": "/media/v1/thumbs/e-center.jpg",
-      "pano": {
-        "faceSize": 1024,
-        "tiles": 1,
-        "level": 1,
         "ext": "webp"
       }
     }
@@ -929,7 +884,7 @@
   ],
   "map": "/media/v1/map.png",
   "mapSize": [
-    2200,
+    1733,
     2220
   ],
   "video": {

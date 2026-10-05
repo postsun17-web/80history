@@ -6,8 +6,8 @@ import {sceneLinks} from '../src/scene-links.ts';
 const museum=JSON.parse(readFileSync(new URL('../src/data/museum.json',import.meta.url),'utf8'));
 const ids=new Set(museum.scenes.map((scene:{id:string})=>scene.id));
 
-test('visitors can walk from the lobby to E and back through adjacent scenes',()=>{
- assert.equal(ids.size,9);
+test('legacy visitors can walk from the lobby to original C and back',()=>{
+ assert.equal(ids.size,7);
  const walk=(start:string,target:string)=>{
   const seen=new Set([start]);let frontier=[start];
   while(frontier.length){
@@ -20,8 +20,8 @@ test('visitors can walk from the lobby to E and back through adjacent scenes',()
   }
   return false;
  };
- assert.equal(walk('scene_f-c-0','scene_ext-e-center'),true);
- assert.equal(walk('scene_ext-e-center','scene_f-c-0'),true);
+ assert.equal(walk('scene_f-c-0','scene_c-s-e+1'),true);
+ assert.equal(walk('scene_c-s-e+1','scene_f-c-0'),true);
  for(const link of sceneLinks){
   assert.ok(ids.has(link.from),`unknown source ${link.from}`);
   assert.ok(ids.has(link.to),`unknown destination ${link.to}`);
@@ -30,7 +30,12 @@ test('visitors can walk from the lobby to E and back through adjacent scenes',()
  }
 });
 
-test('the E doorway is connected in both directions to the right edge of C',()=>{
- assert.ok(sceneLinks.some(link=>link.from==='scene_c-s-e+1'&&link.to==='scene_ext-e-entry'));
- assert.ok(sceneLinks.some(link=>link.from==='scene_ext-e-entry'&&link.to==='scene_c-s-e+1'));
+test('legacy catalogue and navigation cannot enter the retired E extension',()=>{
+ assert.equal([...ids].some(id=>String(id).startsWith('scene_ext-')),false);
+ assert.equal(sceneLinks.some(link=>link.from.startsWith('scene_ext-')||link.to.startsWith('scene_ext-')),false);
+ const c02=museum.scenes.find((scene:{id:string})=>scene.id==='scene_c-s-e+1');
+ assert.equal(c02.pano.root,'/media/full/panos/scene_c-s-e+1');
+ assert.equal(c02.pano.ext,'webp');
+ assert.deepEqual(museum.mapSize,[1733,2220]);
+ assert.ok(Math.abs(c02.map.x-1433/1733*100)<1e-9);
 });
