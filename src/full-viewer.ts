@@ -9,6 +9,7 @@ import mediaScreen from './assets/media-screen.svg';
 import {visiblePageControl,sourcePageControlPosition} from './source-page-controls';
 import {toPosition,verticalFov} from './navigation';
 import type {FullRoute} from './full-navigation';
+import {allowWalkActivation,walkDestination} from './navigation-assist';
 import '@photo-sphere-viewer/core/index.css';
 import '@photo-sphere-viewer/markers-plugin/index.css';
 
@@ -31,7 +32,10 @@ export class FullViewer {
    if(cached){args[1]?.(100);return Promise.resolve(cached);}
    return loadImage(...args);
   };
-  this.markers.addEventListener('select-marker',({marker})=>{if(marker.data?.action)this.action(marker.data.action);});
+  this.markers.addEventListener('select-marker',event=>{
+   const action=event.marker.data?.action;
+   if(action&&(action.type!=='scene'||allowWalkActivation(event)))this.action(action);
+  });
   this.viewer.addEventListener('position-updated',({position})=>heading(position.yaw*180/Math.PI));
  }
  getLook():[number,number,number]{
@@ -63,8 +67,15 @@ export class FullViewer {
    // Delivered krpano polar faces need a 180° turn.
    const panorama:CubemapMultiTilesPanorama={baseUrl,flipTopBottom:true,levels:[{faceSize:p.faceSize,nbTiles:p.tiles}],tileUrl:(face,col,row)=>`${p.root}/${faces[face]}/${p.level}/${row}_${col}.${p.ext}`};
    const look=route.look||scene.view;
-   this.markers.clearMarkers();
-   await this.viewer.setPanorama(panorama,{position:toPosition(look[0],look[1]),zoom:this.zoom(look[2]),transition:this.scene?{speed:500,rotation:false,effect:'fade'}:false});
+   this.markers.clearMarkers();this.page=0;
+   try{
+    const changed=await this.viewer.setPanorama(panorama,{position:toPosition(look[0],look[1]),zoom:this.zoom(look[2]),transition:this.scene?{speed:500,rotation:false,effect:'fade'}:false});
+    if(!changed)throw new Error('Panorama change was cancelled: '+scene.id);
+   }catch(error){
+    // PSV updates its panorama config before loading. Rollback must reload the
+    // original panorama, including adapter tile URLs and any error overlay.
+    this.scene='';throw error;
+   }
    this.scene=scene.id;this.page=0;
   }else if(route.look){this.viewer.rotate(toPosition(route.look[0],route.look[1]));this.viewer.zoom(this.zoom(route.look[2]));}
   if(this.page!==route.page){await this.updateMarkers(route);this.page=route.page;}
@@ -129,8 +140,10 @@ export class FullViewer {
    if(h.points?.length)return {...base,polygon:h.points.map(p=>toPosition(...p)),svgStyle:{fill:'rgba(255,255,255,.01)',stroke:'transparent'}};
    if(a.linkedscene&&action){
     const title=this.data.scenes.find(s=>s.id===a.linkedscene.toLowerCase())?.title||'이동';
-    const button=document.createElement('button');button.className='walk-hotspot';button.setAttribute('aria-label',title+' 이동');button.innerHTML='<span aria-hidden="true">⌃</span>';
-    button.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();this.action(action!);}});
+    const button=document.createElement('button');button.className='walk-hotspot';button.setAttribute('aria-label',title+' 이동');
+    const icon=document.createElement('span');icon.className='walk-icon';icon.setAttribute('aria-hidden','true');icon.textContent='⌃';
+    const destination=document.createElement('span');destination.className='walk-destination';destination.textContent=walkDestination(title);button.append(icon,destination);
+    button.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();if(allowWalkActivation(e))this.action(action!);}});
     return {...base,tooltip:title+' 이동',element:button,position:position()};
    }
    const wallVideo=h.name==='iframe'&&action?.type==='youtube'&&a.onloaded?.includes('add_iframe');
