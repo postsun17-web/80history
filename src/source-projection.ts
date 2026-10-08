@@ -1,4 +1,8 @@
 export type SphericalPoint={yaw:number;pitch:number;distance:number};
+export function hasSourcePosition(a:Record<string,string>,points?:readonly unknown[]):boolean{
+ // Source hotspots can omit either zero coordinate (B04/C04 omit ath).
+ return 'ath'in a||'ath2'in a||'atv'in a||'atv2'in a||!!points?.length;
+}
 export function projectPlane(a:Record<string,string>,naturalWidth:number,naturalHeight:number):[SphericalPoint,SphericalPoint,SphericalPoint,SphericalPoint]{
  const num=(k:string,d=0)=>Number.isFinite(Number(a[k]))?Number(a[k]):d;
  const scale=num('scale',1),factor=scale/500;

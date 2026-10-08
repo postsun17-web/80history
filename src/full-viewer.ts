@@ -6,7 +6,7 @@ import {decodeAction,type SourceAction} from './source-actions';
 import {titlesForMuseum} from './content-titles';
 import {panoramaSource} from './museum-viewer-data';
 import type {MuseumAudio} from './museum-audio';
-import {projectPlane} from './source-projection';
+import {hasSourcePosition,projectPlane} from './source-projection';
 import {applySourcePlane} from './source-plane-mesh';
 import mediaScreen from './assets/media-screen.svg';
 import {visiblePageControl,sourcePageControlPosition} from './source-page-controls';
@@ -136,7 +136,7 @@ export class FullViewer {
   this.activePage=route.page;
   const sources=[...scene.hotspots,...(page?.hotspots||[])];
   const markers=await Promise.all(sources.map(async(h,index):Promise<MarkerConfig|null>=>{
-   const a=this.resolve(h);if(!('ath'in a)&&!('ath2'in a)&&!h.points?.length)return null;
+   const a=this.resolve(h);if(!hasSourcePosition(a,h.points))return null;
    if(a.devices==='mobile')return null;
    a.ath=a.ath||a.ath2||'0';a.atv=a.atv||a.atv2||'0';
    const id=`source-${index}-${h.name}`;let action=this.hotspotAction(h);

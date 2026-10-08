@@ -1,6 +1,30 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {projectPlane} from '../src/source-projection.ts';
+import {hasSourcePosition,projectPlane} from '../src/source-projection.ts';
+import {readFileSync} from 'node:fs';
+import type {FullMuseum} from '../src/full-types.ts';
+
+test('all 21 primary exhibit panels remain renderable when the source omits a zero horizontal coordinate',()=>{
+ const museum=JSON.parse(readFileSync(new URL('../src/data/full-museum.json',import.meta.url),'utf8')) as FullMuseum;
+ const omittedYaw:string[]=[];
+ for(const zone of museum.zones){
+  const scene=museum.scenes.find(scene=>scene.id===zone.scene)!;
+  const panel=scene.hotspots.find(h=>h.name===`sector_${zone.id}_01`)!;
+  assert.ok(panel,zone.id);
+  const attrs=Object.assign({},...(panel.attrs.style||'').split('|').map(style=>museum.styles[style]||{}),panel.attrs);
+  assert.equal(hasSourcePosition(attrs,panel.points),true,`${zone.id}: primary panel must not be filtered out`);
+  if(!('ath'in attrs)){
+   omittedYaw.push(zone.id);
+   assert.deepEqual(projectPlane(attrs,2148,1245),projectPlane({...attrs,ath:'0'},2148,1245));
+  }
+ }
+ assert.deepEqual(omittedYaw,['b04','c04']);
+});
+test('source position accepts either axis or polygon points and still excludes non-spatial helpers',()=>{
+ for(const attrs of [{ath:'0'},{atv:'0'},{ath2:'0'},{atv2:'0'}])assert.equal(hasSourcePosition(attrs),true);
+ assert.equal(hasSourcePosition({},[[0,0],[1,0],[1,1]]),true);
+ assert.equal(hasSourcePosition({url:'loading.gif'},[]),false);
+});
 test('krpano 1000-unit distorted hotspot covers 90 degrees, as specified by hotspotworldscale=2',()=>{
  const p=projectPlane({ath:'0',atv:'0',width:'1000',height:'1000'},1000,1000);
  assert.ok(Math.abs(p[0].yaw+Math.PI/4)<1e-8);
