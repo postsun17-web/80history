@@ -17,8 +17,15 @@ The shared eligibility check accepts either horizontal or vertical coordinates (
 - Actual browser: all 17 C04/B04 pages load the correct visible 3D image texture through the page selector.
 - Mobile emulation: 390×844, C04 wall approach arrives at its original front viewpoint and displays its content; the enlarge button opens the correct image.
 - Desktop 1280×900: both first pages visible; B04 panel click opens its image and Escape closes it.
+- C04's original `morespot_1` button still opens `html/c04_01.html` (church-planting principles and support methods) above the restored panel.
 - Independent source/data and diff review: no findings; eligibility changes only for the two intended source panels.
 - Screenshots and test output: `E:/CodexAssets/youngnak-panel-qa/` (`before-mobile-c04.png`, `after-mobile-c04.png`, `after-desktop-c04.png`, `after-desktop-b04.png`, `mobile-c04-last.png`, `mobile-b04-last.png`, and zoom captures).
 - Mobile testing is browser emulation, not a physical device test.
 
-Deployment verification pending.
+## Deployment
+
+- Fix commit: `8b92c09`.
+- Staged production: `dpl_BGVzSjipKhn4fqynKNx2csvnbSox`, `https://youngnak-museum-osoh4zvv2-postsun17-webs-projects.vercel.app`.
+- Full Vercel build passed and verified all 66,557 source assets. Staged HTTP checks returned 200 for C04/B04 first images (`image/webp`, 106,022 and 481,064 bytes).
+- Staged JavaScript `index-DG5SBMqq.js` SHA-256 matches the locally tested production bundle: `8bec69647db633285cd2aef4810733ff884b601d1a3493580634200b592befde`.
+- Public promotion and browser verification pending.
