@@ -30,4 +30,6 @@ Approved plan: clicking a distant content-bearing wall approaches the existing f
 - Staged production deployment (public domain not yet promoted): `dpl_B8y298FUYivHTN3dE3a42hUyfUzU`, `https://youngnak-museum-6gn273lh0-postsun17-webs-projects.vercel.app`.
 - Vercel verified all 66,557 museum assets and ran the full TypeScript/Vite production build successfully. Code bundle `index-1Fhp05Db.js`, stylesheet `index-VK9_XlPy.css` match the local production build.
 - Staged browser verified desktop A wall hover → A03 front → image dialog, mobile touch C wall → C02 front → image dialog. No application errors. Memorial first floor still loads, has 1F/2F controls, and has no wall-approach controller. `stage-desktop-hover.png`, `stage-desktop-open.png`, `stage-mobile-arrival-c02.png`, `stage-mobile-open-c02.png` saved with the other evidence.
-- Public-domain promotion/verification pending.
+- The same staged production deployment was promoted successfully, then `https://youngnak-museum-poc.vercel.app/` and `/hkjmuseum.html` both returned HTTP 200 with the verified bundle hashes.
+- Public desktop D education wall → front viewpoint/page1 → image dialog passed with no application errors (`public-desktop-d-hover.png`, `public-desktop-d-open.png`). Public mobile touch C social-services wall → front viewpoint/page1 passed with no dialog (`public-mobile-c-arrival.png`).
+- GitHub `postsun17-web/80history` main includes the implementation and verification records. No source panorama, source XML, source museum manifest, sound file or deployment-asset archive changed.
