@@ -20,7 +20,14 @@ Approved plan: clicking a distant content-bearing wall approaches the existing f
 - History: A03 page4 facing A06 → A06 page1 → Back restores A03 page4 and yaw90/pitch3 view.
 - Failure recovery: aborted target panorama requests show the existing retry message; after restoring requests, retry succeeds and content opens (input lock released).
 - Independent browser checks passed: B civil-organization, C social-welfare and D education walls approach and stop in 3D; C next-page control stays in its scene/page2; E far portrait approaches the timeline and the near portrait opens its gallery; the B movement arrow and A freestanding object retain their original action. These runs had no console errors.
+- Static-wall browser review passed F welcome/media, E event mural/institution photographs and A introductory wall. All five desktop arrivals use the configured scene/look and leave the content visible without opening dialogs. E event mural also passed touch at 390×844. Evidence: `qa-<target>-before.png`, `qa-<target>-after.png`, `qa-e-events-touch-before.png`, `qa-e-events-touch-after.png`.
 - Screenshots and calibration atlases: `E:/CodexAssets/youngnak-wall-qa/`. Key screenshots: `desktop-wall-hover.png`, `desktop-arrival-a03.png`, `mobile-far-a03.png`, `mobile-arrival-a03.png`, `mobile-near-open.png`, `mobile-landscape-arrival.png`.
 - Mobile checks use browser/CDP emulation. No physical phone was available.
 
-Release: pending independent static-wall smoke checks and Vercel staging verification.
+## Release
+
+- Feature commit: `9b0d2b5`.
+- Staged production deployment (public domain not yet promoted): `dpl_B8y298FUYivHTN3dE3a42hUyfUzU`, `https://youngnak-museum-6gn273lh0-postsun17-webs-projects.vercel.app`.
+- Vercel verified all 66,557 museum assets and ran the full TypeScript/Vite production build successfully. Code bundle `index-1Fhp05Db.js`, stylesheet `index-VK9_XlPy.css` match the local production build.
+- Staged browser verified desktop A wall hover → A03 front → image dialog, mobile touch C wall → C02 front → image dialog. No application errors. Memorial first floor still loads, has 1F/2F controls, and has no wall-approach controller. `stage-desktop-hover.png`, `stage-desktop-open.png`, `stage-mobile-arrival-c02.png`, `stage-mobile-open-c02.png` saved with the other evidence.
+- Public-domain promotion/verification pending.
