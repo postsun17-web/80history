@@ -24,3 +24,6 @@
 #quick-menu button span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 .tour-controls{display:grid;grid-template-columns:25px 25px;gap:6px;right:10px;bottom:19px}.tour-controls button{grid-column:span 2;justify-self:center}.tour-controls button[data-control=help],.tour-controls button[data-control=sound]{grid-column:span 1;width:25px;height:25px;font-size:14px}
 @media(max-width:700px){.tour-controls{grid-template-columns:17px 17px;right:8px;bottom:102px;gap:5px}.tour-controls button[data-control=help]{display:none}.tour-controls button[data-control=sound]{grid-column:span 2}}
+/* Wall approach uses the panorama's qualified click; this hint never intercepts input. */
+.wall-approach-ready .psv-canvas-container{cursor:pointer}
+.wall-approach-tooltip{position:absolute;z-index:35;pointer-events:none;max-width:min(260px,calc(100% - 16px));padding:7px 10px;border:1px solid #ffffff40;border-radius:5px;background:#142326dd;color:#fff;font-size:12px;line-height:1.4;box-shadow:0 2px 8px #0003}

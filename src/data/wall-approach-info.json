@@ -1,0 +1,9 @@
+{
+  "targets": {
+    "info-a": {"scene":"scene_a-s-0","title":"영락교회 성장 및 발전 안내","look":[37,-9,110]},
+    "info-b": {"scene":"scene_a-s-w-1","title":"영락교회와 한국사회 안내","look":[-21,-10,110]},
+    "info-c": {"scene":"scene_a-s-e+1","title":"영락교회와 한국기독교 안내","look":[25,-10,110]},
+    "info-d": {"scene":"scene_a-s-0","title":"영락교회 5대 본질 안내","look":[-37,-8,110]}
+  },
+  "scenes": {}
+}

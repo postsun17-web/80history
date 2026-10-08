@@ -12,6 +12,8 @@ import mediaScreen from './assets/media-screen.svg';
 import {visiblePageControl,sourcePageControlPosition} from './source-page-controls';
 import {toPosition,verticalFov} from './navigation';
 import type {FullRoute} from './full-navigation';
+import {WallApproachController} from './wall-approach-controller';
+import {wallCatalogue} from './wall-catalogue';
 import '@photo-sphere-viewer/core/index.css';
 import '@photo-sphere-viewer/markers-plugin/index.css';
 
@@ -25,11 +27,13 @@ export class FullViewer {
  private revision=0;
  private mediaCleanup:(()=>void)[]=[];
  private wallVideos=new Map<string,{video:HTMLVideoElement;button:HTMLButtonElement;audible:boolean}>();
+ private wallApproach:WallApproachController|null=null;
  constructor(private container:HTMLElement,private data:FullMuseum,private action:(a:SourceAction)=>void,heading:(yaw:number)=>void,private audio?:MuseumAudio){
   this.titles=titlesForMuseum(data);
   this.viewer=new Viewer({container,adapter:[CubemapTilesAdapter,{baseBlur:false}],navbar:false,minFov:25,maxFov:110,defaultZoomLvl:30,
-   keyboard:'always',mousewheelCtrlKey:false,touchmoveTwoFingers:false,loadingTxt:'전시 공간을 불러오는 중입니다',plugins:[MarkersPlugin]});
+   keyboard:'always',mousewheelCtrlKey:false,touchmoveTwoFingers:false,loadingTxt:'전시 공간을 불러오는 중입니다',plugins:[[MarkersPlugin,{clickEventOnMarker:data.id!=='memorial'}]]});
   this.markers=this.viewer.getPlugin(MarkersPlugin);
+  if(data.id!=='memorial')this.wallApproach=new WallApproachController(this.viewer,this.markers,container,()=>this.scene,this.action,wallCatalogue);
   // Marker3D starts an uncaught second load unless we supply the image already
   // awaited below. Keep only the current room/page's images, not a growing tour cache.
   const loadImage=this.viewer.textureLoader.loadImage.bind(this.viewer.textureLoader);
@@ -38,13 +42,13 @@ export class FullViewer {
    if(cached){args[1]?.(100);return Promise.resolve(cached);}
    return loadImage(...args);
   };
-  this.markers.addEventListener('select-marker',({marker})=>{if(marker.data?.action)this.action(marker.data.action);});
+  this.markers.addEventListener('select-marker',({marker})=>{if(!this.wallApproach&&marker.data?.action)this.action(marker.data.action);});
   this.markers.addEventListener('enter-marker',({marker})=>{if(matchMedia('(hover: hover)').matches)this.setVideoAudible(marker.id,true);});
   this.markers.addEventListener('leave-marker',({marker})=>{if(matchMedia('(hover: hover)').matches)this.setVideoAudible(marker.id,false);});
   this.viewer.addEventListener('position-updated',({position})=>heading(position.yaw*180/Math.PI));
   this.viewer.addEventListener('zoom-updated',()=>heading(this.viewer.getPosition().yaw*180/Math.PI));
  }
- destroy(){this.revision++;this.releaseMedia();this.dimensions.clear();this.markerImages.clear();this.viewer.destroy();}
+ destroy(){this.revision++;this.wallApproach?.destroy();this.releaseMedia();this.dimensions.clear();this.markerImages.clear();this.viewer.destroy();}
  private releaseMedia(){for(const task of this.mediaCleanup)task();this.mediaCleanup=[];this.wallVideos.clear();}
  private setVideoAudible(id:string,audible:boolean){
   const item=this.wallVideos.get(id);if(!item)return;
@@ -73,6 +77,8 @@ export class FullViewer {
  }
  async show(route:FullRoute){
   const revision=++this.revision;
+  this.wallApproach?.setLoading(true);
+  try{
   const scene=this.data.scenes.find(s=>s.id===route.scene);if(!scene)throw new Error('Unknown scene '+route.scene);
   if(this.scene!==scene.id){
    this.releaseMedia();
@@ -88,6 +94,7 @@ export class FullViewer {
    this.scene=scene.id;this.page=0;
   }else if(route.look){this.viewer.rotate(toPosition(route.look[0],route.look[1]));this.viewer.zoom(this.zoom(route.look[2]));}
   if(this.page!==route.page){await this.updateMarkers(route,revision);if(revision===this.revision)this.page=route.page;}
+  }finally{if(revision===this.revision)this.wallApproach?.setLoading(false);}
  }
  resolve(h:SourceHotspot):Record<string,string>{
   const attrs:Record<string,string>={};
@@ -147,7 +154,7 @@ export class FullViewer {
    const sourceLabel=action?.type==='image'?action.title||'':action?.type==='article'?this.titles.article(action.path):action?.type==='page'?this.titles.page(action.zone,action.page):a.tooltip||a.title||a.html||a.text||'';
    const label=((/^hotspot_\d+$/.test(sourceLabel)?'':sourceLabel)||defaultLabels[action?.type||'']||'자료 보기').replace(/\[br\]/g,' ').replace(/<[^>]+>/g,'');
    const position=()=>toPosition(Number(a.ath),Number(a.atv));
-   const base={id,data:{action},tooltip:action?label:undefined,zIndex:Math.min(1000,Number(a.zorder)||1)};
+   const base={id,data:{action,sourceName:h.name},tooltip:action?label:undefined,zIndex:Math.min(1000,Number(a.zorder)||1)};
    if(h.points?.length)return {...base,polygon:h.points.map(p=>toPosition(...p)),svgStyle:{fill:'rgba(255,255,255,.01)',stroke:'transparent'}};
    if(a.linkedscene&&action){
     const title=this.data.scenes.find(s=>s.id===a.linkedscene.toLowerCase())?.title||'이동';
