@@ -14,6 +14,9 @@ import {toPosition,verticalFov} from './navigation';
 import type {FullRoute} from './full-navigation';
 import {WallApproachController} from './wall-approach-controller';
 import {wallCatalogue} from './wall-catalogue';
+import {PinchNavigationController} from './pinch-navigation-controller';
+import {pinchPassages} from './pinch-catalogue';
+import {stabilizePanoramaRaycast,type PickingScene} from './panorama-raycast';
 import '@photo-sphere-viewer/core/index.css';
 import '@photo-sphere-viewer/markers-plugin/index.css';
 
@@ -28,11 +31,17 @@ export class FullViewer {
  private mediaCleanup:(()=>void)[]=[];
  private wallVideos=new Map<string,{video:HTMLVideoElement;button:HTMLButtonElement;audible:boolean}>();
  private wallApproach:WallApproachController|null=null;
- constructor(private container:HTMLElement,private data:FullMuseum,private action:(a:SourceAction)=>void,heading:(yaw:number)=>void,private audio?:MuseumAudio){
+ private pinchNavigation:PinchNavigationController;
+ private restoreRaycast:()=>void;
+ constructor(private container:HTMLElement,private data:FullMuseum,private action:(a:SourceAction,originLook?:[number,number,number])=>void,heading:(yaw:number)=>void,private audio?:MuseumAudio){
   this.titles=titlesForMuseum(data);
   this.viewer=new Viewer({container,adapter:[CubemapTilesAdapter,{baseBlur:false}],navbar:false,minFov:25,maxFov:110,defaultZoomLvl:30,
    keyboard:'always',mousewheelCtrlKey:false,touchmoveTwoFingers:false,loadingTxt:'전시 공간을 불러오는 중입니다',plugins:[[MarkersPlugin,{clickEventOnMarker:data.id!=='memorial'}]]});
   this.markers=this.viewer.getPlugin(MarkersPlugin);
+  this.restoreRaycast=stabilizePanoramaRaycast((this.viewer.renderer as unknown as {scene:PickingScene}).scene);
+  const museum=data.id==='memorial'?'memorial':'history';
+  this.pinchNavigation=new PinchNavigationController(this.viewer,container,museum,()=>this.scene,()=>this.getLook(),
+   (target,origin)=>this.action(target.action,origin),()=>{void this.audio?.unlock();},pinchPassages(museum),museum==='history'?wallCatalogue:undefined);
   if(data.id!=='memorial')this.wallApproach=new WallApproachController(this.viewer,this.markers,container,()=>this.scene,this.action,wallCatalogue);
   // Marker3D starts an uncaught second load unless we supply the image already
   // awaited below. Keep only the current room/page's images, not a growing tour cache.
@@ -42,13 +51,13 @@ export class FullViewer {
    if(cached){args[1]?.(100);return Promise.resolve(cached);}
    return loadImage(...args);
   };
-  this.markers.addEventListener('select-marker',({marker})=>{if(!this.wallApproach&&marker.data?.action)this.action(marker.data.action);});
+  this.markers.addEventListener('select-marker',({marker})=>{if(!this.wallApproach&&!this.pinchNavigation.suppressesClick&&marker.data?.action)this.action(marker.data.action);});
   this.markers.addEventListener('enter-marker',({marker})=>{if(matchMedia('(hover: hover)').matches)this.setVideoAudible(marker.id,true);});
   this.markers.addEventListener('leave-marker',({marker})=>{if(matchMedia('(hover: hover)').matches)this.setVideoAudible(marker.id,false);});
   this.viewer.addEventListener('position-updated',({position})=>heading(position.yaw*180/Math.PI));
   this.viewer.addEventListener('zoom-updated',()=>heading(this.viewer.getPosition().yaw*180/Math.PI));
  }
- destroy(){this.revision++;this.wallApproach?.destroy();this.releaseMedia();this.dimensions.clear();this.markerImages.clear();this.viewer.destroy();}
+ destroy(){this.revision++;this.pinchNavigation.destroy();this.wallApproach?.destroy();this.restoreRaycast();this.releaseMedia();this.dimensions.clear();this.markerImages.clear();this.viewer.destroy();}
  private releaseMedia(){for(const task of this.mediaCleanup)task();this.mediaCleanup=[];this.wallVideos.clear();}
  private setVideoAudible(id:string,audible:boolean){
   const item=this.wallVideos.get(id);if(!item)return;
@@ -78,6 +87,7 @@ export class FullViewer {
  async show(route:FullRoute){
   const revision=++this.revision;
   this.wallApproach?.setLoading(true);
+  this.pinchNavigation.setLoading(true);
   try{
   const scene=this.data.scenes.find(s=>s.id===route.scene);if(!scene)throw new Error('Unknown scene '+route.scene);
   if(this.scene!==scene.id){
@@ -94,7 +104,7 @@ export class FullViewer {
    this.scene=scene.id;this.page=0;
   }else if(route.look){this.viewer.rotate(toPosition(route.look[0],route.look[1]));this.viewer.zoom(this.zoom(route.look[2]));}
   if(this.page!==route.page){await this.updateMarkers(route,revision);if(revision===this.revision)this.page=route.page;}
-  }finally{if(revision===this.revision)this.wallApproach?.setLoading(false);}
+  }finally{if(revision===this.revision){this.wallApproach?.setLoading(false);this.pinchNavigation.setLoading(false);}}
  }
  resolve(h:SourceHotspot):Record<string,string>{
   const attrs:Record<string,string>={};

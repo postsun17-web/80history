@@ -26,4 +26,5 @@
 @media(max-width:700px){.tour-controls{grid-template-columns:17px 17px;right:8px;bottom:102px;gap:5px}.tour-controls button[data-control=help]{display:none}.tour-controls button[data-control=sound]{grid-column:span 2}}
 /* Wall approach uses the panorama's qualified click; this hint never intercepts input. */
 .wall-approach-ready .psv-canvas-container{cursor:pointer}
+.pinch-navigation-hint{position:absolute;left:50%;transform:translateX(-50%);z-index:19;pointer-events:none;max-width:min(440px,calc(100% - 112px));width:max-content;padding:11px 15px;border:1px solid #ffffff80;border-radius:8px;background:#142326e8;color:#fff;font-size:17px;line-height:1.5;text-align:center;word-break:keep-all;box-shadow:0 3px 12px #0005}
 .wall-approach-tooltip{position:absolute;z-index:35;pointer-events:none;max-width:min(260px,calc(100% - 16px));padding:7px 10px;border:1px solid #ffffff40;border-radius:5px;background:#142326dd;color:#fff;font-size:12px;line-height:1.4;box-shadow:0 2px 8px #0003}

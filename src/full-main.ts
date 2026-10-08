@@ -62,27 +62,30 @@ const unsubscribeAudio=audio.subscribe(state=>{
 });
 
 function saveView(){if(!disposed&&museumIdAt(location.pathname)===museumId&&loaded===route.scene&&!busy){route={...route,look:viewer.getLook()};history.replaceState({route},'',fullRouteUrl(route));}}
-function navigate(next:FullRoute,replace=false){
+function navigate(next:FullRoute,replace=false,originLook?:[number,number,number]){
  navigationGeneration++;
- saveView();route=normalizeContentRoute(data,parseFullRoute(fullRouteUrl(next),data.scenes,data.zones));
+ if(originLook){
+  clearTimeout(viewTimer);route={...route,look:[...originLook]};history.replaceState({route},'',fullRouteUrl(route));
+ }else saveView();
+ route=normalizeContentRoute(data,parseFullRoute(fullRouteUrl(next),data.scenes,data.zones));
  if(loaded!==route.scene){audio.setScene(museumId+':loading');audioScene='';}
  history[replace?'replaceState':'pushState']({route},'',fullRouteUrl(route));
  // Reading the next panel must not wait for the hidden 3D marker images to load.
  if(loaded===route.scene){renderSceneUI();showModal();}
  void apply();
 }
-function perform(action:SourceAction){
+function perform(action:SourceAction,originLook?:[number,number,number]){
  void audio.unlock();
  action=contentTitles.action(action);
  if(action.type==='scene'){
   if(!memorial&&loaded==='scene_vr02'&&action.scene==='scene_f-c-0'){
    if(entering)return;entering=true;
    const generation=navigationGeneration;
-   void viewer.enterLobby().finally(()=>{entering=false;if(!disposed&&generation===navigationGeneration&&route.scene==='scene_vr02'){audio.startBackground();navigate({scene:action.scene,page:1,look:action.look||[0,0,100]});}});
+   void viewer.enterLobby().finally(()=>{entering=false;if(!disposed&&generation===navigationGeneration&&route.scene==='scene_vr02'){audio.startBackground();navigate({scene:action.scene,page:1,look:action.look||[0,0,100]},false,originLook);}});
    return;
   }
   const look=action.look||(loaded?viewer.getLook():undefined);
-  navigate({scene:action.scene,page:1,...(look?{look}:{})});
+  navigate({scene:action.scene,page:1,...(look?{look}:{})},false,originLook);
  }else if(action.type==='page'){
   const zone=data.zones.find(z=>z.id===action.zone);if(zone)navigate({scene:zone.scene,page:action.page,...(zone.scene===route.scene?{look:viewer.getLook()}:{})});
  }else if(action.type==='external'){if(memorialDestination(action.url)){onMuseum('memorial');return;}window.open(action.url,'_blank','noopener,noreferrer');}

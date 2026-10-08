@@ -2,7 +2,6 @@ import type {Viewer} from '@photo-sphere-viewer/core';
 import type {MarkersPlugin} from '@photo-sphere-viewer/markers-plugin';
 import type {SourceAction} from './source-actions';
 import {findWallApproach,wallApproachAction,type WallCatalogue,type WallMarker} from './wall-approach';
-import {stabilizePanoramaRaycast,type PickingScene} from './panorama-raycast';
 
 type SourceMarker={data?:{action?:SourceAction;sourceName?:string};hideTooltip?:()=>void};
 
@@ -17,10 +16,7 @@ export class WallApproachController {
  private tooltip:HTMLDivElement;
  private hoverFrame=0;
  private pointer:PointerEvent|null=null;
- private restoreRaycast:()=>void;
  constructor(private viewer:Viewer,markers:MarkersPlugin,private container:HTMLElement,private scene:()=>string,private action:(action:SourceAction)=>void,private catalogue:WallCatalogue){
-  // Pinned PSV 5.15.1 keeps its invisible click sphere in this internal scene.
-  this.restoreRaycast=stabilizePanoramaRaycast((viewer.renderer as unknown as {scene:PickingScene}).scene);
   this.tooltip=document.createElement('div');this.tooltip.className='wall-approach-tooltip';this.tooltip.setAttribute('role','tooltip');this.tooltip.hidden=true;container.append(this.tooltip);
   const click=(event:{data:{rightclick:boolean;yaw:number;pitch:number;marker?:SourceMarker;target?:HTMLElement}})=>{
    if(event.data.rightclick||this.loading||this.locked||performance.now()<this.suppressUntil)return;
@@ -78,5 +74,5 @@ export class WallApproachController {
  }
  private clearHover(){this.container.classList.remove('wall-approach-ready');this.tooltip.hidden=true;}
  setLoading(loading:boolean){this.loading=loading;this.clearHover();if(!loading){this.locked=false;this.hoverMarker=null;}}
- destroy(){this.abort.abort();this.restoreRaycast();cancelAnimationFrame(this.hoverFrame);this.points.clear();this.clearHover();this.tooltip.remove();}
+ destroy(){this.abort.abort();cancelAnimationFrame(this.hoverFrame);this.points.clear();this.clearHover();this.tooltip.remove();}
 }
