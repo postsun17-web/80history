@@ -28,4 +28,5 @@ The shared eligibility check accepts either horizontal or vertical coordinates (
 - Staged production: `dpl_BGVzSjipKhn4fqynKNx2csvnbSox`, `https://youngnak-museum-osoh4zvv2-postsun17-webs-projects.vercel.app`.
 - Full Vercel build passed and verified all 66,557 source assets. Staged HTTP checks returned 200 for C04/B04 first images (`image/webp`, 106,022 and 481,064 bytes).
 - Staged JavaScript `index-DG5SBMqq.js` SHA-256 matches the locally tested production bundle: `8bec69647db633285cd2aef4810733ff884b601d1a3493580634200b592befde`.
-- Public promotion and browser verification pending.
+- Promoted the same deployment to `https://youngnak-museum-poc.vercel.app/`. Public browser verified C04 mobile 3D content + enlargement and B04 desktop 3D content; both have visible decoded 2148px textures and no application errors. Public JavaScript is the verified `index-DG5SBMqq.js`.
+- Public captures: `public-mobile-c04.png`, `public-mobile-c04-zoom.png`, `public-desktop-b04.png` in the evidence folder above. Fix and verification are on GitHub `postsun17-web/80history` main.
