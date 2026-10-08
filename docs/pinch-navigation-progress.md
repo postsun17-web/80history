@@ -46,4 +46,11 @@ Chromium with actual CDP two-contact events, not synthetic zoom-change events. P
 
 ## Release
 
-- Public promotion pending staged production build and integrity checks.
+- Feature commit: dc15e7157882e607e1894eacf42f9ea5a8ca9c70, fast-forwarded and pushed to GitHub 80history/main. Previous version remains at 02f744f.
+- Production-mode local browser verified both museums using minified bundle index-DsVTbU5V.js, without runtime errors. Memorial 2f01 → 2f02 narration h02.mp3 plays, advances, and respects the global mute control.
+- Vercel staged production deployment dpl_6EsRZpJsKRgFGffoXQHk9Skxp56c: all 66557 media assets verified; TypeScript/Vite build successful. Existing large-chunk/static+dynamic import warnings remain unchanged.
+- Protected staging HTTP checks use authenticated `vercel curl`, without saving credentials: main JS, memorial HTML and memorial base panorama return 200. Staged JS SHA256 matches the locally browser-tested production bundle: 1047FA2823C4A2ED025549CB355AF37B273EDEF1BFBF3C7B30604EBBC58E36DD.
+- Promoted the same build to https://youngnak-museum-poc.vercel.app/ and /hkjmuseum.html. Immutable deployment: https://youngnak-museum-88ew120rw-postsun17-webs-projects.vercel.app.
+- Public mobile-emulation checks pass for history A03 page 4 → A02 page 1 → Back and memorial 1f01 → 1f02 → Back. Both restore pre-pinch look/page, show the release hint, use the expected bundle, and produce no runtime or scene errors.
+- Public screenshots: public-history-armed.png, public-history-arrived.png, public-memorial-armed.png, public-memorial-arrived.png in the evidence directory above.
+- No physical-phone verification was possible. The three explicitly blocked memorial seating links retain their existing click/tap arrows.
