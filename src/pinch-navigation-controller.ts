@@ -1,12 +1,12 @@
 import type {Viewer} from '@photo-sphere-viewer/core';
 import {PinchGesture,type TouchPoint} from './pinch-gesture';
-import {findPinchDestination,isPinchControl,type PassageCatalogue,type PinchDestination} from './pinch-navigation';
-import type {WallCatalogue,WallMarker} from './wall-approach';
+import {findPinchDestination,isPinchStartControl,isPinchReadingSurface,type PassageCatalogue,type PinchDestination,type PinchMarker,type ZoomCatalogue} from './pinch-navigation';
+import type {WallCatalogue} from './wall-approach';
 import type {MuseumId} from './full-types';
 
 type Look=[number,number,number];
 type GestureTarget={destination:PinchDestination;scene:string;look:Look};
-type SourceMarker={data?:WallMarker;config?:{visible?:boolean;opacity?:number}};
+type SourceMarker={data?:PinchMarker&{sourcePlane?:unknown};config?:{visible?:boolean;opacity?:number;videoLayer?:string}};
 
 /** Observe native touch input without taking over PSV's normal zoom and pan. */
 export class PinchNavigationController {
@@ -21,12 +21,13 @@ export class PinchNavigationController {
  private suppressUntil=0;
  private points:TouchPoint[]=[];
  private target:GestureTarget|null=null;
+ private origin:{scene:string;look:Look}|null=null;
  private frame=0;
  private commitFrame=0;
 
  constructor(private viewer:Viewer,private container:HTMLElement,private museum:MuseumId,
   private scene:()=>string,private getLook:()=>Look,private commit:(target:PinchDestination,origin:Look)=>void,
-  private unlock:()=>void,private passages:PassageCatalogue,private walls?:WallCatalogue){
+  private unlock:()=>void,private passages:PassageCatalogue,private walls?:WallCatalogue,private zoom?:ZoomCatalogue){
   this.hint=document.createElement('div');this.hint.className='pinch-navigation-hint';this.hint.hidden=true;
   this.hint.setAttribute('role','status');this.hint.setAttribute('aria-live','polite');container.append(this.hint);
   const options={capture:true,passive:true,signal:this.abort.signal};
@@ -45,46 +46,52 @@ export class PinchNavigationController {
  get suppressesClick(){return this.multiTouch||this.locked||performance.now()<this.suppressUntil;}
  private blocked(){return this.loading||this.locked||document.hidden||!!document.querySelector('dialog[open],#welcome:not([hidden]),#scene-list:not([hidden]),#full-menu.mobile-open,.menu-group[open]');}
  private contacts(event:TouchEvent):TouchPoint[]{return Array.from(event.touches,t=>({id:t.identifier,x:t.clientX,y:t.clientY}));}
- private markerAt(point:TouchPoint):WallMarker{
+ private markerAt(point:TouchPoint):PinchMarker{
   const top=document.elementFromPoint(point.x,point.y);
-  if(!top||!this.container.contains(top)||top.closest('button,input,select,a,audio,video,[role="button"],.psv-capture-event'))return {control:true};
+  if(!top||!this.container.contains(top))return {control:true};
   const dom=top.closest('.psv-marker') as (Element&{psvMarker?:SourceMarker})|null;
+  // A walk arrow is a button too: it must not veto a two-finger approach gesture.
+  if(top.closest('button,input,select,a,audio,video,[role="button"],.psv-capture-event')&&dom?.psvMarker?.data?.action?.type!=='scene')return {control:true};
   const rect=this.container.getBoundingClientRect();
   const hits=this.viewer.renderer.getIntersections({x:point.x-rect.left,y:point.y-rect.top});
   // Same marker key as pinned PSV 5.15.1. Never use the mouse-only hover marker.
   const marker=dom?.psvMarker||hits.map(hit=>hit.object.userData.psvMarker as SourceMarker|undefined).find(m=>m&&m.config?.visible!==false&&m.config?.opacity!==0);
-  return marker?.data||{};
+  return marker?.data?{...marker.data,zoomSurface:!!marker.data.sourcePlane&&(isPinchReadingSurface(marker.data.sourceName)||!!marker.config?.videoLayer)}:{};
  }
  private start(event:TouchEvent){
   const previous=this.points.length;this.points=this.contacts(event);
-  if(previous===0){this.cycle=false;this.multiTouch=false;this.gesture.release([],performance.now());}
+  if(previous===0){this.cycle=false;this.multiTouch=false;this.target=null;this.origin=null;this.gesture.release([],performance.now());}
   if(this.points.length<2)return;
   // Suppress touch-generated marker selection even when there is no destination.
   if(this.points.some(point=>{const el=document.elementFromPoint(point.x,point.y);return el&&this.container.contains(el);}))this.multiTouch=true;
   if(this.cycle){this.gesture.update(this.points,performance.now());this.showHint();return;}
   this.cycle=true;
-  if(this.points.length!==2||this.blocked()||this.points.some(point=>isPinchControl(this.markerAt(point))))return;
-  const midpoint={id:-1,x:(this.points[0].x+this.points[1].x)/2,y:(this.points[0].y+this.points[1].y)/2};
-  const marker=this.markerAt(midpoint);if(isPinchControl(marker))return;
+  if(this.points.length!==2||this.blocked()||this.points.some(point=>isPinchStartControl(this.markerAt(point))))return;
   const rect=this.container.getBoundingClientRect();
-  const position=this.viewer.dataHelper.viewerCoordsToSphericalCoords({x:midpoint.x-rect.left,y:midpoint.y-rect.top});
-  if(!position)return;
-  const destination=findPinchDestination(this.museum,this.scene(),position.yaw*180/Math.PI,-position.pitch*180/Math.PI,this.passages,this.walls,marker);
-  if(!destination)return;
-  this.target={destination,scene:this.scene(),look:[...this.getLook()]};
-  if(this.gesture.begin(this.points,performance.now(),rect,this.target))this.tick();
+  this.origin={scene:this.scene(),look:[...this.getLook()]};
+  // Track even without an initial destination, so a small change of view can acquire one.
+  if(this.gesture.begin(this.points,performance.now(),rect,null)){this.acquire();this.showHint();this.tick();}
+ }
+ private acquire(){
+  if(!this.gesture.active||this.gesture.armed||this.points.length!==2||!this.origin)return;
+  if(this.origin.scene!==this.scene()){this.cancel();return;}
+  const rect=this.container.getBoundingClientRect(),position=this.viewer.getPosition();
+  const marker=this.markerAt({id:-1,x:rect.left+rect.width/2,y:rect.top+rect.height/2});
+  const destination=findPinchDestination(this.museum,this.scene(),position.yaw*180/Math.PI,-position.pitch*180/Math.PI,this.passages,this.walls,marker,this.zoom,this.target?.destination.action.scene);
+  this.target=destination?{destination,scene:this.origin.scene,look:[...this.origin.look]}:null;
+  this.gesture.updateCandidate(this.target);
  }
  private move(event:TouchEvent){
   this.points=this.contacts(event);
   if(this.blocked()){this.cancel();return;}
-  this.gesture.update(this.points,performance.now());this.showHint();
+  this.acquire();this.gesture.update(this.points,performance.now());this.showHint();
  }
  private tick(){
   if(this.frame)return;
   this.frame=requestAnimationFrame(()=>{
    this.frame=0;
    if(this.blocked()){this.cancel();return;}
-   this.gesture.update(this.points,performance.now());this.showHint();
+   this.acquire();this.gesture.update(this.points,performance.now());this.showHint();
    if(this.gesture.active)this.tick();
   });
  }
@@ -106,7 +113,7 @@ export class PinchNavigationController {
   });
  }
  private showHint(){
-  const visible=this.gesture.armed&&!!this.target;
+  const visible=this.gesture.active;
   if(visible&&this.hint.hidden){
    const rect=this.container.getBoundingClientRect();let bottom=24;
    for(const element of document.querySelectorAll<HTMLElement>('#page-bar,#media-shelf,#scene-audio-controls,#enable-audio,.scene-caption')){
@@ -115,12 +122,15 @@ export class PinchNavigationController {
     if(bounds.top>rect.top+rect.height/2)bottom=Math.max(bottom,rect.bottom-bounds.top+10);
    }
    this.hint.style.bottom=bottom+'px';
-   this.hint.textContent='손을 떼면 '+this.target!.destination.label;
+  }
+  if(visible){
+   const text=this.target?(this.gesture.armed?'손을 떼면 ':'두 손가락을 벌리면 ')+this.target.destination.label:'현재 화면을 확대합니다';
+   if(this.hint.textContent!==text)this.hint.textContent=text;
   }
   this.hint.hidden=!visible;
  }
  cancel(){
-  this.gesture.cancel();this.target=null;this.hint.hidden=true;
+  this.gesture.cancel();this.target=null;this.origin=null;this.hint.hidden=true;
   if(this.commitFrame&&!this.loading)this.locked=false;
   cancelAnimationFrame(this.frame);this.frame=0;cancelAnimationFrame(this.commitFrame);this.commitFrame=0;
  }

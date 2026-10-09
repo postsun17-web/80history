@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {existsSync,readFileSync} from 'node:fs';
 import type {FullMuseum} from '../src/full-types.ts';
-import {findPinchDestination,type PassageCatalogue} from '../src/pinch-navigation.ts';
+import {findPinchDestination,type PassageCatalogue,type ZoomCatalogue} from '../src/pinch-navigation.ts';
 import {containsWallPoint} from '../src/wall-approach.ts';
 
 for(const [id,file,total] of [['history','full-museum.json',62],['memorial','memorial-museum.json',29]] as const){
@@ -22,6 +22,7 @@ for(const [id,file,total] of [['history','full-museum.json',62],['memorial','mem
    const attrs=Object.assign({},...(hotspot.attrs.style||'').split('|').map(style=>museum.styles[style]||{}),hotspot.attrs);
    const target=id==='history'&&source==='scene_vr02'&&hotspot.name==='open_b'?'scene_f-c-0':attrs.linkedscene?.toLowerCase();
    assert.equal(region.scene,target,`${source}/${region.source}: no invented shortcut`);
+   assert.deepEqual(region.direction,[Number(attrs.ath),Number(attrs.atv)],`${source}/${region.source}: original arrow bearing`);
    assert.notEqual(region.scene,source);assert.ok(ids.has(region.scene));
    assert.match(region.title,/이동$/);assert.ok(!region.title.includes('undefined'));
    assert.equal(region.look.length,3);assert.ok(region.look.every(Number.isFinite));
@@ -30,20 +31,36 @@ for(const [id,file,total] of [['history','full-museum.json',62],['memorial','mem
    assert.ok(region.points.every(point=>Math.abs(point[1])<=90));
   }
  });
- test(`${id}: region boundaries survive panorama seams and each lane has selectable interior`,()=>{
-  let checked=0;
-  for(const [scene,regions] of Object.entries(catalogue.scenes))for(const region of regions){
-   for(const [yaw,atv] of region.points)assert.ok(containsWallPoint(region.points,yaw,atv),`${scene}: degenerate polygon`);
-   const first=region.points[0][0];const unwrapped=region.points.map(([yaw,atv])=>[yaw+360*Math.round((first-yaw)/360),atv]);
-   const xs=unwrapped.map(p=>p[0]),ys=unwrapped.map(p=>p[1]);let interior=false;
-   for(let yaw=Math.min(...xs)+.25;yaw<Math.max(...xs);yaw+=1)for(let atv=Math.min(...ys)+.25;atv<Math.max(...ys);atv+=1){
-    if(!containsWallPoint(region.points,yaw,atv))continue;
-    const hit=findPinchDestination(id,scene,yaw,atv,catalogue);
-    assert.ok(hit,`${scene}: unpickable interior`);checked++;
-    if(hit.action.scene===region.scene)interior=true;
+ test(`${id}: all viewpoints choose the closest forward original link at every sampled yaw regardless of pitch`,()=>{
+  for(const [scene,links] of Object.entries(catalogue.scenes)){
+   for(const link of links){
+    for(const [yaw,atv] of link.points)assert.ok(containsWallPoint(link.points,yaw,atv),`${scene}: degenerate audit polygon`);
+    assert.equal(findPinchDestination(id,scene,...link.direction,catalogue,undefined,{sourceName:link.source,action:{type:'scene',scene:link.scene}})?.action.scene,link.scene);
    }
-   assert.ok(interior,`${scene}/${region.source}: entire lane hidden by another destination`);
+   for(let yaw=-180;yaw<180;yaw+=5){
+    const distances=links.map(link=>({link,distance:Math.abs(Math.atan2(Math.sin((link.direction[0]-yaw)*Math.PI/180),Math.cos((link.direction[0]-yaw)*Math.PI/180))*180/Math.PI)})).filter(x=>x.distance<=45+1e-9).sort((a,b)=>a.distance-b.distance);
+    const nearest=distances.length?links.find(link=>distances.some(d=>d.link===link&&Math.abs(d.distance-distances[0].distance)<1e-7)):undefined;
+    for(const atv of [-30,0,35])assert.equal(findPinchDestination(id,scene,yaw,atv,catalogue)?.action.scene,nearest?.scene,`${scene} facing ${yaw},${atv}`);
+   }
   }
-  assert.ok(checked>0);
+ });
+ test(`${id}: no original destination is missing from direction candidates`,()=>{
+  for(const scene of museum.scenes)for(const hotspot of scene.hotspots){
+   const attrs=Object.assign({},...(hotspot.attrs.style||'').split('|').map(style=>museum.styles[style]||{}),hotspot.attrs);
+   const target=attrs.linkedscene?.toLowerCase();if(!target||target===scene.id)continue;
+   assert.ok(catalogue.scenes[scene.id].some(link=>link.scene===target),`${scene.id}/${hotspot.name} missing ${target}`);
+  }
+ });
+ test(`${id}: zoom-only regions protect local surfaces and leave passage directions available`,()=>{
+  const zoom:ZoomCatalogue=JSON.parse(readFileSync(new URL(`../src/data/pinch-zoom-${id}.json`,import.meta.url),'utf8'));
+  assert.equal(zoom.museum,id);
+  for(const [scene,regions] of Object.entries(zoom.scenes)){
+   assert.ok(museum.scenes.some(s=>s.id===scene));
+   for(const region of regions){
+    assert.ok(region.source);assert.ok(region.points.length>=3);
+    for(const [yaw,atv] of region.points){assert.ok(containsWallPoint(region.points,yaw,atv));assert.equal(findPinchDestination(id,scene,yaw,atv,catalogue,undefined,undefined,zoom),null);}
+   }
+   assert.ok(catalogue.scenes[scene].length===0||catalogue.scenes[scene].some(link=>findPinchDestination(id,scene,...link.direction,catalogue,undefined,undefined,zoom)),`${scene}: reading masks block all exits`);
+  }
  });
 }

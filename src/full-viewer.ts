@@ -15,7 +15,7 @@ import type {FullRoute} from './full-navigation';
 import {WallApproachController} from './wall-approach-controller';
 import {wallCatalogue} from './wall-catalogue';
 import {PinchNavigationController} from './pinch-navigation-controller';
-import {pinchPassages} from './pinch-catalogue';
+import {pinchPassages,pinchZoomRegions} from './pinch-catalogue';
 import {stabilizePanoramaRaycast,type PickingScene} from './panorama-raycast';
 import '@photo-sphere-viewer/core/index.css';
 import '@photo-sphere-viewer/markers-plugin/index.css';
@@ -41,7 +41,7 @@ export class FullViewer {
   this.restoreRaycast=stabilizePanoramaRaycast((this.viewer.renderer as unknown as {scene:PickingScene}).scene);
   const museum=data.id==='memorial'?'memorial':'history';
   this.pinchNavigation=new PinchNavigationController(this.viewer,container,museum,()=>this.scene,()=>this.getLook(),
-   (target,origin)=>this.action(target.action,origin),()=>{void this.audio?.unlock();},pinchPassages(museum),museum==='history'?wallCatalogue:undefined);
+   (target,origin)=>this.action(target.action,origin),()=>{void this.audio?.unlock();},pinchPassages(museum),museum==='history'?wallCatalogue:undefined,pinchZoomRegions(museum));
   if(data.id!=='memorial')this.wallApproach=new WallApproachController(this.viewer,this.markers,container,()=>this.scene,this.action,wallCatalogue);
   // Marker3D starts an uncaught second load unless we supply the image already
   // awaited below. Keep only the current room/page's images, not a growing tour cache.
