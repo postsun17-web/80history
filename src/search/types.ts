@@ -1,0 +1,10 @@
+export type SearchState={query:string;resultPage:number;documentId?:string;paragraphId?:string};
+export type SearchAction={type:'search'}&SearchState;
+export type SearchParagraph={id:string;text:string};
+export type SearchDocument={id:string;kind:'article'|'hwp';title:string;source:string;chapter?:string;articlePath?:string;paragraphs:SearchParagraph[]};
+export type TextPart={text:string;match:boolean};
+export type SearchSnippet={paragraphId:string;parts:TextPart[]};
+export type SearchResult=Pick<SearchDocument,'id'|'kind'|'title'|'source'>&{snippets:SearchSnippet[]};
+export type SearchResponse={query:string;page:number;pageCount:number;total:number;results:SearchResult[]};
+export type SearchRequest={id:number}&({type:'search';query:string;page:number}|{type:'document';documentId:string});
+export type WorkerResponse={id:number}&({ok:true;value:SearchResponse|SearchDocument}|{ok:false;error:string});

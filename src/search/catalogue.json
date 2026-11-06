@@ -1,0 +1,1005 @@
+{
+  "schemaVersion": 1,
+  "documents": [
+    {
+      "id": "article:html/a02_02.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/a02_03.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/a02_04.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a02_05.html",
+      "paragraphCount": 8
+    },
+    {
+      "id": "article:html/a03_01.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a03_02.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a03_03.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a03_06.html",
+      "paragraphCount": 10
+    },
+    {
+      "id": "article:html/a03_07.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a03_08.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a03_09.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a03_10.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a03_11.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/a03_12.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a03_14.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a03_15.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a03_17.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a03_18.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a03_19.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a03_20.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a03_21.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a04_01.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a04_02.html",
+      "paragraphCount": 7
+    },
+    {
+      "id": "article:html/a04_03.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/a04_04.html",
+      "paragraphCount": 6
+    },
+    {
+      "id": "article:html/a04_05.html",
+      "paragraphCount": 10
+    },
+    {
+      "id": "article:html/a04_06.html",
+      "paragraphCount": 11
+    },
+    {
+      "id": "article:html/a04_07.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a04_08.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/a04_09.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/a04_10.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a04_11.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a04_12.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/a04_15.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/a04_16.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/a04_17.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a04_18.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a05_01.html",
+      "paragraphCount": 14
+    },
+    {
+      "id": "article:html/a05_02.html",
+      "paragraphCount": 73
+    },
+    {
+      "id": "article:html/a05_03.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a05_04.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a05_05.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a05_06.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a05_07.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a05_08.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a05_09.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a05_10.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a05_11.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a05_12.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a05_13.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a05_14.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a05_15.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a05_16.html",
+      "paragraphCount": 12
+    },
+    {
+      "id": "article:html/a05_17.html",
+      "paragraphCount": 30
+    },
+    {
+      "id": "article:html/a05_18.html",
+      "paragraphCount": 7
+    },
+    {
+      "id": "article:html/a05_19.html",
+      "paragraphCount": 7
+    },
+    {
+      "id": "article:html/a05_20.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a05_21.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a05_22.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/a05_23.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a05_25.html",
+      "paragraphCount": 11
+    },
+    {
+      "id": "article:html/a05_26.html",
+      "paragraphCount": 8
+    },
+    {
+      "id": "article:html/a06_01.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a06_02.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a06_03.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a06_04.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a06_05.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/a06_06.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a06_07.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/a06_08.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/a06_09.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a06_11.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a06_12.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a06_13.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a06_14.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/a06_15.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a06_16.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a06_17.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a07_03.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/a07_04.html",
+      "paragraphCount": 10
+    },
+    {
+      "id": "article:html/a07_06.html",
+      "paragraphCount": 9
+    },
+    {
+      "id": "article:html/a07_07.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/a07_08.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/b01_02.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/b01_03.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/b01_04.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/b01_05.html",
+      "paragraphCount": 9
+    },
+    {
+      "id": "article:html/b01_07.html",
+      "paragraphCount": 7
+    },
+    {
+      "id": "article:html/b02_01.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/b02_02.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/b02_03.html",
+      "paragraphCount": 7
+    },
+    {
+      "id": "article:html/b02_04.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/b02_05.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/b02_06.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/b02_07.html",
+      "paragraphCount": 6
+    },
+    {
+      "id": "article:html/b02_08.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/b03_01.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/b03_02.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/b03_03.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/b03_04.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/b03_05.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/b04_01.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/b04_02.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/b04_03.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/b05_01.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/b05_02.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/b05_03.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/build001.html",
+      "paragraphCount": 15
+    },
+    {
+      "id": "article:html/build002.html",
+      "paragraphCount": 13
+    },
+    {
+      "id": "article:html/build003.html",
+      "paragraphCount": 12
+    },
+    {
+      "id": "article:html/build004.html",
+      "paragraphCount": 13
+    },
+    {
+      "id": "article:html/build005.html",
+      "paragraphCount": 13
+    },
+    {
+      "id": "article:html/build006.html",
+      "paragraphCount": 13
+    },
+    {
+      "id": "article:html/build007.html",
+      "paragraphCount": 8
+    },
+    {
+      "id": "article:html/build008.html",
+      "paragraphCount": 7
+    },
+    {
+      "id": "article:html/build017.html",
+      "paragraphCount": 13
+    },
+    {
+      "id": "article:html/build_new01.html",
+      "paragraphCount": 10
+    },
+    {
+      "id": "article:html/build_new02.html",
+      "paragraphCount": 13
+    },
+    {
+      "id": "article:html/build_new03.html",
+      "paragraphCount": 11
+    },
+    {
+      "id": "article:html/build_new04.html",
+      "paragraphCount": 15
+    },
+    {
+      "id": "article:html/c01_01.html",
+      "paragraphCount": 22
+    },
+    {
+      "id": "article:html/c01_02.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/c01_03.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/c01_04.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/c01_05.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/c01_06.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/c01_07.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/c01_08.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/c01_09.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/c01_10.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/c02_01.html",
+      "paragraphCount": 83
+    },
+    {
+      "id": "article:html/c02_02.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/c02_03.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/c02_04.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/c02_05.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/c02_06.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/c02_07.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/c02_08.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/c03_01.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/c03_02.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/c03_03.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/c03_04.html",
+      "paragraphCount": 8
+    },
+    {
+      "id": "article:html/c03_05.html",
+      "paragraphCount": 6
+    },
+    {
+      "id": "article:html/c03_06.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/c03_07.html",
+      "paragraphCount": 7
+    },
+    {
+      "id": "article:html/c03_08.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/c04_01.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/c04_02.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d01_01.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d01_02.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d01_03.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d01_04.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d01_05.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d01_06.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d01_07.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/d01_08.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/d01_09.html",
+      "paragraphCount": 6
+    },
+    {
+      "id": "article:html/d01_10.html",
+      "paragraphCount": 8
+    },
+    {
+      "id": "article:html/d01_11.html",
+      "paragraphCount": 7
+    },
+    {
+      "id": "article:html/d01_12.html",
+      "paragraphCount": 7
+    },
+    {
+      "id": "article:html/d01_13.html",
+      "paragraphCount": 7
+    },
+    {
+      "id": "article:html/d01_14.html",
+      "paragraphCount": 6
+    },
+    {
+      "id": "article:html/d01_15.html",
+      "paragraphCount": 7
+    },
+    {
+      "id": "article:html/d01_16.html",
+      "paragraphCount": 6
+    },
+    {
+      "id": "article:html/d01_17.html",
+      "paragraphCount": 6
+    },
+    {
+      "id": "article:html/d02_01.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/d02_02.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d02_03.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/d02_04.html",
+      "paragraphCount": 6
+    },
+    {
+      "id": "article:html/d02_05.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d02_06.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d02_07.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d02_08.html",
+      "paragraphCount": 7
+    },
+    {
+      "id": "article:html/d02_09.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d02_10.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/d02_11.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/d02_12.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/d03_01.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/d03_02.html",
+      "paragraphCount": 8
+    },
+    {
+      "id": "article:html/d03_03.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/d03_04.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/d04_01.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/d04_02.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d04_03.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d04_04.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/d04_05.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d04_06.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/d04_07.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/d04_08.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/d04_09.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d05_02.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/d05_03.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/d05_04.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/d05_05.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d05_06.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/d05_07.html",
+      "paragraphCount": 1
+    },
+    {
+      "id": "article:html/d05_08.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/d05_09.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/d05_10.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/dacu01.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/dacu02.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/dacu03.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/dacu04.html",
+      "paragraphCount": 2
+    },
+    {
+      "id": "article:html/newpaper01.html",
+      "paragraphCount": 7
+    },
+    {
+      "id": "article:html/newpaper02.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/newpaper03.html",
+      "paragraphCount": 9
+    },
+    {
+      "id": "article:html/newpaper04.html",
+      "paragraphCount": 9
+    },
+    {
+      "id": "article:html/newpaper05.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/newpaper06.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "article:html/newpaper07.html",
+      "paragraphCount": 6
+    },
+    {
+      "id": "article:html/newpaper08.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/newpaper09.html",
+      "paragraphCount": 8
+    },
+    {
+      "id": "article:html/newpaper10.html",
+      "paragraphCount": 9
+    },
+    {
+      "id": "article:html/newpaper11.html",
+      "paragraphCount": 3
+    },
+    {
+      "id": "article:html/newpaper12.html",
+      "paragraphCount": 19
+    },
+    {
+      "id": "article:html/newpaper13.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/newpaper14.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/newpaper15.html",
+      "paragraphCount": 10
+    },
+    {
+      "id": "article:html/newpaper16.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/newpaper18.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/newpaper19.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/newpaper20.html",
+      "paragraphCount": 5
+    },
+    {
+      "id": "article:html/newpaper21.html",
+      "paragraphCount": 6
+    },
+    {
+      "id": "article:html/newpaper22.html",
+      "paragraphCount": 4
+    },
+    {
+      "id": "hwp:013739d4-2f59-423d-9237-57081f4eb27c",
+      "paragraphCount": 483
+    },
+    {
+      "id": "hwp:097f81de-0693-4605-90e5-3ce1c69b1c07",
+      "paragraphCount": 300
+    },
+    {
+      "id": "hwp:1def5d05-b28c-4289-bb82-3b586f47666b",
+      "paragraphCount": 575
+    },
+    {
+      "id": "hwp:20845f26-b05f-4dd2-ae0f-415e91eb3d79",
+      "paragraphCount": 559
+    },
+    {
+      "id": "hwp:254b115a-04ce-48cb-b42e-3f50635f1a7a",
+      "paragraphCount": 2578
+    },
+    {
+      "id": "hwp:485f5eb4-5175-4661-a06d-1e18842b5a3c",
+      "paragraphCount": 146
+    },
+    {
+      "id": "hwp:4b8b7d5c-cc99-44d3-8010-3d0d8e367a45",
+      "paragraphCount": 78
+    },
+    {
+      "id": "hwp:7082b77b-4106-4cbe-8b6c-0a0ad5ba6692",
+      "paragraphCount": 118
+    },
+    {
+      "id": "hwp:80180ba5-9a64-4b69-8293-75b2b0e02d77",
+      "paragraphCount": 115
+    },
+    {
+      "id": "hwp:85445a87-44a1-47d0-b0af-7e8a924822a4",
+      "paragraphCount": 417
+    },
+    {
+      "id": "hwp:8b78399b-2f47-499b-bd3f-b524e9ddf097",
+      "paragraphCount": 380
+    },
+    {
+      "id": "hwp:96d504c2-1151-46ee-89bc-38beb6c69449",
+      "paragraphCount": 83
+    },
+    {
+      "id": "hwp:a12a1fff-f5e3-438d-a8b7-7b650901fcc9",
+      "paragraphCount": 169
+    },
+    {
+      "id": "hwp:b50a4e82-bb16-4e75-a495-be2e9c6d5ef0",
+      "paragraphCount": 100
+    },
+    {
+      "id": "hwp:be7388a6-347d-4448-a29c-40d7726dfa36",
+      "paragraphCount": 374
+    },
+    {
+      "id": "hwp:c8d195e4-5b9b-4928-819f-7042cf1cc68c",
+      "paragraphCount": 780
+    },
+    {
+      "id": "hwp:d2e51e95-49f8-4615-876f-b97a30dcb8db",
+      "paragraphCount": 727
+    },
+    {
+      "id": "hwp:e00e5b6d-4c02-4caf-9a7b-4c9f51d06fb1",
+      "paragraphCount": 1652
+    },
+    {
+      "id": "hwp:e130da30-a492-4cc9-bca5-3e27f0f7d709",
+      "paragraphCount": 165
+    },
+    {
+      "id": "hwp:e156d3c0-a12d-4dc7-b881-fca672fe8f3f",
+      "paragraphCount": 59
+    },
+    {
+      "id": "hwp:e502616b-1bf9-4619-a259-f05be9d84f0f",
+      "paragraphCount": 130
+    },
+    {
+      "id": "hwp:e9b072d2-7415-4b55-87bc-7884f59a03d9",
+      "paragraphCount": 57
+    },
+    {
+      "id": "hwp:eadb5115-6d18-4b28-877a-5e6cdfd15535",
+      "paragraphCount": 974
+    },
+    {
+      "id": "hwp:f7f0ad4f-e572-40d9-a1b6-d38dd96b7179",
+      "paragraphCount": 144
+    },
+    {
+      "id": "hwp:f8f0b201-2084-4667-94d2-38d1089844ea",
+      "paragraphCount": 1093
+    },
+    {
+      "id": "hwp:fb1c07bc-ab6d-4f0e-84c6-ac2233b0ae36",
+      "paragraphCount": 120
+    }
+  ]
+}

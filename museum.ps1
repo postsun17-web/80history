@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [Parameter(Position = 0)]
-    [ValidateSet('help', 'sync', 'setup', 'test', 'build', 'dev', 'preview', 'check', 'login', 'deploy-preview', 'deploy-production')]
+    [ValidateSet('help', 'sync', 'setup', 'test', 'build', 'dev', 'preview', 'check', 'login', 'import-search', 'deploy-preview', 'deploy-production')]
     [string]$Command = 'help',
     [Parameter(ValueFromRemainingArguments = $true)]
     [string[]]$CommandArgs = @()

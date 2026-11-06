@@ -160,7 +160,7 @@ export class FullViewer {
    const dynamicPanel=!!(zone&&h.name===`sector_${zone.id}_01`&&page);
    if(dynamicPanel){a.url=page!.image;action={type:'image',src:page!.image,title:this.titles.page(zone!.id,page!.number)};}
    if(action)action=this.titles.action(action);
-   const defaultLabels:Record<string,string>={scene:'다른 공간으로 이동',page:'전시 페이지',gallery:'사진 보기',article:'설명 더 보기',youtube:'영상 보기',object:'유물 둘러보기',books:'전자책',chatbot:'챗봇',help:'관람 안내',image:'크게 보기',video:'영상 보기',audio:'해설 듣기',document:'자료 읽기'};
+   const defaultLabels:Record<string,string>={scene:'다른 공간으로 이동',page:'전시 페이지',gallery:'사진 보기',article:'설명 더 보기',youtube:'영상 보기',object:'유물 둘러보기',books:'전자책',chatbot:'자료 검색',search:'자료 검색',help:'관람 안내',image:'크게 보기',video:'영상 보기',audio:'해설 듣기',document:'자료 읽기'};
    const sourceLabel=action?.type==='image'?action.title||'':action?.type==='article'?this.titles.article(action.path):action?.type==='page'?this.titles.page(action.zone,action.page):a.tooltip||a.title||a.html||a.text||'';
    const label=((/^hotspot_\d+$/.test(sourceLabel)?'':sourceLabel)||defaultLabels[action?.type||'']||'자료 보기').replace(/\[br\]/g,' ').replace(/<[^>]+>/g,'');
    const position=()=>toPosition(Number(a.ath),Number(a.atv));

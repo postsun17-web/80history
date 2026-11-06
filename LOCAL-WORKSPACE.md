@@ -10,7 +10,7 @@
 
 - GitHub: https://github.com/postsun17-web/80history
 - 복구 기준: `main`의 `bdeb3d2139aec34183f3688b31d759752f1f938e`
-- 현재 운영 코드: `c6eb8f2f142f8acd8a04b28438eba30b97e4e2fa`
+- 복구 당시 운영 코드: `c6eb8f2f142f8acd8a04b28438eba30b97e4e2fa`
 - 두 커밋의 차이는 배포 검증 문서 한 개뿐이며 실행 코드는 같습니다.
 - 운영 사이트: https://youngnak-museum-poc.vercel.app/
 - 한경직목사기념관: https://youngnak-museum-poc.vercel.app/hkjmuseum.html
@@ -18,6 +18,8 @@
 - 원격 Git 저장소는 연결되어 있지만 Vercel의 Git 자동 배포는 연결되어 있지 않습니다. Git push만으로 운영 사이트가 바뀌지는 않습니다.
 
 최신 버전은 역사관 62개 시점과 한경직목사기념관 29개 시점을 포함합니다. 옛 복원본에 있던 가상 E방은 제거되었습니다. 벽면 접근, 두 손가락 확대를 이용한 시선 방향 이동, 확대 화면의 페이지·주소 동기화와 공통 사운드가 포함됩니다.
+
+**2026-11-06에 0.2.0 자료 검색 버전을 운영 사이트에 배포했습니다.** 기존 챗봇 두 위치에서 전체 기사·문서 250건을 검색합니다. [배포·검증 기록](docs/workspace/verification-2026-11-06-search.md)과 [자료 수집·운영·복원 안내](docs/workspace/document-search.md)에 검증 결과, 데이터 재생성 방법과 Git 복원 태그를 기록합니다.
 
 ## 저장 위치
 
@@ -66,6 +68,7 @@ cd 'G:\내 드라이브\영락역사관\museum-web'
 ```powershell
 .\museum.ps1 setup    # 잠금 파일 기준 의존성 설치와 관람 자산 복원/검사
 .\museum.ps1 test     # 기존 기능 및 로컬 작업 도구 검사
+.\museum.ps1 import-search # 기사·한글 원문에서 검색 데이터 재생성
 .\museum.ps1 build    # 관람 자산 검사, TypeScript 검사, 자산 중복 없는 로컬 빌드
 .\museum.ps1 preview  # 빌드 결과 확인: http://127.0.0.1:4173/
 ```

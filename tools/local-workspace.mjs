@@ -203,13 +203,20 @@ async function dependencies(context) {
 async function noTreeLinks(root) {
   const stat = await noLinks(root);
   if (!stat) return;
-  async function walk(path) {
-    for (const entry of await readdir(path, { withFileTypes: true })) {
-      if (entry.isSymbolicLink()) throw new Error(`Refusing media link/reparse point: ${join(path, entry.name)}`);
-      if (entry.isDirectory()) await walk(join(path, entry.name));
+  // Streamed DriveFS metadata can be slow. Bound directory reads globally,
+  // including unexpected extra directories, and finish before hashing any file.
+  const directories = [root];
+  while (directories.length) {
+    const batch = directories.splice(0, 32);
+    const entries = await Promise.all(batch.map(path => readdir(path, { withFileTypes: true })));
+    for (let i = 0; i < batch.length; i++) {
+      for (const entry of entries[i]) {
+        const path = join(batch[i], entry.name);
+        if (entry.isSymbolicLink()) throw new Error(`Refusing media link/reparse point: ${path}`);
+        if (entry.isDirectory()) directories.push(path);
+      }
     }
   }
-  await walk(root);
 }
 
 const MAX_ASSET_BUFFER_BYTES = 128 * 1024 * 1024;
@@ -429,7 +436,7 @@ async function check(context) {
 
 export async function main(args = process.argv.slice(2)) {
   const [command = 'help', ...extra] = args;
-  const commands = ['help', 'sync', 'setup', 'test', 'build', 'dev', 'preview', 'check', 'login', 'deploy-preview', 'deploy-production'];
+  const commands = ['help', 'sync', 'setup', 'test', 'build', 'dev', 'preview', 'check', 'login', 'import-search', 'deploy-preview', 'deploy-production'];
   if (!commands.includes(command)) throw new Error(`Unknown command: ${command}`);
   if (extra.length && (!['dev', 'preview'].includes(command) || extra.length !== 2 || extra[0] !== '--port' || !/^\d+$/.test(extra[1]) || Number(extra[1]) < 1024 || Number(extra[1]) > 65535)) throw new Error('Only dev/preview accept arguments: --port <1024-65535>.');
   const sourceRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -441,6 +448,7 @@ export async function main(args = process.argv.slice(2)) {
   if (command === 'sync') return;
   if (command === 'check') return check(context);
   if (command === 'login') return run(context, context.vercel, ['login']);
+  if (command === 'import-search') return run(context, join(context.stage, 'tools', 'search-import.mjs'), ['--source-root', context.sourceRoot]);
   await dependencies(context);
   // Run the same package.json test command directly: loading npm itself from a
   // cold DriveFS cache needlessly reads thousands of extra tooling files.

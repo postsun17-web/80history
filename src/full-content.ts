@@ -3,6 +3,9 @@ import {Viewer} from '@photo-sphere-viewer/core';
 import {CubemapAdapter} from '@photo-sphere-viewer/cubemap-adapter';
 import {assetUrl,sourcePath,type FullMuseum,type GalleryImage} from './full-types';
 import type {SourceAction} from './source-actions';
+import {emptySearch} from './search/route';
+import type {SearchAction} from './search/types';
+import type {SearchView} from './search/view';
 import {sourceGalleryIssue,sourceGalleryNote} from './source-defects';
 import {titlesForMuseum} from './content-titles';
 import {localMuseumObject,objectFrameWindow} from './museum-viewer-data';
@@ -39,6 +42,7 @@ export class FullContent {
  private sequence?:ImageSequence;
  private generation=0;
  private articleImages?:{path:string;links:ArticleImageLink[]};
+ private searchView?:SearchView;
 
  constructor(dialog:HTMLDialogElement,data:FullMuseum,onAction:(action:SourceAction)=>void,private audio?:MuseumAudio){
   this.dialog=dialog;this.data=data;this.onAction=onAction;
@@ -50,8 +54,18 @@ export class FullContent {
   this.heading=dialog.querySelector<HTMLHeadingElement>('h2')!;
   dialog.addEventListener('click',event=>this.controls(event),{signal:this.lifecycle.signal});
   dialog.addEventListener('cancel',event=>{event.preventDefault();this.close();},{signal:this.lifecycle.signal});
-  dialog.addEventListener('close',()=>{if(this.disposed||dialog.open)return;this.teardown();this.resumeSceneMedia();this.previousFocus?.focus();this.previousFocus=null;},{signal:this.lifecycle.signal});
+  dialog.addEventListener('close',()=>{
+   if(this.disposed||dialog.open)return;this.teardown();this.resumeSceneMedia();
+   const focus=this.previousFocus;
+   for(const target of [focus,focus?.closest('details')?.querySelector('summary'),document.getElementById('mobile-menu')]){
+    if(!target?.getClientRects().length)continue;
+    target.focus();if(document.activeElement===target)break;
+   }
+   this.previousFocus=null;
+  },{signal:this.lifecycle.signal});
   dialog.addEventListener('keydown',event=>{
+   // A search input consumes Escape to clear itself before the dialog's cancel event.
+   if(event.key==='Escape'&&!event.isComposing&&this.activeAction?.type==='search'){event.preventDefault();this.close();return;}
    if(event.target instanceof Element&&event.target.closest('input,textarea,select,audio,video,[contenteditable=true],[role=slider]'))return;
    if(event.key==='ArrowLeft'||event.key==='ArrowRight'){
     const direction=event.key==='ArrowLeft'?-1:1;
@@ -64,6 +78,8 @@ export class FullContent {
  open(action:SourceAction):void {
   if(this.disposed)return;
   action=this.titles.action(action);
+  if(action.type==='chatbot')action=emptySearch();
+  if(action.type==='search'&&this.activeAction?.type==='search'&&this.dialog.open&&this.searchView){this.activeAction=action;this.searchView.update(action);return;}
   if(action.type==='scene'||action.type==='page'){this.onAction(action);return;}
   this.releaseSceneMedia??=this.audio?.suspendSceneMedia();
   const focusedCommand=this.dialog.contains(document.activeElement)?(document.activeElement as HTMLElement)?.dataset.contentCommand:undefined;
@@ -83,7 +99,7 @@ export class FullContent {
    case 'audio':this.heading.textContent='음성 안내';this.body.innerHTML='<div class="full-content-audio-card"><span aria-hidden="true">♪</span><p>영락교회 디지털역사관 음성 안내</p></div>';this.addAudio(action.src);break;
    case 'object':this.renderObject(action);break;
    case 'books':this.renderBooks();break;
-   case 'chatbot':this.renderChatbot();break;
+   case 'search':this.renderSearch(action);break;
    case 'help':this.renderGallery('help',action.index??0);if(narration)this.body.append(narration);else if(action.audio||this.data.assets['mp3/info.mp3'])this.addAudio(action.audio||'mp3/info.mp3');break;
    case 'external':this.heading.textContent='연계 자료';this.renderEmbed(action.url,'연계 자료',action.url);break;
    case 'document':this.heading.textContent='기록 자료';this.renderDocument(action.src);break;
@@ -120,11 +136,6 @@ export class FullContent {
   else if(command==='books')this.open({type:'books'});
   else if(command==='book-category'){this.bookCategory=target.dataset.contentCategory??'전체';this.renderBooks();}
   else if(command==='book')this.renderBook(Number(target.dataset.contentBook));
-  else if(command==='chat-help')this.open({type:'help'});
-  else if(command==='chat-exhibit'){
-   const scene=this.data.menus[1]?.items[0]?.scene;
-   if(scene){this.close();this.onAction({type:'scene',scene});}
-  }
   else return false;
   return true;
  }
@@ -132,6 +143,7 @@ export class FullContent {
  private url(path:string):string {return this.data.assets[sourcePath(path)]??assetUrl(path);}
  private teardown(preserveNarration=false):void {
   this.generation++;
+  this.searchView?.dispose();this.searchView=undefined;
   this.zoom?.destroy();this.zoom=undefined;
   this.sphere?.destroy();this.sphere=undefined;
   if(!preserveNarration)this.audio?.stopContent();
@@ -366,15 +378,15 @@ export class FullContent {
   if(book.url)this.renderEmbed(book.url,book.title,book.url);
   else{this.body.insertAdjacentHTML('beforeend',`<img class="full-content-book-cover" src="${escape(book.cover)}" alt="${escape(book.title)} 표지">`);this.notice('전자책 본문 연결을 준비하고 있습니다.');}
  }
- private renderChatbot():void {
-  this.heading.textContent='영락교회 역사 안내 챗봇';this.body.classList.add('full-content-chat');
-  this.body.innerHTML=`<div class="full-content-chat-status"><span aria-hidden="true">✦</span><div><strong>영락 역사 길잡이</strong><small>시범 화면 · 답변 서비스 연결 준비 중</small></div></div><div class="full-content-chat-messages" role="log" aria-live="polite"><div class="full-content-chat-bubble">안녕하세요. 영락교회 디지털역사관에 오신 것을 환영합니다.<br>전시실을 둘러보거나 역사 자료를 찾아보세요.</div><div class="full-content-chat-suggestions">${button('chat-exhibit','역사 전시 둘러보기')}${button('books','전자책 찾아보기')}${button('chat-help','관람 방법 보기')}</div><p class="full-content-note">챗봇 답변 서비스는 아직 연결되지 않았습니다. 아래 입력창에서는 화면 구성만 확인할 수 있습니다.</p></div><form class="full-content-chat-form"><label class="full-content-sr-only" for="full-content-chat-input">역사관에 관해 궁금한 내용</label><input id="full-content-chat-input" autocomplete="off" placeholder="역사관에 관해 궁금한 내용을 입력하세요"><button type="submit" aria-label="메시지 보내기">↑</button></form>`;
-  this.body.querySelector('form')!.addEventListener('submit',event=>{
-   event.preventDefault();const input=this.body.querySelector<HTMLInputElement>('input')!,text=input.value.trim();if(!text)return;
-   const messages=this.body.querySelector<HTMLElement>('.full-content-chat-messages')!;
-   const user=document.createElement('div');user.className='full-content-chat-bubble is-user';user.textContent=text;
-   const response=document.createElement('div');response.className='full-content-chat-bubble';response.textContent='현재는 답변 서비스 연결 전입니다. 관람 메뉴와 전자책에서 관련 자료를 확인하실 수 있습니다.';
-   messages.append(user,response);input.value='';messages.scrollTop=messages.scrollHeight;
+ private renderSearch(action:SearchAction):void {
+  this.heading.textContent='자료 검색';this.notice('검색을 준비하는 중입니다.');
+  const generation=this.generation;
+  void import('./search/view').then(({mountSearchView})=>{
+   if(this.disposed||!this.dialog.open||generation!==this.generation)return;
+   this.body.replaceChildren();this.searchView=mountSearchView(this.body,action,this.onAction);
+  }).catch(()=>{
+   if(this.disposed||!this.dialog.open||generation!==this.generation)return;
+   this.body.replaceChildren();this.notice('검색 화면을 불러오지 못했습니다. 창을 닫고 다시 열어 주세요.');
   });
  }
 }

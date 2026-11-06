@@ -1,12 +1,14 @@
 # 영락교회 디지털역사관 — 원사이트 전체 복원 버전
 
-이 컴퓨터의 작업 안내: **[LOCAL-WORKSPACE.md](LOCAL-WORKSPACE.md)** — G드라이브에서 편집하고 E드라이브에서 실행·검사·빌드하는 명령과 배포 절차를 설명합니다.
+이 컴퓨터의 작업 안내: **[LOCAL-WORKSPACE.md](LOCAL-WORKSPACE.md)** — G드라이브의 `museum-web`에서 편집하고 형제 `museum-workspace`에서 실행·검사·빌드하는 명령과 배포 절차를 설명합니다.
 
 [역사관 관람](https://youngnak-museum-poc.vercel.app/) · [한경직목사기념관](https://youngnak-museum-poc.vercel.app/hkjmuseum.html) · [GitHub](https://github.com/postsun17-web/80history)
 
 업체 전달 자료와 원사이트의 XML·이미지·음원을 바탕으로 관람 화면을 재구현합니다. krpano 런타임 대신 Photo Sphere Viewer를 사용하며, 확대 이미지는 OpenSeadragon Canvas로 표시합니다.
 
 ## 구현 범위
+
+- 기존 챗봇 메뉴의 자료 검색: 기사 224건과 한글 문서 26건의 제목·본문·출처 검색, 본문 읽기와 검색 문단 이동. AI 답변이나 외부 검색 API는 사용하지 않습니다.
 
 - 역사관 원본 62개 시점, A–D 21개 전시 주제·207페이지. 임의로 추가했던 E방은 제거했고 C방도 원본 구조로 복원했습니다.
 - 사진집, 본문, 전자책, 영상, PDF 및 기존 자료의 결손 안내를 유지합니다.

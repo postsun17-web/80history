@@ -1,3 +1,4 @@
+import type {SearchAction} from './search/types';
 /** A deliberately small interpreter for the delivered site's navigation syntax. */
 export type SourceAction =
  | {type:'scene';scene:string;look?:[number,number,number]}
@@ -7,7 +8,7 @@ export type SourceAction =
  | {type:'youtube';id:string}
  | {type:'image';src:string;audio?:string;title?:string;article?:string}
  | {type:'object';url?:string;folder?:string;frames?:number}
- | {type:'books'} | {type:'chatbot'} | {type:'help';audio?:string;index?:number}
+ | {type:'books'} | {type:'chatbot'} | SearchAction | {type:'help';audio?:string;index?:number}
  | {type:'external';url:string} | {type:'video';src:string} | {type:'audio';src:string} | {type:'document';src:string};
 
 function unquote(value:string):string {

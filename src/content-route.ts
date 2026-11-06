@@ -2,10 +2,12 @@ import type {FullMuseum} from './full-types';
 import type {FullRoute} from './full-navigation';
 import type {SourceAction} from './source-actions';
 import {exhibitImageContext} from './content-sequence.ts';
+import {emptySearch,safeSearchAction} from './search/route.ts';
 
 /** Route content contains identifiers, never executable source or arbitrary remote media. */
 export function safeContentAction(data:FullMuseum,value:string):SourceAction|null{
- if(['books','chatbot','help'].includes(value))return {type:value} as SourceAction;
+ if(value==='chatbot'||value==='search')return emptySearch();
+ if(['books','help'].includes(value))return {type:value} as SourceAction;
  try{
   const a=JSON.parse(value);
   if(!a||typeof a!=='object')return null;
@@ -20,7 +22,9 @@ export function safeContentAction(data:FullMuseum,value:string):SourceAction|nul
   if(a.type==='article'&&typeof a.path==='string'&&data.articles[a.path])return {type:'article',path:a.path};
   if(a.type==='document'&&typeof a.src==='string'&&/^photo\/[\w/-]+\.pdf$/.test(a.src))return {type:'document',src:a.src};
   if(a.type==='youtube'&&typeof a.id==='string'&&/^[\w-]{11}$/.test(a.id))return {type:'youtube',id:a.id};
-  if(a.type==='books'||a.type==='chatbot')return {type:a.type};
+  if(a.type==='chatbot')return emptySearch();
+  if(a.type==='search')return safeSearchAction(a);
+  if(a.type==='books')return {type:a.type};
   if(a.type==='help')return {type:'help',...(knownAudio(a.audio)?{audio:a.audio}:{}),...(Number.isInteger(a.index)?{index:a.index}:{})};
   if(a.type==='object'){
    if(typeof a.folder==='string'&&/^ovr\/\d+$/.test(a.folder))return {type:'object',folder:a.folder,...(Number.isInteger(a.frames)&&a.frames>0&&a.frames<=360?{frames:a.frames}:{})};

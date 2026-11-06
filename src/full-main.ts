@@ -5,6 +5,7 @@ import {memorialDestination,museumIdAt} from './museum-route';
 import {normalizeContentRoute,safeContentAction} from './content-route';
 import type {MuseumAudio} from './museum-audio';
 import {decodeAction,type SourceAction} from './source-actions';
+import {emptySearch} from './search/route';
 import {assetUrl,type FullMuseum,type MenuItem,type MuseumId} from './full-types';
 import {parseFullRoute,fullRouteUrl,type FullRoute} from './full-navigation';
 import './full-style.css';
@@ -18,10 +19,10 @@ const $=<T extends HTMLElement=HTMLElement>(s:string)=>document.querySelector<T>
 const escape=(s:string)=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
 const actions=new Map<string,SourceAction>();
 function button(a:SourceAction,label:string,className=''){const key=String(actions.size);actions.set(key,a);return `<button class="${className}" data-action="${key}">${escape(label)}</button>`;}
-function menuAction(m:MenuItem):SourceAction|null{return m.scene?{type:'scene',scene:m.scene,look:m.look}:decodeAction(m.action||'')||(m.url&&/^https?:/.test(m.url)?{type:'external',url:m.url}:null);}
-const menus=data.menus.map((g,i)=>`<details class="menu-group" data-menu-index="${i}"><summary><span>${escape(g.title)}</span></summary><div class="submenu">${g.items.map(m=>{const a=menuAction(m);return a?button(a,m.title):'';}).join('')}</div></details>`).join('');
+function menuAction(m:MenuItem):SourceAction|null{const action=m.scene?{type:'scene',scene:m.scene,look:m.look} as SourceAction:decodeAction(m.action||'')||(m.url&&/^https?:/.test(m.url)?{type:'external',url:m.url} as SourceAction:null);return action?.type==='chatbot'?emptySearch():action;}
+const menus=data.menus.map((g,i)=>`<details class="menu-group" data-menu-index="${i}"><summary><span>${escape(g.title)}</span></summary><div class="submenu">${g.items.map(m=>{const a=menuAction(m);return a?button(a,a.type==='search'?'자료 검색':m.title):'';}).join('')}</div></details>`).join('');
 const quickIcons=['01','02','05','06','04'];
-const quick=(data.quickMenu||[]).map((m,i)=>{const a=menuAction(m);if(!a)return '';const key=String(actions.size);actions.set(key,a);return `<button data-action="${key}" aria-label="${escape(m.title)}" title="${escape(m.title)}"><img src="${assetUrl(`images/qmenu_ico${quickIcons[i]}.png`)}" alt=""><span>${escape(m.title)}</span></button>`;}).join('');
+const quick=(data.quickMenu||[]).map((m,i)=>{const a=menuAction(m);if(!a)return '';const key=String(actions.size),label=a.type==='search'?'자료 검색':m.title;actions.set(key,a);const icon=a.type==='search'?'<svg class="search-menu-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>':`<img src="${assetUrl(`images/qmenu_ico${quickIcons[i]}.png`)}" alt="">`;return `<button data-action="${key}" aria-label="${escape(label)}" title="${escape(label)}">${icon}<span>${escape(label)}</span></button>`;}).join('');
 const persistentActionCount=actions.size;
 $('#app').innerHTML=`${memorial?'':'<a class="skip-link" href="#full-menu">전시 메뉴로 건너뛰기</a>'}
  <main class="full-museum${memorial?' is-memorial':''}"><div id="panorama" aria-label="360도 ${museumTitle}. 마우스 또는 손가락으로 둘러보세요."></div>
@@ -99,7 +100,11 @@ function safeModal(value:string):SourceAction|null{
 function showModal(){
  if(!route.exhibit){if(dialog.open){internalClose=true;content.close();internalClose=false;}renderedModal='';viewer.viewer.startKeyboardControl();return;}
  if(route.exhibit===renderedModal&&dialog.open)return;
- const parsed=safeModal(route.exhibit);if(!parsed)return;
+ const parsed=safeModal(route.exhibit);if(!parsed){
+  delete route.exhibit;history.replaceState({route},'',fullRouteUrl(route));
+  if(dialog.open){internalClose=true;content.close();internalClose=false;}
+  renderedModal='';viewer.viewer.startKeyboardControl();return;
+ }
  const a=contentTitles.action(parsed);
  if(a!==parsed){route={...route,exhibit:JSON.stringify(a)};history.replaceState({route},'',fullRouteUrl(route));}
  renderedModal=route.exhibit!;viewer.viewer.stopKeyboardControl();content.open(a);
