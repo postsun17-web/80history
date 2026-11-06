@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "source_log": "E:\\CodexAssets\\youngnak-direction-qa\\deploy-debug.txt",
+  "source_log_sha256": "6e6201fccbc0abea02a16cabfe39f1d574b318a2a3eaddbd7bda6b3b25357713",
+  "deployment": {
+    "id": "dpl_4DB7s9th9xw6RBWfC5PcjvL1515h",
+    "project": "youngnak-museum-poc",
+    "url": "https://youngnak-museum-8za1wziut-postsun17-webs-projects.vercel.app",
+    "target": "production",
+    "created_utc": "2026-10-09T03:01:42.6140000Z",
+    "source_path": "C:\\Users\\user\\Projects\\youngnak-e-room",
+    "git_commit": "c6eb8f2f142f8acd8a04b28438eba30b97e4e2fa",
+    "git_branch": "feat/pinch-direction",
+    "git_message": "feat: make pinch travel follow the viewing direction",
+    "reported_total_file_count": 86,
+    "reported_uploaded_changed_file_count": 12
+  },
+  "coverage_note": "The deployment log reports 86 total files but names and hashes only the 12 newly uploaded files. It does not contain the complete 86-file manifest. Size labels are rounded CLI values; exact byte sizes are not present.",
+  "logged_uploaded_files": [
+    {
+      "path": "src/wall-approach-controller.ts",
+      "sha1": "0e1117211292e1675d0ac9cef47ff36c64284aef",
+      "size_display": "5.27KB",
+      "size_bytes": null,
+      "log_line": 49
+    },
+    {
+      "path": "src/pinch-catalogue.ts",
+      "sha1": "70f6442f6be1a7530da54b0ef772f714084e0a29",
+      "size_display": "643B",
+      "size_bytes": null,
+      "log_line": 53
+    },
+    {
+      "path": "src/data/pinch-zoom-history.json",
+      "sha1": "1b52ddf3b1d2c15d888c25bf99f3ff6d3c782bb3",
+      "size_display": "554B",
+      "size_bytes": null,
+      "log_line": 57
+    },
+    {
+      "path": "src/pinch-navigation.ts",
+      "sha1": "c3022f3c59bdf852d0e0a96bfc24bb02085f1c2b",
+      "size_display": "3.58KB",
+      "size_bytes": null,
+      "log_line": 61
+    },
+    {
+      "path": "src/full-viewer.ts",
+      "sha1": "e77d5877ebe2749267c62f9b7efee32155549cf8",
+      "size_display": "17.74KB",
+      "size_bytes": null,
+      "log_line": 65
+    },
+    {
+      "path": "src/data/pinch-zoom-memorial.json",
+      "sha1": "913f6ccd3a28c03b0dd7c27a9b6099f55065cac5",
+      "size_display": "17.92KB",
+      "size_bytes": null,
+      "log_line": 69
+    },
+    {
+      "path": "src/pinch-navigation-controller.ts",
+      "sha1": "7cd3e7b0bc764c65777ea59fb750ca4e40321570",
+      "size_display": "8.66KB",
+      "size_bytes": null,
+      "log_line": 73
+    },
+    {
+      "path": "src/full-main.ts",
+      "sha1": "5bb5c589add1cfd1bb18cf0ffebe371f8e3ff5d8",
+      "size_display": "18.1KB",
+      "size_bytes": null,
+      "log_line": 77
+    },
+    {
+      "path": "src/full-style.css",
+      "sha1": "c981c38f7a5748d52f9e1e69102a23f16641839b",
+      "size_display": "15.61KB",
+      "size_bytes": null,
+      "log_line": 81
+    },
+    {
+      "path": "src/pinch-gesture.ts",
+      "sha1": "95ac0e0b0a5c0e32a804e424931646204efa93f9",
+      "size_display": "3.58KB",
+      "size_bytes": null,
+      "log_line": 85
+    },
+    {
+      "path": "src/data/pinch-passages-history.json",
+      "sha1": "39fd91716f0619b224ab0fe4337a12111e053a99",
+      "size_display": "106.13KB",
+      "size_bytes": null,
+      "log_line": 89
+    },
+    {
+      "path": "src/data/pinch-passages-memorial.json",
+      "sha1": "a32f404f0ae72ec8276ab0e1c724ed8c904d2933",
+      "size_display": "36.98KB",
+      "size_bytes": null,
+      "log_line": 93
+    }
+  ],
+  "local_matching_build_assets": [
+    {
+      "path": "assets/index-aODj3v8-.css",
+      "size_bytes": 37409,
+      "sha256": "f7c179d1bb5c279730db783d963af0e7ad9d3d0f3b163a6a9303b5d7392fb216"
+    },
+    {
+      "path": "assets/index-zuoaoP2H.js",
+      "size_bytes": 2242413,
+      "sha256": "c902ac94cbc9c310fbbacbf7a838ec64fafb6ae7f943273457aaad76c2073fb9"
+    },
+    {
+      "path": "assets/memorial-museum-FiMmMWSj.js",
+      "size_bytes": 57674,
+      "sha256": "45bcb7d577a06241c4677724c09a5ee2e3bc4decda3b3dc7a2857904c91f8d2f"
+    }
+  ]
+}

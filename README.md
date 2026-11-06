@@ -1,5 +1,7 @@
 # 영락교회 디지털역사관 — 원사이트 전체 복원 버전
 
+이 컴퓨터의 작업 안내: **[LOCAL-WORKSPACE.md](LOCAL-WORKSPACE.md)** — G드라이브에서 편집하고 E드라이브에서 실행·검사·빌드하는 명령과 배포 절차를 설명합니다.
+
 [역사관 관람](https://youngnak-museum-poc.vercel.app/) · [한경직목사기념관](https://youngnak-museum-poc.vercel.app/hkjmuseum.html) · [GitHub](https://github.com/postsun17-web/80history)
 
 업체 전달 자료와 원사이트의 XML·이미지·음원을 바탕으로 관람 화면을 재구현합니다. krpano 런타임 대신 Photo Sphere Viewer를 사용하며, 확대 이미지는 OpenSeadragon Canvas로 표시합니다.

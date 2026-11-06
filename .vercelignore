@@ -10,3 +10,4 @@ docs
 public/media
 .env*
 .scratch
+.museum-workspace.json
