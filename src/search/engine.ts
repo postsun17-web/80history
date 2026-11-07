@@ -12,9 +12,10 @@ export function createSearchIndex(documents:SearchDocument[]):IndexedDocument[]{
 
 /** Map normalized graphemes back to original UTF-16 offsets, including decomposed Korean. */
 function normalizedMap(text:string){
- let value='';const starts:number[]=[],ends:number[]=[];
+ let value='';const starts:number[]=[],ends:number[]=[],boundaries=new Set<number>([text.length]);
  const segments=new Intl.Segmenter('ko',{granularity:'grapheme'}).segment(text);
  for(const item of segments){
+  boundaries.add(item.index);
   const normalized=item.segment.normalize('NFC').toLowerCase();
   for(const char of normalized){
    if(/\s/u.test(char)){
@@ -26,7 +27,7 @@ function normalizedMap(text:string){
    }
   }
  }
- return {value,starts,ends};
+ return {value,starts,ends,boundaries};
 }
 export function highlightText(text:string,terms:string[]):TextPart[]{
  if(!terms.length)return [{text,match:false}];
@@ -48,12 +49,32 @@ export function highlightText(text:string,terms:string[]):TextPart[]{
 }
 function snippet(text:string,terms:string[]):TextPart[]{
  const map=normalizedMap(text);
- const hits=terms.map(term=>map.value.indexOf(term)).filter(index=>index>=0);
- const match=hits.length?map.starts[Math.min(...hits)]:0;
- let start=Math.max(0,match-55),end=Math.min(text.length,start+210);
- // Avoid splitting a surrogate pair at either edge.
- if(start>0&&/[\uDC00-\uDFFF]/.test(text[start]))start--;
- if(end<text.length&&/[\uDC00-\uDFFF]/.test(text[end]))end++;
+ const hits:{start:number;end:number;term:string}[]=[];
+ for(const term of terms){
+  let offset=0;
+  while((offset=map.value.indexOf(term,offset))!==-1){
+   hits.push({start:map.starts[offset],end:map.ends[offset+term.length-1],term});offset+=term.length;
+  }
+ }
+ hits.sort((a,b)=>a.start-b.start||a.end-b.end);
+ const windowAt=(from:number):[number,number]=>{
+  let start=Math.max(0,Math.min(from,text.length-160)),end=Math.min(text.length,start+160);
+  while(!map.boundaries.has(start))start--;
+  while(!map.boundaries.has(end))end++;
+  // Keep whole query matches at either edge, including overlapping or long terms.
+  for(let i=hits.length-1;i>=0;i--)if(hits[i].start<start&&hits[i].end>start)start=hits[i].start;
+  for(const hit of hits)if(hit.start<end&&hit.end>end)end=hit.end;
+  return [start,end];
+ };
+ let [start,end]=windowAt(0),best=-1;
+ const available=new Set(hits.map(hit=>hit.term)).size;
+ // Try surrounding context and both match-aligned edges; keep source order on ties.
+ select:for(const hit of hits)for(const from of [hit.start-35,hit.start,hit.end-160]){
+  const [left,right]=windowAt(from);
+  const count=new Set(hits.filter(match=>match.start>=left&&match.end<=right).map(match=>match.term)).size;
+  if(count>best){start=left;end=right;best=count;}
+  if(count===available)break select;
+ }
  const parts=highlightText(text.slice(start,end),terms);
  if(start)parts.unshift({text:'…',match:false});if(end<text.length)parts.push({text:'…',match:false});
  return parts;
@@ -68,9 +89,13 @@ export function searchDocuments(index:IndexedDocument[],rawQuery:string,requeste
  const pageCount=Math.ceil(hits.length/20),page=Math.max(1,Math.min(pageCount||1,Number.isSafeInteger(requestedPage)?requestedPage:1));
  const results=hits.slice((page-1)*20,page*20).map(({item})=>{
   const {document}=item;
-  let matching=document.paragraphs.filter((_,i)=>terms.some(term=>item.paragraphs[i].includes(term))).slice(0,3);
-  if(!matching.length)matching=document.paragraphs.slice(0,1);
-  const snippets:SearchSnippet[]=matching.map(p=>({paragraphId:p.id,parts:snippet(p.text,terms)}));
+  let selected=0,best=0;
+  item.paragraphs.forEach((paragraph,i)=>{
+   const count=terms.filter(term=>paragraph.includes(term)).length;
+   if(count>best){selected=i;best=count;}
+  });
+  const paragraph=document.paragraphs[selected];
+  const snippets:SearchSnippet[]=paragraph?[{paragraphId:paragraph.id,parts:snippet(paragraph.text,terms)}]:[];
   return {id:document.id,kind:document.kind,title:document.title,source:document.source,snippets};
  });
  return {query,page,pageCount,total:hits.length,results};

@@ -12,7 +12,9 @@ test('real corpus search reaches articles and HWP, and every excerpt comes from 
  assert.ok(results.length>20);
  assert.equal(new Set(results.map(result=>result.id)).size,first.total);
  assert.ok(results.some(result=>result.kind==='article'));assert.ok(results.some(result=>result.kind==='hwp'));
- for(const result of results)for(const snippet of result.snippets){
+ for(const result of results){
+  assert.equal(result.snippets.length,1);
+  const snippet=result.snippets[0];
   const original=byId.get(result.id)!.paragraphs.find(paragraph=>paragraph.id===snippet.paragraphId)!.text;
   const excerpt=snippet.parts.map(part=>part.text).join('').replace(/^…|…$/gu,'');
   assert.ok(original.includes(excerpt),`${result.id} excerpt must be actual source text`);
